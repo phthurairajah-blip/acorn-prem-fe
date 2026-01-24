@@ -1,0 +1,412 @@
+'use client'
+
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Phone, Mail, Clock, MessageCircle, Calendar, CheckCircle, ArrowLeft } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import Link from "next/link";
+import Image from "next/image";
+
+const drPremConsultationImage = "/dr-prem-consultation.png";
+
+const contactInfo = [
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "+65 6517 9231",
+    href: "tel:+6565179231",
+  },
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "+65 8053 3322",
+    href: "https://wa.me/6580533322",
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    value: "acorngastroorchard@gmail.com",
+    href: "mailto:acorngastroorchard@gmail.com",
+  },
+  {
+    icon: Clock,
+    label: "Hours",
+    value: "Mon–Fri: 9am–5pm, Sat: 9am–1pm",
+    href: null,
+  },
+];
+
+const locations = [
+  {
+    name: "Mount Elizabeth Hospital (Orchard)",
+    address: "3 Mount Elizabeth, #03-10, Singapore 228510",
+    href: "https://maps.google.com/?q=3+Mount+Elizabeth+Singapore+228510",
+  },
+  {
+    name: "Farrer Park Hospital",
+    address: "1 Farrer Park Station Road, #13-14, Singapore 217562",
+    href: "https://maps.google.com/?q=1+Farrer+Park+Station+Road+Singapore+217562",
+  },
+];
+
+const benefits = [
+  "Confirmation within 24 hours",
+  "Flexible scheduling options",
+  "Same-week appointments often available",
+  "Tri-lingual support (English, Bahasa Melayu, Tamil)",
+];
+
+export const BookAppointmentComponent = () => {
+      const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    preferredDate: "",
+    preferredTime: "",
+    preferredLocation: "",
+    message: "",
+  });
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault();
+//     setIsSubmitting(true);
+
+//     try {
+//       // Combine booking details into message
+//       const bookingMessage = `
+// APPOINTMENT REQUEST
+// -------------------
+// Preferred Date: ${formData.preferredDate || "Flexible"}
+// Preferred Time: ${formData.preferredTime || "Flexible"}
+// Preferred Location: ${formData.preferredLocation || "No preference"}
+
+// Additional Notes:
+// ${formData.message || "None"}
+//       `.trim();
+
+//       const { error } = await supabase.functions.invoke("send-inquiry", {
+//         body: {
+//           name: formData.name,
+//           email: formData.email,
+//           phone: formData.phone,
+//           message: bookingMessage,
+//         },
+//       });
+
+//       if (error) throw error;
+
+//       toast({
+//         title: "Booking Request Received",
+//         description: "Thank you! We will contact you within 24 hours to confirm your appointment.",
+//       });
+//       setFormData({ 
+//         name: "", 
+//         email: "", 
+//         phone: "", 
+//         preferredDate: "",
+//         preferredTime: "",
+//         preferredLocation: "",
+//         message: "" 
+//       });
+//     } catch (error) {
+//       console.error("Error sending booking request:", error);
+//       toast({
+//         title: "Error",
+//         description: "Failed to submit booking request. Please try again or contact us directly.",
+//         variant: "destructive",
+//       });
+//     } finally {
+//       setIsSubmitting(false);
+//     }
+//   };
+
+  return (
+    <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <Link href="/" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 text-sm font-medium mb-4 transition-colors">
+                  <ArrowLeft className="h-4 w-4" />
+                  Return to Home
+                </Link>
+                <span className="block text-primary text-sm font-medium tracking-widest uppercase">
+                  Schedule Your Visit
+                </span>
+                <h1 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mt-2 mb-4">
+                  Request an Appointment
+                </h1>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Arrange a consultation with Dr Prem Thurairajah to discuss your digestive or liver concerns. Our clinic team will contact you to confirm your appointment.
+                </p>
+                
+                <ul className="space-y-3 mb-8">
+                  {benefits.map((benefit, index) => (
+                    <motion.li 
+                      key={index}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.2 + index * 0.1 }}
+                      className="flex items-center gap-3 text-foreground"
+                    >
+                      <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0" />
+                      {benefit}
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <Image
+                  src={drPremConsultationImage}
+                  alt="Dr. Prem Thurairajah consulting with a patient"
+                  className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"
+                  width={1280}
+                  height={720}
+                />
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Booking Form Section */}
+        <section className="py-14 lg:py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+              {/* Booking Form */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="bg-card rounded-2xl p-8 shadow-soft border border-border"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <Calendar className="h-6 w-6 text-primary" />
+                  <h2 className="text-2xl font-serif font-semibold text-foreground">
+                    Request an Appointment
+                  </h2>
+                </div>
+                
+                <form className="space-y-5">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-1.5">
+                      Full Name *
+                    </label>
+                    <Input
+                      type="text"
+                      placeholder="Your full name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      required
+                      className="bg-background"
+                    />
+                  </div>
+                  
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-1.5">
+                        Email Address *
+                      </label>
+                      <Input
+                        type="email"
+                        placeholder="your@email.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        required
+                        className="bg-background"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-1.5">
+                        Phone Number
+                      </label>
+                      <Input
+                        type="tel"
+                        placeholder="+65 9123 4567"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        autoComplete="off"
+                        className="bg-background"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-1.5">
+                        Preferred Date
+                      </label>
+                      <Input
+                        type="date"
+                        value={formData.preferredDate}
+                        onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
+                        className="bg-background"
+                        min={new Date().toISOString().split('T')[0]}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-1.5">
+                        Preferred Time
+                      </label>
+                      <select
+                        value={formData.preferredTime}
+                        onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      >
+                        <option value="">Select time</option>
+                        <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
+                        <option value="Afternoon (12pm-3pm)">Afternoon (12pm-3pm)</option>
+                        <option value="Late Afternoon (3pm-5pm)">Late Afternoon (3pm-5pm)</option>
+                        <option value="Flexible">Flexible</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-1.5">
+                      Preferred Location
+                    </label>
+                    <select
+                      value={formData.preferredLocation}
+                      onChange={(e) => setFormData({ ...formData, preferredLocation: e.target.value })}
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      <option value="">Select location</option>
+                      <option value="Mount Elizabeth Hospital (Orchard)">Mount Elizabeth Hospital (Orchard)</option>
+                      <option value="Farrer Park Hospital">Farrer Park Hospital</option>
+                      <option value="No preference">No preference</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-1.5">
+                      Reason for Visit / Additional Notes
+                    </label>
+                    <Textarea
+                      placeholder="Please briefly describe your symptoms or reason for consultation..."
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      rows={4}
+                      className="bg-background resize-none"
+                    />
+                  </div>
+
+                  <Button type="submit" variant="default" size="lg" className="w-full text-white" disabled={isSubmitting}>
+                    {isSubmitting ? "Submitting..." : "Request Appointment"}
+                  </Button>
+
+                  <p className="text-xs text-muted-foreground text-center">
+                    We will contact you within 24 hours to confirm your appointment.
+                  </p>
+                </form>
+              </motion.div>
+
+              {/* Contact Info & Locations */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="space-y-8"
+              >
+                {/* Quick Contact */}
+                <div>
+                  <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
+                    Need Immediate Assistance?
+                  </h3>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button variant="default" size="lg" className="flex-1" asChild>
+                      <a href="tel:+6565179231">
+                        <Phone className="mr-2 h-4 w-4" />
+                        Call Now
+                      </a>
+                    </Button>
+                    <Button variant="outline" size="lg" className="flex-1" asChild>
+                      <a
+                        href="https://wa.me/6580533322"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <MessageCircle className="mr-2 h-4 w-4" />
+                        WhatsApp
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Contact Details */}
+                <div className="bg-muted/30 rounded-2xl p-6">
+                  <h3 className="text-lg font-serif font-semibold text-foreground mb-4">
+                    Contact Information
+                  </h3>
+                  <div className="space-y-4">
+                    {contactInfo.map((item) => (
+                      <div key={item.label} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-sm font-medium text-foreground">{item.label}</p>
+                          {item.href ? (
+                            <a
+                              href={item.href}
+                              target={item.href.startsWith("http") ? "_blank" : undefined}
+                              rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                            >
+                              {item.value}
+                            </a>
+                          ) : (
+                            <p className="text-sm text-muted-foreground">{item.value}</p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Clinic Locations */}
+                <div>
+                  <h3 className="text-lg font-serif font-semibold text-foreground mb-4">
+                    Clinic Locations
+                  </h3>
+                  <div className="space-y-4">
+                    {locations.map((location) => (
+                      <a
+                        key={location.name}
+                        href={location.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:shadow-md transition-all"
+                      >
+                        <div className="flex gap-3">
+                          <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                          <div>
+                            <p className="font-medium text-foreground">{location.name}</p>
+                            <p className="text-sm text-muted-foreground">{location.address}</p>
+                          </div>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      </main>
+  )
+}
