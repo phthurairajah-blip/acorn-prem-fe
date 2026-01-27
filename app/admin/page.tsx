@@ -39,9 +39,9 @@ const AdminLoginPage = () => {
           <Image
             src="/acorn-logo-transparent.png"
             alt="Acorn Gastroenterology"
-            width={180}
-            height={90}
-            className="h-12 w-auto"
+            width={280}
+            height={180}
+            className="h-32 w-auto"
           />
         </div>
           <h1 className="text-2xl font-serif font-semibold text-foreground">Sign in</h1>
@@ -59,7 +59,7 @@ const AdminLoginPage = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full bg-transparent text-sm outline-none"
-                  placeholder="admin@acorn.com"
+                  placeholder="Enter email address"
                   required
                 />
               </div>
@@ -98,16 +98,13 @@ const AdminLoginPage = () => {
             </button>
           </form>
 
-          <div className="mt-6 flex items-center justify-between text-sm">
+          <div className="mt-6 flex items-center justify-center text-sm">
             <Link href="/admin/forgot-password" className="text-emerald-700 hover:text-emerald-800">
               Forgot password?
             </Link>
-            <Link href="/admin/reset-password" className="text-muted-foreground hover:text-foreground">
-              Reset password
-            </Link>
           </div>
 
-          <p className="mt-6 text-xs text-muted-foreground">
+          <p className="mt-6 text-xs text-muted-foreground text-center">
             Demo login: {STATIC_EMAIL} / {STATIC_PASSWORD}
           </p>
       </div>

@@ -66,7 +66,7 @@ const conditions: {
 }, {
   title: "Irritable Bowel Syndrome",
   image: ibsImage,
-  link: "/irritable-bowel-syndrome"
+  link: "/ibs"
 }, {
   title: "Jaundice",
   image: jaundiceImage,

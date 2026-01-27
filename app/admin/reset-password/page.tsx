@@ -29,13 +29,13 @@ const ResetPasswordPage = () => {
   return (
     <main className="min-h-screen flex items-center justify-center px-4 py-16">
       <div className="w-full max-w-lg bg-white rounded-3xl shadow-soft border border-slate-200 p-8">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center justify-center gap-3">
           <Image
             src="/acorn-logo-transparent.png"
             alt="Acorn Gastroenterology"
             width={140}
             height={70}
-            className="h-10 w-auto"
+            className="h-32 w-auto"
           />
         </div>
         <h1 className="mt-6 text-2xl font-serif font-semibold text-foreground">
@@ -100,11 +100,6 @@ const ResetPasswordPage = () => {
           </div>
         ) : null}
 
-        <div className="mt-6 text-sm">
-          <Link href="/admin" className="text-emerald-700 hover:text-emerald-800">
-            Back to sign in
-          </Link>
-        </div>
       </div>
     </main>
   );

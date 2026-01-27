@@ -21,7 +21,7 @@ const procedures = [
     description:
       "Upper gastrointestinal endoscopy for the diagnosis and management of conditions affecting the oesophagus, stomach, and duodenum, including reflux disease, gastritis, ulcers, and upper GI bleeding.",
     image: endoscopeImage,
-    link: "/gastroscopy",
+    link: "/gastroscopy-colonoscopy",
   },
   {
     title: "Colonoscopy",
