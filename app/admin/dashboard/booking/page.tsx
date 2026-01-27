@@ -13,51 +13,84 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import { getAdminAuthHeaders } from "@/lib/auth";
 
 type Booking = {
   id: string;
   name: string;
   email: string;
-  date: string;
-  time: string;
+  date?: string;
+  time?: string;
 };
 
-const initialBookings: Booking[] = [
-  {
-    id: "melissa-carter",
-    name: "Melissa Carter",
-    email: "melissa.carter@email.com",
-    date: "Jan 27, 2026",
-    time: "10:30 AM",
-  },
-  {
-    id: "daniel-cho",
-    name: "Daniel Cho",
-    email: "daniel.cho@email.com",
-    date: "Jan 27, 2026",
-    time: "1:00 PM",
-  },
-  {
-    id: "priya-singh",
-    name: "Priya Singh",
-    email: "priya.singh@email.com",
-    date: "Jan 28, 2026",
-    time: "9:15 AM",
-  },
-];
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
 const BookingPage = () => {
-  const [bookings, setBookings] = useState(initialBookings);
+  const [bookings, setBookings] = useState<Booking[]>([]);
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const selectedBooking = useMemo(
     () => bookings.find((booking) => booking.id === deleteId),
     [bookings, deleteId]
   );
 
+  const loadBookings = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch(`${API_URL}/bookings`, {
+        headers: new Headers({
+          ...getAdminAuthHeaders(),
+        }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setError(data?.detail || "Unable to load bookings.");
+        return;
+      }
+      const data = (await res.json()) as Array<{
+        id: string;
+        name: string;
+        email: string;
+        preferred_date?: string | null;
+        preferred_time?: string | null;
+      }>;
+      setBookings(
+        data.map((item) => ({
+          id: item.id,
+          name: item.name,
+          email: item.email,
+          date: item.preferred_date || undefined,
+          time: item.preferred_time || undefined,
+        }))
+      );
+    } catch {
+      setError("Unable to load bookings.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const deleteBooking = async (id: string) => {
-    setBookings((prev) => prev.filter((booking) => booking.id !== id));
+    try {
+      const res = await fetch(`${API_URL}/bookings/${id}`, {
+        method: "DELETE",
+        headers: new Headers({
+          ...getAdminAuthHeaders(),
+        }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setError(data?.detail || "Unable to delete booking.");
+        return;
+      }
+      setBookings((prev) => prev.filter((booking) => booking.id !== id));
+    } catch {
+      setError("Unable to delete booking.");
+    }
   };
 
   const handleDelete = async () => {
@@ -65,6 +98,10 @@ const BookingPage = () => {
     await deleteBooking(deleteId);
     setDeleteId(null);
   };
+
+  useEffect(() => {
+    loadBookings();
+  }, []);
 
   useEffect(() => {
     if (!menuOpenId) return;
@@ -99,6 +136,12 @@ const BookingPage = () => {
           </div>
         </div>
         <div className="divide-y divide-slate-100">
+          {loading ? (
+            <div className="px-6 py-6 text-sm text-muted-foreground">Loading bookings...</div>
+          ) : null}
+          {error ? (
+            <div className="px-6 py-4 text-sm text-red-600">{error}</div>
+          ) : null}
           {bookings.map((booking) => (
             <div
               key={booking.id}
@@ -106,8 +149,8 @@ const BookingPage = () => {
             >
               <span className="font-medium">{booking.name}</span>
               <span className="text-muted-foreground">{booking.email}</span>
-              <span className="text-muted-foreground">{booking.date}</span>
-              <span className="text-muted-foreground">{booking.time}</span>
+              <span className="text-muted-foreground">{booking.date || "Flexible"}</span>
+              <span className="text-muted-foreground">{booking.time || "Flexible"}</span>
               <div className="flex items-center justify-end">
                 <div className="relative" data-booking-menu>
                   <button

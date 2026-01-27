@@ -1,8 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { BlogList } from "@/components/blog/BlogList";
-import { blogs } from "@/components/blog/data";
 import type { Metadata } from "next";
+import { BlogsListClient } from "@/app/blogs/page-client";
 
 export const metadata: Metadata = {
   title: "Blogs | Dr. Prem Thurairajah - Gastroenterologist Singapore",
@@ -18,7 +17,7 @@ const BlogsPage = () => {
     <>
       <Navigation alwaysWhite />
       <main className="min-h-screen">
-        <BlogList blogs={blogs} />
+        <BlogsListClient />
       </main>
       <Footer />
     </>

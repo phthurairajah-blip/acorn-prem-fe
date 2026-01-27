@@ -1,56 +1,93 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Mail, MapPin, Phone, User } from "lucide-react";
+import { getAdminAuthHeaders } from "@/lib/auth";
 
 type BookingDetail = {
   id: string;
   name: string;
   email: string;
-  phone: string;
-  date: string;
-  time: string;
-  location: string;
-  reason: string;
-  submittedAt: string;
+  phone?: string | null;
+  date?: string | null;
+  time?: string | null;
+  location?: string | null;
+  reason?: string | null;
+  submittedAt?: string | null;
 };
 
-const bookings: BookingDetail[] = [
-  {
-    id: "melissa-carter",
-    name: "Melissa Carter",
-    email: "melissa.carter@email.com",
-    phone: "+1 (415) 555-2309",
-    date: "Jan 27, 2026",
-    time: "10:30 AM",
-    location: "San Francisco Clinic",
-    reason: "Ongoing heartburn and acid reflux, especially after dinner.",
-    submittedAt: "Jan 25, 2026 · 3:12 PM",
-  },
-  {
-    id: "daniel-cho",
-    name: "Daniel Cho",
-    email: "daniel.cho@email.com",
-    phone: "+1 (510) 555-9912",
-    date: "Jan 27, 2026",
-    time: "1:00 PM",
-    location: "Oakland Clinic",
-    reason: "Follow-up for IBS management plan and diet adjustments.",
-    submittedAt: "Jan 24, 2026 · 11:04 AM",
-  },
-  {
-    id: "priya-singh",
-    name: "Priya Singh",
-    email: "priya.singh@email.com",
-    phone: "+1 (650) 555-7781",
-    date: "Jan 28, 2026",
-    time: "9:15 AM",
-    location: "San Mateo Clinic",
-    reason: "Interested in colonoscopy screening and general wellness guidance.",
-    submittedAt: "Jan 25, 2026 · 6:45 PM",
-  },
-];
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
 const BookingDetailPage = ({ params }: { params: { id: string } }) => {
-  const booking = bookings.find((item) => item.id === params.id) ?? bookings[0];
+  const [booking, setBooking] = useState<BookingDetail | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const load = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const res = await fetch(`${API_URL}/bookings/${params.id}`, {
+          headers: new Headers({
+            ...getAdminAuthHeaders(),
+          }),
+        });
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({}));
+          setError(data?.detail || "Unable to load booking.");
+          return;
+        }
+        const data = (await res.json()) as {
+          id: string;
+          name: string;
+          email: string;
+          phone?: string | null;
+          preferred_date?: string | null;
+          preferred_time?: string | null;
+          preferred_location?: string | null;
+          message?: string | null;
+          created_at?: string | null;
+        };
+
+        setBooking({
+          id: data.id,
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          date: data.preferred_date,
+          time: data.preferred_time,
+          location: data.preferred_location,
+          reason: data.message,
+          submittedAt: data.created_at,
+        });
+      } catch {
+        setError("Unable to load booking.");
+      } finally {
+        setLoading(false);
+      }
+    };
+    load();
+  }, [params.id]);
+
+  if (loading) {
+    return <div className="text-sm text-muted-foreground">Loading booking...</div>;
+  }
+
+  if (error || !booking) {
+    return (
+      <div className="space-y-3">
+        <p className="text-sm text-red-600">{error || "Booking not found."}</p>
+        <Link
+          href="/admin/dashboard/booking"
+          className="text-sm text-emerald-700 hover:text-emerald-800"
+        >
+          Back to bookings
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
@@ -97,7 +134,7 @@ const BookingDetailPage = ({ params }: { params: { id: string } }) => {
                 <Phone className="h-4 w-4 text-emerald-600" />
                 <div>
                   <p className="text-xs text-muted-foreground">Phone number</p>
-                  <p className="font-medium">{booking.phone}</p>
+                  <p className="font-medium">{booking.phone || "Not provided"}</p>
                 </div>
               </div>
             </div>
@@ -105,7 +142,9 @@ const BookingDetailPage = ({ params }: { params: { id: string } }) => {
 
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
             <h2 className="text-sm font-semibold text-foreground">Reason for visit</h2>
-            <p className="mt-4 text-sm leading-7 text-slate-700">{booking.reason}</p>
+            <p className="mt-4 text-sm leading-7 text-slate-700">
+              {booking.reason || "No additional notes."}
+            </p>
           </div>
         </div>
 
@@ -118,7 +157,7 @@ const BookingDetailPage = ({ params }: { params: { id: string } }) => {
                 <div>
                   <p className="text-xs text-muted-foreground">Date & time</p>
                   <p className="font-medium">
-                    {booking.date} · {booking.time}
+                    {booking.date || "Flexible"} · {booking.time || "Flexible"}
                   </p>
                 </div>
               </div>
@@ -126,11 +165,11 @@ const BookingDetailPage = ({ params }: { params: { id: string } }) => {
                 <MapPin className="h-4 w-4 text-emerald-600" />
                 <div>
                   <p className="text-xs text-muted-foreground">Preferred location</p>
-                  <p className="font-medium">{booking.location}</p>
+                  <p className="font-medium">{booking.location || "No preference"}</p>
                 </div>
               </div>
               <div className="rounded-xl border border-emerald-100 bg-emerald-50 px-4 py-3 text-xs text-emerald-700">
-                Submitted {booking.submittedAt}
+                Submitted {booking.submittedAt || "—"}
               </div>
             </div>
           </div>

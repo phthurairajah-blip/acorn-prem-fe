@@ -1,49 +1,121 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Edit3, User } from "lucide-react";
+import { useParams } from "next/navigation";
+import { getAdminAuthHeaders } from "@/lib/auth";
 
-type BlogPost = {
-  id: string;
-  title: string;
-  status: "Published" | "Draft" | "Scheduled";
-  author: string;
-  date: string;
-  category: string;
-  readTime: string;
-  content: string[];
-};
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
-const posts: BlogPost[] = [
-  {
-    id: "gerd-daily-habits",
-    title: "Managing GERD: Daily Habits That Reduce Flare-Ups",
-    status: "Published",
-    author: "Dr. Patel",
-    date: "Jan 18, 2026",
-    category: "Digestive Health",
-    readTime: "6 min",
-    content: [
-      "GERD symptoms can be managed with small, consistent changes to daily routines. Start with a focus on meal timing, hydration, and gentle movement after eating to reduce reflux episodes.",
-      "Build a calm routine: Encourage patients to avoid late-night meals and to finish dinner at least three hours before bedtime.",
-      "Choose trigger-smart meals: Swap common trigger foods with lower-acid alternatives and keep portions smaller throughout the day.",
-      "Keep movement gentle: Light walks after meals can support digestion and reduce the likelihood of reflux.",
-    ],
-  },
-  {
-    id: "colonoscopy-expectations",
-    title: "What to Expect During a Colonoscopy",
-    status: "Draft",
-    author: "Dr. Nguyen",
-    date: "Jan 22, 2026",
-    category: "Procedures",
-    readTime: "5 min",
-    content: [
-      "This draft walks patients through preparation, the procedure, and recovery in a reassuring, step-by-step format.",
-    ],
-  },
-];
+const BlogDetailPage = () => {
+  const params = useParams<{ id: string }>();
+  const blogId = params?.id;
+  const [post, setPost] = useState<{
+    id: string;
+    title: string;
+    status: string;
+    author: string;
+    date: string;
+    category: string;
+    readTime: string;
+    content_html: string;
+    image_url?: string | null;
+  } | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-const BlogDetailPage = ({ params }: { params: { id: string } }) => {
-  const post = posts.find((item) => item.id === params.id) ?? posts[0];
+  const formatDate = (value?: string | null) => {
+    if (!value) return "—";
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "—";
+    return date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+  };
+
+  const readTimeFromHtml = (html: string) => {
+    const text = html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+    if (!text) return "1 min";
+    const words = text.split(" ").length;
+    const minutes = Math.max(1, Math.ceil(words / 200));
+    return `${minutes} min`;
+  };
+
+  useEffect(() => {
+    if (!blogId) return;
+    const load = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const [categoriesRes, blogRes] = await Promise.all([
+          fetch(`${API_URL}/categories`, {
+            headers: new Headers({
+              ...getAdminAuthHeaders(),
+            }),
+          }).then(async (res) => (res.ok ? res.json() : [])),
+          fetch(`${API_URL}/blogs/${blogId}`, {
+            headers: new Headers({
+              ...getAdminAuthHeaders(),
+            }),
+          }).then(async (res) => {
+            if (!res.ok) throw new Error((await res.json().catch(() => ({})))?.detail);
+            return res.json();
+          }),
+        ]);
+
+        const categoryMap = new Map(
+          (categoriesRes as Array<{ id: string; name: string }>).map((c) => [c.id, c.name])
+        );
+
+        const blog = blogRes as {
+          id: string;
+          title: string;
+          status: string;
+          content_html: string;
+          category_id: string;
+          image_url?: string | null;
+          created_at?: string | null;
+          published_at?: string | null;
+        };
+
+        const date = blog.published_at || blog.created_at;
+        setPost({
+          id: blog.id,
+          title: blog.title,
+          status: blog.status === "PUBLISHED" ? "Published" : "Draft",
+          author: "Dr. Prem Thurairajah",
+          date: formatDate(date),
+          category: categoryMap.get(blog.category_id) || "—",
+          readTime: readTimeFromHtml(blog.content_html || ""),
+          content_html: blog.content_html || "",
+          image_url: blog.image_url || null,
+        });
+      } catch (err) {
+        setError((err as Error)?.message || "Unable to load post.");
+      } finally {
+        setLoading(false);
+      }
+    };
+    load();
+  }, [blogId]);
+
+  if (!blogId) {
+    return <div className="text-sm text-muted-foreground">Loading post...</div>;
+  }
+
+  if (loading) {
+    return <div className="text-sm text-muted-foreground">Loading post...</div>;
+  }
+
+  if (error || !post) {
+    return (
+      <div className="space-y-3">
+        <p className="text-sm text-red-600">{error || "Post not found."}</p>
+        <Link href="/admin/dashboard/blogs" className="text-sm text-emerald-700">
+          Back to posts
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
@@ -58,9 +130,7 @@ const BlogDetailPage = ({ params }: { params: { id: string } }) => {
             </Link>
             <div>
               <p className="text-sm text-muted-foreground">Blog post</p>
-              <h1 className="text-2xl font-semibold text-foreground">
-                {post.title}
-              </h1>
+              <h1 className="text-2xl font-semibold text-foreground">{post.title}</h1>
             </div>
           </div>
           <Link
@@ -87,15 +157,29 @@ const BlogDetailPage = ({ params }: { params: { id: string } }) => {
             {post.date}
           </span>
           <span>{post.readTime} read</span>
+          <span>{post.category}</span>
         </div>
       </section>
 
+      {post.image_url ? (
+        <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <img
+            src={
+              post.image_url.startsWith("http")
+                ? post.image_url
+                : `${API_URL}${post.image_url}`
+            }
+            alt={post.title}
+            className="w-full rounded-xl object-cover"
+          />
+        </section>
+      ) : null}
+
       <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-        <div className="space-y-5 text-sm leading-7 text-slate-700">
-          {post.content.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
+        <div
+          className="prose prose-slate max-w-none text-sm leading-7"
+          dangerouslySetInnerHTML={{ __html: post.content_html }}
+        />
       </section>
     </div>
   );

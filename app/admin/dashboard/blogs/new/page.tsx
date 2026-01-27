@@ -1,30 +1,98 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Save } from "lucide-react";
+import { ArrowLeft, Save } from "lucide-react";
 import FeatureImagePicker, {
   type FeatureImageValue,
 } from "@/app/admin/dashboard/blogs/_components/FeatureImagePicker";
 import RichTextEditor from "@/app/admin/dashboard/blogs/_components/RichTextEditor";
+import { getAdminAuthHeaders } from "@/lib/auth";
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
 const NewBlogPage = () => {
   const [title, setTitle] = useState("");
-  const [category, setCategory] = useState("Digestive Health");
+  const [categoryId, setCategoryId] = useState("");
   const [excerpt, setExcerpt] = useState("");
   const [content, setContent] = useState("");
   const [featureImage, setFeatureImage] = useState<FeatureImageValue>({
     type: "none",
   });
+  const [categories, setCategories] = useState<Array<{ id: string; name: string }>>([]);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
-  const saveDraft = async () => {
-    return {
-      title,
-      category,
-      excerpt,
-      content,
-      featureImage,
+  useEffect(() => {
+    const loadCategories = async () => {
+      try {
+        const res = await fetch(`${API_URL}/categories`, {
+          headers: new Headers({
+            ...getAdminAuthHeaders(),
+          }),
+        });
+        if (!res.ok) return;
+        const data = (await res.json()) as Array<{ id: string; name: string }>;
+        setCategories(data);
+        if (data.length > 0 && !categoryId) {
+          setCategoryId(data[0].id);
+        }
+      } catch {
+        // ignore
+      }
     };
+    loadCategories();
+  }, []);
+
+  const submitPost = async (status: "DRAFT" | "PUBLISHED") => {
+    setSaving(true);
+    setError(null);
+    setSuccess(null);
+    try {
+      if (!title.trim() || !categoryId || !excerpt.trim() || !content.trim()) {
+        throw new Error("All fields are required.");
+      }
+      if (featureImage.type === "none") {
+        throw new Error("Feature image is required.");
+      }
+      const formData = new FormData();
+      formData.append("title", title);
+      formData.append("content_html", content);
+      formData.append("category_id", categoryId);
+      formData.append("status_value", status);
+      formData.append("excerpt_html", excerpt);
+      if (featureImage.type === "url" && featureImage.url) {
+        const url = featureImage.url.startsWith(API_URL)
+          ? featureImage.url.replace(API_URL, "")
+          : featureImage.url;
+        formData.append("image_url", url);
+      }
+      if (featureImage.type === "file" && featureImage.file) {
+        formData.append("image_file", featureImage.file);
+      }
+
+      const res = await fetch(`${API_URL}/blogs`, {
+        method: "POST",
+        headers: new Headers({
+          ...(getAdminAuthHeaders() as Record<string, string>),
+        }),
+        body: formData,
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.detail || "Unable to save post.");
+      }
+      setSuccess(status === "PUBLISHED" ? "Post published." : "Draft saved.");
+      setTitle("");
+      setExcerpt("");
+      setContent("");
+      setFeatureImage({ type: "none" });
+    } catch (err) {
+      setError((err as Error)?.message || "Unable to save post.");
+    } finally {
+      setSaving(false);
+    }
   };
 
   return (
@@ -46,21 +114,25 @@ const NewBlogPage = () => {
           <div className="flex items-center gap-2">
             <button
               type="button"
-              onClick={saveDraft}
+              onClick={() => submitPost("DRAFT")}
               className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors"
+              disabled={saving}
             >
               <Save className="h-4 w-4" />
               Save draft
             </button>
             <button
               type="button"
-              onClick={saveDraft}
-              className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 transition-colors"
+              onClick={() => submitPost("PUBLISHED")}
+              className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 transition-colors disabled:opacity-70"
+              disabled={saving}
             >
               Publish
             </button>
           </div>
         </div>
+        {error ? <p className="mt-3 text-sm text-red-600">{error}</p> : null}
+        {success ? <p className="mt-3 text-sm text-emerald-700">{success}</p> : null}
       </header>
 
       <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
@@ -92,24 +164,16 @@ const NewBlogPage = () => {
                   Category
                 </label>
                 <select
-                  value={category}
-                  onChange={(event) => setCategory(event.target.value)}
+                  value={categoryId}
+                  onChange={(event) => setCategoryId(event.target.value)}
                   className="mt-2 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm"
                 >
-                  <option>Digestive Health</option>
-                  <option>Procedures</option>
-                  <option>Nutrition</option>
-                  <option>Patient Education</option>
+                  {categories.map((category) => (
+                    <option key={category.id} value={category.id}>
+                      {category.name}
+                    </option>
+                  ))}
                 </select>
-              </div>
-              <div>
-                <label className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-                  Publish date
-                </label>
-                <div className="mt-2 flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-600">
-                  <Calendar className="h-4 w-4" />
-                  <span>Jan 30, 2026</span>
-                </div>
               </div>
               <FeatureImagePicker value={featureImage} onChange={setFeatureImage} />
             </div>

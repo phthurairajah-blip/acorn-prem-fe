@@ -1,4 +1,5 @@
 export type BlogPost = {
+  id: string;
   slug: string;
   title: string;
   category: string;
@@ -6,5 +7,6 @@ export type BlogPost = {
   postedAt: string;
   minutesToRead: number;
   image: string;
-  content: string;
+  excerptHtml: string;
+  contentHtml: string;
 };

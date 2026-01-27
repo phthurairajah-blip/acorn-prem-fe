@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Image as ImageIcon, Link2, UploadCloud } from "lucide-react";
 
 export type FeatureImageValue = {
@@ -14,19 +14,34 @@ type FeatureImagePickerProps = {
   onChange?: (value: FeatureImageValue) => void;
 };
 
+const MAX_IMAGE_BYTES = 3 * 1024 * 1024;
+const MAX_IMAGE_LABEL = "Max 3 MB";
+
 const FeatureImagePicker = ({ value, onChange }: FeatureImagePickerProps) => {
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [link, setLink] = useState(value?.url ?? "");
   const [filePreview, setFilePreview] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLink(value?.url ?? "");
+  }, [value?.url]);
 
   const preview = useMemo(() => {
-    if (value?.type === "url" && value.url) return value.url;
-    if (value?.type === "file" && value.url) return value.url;
+    const url = value?.url || "";
+    if (value?.type === "file" && url) return url;
+    if (value?.type === "url" && url) {
+      if (url.startsWith("http://") || url.startsWith("https://")) return url;
+      if (url.startsWith("/")) return `${API_URL}${url}`;
+      return url;
+    }
     return filePreview;
-  }, [value, filePreview]);
+  }, [value, filePreview, API_URL]);
 
   const handleLinkChange = (next: string) => {
     setLink(next);
+    setError(null);
     if (!next.trim()) {
       onChange?.({ type: "none" });
       return;
@@ -37,6 +52,13 @@ const FeatureImagePicker = ({ value, onChange }: FeatureImagePickerProps) => {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
+    if (file.size > MAX_IMAGE_BYTES) {
+      setError(`Image too large. ${MAX_IMAGE_LABEL}.`);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+      onChange?.({ type: "none" });
+      return;
+    }
+    setError(null);
     const objectUrl = URL.createObjectURL(file);
     setFilePreview(objectUrl);
     onChange?.({ type: "file", file, url: objectUrl });
@@ -45,6 +67,7 @@ const FeatureImagePicker = ({ value, onChange }: FeatureImagePickerProps) => {
   const handleClear = () => {
     setLink("");
     setFilePreview(null);
+    setError(null);
     if (fileInputRef.current) {
       fileInputRef.current.value = "";
     }
@@ -67,6 +90,7 @@ const FeatureImagePicker = ({ value, onChange }: FeatureImagePickerProps) => {
             className="w-full bg-transparent text-sm outline-none"
           />
         </div>
+        <p className="mt-2 text-xs text-slate-400">{MAX_IMAGE_LABEL}</p>
       </div>
       <div className="flex items-center gap-3">
         <input
@@ -92,6 +116,8 @@ const FeatureImagePicker = ({ value, onChange }: FeatureImagePickerProps) => {
           Clear
         </button>
       </div>
+
+      {error ? <p className="text-xs text-red-600">{error}</p> : null}
 
       <div className="rounded-xl border border-dashed border-slate-200 bg-slate-50 p-4 text-center text-xs text-slate-500">
         {preview ? (

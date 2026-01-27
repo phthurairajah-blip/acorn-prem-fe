@@ -40,13 +40,24 @@ const CategoryModal = ({
 
   if (!open) return null;
 
+  const trimmedName = name.trim();
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    if (!trimmedName) return;
+    await onSubmit(trimmedName);
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
       <div
         className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm"
         onClick={onClose}
       />
-      <div className="relative w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-xl">
+      <form
+        onSubmit={handleSubmit}
+        className="relative w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-xl"
+      >
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm text-muted-foreground">
@@ -86,14 +97,14 @@ const CategoryModal = ({
             Cancel
           </button>
           <button
-            type="button"
-            onClick={() => onSubmit(name)}
-            className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700"
+            type="submit"
+            disabled={!trimmedName}
+            className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-70"
           >
             {mode === "create" ? "Create" : "Save"}
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

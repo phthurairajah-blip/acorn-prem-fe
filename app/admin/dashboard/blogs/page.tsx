@@ -13,68 +13,123 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import { getAdminAuthHeaders } from "@/lib/auth";
 
 export type BlogPost = {
   id: string;
   title: string;
-  status: "Published" | "Draft" | "Scheduled";
+  status: "Published" | "Draft";
   author: string;
   date: string;
   category: string;
   readTime: string;
 };
 
-const initialPosts: BlogPost[] = [
-  {
-    id: "gerd-daily-habits",
-    title: "Managing GERD: Daily Habits That Reduce Flare-Ups",
-    status: "Published",
-    author: "Dr. Patel",
-    date: "Jan 18, 2026",
-    category: "Digestive Health",
-    readTime: "6 min",
-  },
-  {
-    id: "colonoscopy-expectations",
-    title: "What to Expect During a Colonoscopy",
-    status: "Draft",
-    author: "Dr. Nguyen",
-    date: "Jan 22, 2026",
-    category: "Procedures",
-    readTime: "5 min",
-  },
-  {
-    id: "ibs-vs-ibd",
-    title: "IBS vs. IBD: Key Differences Explained",
-    status: "Published",
-    author: "Dr. Vasquez",
-    date: "Jan 12, 2026",
-    category: "Patient Education",
-    readTime: "7 min",
-  },
-  {
-    id: "gut-healthy-foods",
-    title: "Gut-Healthy Foods for Busy Schedules",
-    status: "Scheduled",
-    author: "Dr. Patel",
-    date: "Jan 28, 2026",
-    category: "Nutrition",
-    readTime: "4 min",
-  },
-];
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+const PAGE_SIZE = 12;
 
 const BlogsPage = () => {
-  const [posts, setPosts] = useState(initialPosts);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [page, setPage] = useState(0);
+  const [hasNext, setHasNext] = useState(false);
 
   const selectedPost = useMemo(
     () => posts.find((post) => post.id === deleteId),
     [posts, deleteId]
   );
 
+  const formatDate = (value?: string | null) => {
+    if (!value) return "—";
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "—";
+    return date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+  };
+
+  const readTimeFromHtml = (html: string) => {
+    const text = html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+    if (!text) return "1 min";
+    const words = text.split(" ").length;
+    const minutes = Math.max(1, Math.ceil(words / 200));
+    return `${minutes} min`;
+  };
+
+  const loadCategories = async () => {
+    const res = await fetch(`${API_URL}/categories`, {
+      headers: new Headers({
+        ...getAdminAuthHeaders(),
+      }),
+    });
+    if (!res.ok) return [];
+    return (await res.json()) as Array<{ id: string; name: string }>;
+  };
+
+  const loadBlogs = async (pageIndex: number) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const skip = pageIndex * PAGE_SIZE;
+      const [categoriesRes, blogsRes] = await Promise.all([
+        loadCategories(),
+        fetch(`${API_URL}/blogs?skip=${skip}&limit=${PAGE_SIZE}`, {
+          headers: {
+            ...getAdminAuthHeaders(),
+          } as HeadersInit,
+        }).then(async (res) => {
+          if (!res.ok) throw new Error((await res.json().catch(() => ({})))?.detail);
+          return res.json();
+        }),
+      ]);
+      const categoryMap = new Map(categoriesRes.map((c) => [c.id, c.name]));
+      const data = blogsRes as Array<{
+        id: string;
+        title: string;
+        status: string;
+        category_id: string;
+        content_html: string;
+        created_at?: string | null;
+        published_at?: string | null;
+      }>;
+      setPosts(
+        data.map((blog) => ({
+          id: blog.id,
+          title: blog.title,
+          status: blog.status === "PUBLISHED" ? "Published" : "Draft",
+          author: "Dr. Prem Thurairajah",
+          category: categoryMap.get(blog.category_id) || "—",
+          date: formatDate(blog.published_at || blog.created_at),
+          readTime: readTimeFromHtml(blog.content_html || ""),
+        }))
+      );
+      setHasNext(data.length === PAGE_SIZE);
+      setPage(pageIndex);
+    } catch (err) {
+      setError((err as Error)?.message || "Unable to load posts.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const deletePost = async (id: string) => {
-    setPosts((prev) => prev.filter((post) => post.id !== id));
+    try {
+      const res = await fetch(`${API_URL}/blogs/${id}`, {
+        method: "DELETE",
+        headers: {
+          ...getAdminAuthHeaders(),
+        },
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setError(data?.detail || "Unable to delete post.");
+        return;
+      }
+      loadBlogs(page);
+    } catch {
+      setError("Unable to delete post.");
+    }
   };
 
   const handleDelete = async () => {
@@ -82,6 +137,10 @@ const BlogsPage = () => {
     await deletePost(deleteId);
     setDeleteId(null);
   };
+
+  useEffect(() => {
+    loadBlogs(0);
+  }, []);
 
   useEffect(() => {
     if (!menuOpenId) return;
@@ -100,13 +159,9 @@ const BlogsPage = () => {
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <p className="text-sm text-muted-foreground">Blog posts</p>
-            <h2 className="text-xl font-semibold text-foreground">Manage published content</h2>
+            <h2 className="text-xl font-semibold text-foreground">Manage contents</h2>
           </div>
           <div className="flex items-center gap-2">
-            <button className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors">
-              <FileText className="h-4 w-4" />
-              All posts
-            </button>
             <Link
               href="/admin/dashboard/blogs/new"
               className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 transition-colors"
@@ -129,6 +184,10 @@ const BlogsPage = () => {
           </div>
         </div>
         <div className="divide-y divide-slate-100">
+          {loading ? (
+            <div className="px-6 py-6 text-sm text-muted-foreground">Loading posts...</div>
+          ) : null}
+          {error ? <div className="px-6 py-4 text-sm text-red-600">{error}</div> : null}
           {posts.map((post) => (
             <div
               key={post.id}
@@ -144,8 +203,6 @@ const BlogsPage = () => {
                 className={`inline-flex w-fit items-center rounded-full px-2.5 py-1 text-xs font-medium ${
                   post.status === "Published"
                     ? "bg-emerald-50 text-emerald-700"
-                    : post.status === "Scheduled"
-                    ? "bg-amber-50 text-amber-700"
                     : "bg-slate-100 text-slate-600"
                 }`}
               >
@@ -199,6 +256,26 @@ const BlogsPage = () => {
           ))}
         </div>
       </section>
+
+      <div className="flex items-center justify-between">
+        <button
+          type="button"
+          onClick={() => loadBlogs(Math.max(0, page - 1))}
+          disabled={page === 0 || loading}
+          className="rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-70"
+        >
+          Prev
+        </button>
+        <span className="text-sm text-muted-foreground">Page {page + 1}</span>
+        <button
+          type="button"
+          onClick={() => loadBlogs(page + 1)}
+          disabled={!hasNext || loading}
+          className="rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-70"
+        >
+          Next
+        </button>
+      </div>
 
       <AlertDialog open={Boolean(deleteId)} onOpenChange={(open) => !open && setDeleteId(null)}>
         <AlertDialogContent>

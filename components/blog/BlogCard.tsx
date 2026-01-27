@@ -8,6 +8,8 @@ const truncateTitle = (title: string, maxLength = 70) => {
   return `${title.slice(0, maxLength - 1)}…`;
 };
 
+const stripHtml = (html: string) => html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+
 const truncateChars = (text: string, maxChars = 200) => {
   if (text.length <= maxChars) return text;
   return `${text.slice(0, maxChars).trimEnd()}....`;
@@ -42,7 +44,7 @@ export const BlogCard = ({ blog }: { blog: BlogPost }) => {
           </Link>
         </h3>
         <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-          {truncateChars(blog.content)}
+          {truncateChars(stripHtml(blog.excerptHtml || blog.contentHtml))}
         </p>
         <div className="mt-4">
           <Link

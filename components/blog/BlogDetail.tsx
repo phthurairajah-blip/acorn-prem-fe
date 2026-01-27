@@ -43,8 +43,14 @@ export const BlogDetail = ({ blog }: { blog: BlogPost }) => {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl text-base text-muted-foreground leading-relaxed">
-            <p className="whitespace-pre-line">{blog.content}</p>
+          <div className="max-w-3xl text-base text-muted-foreground leading-relaxed space-y-6">
+            {blog.excerptHtml ? (
+              <div
+                className="text-lg text-foreground"
+                dangerouslySetInnerHTML={{ __html: blog.excerptHtml }}
+              />
+            ) : null}
+            <div dangerouslySetInnerHTML={{ __html: blog.contentHtml }} />
           </div>
         </div>
       </section>

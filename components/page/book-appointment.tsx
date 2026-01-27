@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 
 const drPremConsultationImage = "/dr-prem-consultation.png";
 
@@ -60,7 +61,9 @@ const benefits = [
 ];
 
 export const BookAppointmentComponent = () => {
-      const [formData, setFormData] = useState({
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+  const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
@@ -72,61 +75,77 @@ export const BookAppointmentComponent = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-//   const handleSubmit = async (e: React.FormEvent) => {
-//     e.preventDefault();
-//     setIsSubmitting(true);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!RECAPTCHA_SITE_KEY) {
+      toast({
+        title: "Recaptcha not configured",
+        description: "Please set the recaptcha site key.",
+        variant: "destructive",
+      });
+      return;
+    }
+    const token = window.grecaptcha?.getResponse() || "";
+    if (!token) {
+      toast({
+        title: "Recaptcha required",
+        description: "Please confirm you are not a robot.",
+        variant: "destructive",
+      });
+      return;
+    }
 
-//     try {
-//       // Combine booking details into message
-//       const bookingMessage = `
-// APPOINTMENT REQUEST
-// -------------------
-// Preferred Date: ${formData.preferredDate || "Flexible"}
-// Preferred Time: ${formData.preferredTime || "Flexible"}
-// Preferred Location: ${formData.preferredLocation || "No preference"}
+    setIsSubmitting(true);
 
-// Additional Notes:
-// ${formData.message || "None"}
-//       `.trim();
+    try {
+      const res = await fetch(`${API_URL}/bookings`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || null,
+          preferred_date: formData.preferredDate || null,
+          preferred_time: formData.preferredTime || null,
+          preferred_location: formData.preferredLocation || null,
+          message: formData.message || null,
+          recaptcha_token: token,
+        }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.detail || "Failed to submit booking request.");
+      }
 
-//       const { error } = await supabase.functions.invoke("send-inquiry", {
-//         body: {
-//           name: formData.name,
-//           email: formData.email,
-//           phone: formData.phone,
-//           message: bookingMessage,
-//         },
-//       });
-
-//       if (error) throw error;
-
-//       toast({
-//         title: "Booking Request Received",
-//         description: "Thank you! We will contact you within 24 hours to confirm your appointment.",
-//       });
-//       setFormData({ 
-//         name: "", 
-//         email: "", 
-//         phone: "", 
-//         preferredDate: "",
-//         preferredTime: "",
-//         preferredLocation: "",
-//         message: "" 
-//       });
-//     } catch (error) {
-//       console.error("Error sending booking request:", error);
-//       toast({
-//         title: "Error",
-//         description: "Failed to submit booking request. Please try again or contact us directly.",
-//         variant: "destructive",
-//       });
-//     } finally {
-//       setIsSubmitting(false);
-//     }
-//   };
+      toast({
+        title: "Booking Request Received",
+        description: "Thank you! We will contact you within 24 hours to confirm your appointment.",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        preferredDate: "",
+        preferredTime: "",
+        preferredLocation: "",
+        message: "",
+      });
+      window.grecaptcha?.reset();
+    } catch (error) {
+      console.error("Error sending booking request:", error);
+      toast({
+        title: "Error",
+        description: "Failed to submit booking request. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <main className="pt-20">
+    <>
+      <main className="pt-20">
         {/* Hero Section */}
         <section className="py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
@@ -202,7 +221,7 @@ export const BookAppointmentComponent = () => {
                   </h2>
                 </div>
                 
-                <form className="space-y-5">
+                <form className="space-y-5" onSubmit={handleSubmit}>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-1.5">
                       Full Name *
@@ -304,6 +323,10 @@ export const BookAppointmentComponent = () => {
                       rows={4}
                       className="bg-background resize-none"
                     />
+                  </div>
+
+                  <div className="flex justify-center">
+                    <div className="g-recaptcha" data-sitekey={RECAPTCHA_SITE_KEY} />
                   </div>
 
                   <Button type="submit" variant="default" size="lg" className="w-full text-white" disabled={isSubmitting}>
@@ -408,5 +431,9 @@ export const BookAppointmentComponent = () => {
           </div>
         </section>
       </main>
+      {RECAPTCHA_SITE_KEY ? (
+        <Script src="https://www.google.com/recaptcha/api.js" async defer />
+      ) : null}
+    </>
   )
 }

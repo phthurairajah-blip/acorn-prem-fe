@@ -13,6 +13,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import CategoryModal from "@/components/blog/CategoryModal";
+import { getAdminAuthHeaders } from "@/lib/auth";
 
 type Category = {
   id: string;
@@ -20,47 +21,136 @@ type Category = {
   posts: number;
 };
 
-const initialCategories: Category[] = [
-  { id: "digestive-health", name: "Digestive Health", posts: 6 },
-  { id: "procedures", name: "Procedures", posts: 4 },
-  { id: "nutrition", name: "Nutrition", posts: 3 },
-  { id: "patient-education", name: "Patient Education", posts: 5 },
-];
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
 const CategoriesPage = () => {
-  const [categories, setCategories] = useState(initialCategories);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalMode, setModalMode] = useState<"create" | "edit">("create");
   const [editingId, setEditingId] = useState<string | null>(null);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const selectedCategory = useMemo(
     () => categories.find((category) => category.id === deleteId),
     [categories, deleteId]
   );
 
+  const loadCategories = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch(`${API_URL}/categories`, {
+        headers: new Headers({
+          ...getAdminAuthHeaders(),
+        }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setError(data?.detail || "Unable to load categories.");
+        return;
+      }
+      const data = (await res.json()) as Array<{
+        id: string;
+        name: string;
+        posts_count?: number;
+        posts?: number;
+      }>;
+      setCategories(
+        data.map((item) => ({
+          id: item.id,
+          name: item.name,
+          posts: item.posts ?? item.posts_count ?? 0,
+        }))
+      );
+    } catch {
+      setError("Unable to load categories.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const deleteCategory = async (id: string) => {
-    setCategories((prev) => prev.filter((category) => category.id !== id));
+    try {
+      const res = await fetch(`${API_URL}/categories/${id}`, {
+        method: "DELETE",
+        headers: new Headers({
+          ...getAdminAuthHeaders(),
+        }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setError(data?.detail || "Unable to delete category.");
+        return;
+      }
+      setCategories((prev) => prev.filter((category) => category.id !== id));
+    } catch {
+      setError("Unable to delete category.");
+    }
   };
 
   const createCategory = async (name: string) => {
     const next = name.trim();
     if (!next) return;
-    setCategories((prev) => [
-      { id: next.toLowerCase().replace(/\s+/g, "-"), name: next, posts: 0 },
-      ...prev,
-    ]);
+    try {
+      const res = await fetch(`${API_URL}/categories`, {
+        method: "POST",
+        headers: new Headers({
+          ...getAdminAuthHeaders(),
+        }),
+        body: JSON.stringify({ name: next }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setError(data?.detail || "Unable to create category.");
+        return;
+      }
+      const data = (await res.json()) as {
+        id: string;
+        name: string;
+        posts_count?: number;
+        posts?: number;
+      };
+      setCategories((prev) => [
+        {
+          id: data.id,
+          name: data.name,
+          posts: data.posts ?? data.posts_count ?? 0,
+        },
+        ...prev,
+      ]);
+    } catch {
+      setError("Unable to create category.");
+    }
   };
 
   const updateCategory = async (id: string, name: string) => {
     const next = name.trim();
     if (!next) return;
-    setCategories((prev) =>
-      prev.map((category) =>
-        category.id === id ? { ...category, name: next } : category
-      )
-    );
+    try {
+      const res = await fetch(`${API_URL}/categories/${id}`, {
+        method: "PUT",
+        headers: new Headers({
+          ...getAdminAuthHeaders(),
+        }),
+        body: JSON.stringify({ name: next }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setError(data?.detail || "Unable to update category.");
+        return;
+      }
+      const data = (await res.json()) as { id: string; name: string };
+      setCategories((prev) =>
+        prev.map((category) =>
+          category.id === id ? { ...category, name: data.name } : category
+        )
+      );
+    } catch {
+      setError("Unable to update category.");
+    }
   };
 
   const handleDelete = async () => {
@@ -97,6 +187,7 @@ const CategoriesPage = () => {
   };
 
   const handleSubmit = async (name: string) => {
+    setError(null);
     if (modalMode === "create") {
       await createCategory(name);
     } else if (editingId) {
@@ -104,6 +195,10 @@ const CategoriesPage = () => {
     }
     closeModal();
   };
+
+  useEffect(() => {
+    loadCategories();
+  }, []);
 
   return (
     <div className="space-y-6">
@@ -133,6 +228,12 @@ const CategoriesPage = () => {
           </div>
         </div>
         <div className="divide-y divide-slate-100">
+          {loading ? (
+            <div className="px-6 py-6 text-sm text-muted-foreground">Loading categories...</div>
+          ) : null}
+          {error ? (
+            <div className="px-6 py-4 text-sm text-red-600">{error}</div>
+          ) : null}
           {categories.map((category) => (
             <div
               key={category.id}

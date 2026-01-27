@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
-import { Calendar, ChevronDown, FileText, LogOut, PanelLeft, Tag } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Calendar, ChevronDown, FileText, LogOut, PanelLeft, Tag, Settings } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -21,19 +21,63 @@ const navItems = [
   { href: "/admin/dashboard/categories", label: "Blog Category", icon: Tag },
   { href: "/admin/dashboard/blogs", label: "Blogs", icon: FileText },
   { href: "/admin/dashboard/booking", label: "Booking", icon: Calendar },
+  { href: "/admin/dashboard/settings", label: "Settings", icon: Settings },
 ];
 
 const AdminDashboardLayout = ({ children }: { children: ReactNode }) => {
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
   const pathname = usePathname();
   const router = useRouter();
   const [collapsed, setCollapsed] = useState(false);
   const [logoutOpen, setLogoutOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+  const [adminEmail, setAdminEmail] = useState<string | null>(null);
 
   const handleLogout = () => {
+    localStorage.removeItem("admin_token");
     document.cookie = "admin_auth=; Path=/; Max-Age=0; SameSite=Lax";
     router.push("/admin");
   };
+
+  useEffect(() => {
+    const isTokenExpired = (token: string) => {
+      try {
+        const payload = token.split(".")[1];
+        if (!payload) return true;
+        const decoded = JSON.parse(atob(payload.replace(/-/g, "+").replace(/_/g, "/")));
+        if (!decoded?.exp) return true;
+        return Date.now() >= decoded.exp * 1000;
+      } catch {
+        return true;
+      }
+    };
+
+    const token = localStorage.getItem("admin_token");
+    if (token && isTokenExpired(token)) {
+      handleLogout();
+      return;
+    }
+
+    const loadProfile = async () => {
+      if (!token) return;
+      try {
+        const res = await fetch(`${API_URL}/users/me`, {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        if (!res.ok) return;
+        const data = (await res.json()) as { email?: string };
+        if (data?.email) {
+          setAdminEmail(data.email);
+        }
+      } catch {
+        // noop
+      }
+    };
+    loadProfile();
+  }, [API_URL]);
 
   return (
     <div className="min-h-screen bg-slate-50 text-foreground">
@@ -121,14 +165,14 @@ const AdminDashboardLayout = ({ children }: { children: ReactNode }) => {
                   className="flex items-center gap-3 rounded-full border border-slate-200 px-3 py-1.5 text-left text-sm hover:bg-slate-50"
                 >
                   <div className="grid h-8 w-8 place-items-center rounded-full bg-emerald-100 text-xs font-semibold text-emerald-700">
-                    AA
+                    A
                   </div>
                   <div className="hidden sm:block">
                     <p className="text-sm font-medium leading-tight text-foreground">
-                      Admin User
+                      Admin
                     </p>
                     <p className="text-xs leading-tight text-muted-foreground">
-                      admin@acorn.com
+                      {adminEmail || "admin@acorn.com"}
                     </p>
                   </div>
                   <ChevronDown className="h-4 w-4 text-slate-500" />
