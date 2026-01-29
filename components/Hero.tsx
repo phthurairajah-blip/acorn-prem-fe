@@ -92,7 +92,7 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button asChild size="lg" className="bg-card hover:bg-card/90 text-secondary font-semibold shadow-md">
+              <Button asChild size="lg" className="bg-white hover:bg-white/90 text-secondary font-semibold shadow-md">
                 <Link href="/book-appointment">
                   <Calendar className="mr-2 h-5 w-5" />
                   Schedule Consultation
