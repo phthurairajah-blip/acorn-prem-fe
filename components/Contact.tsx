@@ -130,7 +130,7 @@ export const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch(`${API_URL}/bookings/`, {
+      const res = await fetch(`${API_URL}/bookings`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

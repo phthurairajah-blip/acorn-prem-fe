@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Mail, MapPin, Phone, User } from "lucide-react";
 import { getAdminAuthHeaders } from "@/lib/auth";
@@ -19,7 +19,18 @@ type BookingDetail = {
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
-const BookingDetailPage = ({ params }: { params: { id: string } }) => {
+const formatSubmittedAt = (value?: string | null) => {
+  if (!value) return "—";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat("en-SG", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(date);
+};
+
+const BookingDetailPage = ({ params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+  const params = use(paramsPromise);
   const [booking, setBooking] = useState<BookingDetail | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -169,28 +180,12 @@ const BookingDetailPage = ({ params }: { params: { id: string } }) => {
                 </div>
               </div>
               <div className="rounded-xl border border-emerald-100 bg-emerald-50 px-4 py-3 text-xs text-emerald-700">
-                Submitted {booking.submittedAt || "—"}
+                Submitted {formatSubmittedAt(booking.submittedAt)}
               </div>
             </div>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-            <h2 className="text-sm font-semibold text-foreground">Next steps</h2>
-            <ul className="mt-4 space-y-3 text-sm text-slate-600">
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                Confirm the appointment time with the patient.
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                Share any pre-visit instructions or forms.
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                Update the booking status after contact.
-              </li>
-            </ul>
-          </div>
+         
         </aside>
       </section>
     </div>
