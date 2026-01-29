@@ -5,11 +5,20 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 // import { supabase } from "@/integrations/supabase/client";
 import Image from "next/image";
 import Script from "next/script";
+
+declare global {
+  interface Window {
+    onRecaptchaSuccess?: (token: string) => void;
+    onRecaptchaExpired?: () => void;
+    onRecaptchaError?: () => void;
+    grecaptcha?: Grecaptcha;
+  }
+}
 
 const drPremConsultationImage = "/dr-prem-consultation.png";
 const contactInfo = [
@@ -73,6 +82,30 @@ export const Contact = () => {
   });
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState("");
+
+  useEffect(() => {
+    window.onRecaptchaSuccess = (token: string) => {
+      setRecaptchaToken(token);
+    };
+    window.onRecaptchaExpired = () => {
+      setRecaptchaToken("");
+    };
+    window.onRecaptchaError = () => {
+      setRecaptchaToken("");
+    };
+    return () => {
+      window.onRecaptchaSuccess = undefined;
+      window.onRecaptchaExpired = undefined;
+      window.onRecaptchaError = undefined;
+    };
+  }, []);
+
+  const isFormValid =
+    !!RECAPTCHA_SITE_KEY &&
+    formData.name.trim().length > 0 &&
+    formData.email.trim().length > 0 &&
+    recaptchaToken.length > 0;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -84,7 +117,7 @@ export const Contact = () => {
       });
       return;
     }
-    const token = window.grecaptcha?.getResponse() || "";
+    const token = recaptchaToken || window.grecaptcha?.getResponse?.() || "";
     if (!token) {
       toast({
         title: "Recaptcha required",
@@ -129,7 +162,8 @@ export const Contact = () => {
         preferredLocation: "",
         message: "",
       });
-      window.grecaptcha?.reset();
+      setRecaptchaToken("");
+      window.grecaptcha?.reset?.();
     } catch (error) {
       console.error("Error sending booking request:", error);
       toast({
@@ -313,10 +347,16 @@ export const Contact = () => {
               </div>
 
               <div className="flex justify-center">
-                <div className="g-recaptcha" data-sitekey={RECAPTCHA_SITE_KEY} />
+                <div
+                  className="g-recaptcha"
+                  data-sitekey={RECAPTCHA_SITE_KEY}
+                  data-callback="onRecaptchaSuccess"
+                  data-expired-callback="onRecaptchaExpired"
+                  data-error-callback="onRecaptchaError"
+                />
               </div>
 
-              <Button type="submit" variant="default" size="lg" className="w-full" disabled={isSubmitting}>
+              <Button type="submit" variant="default" size="lg" className="w-full" disabled={isSubmitting || !isFormValid}>
                 {isSubmitting ? "Submitting..." : "Request Appointment"}
               </Button>
 
