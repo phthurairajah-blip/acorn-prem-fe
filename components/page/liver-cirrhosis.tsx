@@ -103,7 +103,7 @@ export const LiverCirrhosis = () => {
     <main className="pt-20">
         {/* Hero Section */}
         <section className="py-16 lg:py-24 bg-gradient-to-b from-emerald-50 to-background dark:from-emerald-950/30 dark:to-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <Link href="/#conditions" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8">
               <ArrowLeft className="h-4 w-4" />
               Back to Conditions
@@ -162,7 +162,7 @@ export const LiverCirrhosis = () => {
 
         {/* Understanding Cirrhosis */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div initial={{
             opacity: 0,
             y: 20
@@ -209,7 +209,7 @@ export const LiverCirrhosis = () => {
 
         {/* Complications */}
         <section className="py-16 lg:py-20 bg-red-50 dark:bg-red-950/10">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div initial={{
             opacity: 0,
             y: 20
@@ -262,7 +262,7 @@ export const LiverCirrhosis = () => {
 
         {/* Diagnosis */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div initial={{
             opacity: 0,
             y: 20
@@ -319,7 +319,7 @@ export const LiverCirrhosis = () => {
 
         {/* Management */}
         <section className="py-16 lg:py-20 bg-emerald-50 dark:bg-emerald-950/20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div initial={{
             opacity: 0,
             y: 20
@@ -362,7 +362,7 @@ export const LiverCirrhosis = () => {
 
         {/* Liver Transplant */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div initial={{
             opacity: 0,
             y: 20
@@ -401,7 +401,7 @@ export const LiverCirrhosis = () => {
 
         {/* CTA Section */}
         <section className="py-16 lg:py-20 bg-primary/5">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div initial={{
             opacity: 0,
             y: 20
@@ -436,7 +436,7 @@ export const LiverCirrhosis = () => {
 
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <p className="text-xs text-muted-foreground text-center max-w-3xl mx-auto">
               <strong>Disclaimer:</strong> The information provided on this page is for educational purposes only and 
               is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek 

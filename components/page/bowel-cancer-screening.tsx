@@ -121,7 +121,7 @@ export const BowelCancerScreeningPage = () => {
       <main className="pt-20">
         {/* Hero Section with Image */}
         <section className="py-12 lg:py-20 bg-gradient-to-b from-emerald-50 to-background dark:from-emerald-950/30 dark:to-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <Link
               href="/#conditions"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6"
@@ -173,7 +173,7 @@ export const BowelCancerScreeningPage = () => {
 
         {/* Benefits - Visual Cards */}
         <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -204,7 +204,7 @@ export const BowelCancerScreeningPage = () => {
 
         {/* Risk Factors with Image */}
         <section className="py-14 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -280,7 +280,7 @@ export const BowelCancerScreeningPage = () => {
 
         {/* What to Expect - Accordion with Image */}
         <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -346,7 +346,7 @@ export const BowelCancerScreeningPage = () => {
 
         {/* FAQ Section */}
         <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -394,7 +394,7 @@ export const BowelCancerScreeningPage = () => {
 
         {/* CTA Section */}
         <section className="py-14 lg:py-20 bg-primary/5">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -424,7 +424,7 @@ export const BowelCancerScreeningPage = () => {
 
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <p className="text-sm text-muted-foreground text-center max-w-3xl mx-auto">
               <strong>Disclaimer:</strong> This information is for educational purposes only and is not a substitute for professional medical advice.
             </p>

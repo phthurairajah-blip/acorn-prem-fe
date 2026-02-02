@@ -118,7 +118,7 @@ const BileDuctStones = () => {
     <main className="pt-20">
         {/* Hero Section */}
         <section className="py-12 lg:py-20 bg-gradient-to-b from-emerald-50 to-background dark:from-emerald-950/30 dark:to-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <Link
               href="/#conditions"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6"
@@ -171,7 +171,7 @@ const BileDuctStones = () => {
 
         {/* Key Facts */}
         <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -227,7 +227,7 @@ const BileDuctStones = () => {
 
         {/* Symptoms and Risk Factors */}
         <section className="py-14 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -284,7 +284,7 @@ const BileDuctStones = () => {
 
         {/* Complications */}
         <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -323,7 +323,7 @@ const BileDuctStones = () => {
 
         {/* Diagnosis Section */}
         <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -376,7 +376,7 @@ const BileDuctStones = () => {
 
         {/* Treatment Section */}
         <section className="py-14 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -429,7 +429,7 @@ const BileDuctStones = () => {
 
         {/* CTA Section */}
         <section className="py-14 lg:py-20 bg-emerald-600 dark:bg-emerald-800">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-2 sm:px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -458,7 +458,7 @@ const BileDuctStones = () => {
 
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <p className="text-sm text-muted-foreground text-center max-w-3xl mx-auto">
               The information provided is for educational purposes only and should not replace professional medical advice. 
               Please consult Dr. Prem Thurairajah for personalised diagnosis and treatment options.

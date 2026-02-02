@@ -107,7 +107,7 @@ const LiverPancreaticCancer = () => {
     <main className="pt-20">
         {/* Hero Section with Image */}
         <section className="py-12 lg:py-20 bg-gradient-to-b from-emerald-50 to-background dark:from-emerald-950/30 dark:to-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <Link
               href="/#conditions"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6"
@@ -160,7 +160,7 @@ const LiverPancreaticCancer = () => {
 
         {/* Benefits - Visual Cards */}
         <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -191,7 +191,7 @@ const LiverPancreaticCancer = () => {
 
         {/* Liver Cancer Risk Factors with Image */}
         <section className="py-14 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -238,7 +238,7 @@ const LiverPancreaticCancer = () => {
 
         {/* Liver Screening Methods - Card Grid */}
         <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -291,7 +291,7 @@ const LiverPancreaticCancer = () => {
 
         {/* Pancreatic Cancer Risk Factors */}
         <section className="py-14 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -356,7 +356,7 @@ const LiverPancreaticCancer = () => {
 
         {/* Pancreatic Screening Methods - Card Grid */}
         <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -409,7 +409,7 @@ const LiverPancreaticCancer = () => {
 
         {/* CTA Section */}
         <section className="py-14 lg:py-20 bg-emerald-600 dark:bg-emerald-800">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-2 sm:px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -438,7 +438,7 @@ const LiverPancreaticCancer = () => {
 
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <p className="text-sm text-muted-foreground text-center max-w-3xl mx-auto">
               The information provided is for educational purposes only and should not replace professional medical advice. 
               Please consult Dr. Prem Thurairajah for personalised diagnosis and treatment options.

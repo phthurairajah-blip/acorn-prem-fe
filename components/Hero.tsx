@@ -15,7 +15,7 @@ export const Hero = () => {
         <div className="absolute bottom-20 left-20 w-64 h-64 bg-card rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto pt-32 pb-20 lg:pt-24 lg:pb-24 px-4 lg:px-8">
+      <div className="container mx-auto pt-32 pb-20 lg:pt-24 lg:pb-24 px-2 sm:px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Photo */}
           <motion.div initial={{

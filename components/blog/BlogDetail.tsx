@@ -14,7 +14,7 @@ export const BlogDetail = ({ blog }: { blog: BlogPost }) => {
           backgroundPosition: "center",
         }}
       >
-        <div className="container mx-auto px-4 h-full flex items-end pb-10">
+        <div className="container mx-auto px-2 sm:px-4 h-full flex items-end pb-10">
           <div className="text-white max-w-3xl">
             <Link
               href="/blogs"
@@ -42,7 +42,7 @@ export const BlogDetail = ({ blog }: { blog: BlogPost }) => {
       </div>
 
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-2 sm:px-4">
           <div className="max-w-3xl text-base text-muted-foreground leading-relaxed space-y-6">
             {blog.excerptHtml ? (
               <div

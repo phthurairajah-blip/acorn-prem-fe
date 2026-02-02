@@ -5,13 +5,20 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 // import { supabase } from "@/integrations/supabase/client";
 import Image from "next/image";
 import Script from "next/script";
 
 declare global {
+  interface Grecaptcha {
+    render?: (
+      container: string | HTMLElement,
+      parameters: Record<string, unknown>
+    ) => number;
+  }
+
   interface Window {
     onRecaptchaSuccess?: (token: string) => void;
     onRecaptchaExpired?: () => void;
@@ -83,6 +90,8 @@ export const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState("");
+  const recaptchaRef = useRef<HTMLDivElement | null>(null);
+  const recaptchaWidgetId = useRef<number | null>(null);
 
   useEffect(() => {
     window.onRecaptchaSuccess = (token: string) => {
@@ -100,6 +109,40 @@ export const Contact = () => {
       window.onRecaptchaError = undefined;
     };
   }, []);
+
+  const renderRecaptcha = () => {
+    if (!RECAPTCHA_SITE_KEY) return;
+    if (!recaptchaRef.current) return;
+    if (!window.grecaptcha?.render) return;
+    if (recaptchaWidgetId.current !== null) return;
+    recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
+      sitekey: RECAPTCHA_SITE_KEY,
+      callback: "onRecaptchaSuccess",
+      "expired-callback": "onRecaptchaExpired",
+      "error-callback": "onRecaptchaError",
+    });
+  };
+
+  useEffect(() => {
+    if (!RECAPTCHA_SITE_KEY) return;
+    let attempts = 0;
+    const interval = setInterval(() => {
+      if (recaptchaWidgetId.current !== null) {
+        clearInterval(interval);
+        return;
+      }
+      if (window.grecaptcha?.render && recaptchaRef.current) {
+        renderRecaptcha();
+        clearInterval(interval);
+        return;
+      }
+      attempts += 1;
+      if (attempts > 20) {
+        clearInterval(interval);
+      }
+    }, 250);
+    return () => clearInterval(interval);
+  }, [RECAPTCHA_SITE_KEY]);
 
   const isFormValid =
     !!RECAPTCHA_SITE_KEY &&
@@ -178,7 +221,7 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="py-20 lg:py-28 section-gradient">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2 sm:px-4">
         {/* Hero Header with Image */}
         <div className="grid lg:grid-cols-2 gap-10 items-center mb-16">
           <motion.div
@@ -347,13 +390,7 @@ export const Contact = () => {
               </div>
 
               <div className="flex justify-center">
-                <div
-                  className="g-recaptcha"
-                  data-sitekey={RECAPTCHA_SITE_KEY}
-                  data-callback="onRecaptchaSuccess"
-                  data-expired-callback="onRecaptchaExpired"
-                  data-error-callback="onRecaptchaError"
-                />
+                <div ref={recaptchaRef} />
               </div>
 
               <Button type="submit" variant="default" size="lg" className="w-full" disabled={isSubmitting || !isFormValid}>
@@ -459,7 +496,11 @@ export const Contact = () => {
         </div>
       </div>
       {RECAPTCHA_SITE_KEY ? (
-        <Script src="https://www.google.com/recaptcha/api.js" async defer />
+        <Script
+          src="https://www.google.com/recaptcha/api.js?render=explicit"
+          strategy="afterInteractive"
+          onLoad={renderRecaptcha}
+        />
       ) : null}
     </section>
   );

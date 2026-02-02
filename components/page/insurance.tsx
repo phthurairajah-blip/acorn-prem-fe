@@ -54,7 +54,7 @@ const InsurancePage = () => {
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-16 lg:py-24 bg-gradient-to-b from-sky-50 to-background dark:from-sky-950/30 dark:to-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <Link
               href="/"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
@@ -84,7 +84,7 @@ const InsurancePage = () => {
 
         {/* Insurance Partners */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -137,7 +137,7 @@ const InsurancePage = () => {
 
         {/* Payment Methods */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -177,7 +177,7 @@ const InsurancePage = () => {
 
         {/* MediSave Section */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -205,7 +205,7 @@ const InsurancePage = () => {
 
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <p className="text-sm text-muted-foreground text-center max-w-3xl mx-auto">
               The information provided on this page is for general guidance only. Insurance coverage, MediSave 
               eligibility, and claimable amounts are subject to individual policy terms and government regulations. 

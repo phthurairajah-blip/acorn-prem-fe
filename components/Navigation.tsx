@@ -144,21 +144,21 @@ export const Navigation = ({
         alwaysWhite || isScrolled ? "bg-white shadow-soft" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto">
-        <nav className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-2 sm:px-4">
+        <nav className="flex items-center justify-between h-20 min-w-0">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3 min-w-0">
             <Image src={acornLogo} alt="Acorn Gastroenterology" width={56} height={56} className="h-14 w-auto" />
-            <div className="hidden sm:flex flex-col">
+            <div className="hidden sm:flex flex-col min-w-0">
               <span
-                className={`font-serif text-lg font-semibold transition-colors ${
+                className={`font-serif text-lg font-semibold transition-colors truncate ${
                   alwaysWhite || isScrolled ? "text-primary" : "text-primary-foreground"
                 }`}
               >
                 Dr. Prem Thurairajah
               </span>
               <span
-                className={`text-xs tracking-wide transition-colors ${
+                className={`text-xs tracking-wide transition-colors truncate ${
                   alwaysWhite || isScrolled ? "text-muted-foreground" : "text-primary-foreground/70"
                 }`}
               >

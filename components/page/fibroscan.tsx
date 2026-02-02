@@ -109,7 +109,7 @@ const Fibroscan = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
           </div>
 
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container mx-auto px-2 sm:px-4 relative z-10">
             <Link
               href="/#procedures"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
@@ -149,7 +149,7 @@ const Fibroscan = () => {
         </section>
         {/* What is FibroScan */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -193,7 +193,7 @@ const Fibroscan = () => {
 
         {/* Advantages */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -231,7 +231,7 @@ const Fibroscan = () => {
 
         {/* What It Measures */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -290,7 +290,7 @@ const Fibroscan = () => {
 
         {/* The Procedure */}
         <section className="py-16 lg:py-20 bg-emerald-50 dark:bg-emerald-950/20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -319,7 +319,7 @@ const Fibroscan = () => {
 
         {/* Limitations */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -351,7 +351,7 @@ const Fibroscan = () => {
 
         {/* FAQ Section */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -391,7 +391,7 @@ const Fibroscan = () => {
 
         {/* CTA Section */}
         <section className="py-16 lg:py-20 bg-primary/5">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -420,7 +420,7 @@ const Fibroscan = () => {
 
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <p className="text-xs text-muted-foreground text-center max-w-3xl mx-auto">
               <strong>Disclaimer:</strong> The information provided on this page is for educational purposes only and 
               is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek 

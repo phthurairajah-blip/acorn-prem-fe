@@ -96,7 +96,7 @@ const LiverTransplant = () => {
     <main className="pt-20">
         {/* Hero Section */}
         <section className="py-16 lg:py-24 bg-gradient-to-b from-emerald-50 to-background dark:from-emerald-950/30 dark:to-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <Link
               href="/#conditions"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
@@ -153,7 +153,7 @@ const LiverTransplant = () => {
 
         {/* Statistics Banner */}
         <section className="py-8 bg-emerald-600 dark:bg-emerald-700">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto text-center">
               <div>
                 <p className="text-3xl md:text-4xl font-bold text-white">90%+</p>
@@ -169,7 +169,7 @@ const LiverTransplant = () => {
 
         {/* Understanding Liver Transplant */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -203,7 +203,7 @@ const LiverTransplant = () => {
 
         {/* Indications for Transplant */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -242,7 +242,7 @@ const LiverTransplant = () => {
 
         {/* Transplant Evaluation Process */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -291,7 +291,7 @@ const LiverTransplant = () => {
 
         {/* Types of Liver Transplant */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -345,7 +345,7 @@ const LiverTransplant = () => {
 
         {/* Pre-Transplant Assessment */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -429,7 +429,7 @@ const LiverTransplant = () => {
 
         {/* Post-Transplant Care */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -472,7 +472,7 @@ const LiverTransplant = () => {
 
         {/* Dr. Prem's Experience */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -507,7 +507,7 @@ const LiverTransplant = () => {
 
         {/* CTA Section */}
         <section className="py-16 lg:py-20 bg-primary/5">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -542,7 +542,7 @@ const LiverTransplant = () => {
 
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <p className="text-sm text-muted-foreground text-center max-w-3xl mx-auto">
               <strong>Medical Disclaimer:</strong> The information provided on this page is for educational purposes only 
               and is not intended as a substitute for professional medical advice, diagnosis, or treatment. Liver transplant 

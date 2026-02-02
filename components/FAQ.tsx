@@ -39,7 +39,7 @@ const faqs = [
 export const FAQ = () => {
   return (
     <section id="faq" className="py-20 lg:py-28 bg-card">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2 sm:px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Header */}
           <motion.div

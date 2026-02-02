@@ -96,7 +96,7 @@ const Eus = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
           </div>
 
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container mx-auto px-2 sm:px-4 relative z-10">
             <Link
               href="/#procedures"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
@@ -137,7 +137,7 @@ const Eus = () => {
 
         {/* What is EUS */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -184,7 +184,7 @@ const Eus = () => {
 
         {/* Therapeutic Applications */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -221,7 +221,7 @@ const Eus = () => {
 
         {/* Image Section */}
         <section className="py-12 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -265,7 +265,7 @@ const Eus = () => {
 
         {/* Advantages */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -301,7 +301,7 @@ const Eus = () => {
 
         {/* The Procedure */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -330,7 +330,7 @@ const Eus = () => {
 
         {/* FAQ Section */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -370,7 +370,7 @@ const Eus = () => {
 
         {/* CTA Section */}
         <section className="py-16 lg:py-20 bg-primary/5">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -399,7 +399,7 @@ const Eus = () => {
 
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <p className="text-xs text-muted-foreground text-center max-w-3xl mx-auto">
               <strong>Disclaimer:</strong> The information provided on this page is for educational purposes only and 
               is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek 

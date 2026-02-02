@@ -16,7 +16,7 @@ const GlobalError = ({
   }, [error]);
 
   return (
-    <main className="min-h-screen flex items-center justify-center px-4 py-20">
+    <main className="min-h-screen flex items-center justify-center px-2 sm:px-4 py-20">
       <section className="w-full max-w-2xl rounded-3xl border border-slate-200 bg-white p-10 text-center shadow-soft">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-amber-100 text-amber-700">
           <AlertTriangle className="h-7 w-7" />

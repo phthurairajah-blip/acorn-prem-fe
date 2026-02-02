@@ -17,7 +17,7 @@ export const RelatedConditions = ({ conditions }: RelatedConditionsProps) => {
 
   return (
     <section className="py-16 lg:py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 sm:px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

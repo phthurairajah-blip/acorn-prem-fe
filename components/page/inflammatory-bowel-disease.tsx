@@ -156,7 +156,7 @@ export const InflammatoryBowelDisease = () => {
     <main className="pt-20">
         {/* Hero Section */}
         <section className="py-16 lg:py-24 bg-gradient-to-b from-emerald-50 to-background dark:from-emerald-950/30 dark:to-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <Link
               href="/#conditions"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
@@ -207,7 +207,7 @@ export const InflammatoryBowelDisease = () => {
 
         {/* What is IBD */}
         <section className="py-16 lg:py-20 bg-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -237,7 +237,7 @@ export const InflammatoryBowelDisease = () => {
 
         {/* Symptoms */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -272,7 +272,7 @@ export const InflammatoryBowelDisease = () => {
 
         {/* Crohn's vs UC */}
         <section className="py-16 lg:py-20 bg-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -339,7 +339,7 @@ export const InflammatoryBowelDisease = () => {
 
         {/* Diagnosis */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -407,7 +407,7 @@ export const InflammatoryBowelDisease = () => {
 
         {/* Treatment Options */}
         <section className="py-16 lg:py-20 bg-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -454,7 +454,7 @@ export const InflammatoryBowelDisease = () => {
 
         {/* Complications */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -492,7 +492,7 @@ export const InflammatoryBowelDisease = () => {
 
         {/* Why Choose Dr. Prem */}
         <section className="py-16 lg:py-20 bg-emerald-50 dark:bg-emerald-950/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -537,7 +537,7 @@ export const InflammatoryBowelDisease = () => {
 
         {/* CTA Section */}
         <section className="py-16 lg:py-20 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-2 sm:px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -561,7 +561,7 @@ export const InflammatoryBowelDisease = () => {
 
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <p className="text-sm text-muted-foreground text-center max-w-3xl mx-auto">
               <strong>Disclaimer:</strong> The information provided on this page is for educational purposes only and is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
             </p>

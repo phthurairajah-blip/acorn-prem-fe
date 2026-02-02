@@ -165,7 +165,7 @@ const ChronicPancreatitis = () => {
     <main className="pt-20">
         {/* Hero Section */}
         <section className="py-16 lg:py-24 bg-gradient-to-b from-emerald-50 to-background dark:from-emerald-950/30 dark:to-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <Link
               href="/#conditions"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
@@ -224,7 +224,7 @@ const ChronicPancreatitis = () => {
 
         {/* What is Chronic Pancreatitis */}
         <section className="py-16 lg:py-20 bg-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -258,7 +258,7 @@ const ChronicPancreatitis = () => {
 
         {/* Causes Section */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -323,7 +323,7 @@ const ChronicPancreatitis = () => {
 
         {/* Symptoms Section */}
         <section className="py-16 lg:py-20 bg-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -382,7 +382,7 @@ const ChronicPancreatitis = () => {
 
         {/* Complications Section */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -421,7 +421,7 @@ const ChronicPancreatitis = () => {
 
         {/* Diagnosis Section */}
         <section className="py-16 lg:py-20 bg-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -475,7 +475,7 @@ const ChronicPancreatitis = () => {
 
         {/* Treatment Section */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -529,7 +529,7 @@ const ChronicPancreatitis = () => {
 
         {/* Expert Care Section */}
         <section className="py-16 lg:py-20 bg-emerald-600 dark:bg-emerald-800">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -565,7 +565,7 @@ const ChronicPancreatitis = () => {
 
         {/* Medical Disclaimer */}
         <section className="py-12 bg-muted/50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-sm text-muted-foreground">
                 <strong>Medical Disclaimer:</strong> The information provided on this page is for educational 

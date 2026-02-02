@@ -148,7 +148,7 @@ export const BookAppointmentComponent = () => {
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -204,7 +204,7 @@ export const BookAppointmentComponent = () => {
 
         {/* Booking Form Section */}
         <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
               {/* Booking Form */}
               <motion.div

@@ -29,7 +29,7 @@ const badges = [
 export const TrustBadges = () => {
   return (
     <section className="py-12 bg-card border-y border-border">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2 sm:px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {badges.map((badge, index) => (
             <motion.div

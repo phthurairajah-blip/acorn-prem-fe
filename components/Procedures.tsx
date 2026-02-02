@@ -243,7 +243,7 @@ export const Procedures = () => {
 
   return (
     <section id="procedures" className="py-20 lg:py-28 section-gradient">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2 sm:px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

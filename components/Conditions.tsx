@@ -118,7 +118,7 @@ const ConditionCard = ({
 
 export const Conditions = () => {
   return <section id="conditions" className="py-20 lg:py-28 bg-sky-50 dark:bg-sky-950/40">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2 sm:px-4">
         <motion.div initial={{
         opacity: 0,
         y: 20

@@ -126,7 +126,7 @@ const Jaundice = () => {
     <main className="pt-20">
         {/* Hero Section */}
         <section className="py-12 lg:py-20 bg-gradient-to-b from-emerald-50 to-background dark:from-emerald-950/30 dark:to-background">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <Link
               href="/#conditions"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6"
@@ -185,7 +185,7 @@ const Jaundice = () => {
 
         {/* Important Notice */}
         <section className="py-8 bg-amber-50 dark:bg-amber-950/20 border-y border-amber-200 dark:border-amber-800/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <div className="flex items-start gap-4 max-w-4xl mx-auto">
               <AlertTriangle className="h-6 w-6 text-amber-600 shrink-0 mt-0.5" />
               <div className="text-lg text-amber-900 dark:text-amber-100 leading-relaxed">
@@ -202,7 +202,7 @@ const Jaundice = () => {
 
         {/* Understanding Jaundice */}
         <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -268,7 +268,7 @@ const Jaundice = () => {
 
         {/* Symptoms */}
         <section className="py-14 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -313,7 +313,7 @@ const Jaundice = () => {
 
         {/* Diagnostic Tests */}
         <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -369,7 +369,7 @@ const Jaundice = () => {
 
         {/* CTA Section */}
         <section className="py-14 lg:py-20 bg-primary/5">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -401,7 +401,7 @@ const Jaundice = () => {
 
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-2 sm:px-4">
             <p className="text-xs text-muted-foreground text-center max-w-3xl mx-auto">
               <strong>Disclaimer:</strong> The information provided on this page is for educational purposes only and 
               is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek 

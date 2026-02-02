@@ -118,7 +118,7 @@ export const BlogsListClient = () => {
 
   if (loading) {
     return (
-      <div className="container mx-auto px-4 py-16 text-sm text-muted-foreground">
+      <div className="container mx-auto px-2 sm:px-4 py-16 text-sm text-muted-foreground">
         Loading blogs...
       </div>
     );
@@ -126,14 +126,14 @@ export const BlogsListClient = () => {
 
   if (error) {
     return (
-      <div className="container mx-auto px-4 py-16 text-sm text-red-600">{error}</div>
+      <div className="container mx-auto px-2 sm:px-4 py-16 text-sm text-red-600">{error}</div>
     );
   }
 
   return (
     <>
       <BlogList blogs={blogs} />
-      <div className="container mx-auto px-4 pb-16">
+      <div className="container mx-auto px-2 sm:px-4 pb-16">
         {hasMore ? (
           <button
             type="button"

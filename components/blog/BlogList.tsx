@@ -37,7 +37,7 @@ export const BlogList = ({ blogs }: { blogs: BlogPost[] }) => {
 
   return (
     <section className="py-16 lg:py-20 my-10">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 sm:px-4">
         <div className="flex flex-col items-start gap-3 mb-10">
           <span className="text-sm font-medium tracking-widest uppercase text-accent">Insights</span>
           <h1 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
