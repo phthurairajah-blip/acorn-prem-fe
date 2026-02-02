@@ -320,7 +320,6 @@ export const Contact = () => {
                   </label>
                   <Input
                     type="tel"
-                    placeholder="+65 9123 4567"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     autoComplete="off"
@@ -417,13 +416,13 @@ export const Contact = () => {
                 Need Immediate Assistance?
               </h3>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button variant="default" size="lg" className="flex-1" asChild>
+                <Button variant="default" size="lg" className="flex-1 py-2 sm:py-3" asChild>
                   <a href="tel:+6565179231">
                     <Phone className="mr-2 h-4 w-4" />
                     Call Now
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="flex-1" asChild>
+                <Button variant="outline" size="lg" className="flex-1 py-2 sm:py-3" asChild>
                   <a
                     href="https://wa.me/6580533322"
                     target="_blank"
