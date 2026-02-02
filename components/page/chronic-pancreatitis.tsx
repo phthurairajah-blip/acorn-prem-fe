@@ -192,9 +192,9 @@ const ChronicPancreatitis = () => {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                    <a href="https://wa.me/6580533322" target="_blank" rel="noopener noreferrer">
+                    <Link href="/#contact">
                       Book a Consultation
-                    </a>
+                    </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg">
                     <Link href="/ercp">Learn About ERCP</Link>
@@ -547,10 +547,10 @@ const ChronicPancreatitis = () => {
                 He provides comprehensive care from diagnosis through long-term management.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild size="lg" variant="secondary" className="text-white">
-                  <a href="https://wa.me/6580533322" target="_blank" rel="noopener noreferrer">
+                <Button asChild size="lg" variant="secondary" className="bg-white hover:bg-white/90">
+                  <Link href="/#contact">
                     Schedule Consultation
-                  </a>
+                  </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
                   <Link href="/ercp">Learn About ERCP</Link>

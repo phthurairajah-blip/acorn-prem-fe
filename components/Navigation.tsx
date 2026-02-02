@@ -140,11 +140,11 @@ export const Navigation = ({
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 overflow-x-hidden transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 overflow-visible transition-all duration-300 ${
         alwaysWhite || isScrolled ? "bg-white shadow-soft" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-2 sm:px-4">
+      <div className="container mx-auto px-2 sm:px-4 overflow-visible">
         <nav className="flex items-center justify-between h-20 min-w-0">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 min-w-0">
@@ -192,7 +192,7 @@ export const Navigation = ({
                   
                   {/* Dropdown Menu */}
                   {openDropdown === link.hasDropdown && (
-                    <div className="absolute top-full left-0 pt-2">
+                    <div className="absolute top-full left-0 pt-2 z-[60]">
                       {link.hasDropdown === "conditions" ? (
                         <div className="bg-white border border-border rounded-lg shadow-lg p-4 z-50 grid grid-cols-3 gap-6 min-w-[520px]">
                           <div>
