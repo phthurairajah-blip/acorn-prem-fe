@@ -17,6 +17,8 @@ declare global {
       container: string | HTMLElement,
       parameters: Record<string, unknown>
     ) => number;
+    getResponse?: () => string;
+    reset?: () => void;
   }
 
   interface Window {
@@ -273,7 +275,7 @@ export const Contact = () => {
           </motion.div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 lg:gap-16">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -296,7 +298,7 @@ export const Contact = () => {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
-                  className="bg-background"
+                  className="bg-background box-border"
                 />
               </div>
               
@@ -311,7 +313,7 @@ export const Contact = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
-                    className="bg-background"
+                    className="bg-background box-border"
                   />
                 </div>
                 <div>
@@ -323,7 +325,7 @@ export const Contact = () => {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     autoComplete="off"
-                    className="bg-background"
+                    className="bg-background box-border"
                   />
                 </div>
               </div>
@@ -337,7 +339,7 @@ export const Contact = () => {
                     type="date"
                     value={formData.preferredDate}
                     onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-                    className="bg-background"
+                    className="bg-background box-border"
                     min={new Date().toISOString().split('T')[0]}
                   />
                 </div>
@@ -348,7 +350,7 @@ export const Contact = () => {
                   <select
                     value={formData.preferredTime}
                     onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 box-border"
                   >
                     <option value="">Select time</option>
                     <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
@@ -363,11 +365,11 @@ export const Contact = () => {
                 <label className="block text-sm font-medium text-foreground mb-1.5">
                   Preferred Location
                 </label>
-                <select
-                  value={formData.preferredLocation}
-                  onChange={(e) => setFormData({ ...formData, preferredLocation: e.target.value })}
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                >
+                  <select
+                    value={formData.preferredLocation}
+                    onChange={(e) => setFormData({ ...formData, preferredLocation: e.target.value })}
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 box-border"
+                  >
                   <option value="">Select location</option>
                   <option value="Mount Elizabeth Hospital (Orchard)">Mount Elizabeth Hospital (Orchard)</option>
                   <option value="Farrer Park Hospital">Farrer Park Hospital</option>
@@ -384,7 +386,7 @@ export const Contact = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={4}
-                  className="bg-background resize-none"
+                  className="bg-background resize-none box-border"
                 />
               </div>
 
@@ -415,14 +417,14 @@ export const Contact = () => {
               <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
                 Need Immediate Assistance?
               </h3>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button variant="default" size="lg" className="flex-1 py-2 sm:py-3" asChild>
+              <div className="flex flex-col sm:flex-row gap-3 w-full min-w-0">
+                <Button variant="default" size="lg" className="w-full sm:w-auto flex-1 min-w-0 py-2 sm:py-3" asChild>
                   <a href="tel:+6565179231">
                     <Phone className="mr-2 h-4 w-4" />
                     Call Now
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="flex-1 py-2 sm:py-3" asChild>
+                <Button variant="outline" size="lg" className="w-full sm:w-auto flex-1 min-w-0 py-2 sm:py-3" asChild>
                   <a
                     href="https://wa.me/6580533322"
                     target="_blank"

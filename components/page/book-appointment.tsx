@@ -5,11 +5,29 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, Clock, MessageCircle, Calendar, CheckCircle, ArrowLeft } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
+
+declare global {
+  interface Grecaptcha {
+    render?: (
+      container: string | HTMLElement,
+      parameters: Record<string, unknown>
+    ) => number;
+    getResponse?: () => string;
+    reset?: () => void;
+  }
+
+  interface Window {
+    onRecaptchaSuccess?: (token: string) => void;
+    onRecaptchaExpired?: () => void;
+    onRecaptchaError?: () => void;
+    grecaptcha?: Grecaptcha;
+  }
+}
 
 const drPremConsultationImage = "/dr-prem-consultation.png";
 
@@ -74,6 +92,66 @@ export const BookAppointmentComponent = () => {
   });
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState("");
+  const recaptchaRef = useRef<HTMLDivElement | null>(null);
+  const recaptchaWidgetId = useRef<number | null>(null);
+
+  useEffect(() => {
+    window.onRecaptchaSuccess = (token: string) => {
+      setRecaptchaToken(token);
+    };
+    window.onRecaptchaExpired = () => {
+      setRecaptchaToken("");
+    };
+    window.onRecaptchaError = () => {
+      setRecaptchaToken("");
+    };
+    return () => {
+      window.onRecaptchaSuccess = undefined;
+      window.onRecaptchaExpired = undefined;
+      window.onRecaptchaError = undefined;
+    };
+  }, []);
+
+  const renderRecaptcha = () => {
+    if (!RECAPTCHA_SITE_KEY) return;
+    if (!recaptchaRef.current) return;
+    if (!window.grecaptcha?.render) return;
+    if (recaptchaWidgetId.current !== null) return;
+    recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
+      sitekey: RECAPTCHA_SITE_KEY,
+      callback: "onRecaptchaSuccess",
+      "expired-callback": "onRecaptchaExpired",
+      "error-callback": "onRecaptchaError",
+    });
+  };
+
+  useEffect(() => {
+    if (!RECAPTCHA_SITE_KEY) return;
+    let attempts = 0;
+    const interval = setInterval(() => {
+      if (recaptchaWidgetId.current !== null) {
+        clearInterval(interval);
+        return;
+      }
+      if (window.grecaptcha?.render && recaptchaRef.current) {
+        renderRecaptcha();
+        clearInterval(interval);
+        return;
+      }
+      attempts += 1;
+      if (attempts > 20) {
+        clearInterval(interval);
+      }
+    }, 250);
+    return () => clearInterval(interval);
+  }, [RECAPTCHA_SITE_KEY]);
+
+  const isFormValid =
+    !!RECAPTCHA_SITE_KEY &&
+    formData.name.trim().length > 0 &&
+    formData.email.trim().length > 0 &&
+    recaptchaToken.length > 0;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -85,7 +163,7 @@ export const BookAppointmentComponent = () => {
       });
       return;
     }
-    const token = window.grecaptcha?.getResponse() || "";
+    const token = recaptchaToken || window.grecaptcha?.getResponse?.() || "";
     if (!token) {
       toast({
         title: "Recaptcha required",
@@ -130,7 +208,8 @@ export const BookAppointmentComponent = () => {
         preferredLocation: "",
         message: "",
       });
-      window.grecaptcha?.reset();
+      setRecaptchaToken("");
+      window.grecaptcha?.reset?.();
     } catch (error) {
       console.error("Error sending booking request:", error);
       toast({
@@ -205,7 +284,7 @@ export const BookAppointmentComponent = () => {
         {/* Booking Form Section */}
         <section className="py-14 lg:py-20">
           <div className="container mx-auto px-2 sm:px-4">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+            <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 lg:gap-16">
               {/* Booking Form */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -232,7 +311,7 @@ export const BookAppointmentComponent = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
-                      className="bg-background"
+                      className="bg-background box-border"
                     />
                   </div>
                   
@@ -247,7 +326,7 @@ export const BookAppointmentComponent = () => {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         required
-                        className="bg-background"
+                        className="bg-background box-border"
                       />
                     </div>
                     <div>
@@ -259,7 +338,7 @@ export const BookAppointmentComponent = () => {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         autoComplete="off"
-                        className="bg-background"
+                        className="bg-background box-border"
                       />
                     </div>
                   </div>
@@ -273,7 +352,7 @@ export const BookAppointmentComponent = () => {
                         type="date"
                         value={formData.preferredDate}
                         onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-                        className="bg-background"
+                        className="bg-background box-border"
                         min={new Date().toISOString().split('T')[0]}
                       />
                     </div>
@@ -284,7 +363,7 @@ export const BookAppointmentComponent = () => {
                       <select
                         value={formData.preferredTime}
                         onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 box-border"
                       >
                         <option value="">Select time</option>
                         <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
@@ -299,11 +378,11 @@ export const BookAppointmentComponent = () => {
                     <label className="block text-sm font-medium text-foreground mb-1.5">
                       Preferred Location
                     </label>
-                    <select
-                      value={formData.preferredLocation}
-                      onChange={(e) => setFormData({ ...formData, preferredLocation: e.target.value })}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                    >
+                      <select
+                        value={formData.preferredLocation}
+                        onChange={(e) => setFormData({ ...formData, preferredLocation: e.target.value })}
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 box-border"
+                      >
                       <option value="">Select location</option>
                       <option value="Mount Elizabeth Hospital (Orchard)">Mount Elizabeth Hospital (Orchard)</option>
                       <option value="Farrer Park Hospital">Farrer Park Hospital</option>
@@ -320,15 +399,15 @@ export const BookAppointmentComponent = () => {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       rows={4}
-                      className="bg-background resize-none"
+                      className="bg-background resize-none box-border"
                     />
                   </div>
 
                   <div className="flex justify-center">
-                    <div className="g-recaptcha" data-sitekey={RECAPTCHA_SITE_KEY} />
+                    <div ref={recaptchaRef} />
                   </div>
 
-                  <Button type="submit" variant="default" size="lg" className="w-full text-white" disabled={isSubmitting}>
+                  <Button type="submit" variant="default" size="lg" className="w-full text-white" disabled={isSubmitting || !isFormValid}>
                     {isSubmitting ? "Submitting..." : "Request Appointment"}
                   </Button>
 
@@ -351,14 +430,14 @@ export const BookAppointmentComponent = () => {
                   <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
                     Need Immediate Assistance?
                   </h3>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Button variant="default" size="lg" className="flex-1 py-2 sm:py-3" asChild>
+                  <div className="flex flex-col sm:flex-row gap-3 w-full min-w-0">
+                    <Button variant="default" size="lg" className="w-full sm:w-auto flex-1 min-w-0 py-2 sm:py-3" asChild>
                       <a href="tel:+6565179231">
                         <Phone className="mr-2 h-4 w-4" />
                         Call Now
                       </a>
                     </Button>
-                    <Button variant="outline" size="lg" className="flex-1 py-2 sm:py-3" asChild>
+                    <Button variant="outline" size="lg" className="w-full sm:w-auto flex-1 min-w-0 py-2 sm:py-3" asChild>
                       <a
                         href="https://wa.me/6580533322"
                         target="_blank"
@@ -431,7 +510,11 @@ export const BookAppointmentComponent = () => {
         </section>
       </main>
       {RECAPTCHA_SITE_KEY ? (
-        <Script src="https://www.google.com/recaptcha/api.js" async defer />
+        <Script
+          src="https://www.google.com/recaptcha/api.js?render=explicit"
+          strategy="afterInteractive"
+          onLoad={renderRecaptcha}
+        />
       ) : null}
     </>
   )
