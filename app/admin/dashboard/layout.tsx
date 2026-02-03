@@ -172,7 +172,7 @@ const AdminDashboardLayout = ({ children }: { children: ReactNode }) => {
                       Admin
                     </p>
                     <p className="text-xs leading-tight text-muted-foreground">
-                      {adminEmail || "admin@acorn.com"}
+                      {adminEmail || "enquiried@drpremgastro.sg"}
                     </p>
                   </div>
                   <ChevronDown className="h-4 w-4 text-slate-500" />

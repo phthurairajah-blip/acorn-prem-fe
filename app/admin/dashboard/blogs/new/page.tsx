@@ -10,6 +10,12 @@ import RichTextEditor from "@/app/admin/dashboard/blogs/_components/RichTextEdit
 import { getAdminAuthHeaders } from "@/lib/auth";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+const formatApiError = (data: { status?: number; message?: string; detail?: string } | null) => {
+  if (!data) return "Unable to save post.";
+  const message = data.message || data.detail;
+  if (data.status && message) return `${data.status}: ${message}`;
+  return message || "Unable to save post.";
+};
 
 const NewBlogPage = () => {
   const [title, setTitle] = useState("");
@@ -71,17 +77,17 @@ const NewBlogPage = () => {
       if (featureImage.type === "file" && featureImage.file) {
         formData.append("image_file", featureImage.file);
       }
-
+      
+      const headers = new Headers(getAdminAuthHeaders());
+      headers.delete("Content-Type");
       const res = await fetch(`${API_URL}/blogs`, {
         method: "POST",
-        headers: new Headers({
-          ...(getAdminAuthHeaders() as Record<string, string>),
-        }),
+        headers,
         body: formData,
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error(data?.detail || "Unable to save post.");
+        throw new Error(formatApiError(data));
       }
       setSuccess(status === "PUBLISHED" ? "Post published." : "Draft saved.");
       setTitle("");

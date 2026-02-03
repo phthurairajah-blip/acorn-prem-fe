@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { motion } from "framer-motion";
 import { RelatedConditions } from "@/components/RelatedConditions";
@@ -6,13 +6,11 @@ import { ArrowLeft, AlertTriangle, CheckCircle, Calendar, Heart, Users, Clock, S
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-
 const liverTransplantHeroImage = "/liver-transplant-new.jpeg";
 const bloodTestImage = "/blood-test-liver.jpg";
 const cardiacWorkupImage = "/cardiac-workup.jpeg";
 const mriLiverImage = "/mri-liver-scan.jpg";
 const ogdProcedureImage = "/ogd-procedure-hero.jpeg";
-
 
 const relatedConditions = [
   {
@@ -91,12 +89,13 @@ const postTransplantCare = [
   "Regular follow-up with your transplant hepatologist",
 ];
 
-const LiverTransplant = () => {
+const LiverTransplantPage = () => {
   return (
-    <main className="pt-20">
+
+      <main className="pt-20">
         {/* Hero Section */}
         <section className="py-16 lg:py-24 bg-gradient-to-b from-emerald-50 to-background dark:from-emerald-950/30 dark:to-background">
-          <div className="container mx-auto px-2 sm:px-4">
+          <div className="container mx-auto px-4">
             <Link
               href="/#conditions"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
@@ -119,9 +118,10 @@ const LiverTransplant = () => {
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8 text-justify">
                   Liver transplantation is a life-saving treatment for patients with end-stage liver disease 
-                  or liver cancer. Dr. Prem Thurairajah has extensive experience in transplant hepatology, 
-                  having trained and worked at leading liver transplant units in the UK (Queen Elizabeth Hospital 
-                  Birmingham and St. James&apos;s University Hospital Leeds) and the USA (University of Kentucky).
+                  or liver cancer. Dr. Prem Thurairajah is a transplant hepatologist with over 25 years of 
+                  international clinical experience, including training at internationally renowned liver 
+                  transplant centres in the UK (Queen Elizabeth Hospital Birmingham and St. James&apos;s University 
+                  Hospital Leeds) and the USA (University of Kentucky).
                 </p>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
@@ -153,7 +153,7 @@ const LiverTransplant = () => {
 
         {/* Statistics Banner */}
         <section className="py-8 bg-emerald-600 dark:bg-emerald-700">
-          <div className="container mx-auto px-2 sm:px-4">
+          <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto text-center">
               <div>
                 <p className="text-3xl md:text-4xl font-bold text-white">90%+</p>
@@ -169,7 +169,7 @@ const LiverTransplant = () => {
 
         {/* Understanding Liver Transplant */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-2 sm:px-4">
+          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -203,7 +203,7 @@ const LiverTransplant = () => {
 
         {/* Indications for Transplant */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-2 sm:px-4">
+          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -242,7 +242,7 @@ const LiverTransplant = () => {
 
         {/* Transplant Evaluation Process */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-2 sm:px-4">
+          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -291,7 +291,7 @@ const LiverTransplant = () => {
 
         {/* Types of Liver Transplant */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-2 sm:px-4">
+          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -345,7 +345,7 @@ const LiverTransplant = () => {
 
         {/* Pre-Transplant Assessment */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-2 sm:px-4">
+          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -429,7 +429,7 @@ const LiverTransplant = () => {
 
         {/* Post-Transplant Care */}
         <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-2 sm:px-4">
+          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -472,7 +472,7 @@ const LiverTransplant = () => {
 
         {/* Dr. Prem's Experience */}
         <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-2 sm:px-4">
+          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -486,8 +486,8 @@ const LiverTransplant = () => {
               
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-loose">
                 <p>
-                  Dr. Prem Thurairajah is one of Singapore&apos;s most experienced transplant hepatologists, with training 
-                  and clinical experience at internationally renowned liver transplant centres:
+                  Dr. Prem Thurairajah is a transplant hepatologist with over 25 years of international clinical 
+                  experience, including training at internationally renowned liver transplant centres:
                 </p>
                 <ul className="space-y-2 mt-4">
                   <li><strong>National University Centre for Organ Transplantation (NUCOT), Singapore</strong> – Senior Transplant Hepatologist</li>
@@ -507,7 +507,7 @@ const LiverTransplant = () => {
 
         {/* CTA Section */}
         <section className="py-16 lg:py-20 bg-primary/5">
-          <div className="container mx-auto px-2 sm:px-4">
+          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -542,7 +542,7 @@ const LiverTransplant = () => {
 
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
-          <div className="container mx-auto px-2 sm:px-4">
+          <div className="container mx-auto px-4">
             <p className="text-sm text-muted-foreground text-center max-w-3xl mx-auto">
               <strong>Medical Disclaimer:</strong> The information provided on this page is for educational purposes only 
               and is not intended as a substitute for professional medical advice, diagnosis, or treatment. Liver transplant 
@@ -554,7 +554,8 @@ const LiverTransplant = () => {
         {/* Related Conditions */}
         <RelatedConditions conditions={relatedConditions} />
       </main>
-  )
-}
 
-export default LiverTransplant
+  );
+};
+
+export default LiverTransplantPage;

@@ -263,7 +263,7 @@ export const Navigation = ({
               <Phone className="h-5 w-5" />
             </a>
             <a
-              href="mailto:acorngastroorchard@gmail.com"
+              href="mailto:enquiried@drpremgastro.sg"
               className={`transition-colors ${
                 alwaysWhite || isScrolled
                   ? "text-muted-foreground hover:text-primary"

@@ -10,6 +10,12 @@ import FeatureImagePicker, {
 import RichTextEditor from "@/app/admin/dashboard/blogs/_components/RichTextEditor";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+const formatApiError = (data: { status?: number; message?: string; detail?: string } | null) => {
+  if (!data) return "Unable to update post.";
+  const message = data.message || data.detail;
+  if (data.status && message) return `${data.status}: ${message}`;
+  return message || "Unable to update post.";
+};
 
 const EditBlogPage = () => {
   const params = useParams<{ id: string }>();
@@ -122,7 +128,7 @@ const EditBlogPage = () => {
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error(data?.detail || "Unable to update post.");
+        throw new Error(formatApiError(data));
       }
       setSuccess("Post updated.");
       if (nextStatus) setStatus(nextStatus);

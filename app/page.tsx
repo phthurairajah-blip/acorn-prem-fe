@@ -51,7 +51,7 @@ const Index = () => {
               addressCountry: "SG",
             },
             telephone: "+65-1234-5678",
-            email: "contact@drprem.sg",
+            email: "enquiried@drpremgastro.sg",
             openingHours: ["Mo-Fr 09:00-17:00", "Sa 09:00-13:00"],
           }),
         }}

@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 // import { supabase } from "@/integrations/supabase/client";
 import Image from "next/image";
 import Script from "next/script";
+import AppointmentSuccessModal from "@/components/AppointmentSuccessModal";
 
 declare global {
   interface Grecaptcha {
@@ -91,6 +92,7 @@ export const Contact = () => {
   });
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccessOpen, setIsSuccessOpen] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState("");
   const recaptchaRef = useRef<HTMLDivElement | null>(null);
   const recaptchaWidgetId = useRef<number | null>(null);
@@ -194,10 +196,7 @@ export const Contact = () => {
         throw new Error(data?.detail || "Failed to submit booking request.");
       }
 
-      toast({
-        title: "Booking Request Received",
-        description: "Thank you! We will contact you within 24 hours to confirm your appointment.",
-      });
+      setIsSuccessOpen(true);
       setFormData({
         name: "",
         email: "",
@@ -223,6 +222,7 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="py-20 lg:py-28 section-gradient">
+      <AppointmentSuccessModal open={isSuccessOpen} onOpenChange={setIsSuccessOpen} />
       <div className="container mx-auto px-2 sm:px-4">
         {/* Hero Header with Image */}
         <div className="grid lg:grid-cols-2 gap-10 items-center mb-16">

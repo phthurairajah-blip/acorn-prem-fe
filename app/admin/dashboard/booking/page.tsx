@@ -24,6 +24,7 @@ type Booking = {
 };
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+const PAGE_SIZE = 12;
 
 const BookingPage = () => {
   const [bookings, setBookings] = useState<Booking[]>([]);
@@ -31,17 +32,20 @@ const BookingPage = () => {
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [page, setPage] = useState(0);
+  const [hasNext, setHasNext] = useState(false);
 
   const selectedBooking = useMemo(
     () => bookings.find((booking) => booking.id === deleteId),
     [bookings, deleteId]
   );
 
-  const loadBookings = async () => {
+  const loadBookings = async (pageIndex: number) => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${API_URL}/bookings`, {
+      const skip = pageIndex * PAGE_SIZE;
+      const res = await fetch(`${API_URL}/bookings?skip=${skip}&limit=${PAGE_SIZE}`, {
         headers: new Headers({
           ...getAdminAuthHeaders(),
         }),
@@ -67,6 +71,8 @@ const BookingPage = () => {
           time: item.preferred_time || undefined,
         }))
       );
+      setHasNext(data.length === PAGE_SIZE);
+      setPage(pageIndex);
     } catch {
       setError("Unable to load bookings.");
     } finally {
@@ -87,7 +93,7 @@ const BookingPage = () => {
         setError(data?.detail || "Unable to delete booking.");
         return;
       }
-      setBookings((prev) => prev.filter((booking) => booking.id !== id));
+      loadBookings(page);
     } catch {
       setError("Unable to delete booking.");
     }
@@ -100,7 +106,7 @@ const BookingPage = () => {
   };
 
   useEffect(() => {
-    loadBookings();
+    loadBookings(0);
   }, []);
 
   useEffect(() => {
@@ -190,6 +196,26 @@ const BookingPage = () => {
           ))}
         </div>
       </section>
+
+      <div className="flex items-center justify-between">
+        <button
+          type="button"
+          onClick={() => loadBookings(Math.max(0, page - 1))}
+          disabled={page === 0 || loading}
+          className="rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-70"
+        >
+          Prev
+        </button>
+        <span className="text-sm text-muted-foreground">Page {page + 1}</span>
+        <button
+          type="button"
+          onClick={() => loadBookings(page + 1)}
+          disabled={!hasNext || loading}
+          className="rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-70"
+        >
+          Next
+        </button>
+      </div>
 
       <AlertDialog open={Boolean(deleteId)} onOpenChange={(open) => !open && setDeleteId(null)}>
         <AlertDialogContent>

@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
+import AppointmentSuccessModal from "@/components/AppointmentSuccessModal";
 
 declare global {
   interface Grecaptcha {
@@ -92,6 +93,7 @@ export const BookAppointmentComponent = () => {
   });
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccessOpen, setIsSuccessOpen] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState("");
   const recaptchaRef = useRef<HTMLDivElement | null>(null);
   const recaptchaWidgetId = useRef<number | null>(null);
@@ -195,10 +197,7 @@ export const BookAppointmentComponent = () => {
         throw new Error(data?.detail || "Failed to submit booking request.");
       }
 
-      toast({
-        title: "Booking Request Received",
-        description: "Thank you! We will contact you within 24 hours to confirm your appointment.",
-      });
+      setIsSuccessOpen(true);
       setFormData({
         name: "",
         email: "",
@@ -224,6 +223,7 @@ export const BookAppointmentComponent = () => {
 
   return (
     <>
+      <AppointmentSuccessModal open={isSuccessOpen} onOpenChange={setIsSuccessOpen} />
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background">

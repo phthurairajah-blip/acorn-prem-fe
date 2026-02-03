@@ -57,7 +57,7 @@ export const BlogsListClient = () => {
     return res.json();
   };
 
-  const mapBlogs = (data: Array<any>) =>
+  const mapBlogs = (data: Array<any>, map: Map<string, string> = categoryMap) =>
     data.map((blog) => {
       const slug = `${slugify(blog.title)}--${blog.id}`;
       const image = blog.image_url
@@ -70,7 +70,7 @@ export const BlogsListClient = () => {
         id: blog.id,
         slug,
         title: blog.title,
-        category: categoryMap.get(blog.category_id) || "—",
+        category: map.get(blog.category_id) || "—",
         author: blog.posted_by || "Dr. Prem Thurairajah",
         postedAt: formatDate(blog.published_at || blog.created_at),
         minutesToRead: readTimeFromHtml(blog.content_html || ""),
@@ -86,9 +86,10 @@ export const BlogsListClient = () => {
       setError(null);
       try {
         const categoriesRes = await fetchCategories();
+        const nextCategoryMap = new Map(categoriesRes.map((c) => [c.id, c.name]));
         setCategories(categoriesRes);
         const data = (await fetchBlogs(0)) as Array<any>;
-        setBlogs(mapBlogs(data));
+        setBlogs(mapBlogs(data, nextCategoryMap));
         setHasMore(data.length === PAGE_SIZE);
         setPage(0);
       } catch (err) {
