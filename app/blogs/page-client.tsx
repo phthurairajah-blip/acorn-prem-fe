@@ -75,7 +75,6 @@ export const BlogsListClient = () => {
         postedAt: formatDate(blog.published_at || blog.created_at),
         minutesToRead: readTimeFromHtml(blog.content_html || ""),
         image,
-        excerptHtml: blog.excerpt_html || "",
         contentHtml: blog.content_html || "",
       } satisfies BlogPost;
     });

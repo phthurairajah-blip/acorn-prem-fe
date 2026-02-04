@@ -44,7 +44,7 @@ export const BlogCard = ({ blog }: { blog: BlogPost }) => {
           </Link>
         </h3>
         <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-          {truncateChars(stripHtml(blog.excerptHtml || blog.contentHtml))}
+          {truncateChars(stripHtml(blog.contentHtml))}
         </p>
         <div className="mt-4">
           <Link

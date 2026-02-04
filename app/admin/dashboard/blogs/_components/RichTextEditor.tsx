@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Bold, Heading2, Italic, Link2, List, ListOrdered } from "lucide-react";
+import { Bold, Italic } from "lucide-react";
 
 type RichTextEditorProps = {
   initialValue?: string;
@@ -10,11 +10,8 @@ type RichTextEditorProps = {
 };
 
 const TOOLBAR = [
-  { label: "Heading", command: "formatBlock", value: "h2", icon: Heading2 },
   { label: "Bold", command: "bold", icon: Bold },
   { label: "Italic", command: "italic", icon: Italic },
-  { label: "Bullets", command: "insertUnorderedList", icon: List },
-  { label: "Numbered", command: "insertOrderedList", icon: ListOrdered },
 ];
 
 const RichTextEditor = ({ initialValue = "", placeholder, onChange }: RichTextEditorProps) => {
@@ -44,12 +41,6 @@ const RichTextEditor = ({ initialValue = "", placeholder, onChange }: RichTextEd
     [handleInput]
   );
 
-  const handleLink = useCallback(() => {
-    const url = window.prompt("Enter URL");
-    if (!url) return;
-    handleCommand("createLink", url);
-  }, [handleCommand]);
-
   const isEmpty = useMemo(
     () => value.replace(/<[^>]*>/g, "").trim().length === 0,
     [value]
@@ -64,7 +55,7 @@ const RichTextEditor = ({ initialValue = "", placeholder, onChange }: RichTextEd
             <button
               key={tool.label}
               type="button"
-              onClick={() => handleCommand(tool.command, tool.value)}
+              onClick={() => handleCommand(tool.command)}
               className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-semibold text-slate-600 hover:bg-slate-50"
             >
               <Icon className="h-3.5 w-3.5" />
@@ -72,14 +63,6 @@ const RichTextEditor = ({ initialValue = "", placeholder, onChange }: RichTextEd
             </button>
           );
         })}
-        <button
-          type="button"
-          onClick={handleLink}
-          className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-semibold text-slate-600 hover:bg-slate-50"
-        >
-          <Link2 className="h-3.5 w-3.5" />
-          Link
-        </button>
       </div>
       <div className="relative p-6">
         {isEmpty ? (

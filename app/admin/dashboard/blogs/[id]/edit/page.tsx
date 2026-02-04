@@ -22,7 +22,6 @@ const EditBlogPage = () => {
   const blogId = params?.id;
   const [title, setTitle] = useState("");
   const [categoryId, setCategoryId] = useState("");
-  const [excerpt, setExcerpt] = useState("");
   const [content, setContent] = useState("");
   const [status, setStatus] = useState<"DRAFT" | "PUBLISHED">("DRAFT");
   const [featureImage, setFeatureImage] = useState<FeatureImageValue>({
@@ -68,7 +67,6 @@ const EditBlogPage = () => {
 
         const blog = blogRes as {
           title: string;
-          excerpt_html?: string | null;
           content_html: string;
           status: string;
           category_id: string;
@@ -76,7 +74,6 @@ const EditBlogPage = () => {
         };
 
         setTitle(blog.title || "");
-        setExcerpt(blog.excerpt_html || "");
         setContent(blog.content_html || "");
         setStatus(blog.status === "PUBLISHED" ? "PUBLISHED" : "DRAFT");
         setCategoryId(blog.category_id || (categoriesRes[0]?.id ?? ""));
@@ -98,7 +95,7 @@ const EditBlogPage = () => {
     setSuccess(null);
     try {
       const formData = new FormData();
-      if (!title.trim() || !categoryId || !excerpt.trim() || !content.trim()) {
+      if (!title.trim() || !categoryId || !content.trim()) {
         throw new Error("All fields are required.");
       }
       if (featureImage.type === "none") {
@@ -107,7 +104,6 @@ const EditBlogPage = () => {
       formData.append("title", title);
       formData.append("content_html", content);
       formData.append("category_id", categoryId);
-      formData.append("excerpt_html", excerpt);
       formData.append("status_value", nextStatus ?? status);
 
       if (featureImage.type === "url" && featureImage.url) {
@@ -202,7 +198,7 @@ const EditBlogPage = () => {
           <RichTextEditor
             initialValue={content}
             onChange={setContent}
-            placeholder="Write the body of the blog post here. Use short paragraphs, headings, and bullet lists."
+            placeholder="Write the body of the blog post here. Use short, patient-friendly paragraphs."
           />
         </section>
 
@@ -230,15 +226,6 @@ const EditBlogPage = () => {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-            <h2 className="text-sm font-semibold text-foreground">Excerpt</h2>
-            <textarea
-              rows={4}
-              value={excerpt}
-              onChange={(event) => setExcerpt(event.target.value)}
-              className="mt-3 w-full resize-none rounded-xl border border-slate-200 px-3 py-2 text-sm text-foreground"
-            />
-          </div>
         </aside>
       </div>
     </div>

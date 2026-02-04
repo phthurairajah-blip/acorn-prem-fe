@@ -59,7 +59,6 @@ const getBlog = async (slug: string): Promise<BlogPost | null> => {
     postedAt: formatDate(blog.published_at || blog.created_at),
     minutesToRead: readTimeFromHtml(blog.content_html || ""),
     image,
-    excerptHtml: blog.excerpt_html || "",
     contentHtml: blog.content_html || "",
   } satisfies BlogPost;
 };
@@ -76,7 +75,7 @@ export const generateMetadata = async ({
   }
   return {
     title: `${blog.title} | Dr. Prem Thurairajah`,
-    description: blog.excerptHtml.replace(/<[^>]*>/g, " ").slice(0, 160),
+    description: blog.contentHtml.replace(/<[^>]*>/g, " ").slice(0, 160),
     alternates: {
       canonical: `https://drpremgastro.com/blogs/${blog.slug}`,
     },

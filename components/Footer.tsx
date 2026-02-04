@@ -56,7 +56,7 @@ export const Footer = () => {
                 Sign In
               </a>
               <a
-                href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin"
+                href="https://www.linkedin.com/in/prem-thurairajah-79b9611b0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"

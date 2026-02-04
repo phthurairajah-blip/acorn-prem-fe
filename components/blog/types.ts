@@ -7,6 +7,5 @@ export type BlogPost = {
   postedAt: string;
   minutesToRead: number;
   image: string;
-  excerptHtml: string;
   contentHtml: string;
 };

@@ -20,7 +20,6 @@ const formatApiError = (data: { status?: number; message?: string; detail?: stri
 const NewBlogPage = () => {
   const [title, setTitle] = useState("");
   const [categoryId, setCategoryId] = useState("");
-  const [excerpt, setExcerpt] = useState("");
   const [content, setContent] = useState("");
   const [featureImage, setFeatureImage] = useState<FeatureImageValue>({
     type: "none",
@@ -56,7 +55,7 @@ const NewBlogPage = () => {
     setError(null);
     setSuccess(null);
     try {
-      if (!title.trim() || !categoryId || !excerpt.trim() || !content.trim()) {
+      if (!title.trim() || !categoryId || !content.trim()) {
         throw new Error("All fields are required.");
       }
       if (featureImage.type === "none") {
@@ -67,7 +66,6 @@ const NewBlogPage = () => {
       formData.append("content_html", content);
       formData.append("category_id", categoryId);
       formData.append("status_value", status);
-      formData.append("excerpt_html", excerpt);
       if (featureImage.type === "url" && featureImage.url) {
         const url = featureImage.url.startsWith(API_URL)
           ? featureImage.url.replace(API_URL, "")
@@ -91,7 +89,6 @@ const NewBlogPage = () => {
       }
       setSuccess(status === "PUBLISHED" ? "Post published." : "Draft saved.");
       setTitle("");
-      setExcerpt("");
       setContent("");
       setFeatureImage({ type: "none" });
     } catch (err) {
@@ -157,7 +154,7 @@ const NewBlogPage = () => {
           <RichTextEditor
             initialValue={content}
             onChange={setContent}
-            placeholder="Write the body of the blog post here. Use short paragraphs, headings, and bullet lists."
+            placeholder="Write the body of the blog post here. Use short, patient-friendly paragraphs."
           />
         </section>
 
@@ -185,16 +182,6 @@ const NewBlogPage = () => {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-            <h2 className="text-sm font-semibold text-foreground">Excerpt</h2>
-            <textarea
-              rows={4}
-              placeholder="Short summary for previews and SEO."
-              value={excerpt}
-              onChange={(event) => setExcerpt(event.target.value)}
-              className="mt-3 w-full resize-none rounded-xl border border-slate-200 px-3 py-2 text-sm text-foreground"
-            />
-          </div>
         </aside>
       </div>
     </div>
