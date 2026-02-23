@@ -69,6 +69,11 @@ const locations = [
     address: "1 Farrer Park Station Road, #13-14, Singapore 217562",
     href: "https://maps.google.com/?q=1+Farrer+Park+Station+Road+Singapore+217562",
   },
+  {
+    name: "Thomson Medical Centre",
+    address: "339 Thomson Rd, Singapore 307677",
+    href: "https://maps.google.com/?q=339+Thomson+Rd+Singapore+307677",
+  },
 ];
 
 const benefits = [
@@ -373,6 +378,7 @@ export const Contact = () => {
                   <option value="">Select location</option>
                   <option value="Mount Elizabeth Hospital (Orchard)">Mount Elizabeth Hospital (Orchard)</option>
                   <option value="Farrer Park Hospital">Farrer Park Hospital</option>
+                  <option value="Thomson Medical Centre">Thomson Medical Centre</option>
                   <option value="No preference">No preference</option>
                 </select>
               </div>
