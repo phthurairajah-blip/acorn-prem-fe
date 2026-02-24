@@ -8,6 +8,7 @@ import FeatureImagePicker, {
 } from "@/app/admin/dashboard/blogs/_components/FeatureImagePicker";
 import RichTextEditor from "@/app/admin/dashboard/blogs/_components/RichTextEditor";
 import { getAdminAuthHeaders } from "@/lib/auth";
+import { blogFormSchema, getBlogFormErrors, type BlogFormErrors } from "@/lib/blog-validation";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 const formatApiError = (data: { status?: number; message?: string; detail?: string } | null) => {
@@ -28,6 +29,7 @@ const NewBlogPage = () => {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  const [formErrors, setFormErrors] = useState<BlogFormErrors>({});
 
   useEffect(() => {
     const loadCategories = async () => {
@@ -54,12 +56,18 @@ const NewBlogPage = () => {
     setSaving(true);
     setError(null);
     setSuccess(null);
+    setFormErrors({});
     try {
-      if (!title.trim() || !categoryId || !content.trim()) {
-        throw new Error("All fields are required.");
-      }
-      if (featureImage.type === "none") {
-        throw new Error("Feature image is required.");
+      const validation = blogFormSchema.safeParse({
+        title,
+        categoryId,
+        content,
+        featureImage,
+      });
+      if (!validation.success) {
+        setFormErrors(getBlogFormErrors(validation.error));
+        setError("Please fix the highlighted errors.");
+        return;
       }
       const formData = new FormData();
       formData.append("title", title);
@@ -91,6 +99,7 @@ const NewBlogPage = () => {
       setTitle("");
       setContent("");
       setFeatureImage({ type: "none" });
+      setFormErrors({});
     } catch (err) {
       setError((err as Error)?.message || "Unable to save post.");
     } finally {
@@ -111,19 +120,10 @@ const NewBlogPage = () => {
             </Link>
             <div>
               <p className="text-sm text-muted-foreground">Create blog post</p>
-              <h1 className="text-2xl font-semibold text-foreground">New blog draft</h1>
+              <h1 className="text-2xl font-semibold text-foreground">New Blog</h1>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => submitPost("DRAFT")}
-              className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors"
-              disabled={saving}
-            >
-              <Save className="h-4 w-4" />
-              Save draft
-            </button>
             <button
               type="button"
               onClick={() => submitPost("PUBLISHED")}
@@ -145,17 +145,33 @@ const NewBlogPage = () => {
             <input
               type="text"
               value={title}
-              onChange={(event) => setTitle(event.target.value)}
+              onChange={(event) => {
+                setTitle(event.target.value);
+                if (formErrors.title) {
+                  setFormErrors((prev) => ({ ...prev, title: undefined }));
+                }
+              }}
               placeholder="Enter a clear, patient-friendly headline"
               className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-base font-medium text-foreground focus:border-emerald-500 focus:outline-none"
             />
+            {formErrors.title ? (
+              <p className="mt-2 text-xs text-red-600">{formErrors.title}</p>
+            ) : null}
           </div>
 
           <RichTextEditor
             initialValue={content}
-            onChange={setContent}
+            onChange={(value) => {
+              setContent(value);
+              if (formErrors.content) {
+                setFormErrors((prev) => ({ ...prev, content: undefined }));
+              }
+            }}
             placeholder="Write the body of the blog post here. Use short, patient-friendly paragraphs."
           />
+          {formErrors.content ? (
+            <p className="text-xs text-red-600">{formErrors.content}</p>
+          ) : null}
         </section>
 
         <aside className="space-y-6">
@@ -168,7 +184,12 @@ const NewBlogPage = () => {
                 </label>
                 <select
                   value={categoryId}
-                  onChange={(event) => setCategoryId(event.target.value)}
+                  onChange={(event) => {
+                    setCategoryId(event.target.value);
+                    if (formErrors.categoryId) {
+                      setFormErrors((prev) => ({ ...prev, categoryId: undefined }));
+                    }
+                  }}
                   className="mt-2 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm"
                 >
                   {categories.map((category) => (
@@ -177,8 +198,24 @@ const NewBlogPage = () => {
                     </option>
                   ))}
                 </select>
+                {formErrors.categoryId ? (
+                  <p className="mt-2 text-xs text-red-600">{formErrors.categoryId}</p>
+                ) : null}
               </div>
-              <FeatureImagePicker value={featureImage} onChange={setFeatureImage} />
+              <div>
+                <FeatureImagePicker
+                  value={featureImage}
+                  onChange={(value) => {
+                    setFeatureImage(value);
+                    if (formErrors.featureImage) {
+                      setFormErrors((prev) => ({ ...prev, featureImage: undefined }));
+                    }
+                  }}
+                />
+                {formErrors.featureImage ? (
+                  <p className="mt-2 text-xs text-red-600">{formErrors.featureImage}</p>
+                ) : null}
+              </div>
             </div>
           </div>
 

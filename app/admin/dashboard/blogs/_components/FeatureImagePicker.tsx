@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Image as ImageIcon, Link2, UploadCloud } from "lucide-react";
+import { IMAGE_HELPER_TEXT } from "@/lib/blog-validation";
 
 export type FeatureImageValue = {
   type: "url" | "file" | "none";
@@ -14,8 +15,9 @@ type FeatureImagePickerProps = {
   onChange?: (value: FeatureImageValue) => void;
 };
 
-const MAX_IMAGE_BYTES = 3 * 1024 * 1024;
-const MAX_IMAGE_LABEL = "Max 3 MB";
+const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
+const ALLOWED_MIME_TYPES = ["image/png", "image/jpeg"];
+const ACCEPTED_FILE_TYPES = "image/png,image/jpeg";
 
 const FeatureImagePicker = ({ value, onChange }: FeatureImagePickerProps) => {
   const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
@@ -52,8 +54,14 @@ const FeatureImagePicker = ({ value, onChange }: FeatureImagePickerProps) => {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
+    if (!ALLOWED_MIME_TYPES.includes(file.type)) {
+      setError("Only PNG, JPG, or JPEG files are allowed.");
+      if (fileInputRef.current) fileInputRef.current.value = "";
+      onChange?.({ type: "none" });
+      return;
+    }
     if (file.size > MAX_IMAGE_BYTES) {
-      setError(`Image too large. ${MAX_IMAGE_LABEL}.`);
+      setError("Image must be 5 MB or smaller.");
       if (fileInputRef.current) fileInputRef.current.value = "";
       onChange?.({ type: "none" });
       return;
@@ -90,13 +98,13 @@ const FeatureImagePicker = ({ value, onChange }: FeatureImagePickerProps) => {
             className="w-full bg-transparent text-sm outline-none"
           />
         </div>
-        <p className="mt-2 text-xs text-slate-400">{MAX_IMAGE_LABEL}</p>
+        <p className="mt-2 text-xs text-slate-400">{IMAGE_HELPER_TEXT}</p>
       </div>
       <div className="flex items-center gap-3">
         <input
           ref={fileInputRef}
           type="file"
-          accept="image/*"
+          accept={ACCEPTED_FILE_TYPES}
           onChange={handleFileChange}
           className="hidden"
         />

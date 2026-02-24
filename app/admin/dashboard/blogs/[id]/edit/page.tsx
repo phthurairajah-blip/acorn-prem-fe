@@ -8,6 +8,7 @@ import FeatureImagePicker, {
   type FeatureImageValue,
 } from "@/app/admin/dashboard/blogs/_components/FeatureImagePicker";
 import RichTextEditor from "@/app/admin/dashboard/blogs/_components/RichTextEditor";
+import { blogFormSchema, getBlogFormErrors, type BlogFormErrors } from "@/lib/blog-validation";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 const formatApiError = (data: { status?: number; message?: string; detail?: string } | null) => {
@@ -32,6 +33,7 @@ const EditBlogPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  const [formErrors, setFormErrors] = useState<BlogFormErrors>({});
 
   const getAuthHeader = () => {
     const token = localStorage.getItem("admin_token");
@@ -93,13 +95,19 @@ const EditBlogPage = () => {
     setSaving(true);
     setError(null);
     setSuccess(null);
+    setFormErrors({});
     try {
       const formData = new FormData();
-      if (!title.trim() || !categoryId || !content.trim()) {
-        throw new Error("All fields are required.");
-      }
-      if (featureImage.type === "none") {
-        throw new Error("Feature image is required.");
+      const validation = blogFormSchema.safeParse({
+        title,
+        categoryId,
+        content,
+        featureImage,
+      });
+      if (!validation.success) {
+        setFormErrors(getBlogFormErrors(validation.error));
+        setError("Please fix the highlighted errors.");
+        return;
       }
       formData.append("title", title);
       formData.append("content_html", content);
@@ -128,6 +136,7 @@ const EditBlogPage = () => {
       }
       setSuccess("Post updated.");
       if (nextStatus) setStatus(nextStatus);
+      setFormErrors({});
     } catch (err) {
       setError((err as Error)?.message || "Unable to update post.");
     } finally {
@@ -190,16 +199,32 @@ const EditBlogPage = () => {
             <input
               type="text"
               value={title}
-              onChange={(event) => setTitle(event.target.value)}
+              onChange={(event) => {
+                setTitle(event.target.value);
+                if (formErrors.title) {
+                  setFormErrors((prev) => ({ ...prev, title: undefined }));
+                }
+              }}
               className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-base font-medium text-foreground focus:border-emerald-500 focus:outline-none"
             />
+            {formErrors.title ? (
+              <p className="mt-2 text-xs text-red-600">{formErrors.title}</p>
+            ) : null}
           </div>
 
           <RichTextEditor
             initialValue={content}
-            onChange={setContent}
+            onChange={(value) => {
+              setContent(value);
+              if (formErrors.content) {
+                setFormErrors((prev) => ({ ...prev, content: undefined }));
+              }
+            }}
             placeholder="Write the body of the blog post here. Use short, patient-friendly paragraphs."
           />
+          {formErrors.content ? (
+            <p className="text-xs text-red-600">{formErrors.content}</p>
+          ) : null}
         </section>
 
         <aside className="space-y-6">
@@ -212,7 +237,12 @@ const EditBlogPage = () => {
                 </label>
                 <select
                   value={categoryId}
-                  onChange={(event) => setCategoryId(event.target.value)}
+                  onChange={(event) => {
+                    setCategoryId(event.target.value);
+                    if (formErrors.categoryId) {
+                      setFormErrors((prev) => ({ ...prev, categoryId: undefined }));
+                    }
+                  }}
                   className="mt-2 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm"
                 >
                   {categories.map((category) => (
@@ -221,8 +251,24 @@ const EditBlogPage = () => {
                     </option>
                   ))}
                 </select>
+                {formErrors.categoryId ? (
+                  <p className="mt-2 text-xs text-red-600">{formErrors.categoryId}</p>
+                ) : null}
               </div>
-              <FeatureImagePicker value={featureImage} onChange={setFeatureImage} />
+              <div>
+                <FeatureImagePicker
+                  value={featureImage}
+                  onChange={(value) => {
+                    setFeatureImage(value);
+                    if (formErrors.featureImage) {
+                      setFormErrors((prev) => ({ ...prev, featureImage: undefined }));
+                    }
+                  }}
+                />
+                {formErrors.featureImage ? (
+                  <p className="mt-2 text-xs text-red-600">{formErrors.featureImage}</p>
+                ) : null}
+              </div>
             </div>
           </div>
 
