@@ -28,6 +28,23 @@ const formatDate = (value?: string | null) => {
   return date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
 };
 
+const SkeletonCard = () => (
+  <article className="rounded-2xl border border-border/40 bg-card overflow-hidden shadow-soft">
+    <div className="h-52 w-full bg-slate-100 animate-pulse" />
+    <div className="p-5 space-y-3">
+      <div className="flex items-center justify-between">
+        <div className="h-3 w-20 rounded bg-slate-100 animate-pulse" />
+        <div className="h-3 w-16 rounded bg-slate-100 animate-pulse" />
+      </div>
+      <div className="h-3 w-28 rounded bg-slate-100 animate-pulse" />
+      <div className="h-5 w-3/4 rounded bg-slate-100 animate-pulse" />
+      <div className="h-4 w-full rounded bg-slate-100 animate-pulse" />
+      <div className="h-4 w-5/6 rounded bg-slate-100 animate-pulse" />
+      <div className="h-4 w-24 rounded bg-slate-100 animate-pulse" />
+    </div>
+  </article>
+);
+
 export const BlogsListClient = () => {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [page, setPage] = useState(0);
@@ -118,9 +135,24 @@ export const BlogsListClient = () => {
 
   if (loading) {
     return (
-      <div className="container mx-auto px-2 sm:px-4 py-16 text-sm text-muted-foreground">
-        Loading blogs...
-      </div>
+      <section className="py-16 lg:py-20 my-10">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="flex flex-col items-start gap-3 mb-10">
+            <span className="text-sm font-medium tracking-widest uppercase text-accent">Insights</span>
+            <h1 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
+              Clinical Insights & Patient Resources
+            </h1>
+            <p className="text-base text-muted-foreground max-w-2xl">
+              Short, practical guides on digestive and liver health—written for patients and families.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <SkeletonCard key={`blog-skeleton-${index}`} />
+            ))}
+          </div>
+        </div>
+      </section>
     );
   }
 
