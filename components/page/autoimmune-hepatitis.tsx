@@ -16,12 +16,12 @@ import Image from "next/image";
 const relatedConditions = [
   {
     title: "Liver Cirrhosis",
-    description: "Advanced care for chronic liver disease and complications.",
+    description: "Comprehensive care for chronic liver disease and complications.",
     link: "/liver-cirrhosis",
   },
   {
     title: "Jaundice",
-    description: "Expert evaluation and management of liver-related jaundice.",
+    description: "Clinical evaluation and management of liver-related jaundice.",
     link: "/jaundice",
   },
   {
@@ -389,7 +389,7 @@ export const AutoimmuneHepatitis = () => {
               </h2>
               <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
                 If you&apos;re experiencing symptoms or have been diagnosed with autoimmune hepatitis, 
-                Dr. Prem Thurairajah can provide expert evaluation and personalised treatment.
+                Dr. Prem Thurairajah can provide specialised clinical evaluation and personalised treatment.
               </p>
               <Button asChild size="lg" variant="secondary" className="gap-2 text-white">
                 <Link href="/#contact">
