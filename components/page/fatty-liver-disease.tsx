@@ -20,7 +20,7 @@ const mediterraneanDietImage = "/mediterranean-diet.jpeg";
 const relatedConditions = [
   {
     title: "Liver Cirrhosis",
-    description: "Advanced care for chronic liver disease, complications, and transplant assessment.",
+    description: "Comprehensive care for chronic liver disease, complications, and transplant assessment.",
     link: "/liver-cirrhosis",
   },
   {
@@ -30,7 +30,7 @@ const relatedConditions = [
   },
   {
     title: "Jaundice",
-    description: "Expert evaluation and management of liver and biliary causes of jaundice.",
+    description: "Specialized evaluation and management of liver and biliary causes of jaundice.",
     link: "/jaundice",
   },
 ];
@@ -128,8 +128,8 @@ export const FattyLiverDisease = () => {
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8 text-justify">
                   Metabolic dysfunction-associated steatotic liver disease (MASLD) has become the most common liver condition worldwide, 
                   affecting approximately 1 in 3 adults in Singapore. While often asymptomatic in early stages, 
-                  it can progress to serious liver damage. The good news is that with early detection and lifestyle 
-                  changes, fatty liver disease can often be reversed.
+                  it can progress to serious liver damage. Clinical evidence suggests that early-stage MASLD may 
+                  be manageable through lifestyle intervention.
                 </p>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
@@ -308,7 +308,7 @@ export const FattyLiverDisease = () => {
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-loose">
                 <p className="mb-10">
-                  Fatty liver disease is often discovered incidentally on blood tests or imaging. A comprehensive 
+                  Fatty liver disease is often discovered incidentally on blood tests or imaging. A detailed clinical 
                   assessment is important to determine the stage of disease and guide management.
                 </p>
               </div>
@@ -412,7 +412,7 @@ export const FattyLiverDisease = () => {
               </h2>
               <p className="text-base text-muted-foreground mb-10 leading-relaxed">
                 Lifestyle modification is the cornerstone of fatty liver disease treatment. Weight loss of 
-                5-10% of body weight has been shown to significantly improve liver fat, inflammation, and even fibrosis.
+                5-10% of body weight is associated with a reduction in liver fat, inflammation, and even fibrosis.
               </p>
 
               {/* Lifestyle Treatment Images */}
@@ -511,7 +511,7 @@ export const FattyLiverDisease = () => {
               className="text-center max-w-2xl mx-auto"
             >
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
-                Take Control of Your Liver Health
+               Schedule a Clinical Assessment for Liver Health
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-8">
                 If you have risk factors or have been told you have fatty liver, schedule a comprehensive 
