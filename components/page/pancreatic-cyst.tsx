@@ -18,7 +18,7 @@ const relatedConditions = [
   },
   {
     title: "Jaundice",
-    description: "Expert evaluation of bile duct and pancreatic causes.",
+    description: "Specialized evaluation of bile duct and pancreatic causes.",
     link: "/jaundice",
   },
   {
@@ -97,8 +97,8 @@ const PancreaticCyst = () => {
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                   Pancreatic cysts are increasingly detected with modern imaging. While most are benign, 
-                  some carry malignant potential. Expert evaluation and appropriate surveillance are 
-                  essential for safe, evidence-based management.
+                  some carry malignant potential. Specialized evaluation and appropriate surveillance 
+                  are essential for safe, evidence-based management.
                 </p>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
@@ -305,7 +305,7 @@ const PancreaticCyst = () => {
                       EUS with FNA
                     </h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Endoscopic ultrasound provides the highest resolution imaging of pancreatic cysts and allows cyst fluid sampling.
+                      Endoscopic ultrasound provides high-resolution imaging of pancreatic cysts and allows cyst fluid sampling.
                     </p>
                     <ul className="space-y-2 mb-4">
                       {[
@@ -356,7 +356,7 @@ const PancreaticCyst = () => {
                     <ul className="space-y-2">
                       {[
                         "No radiation exposure (safe for repeated imaging)",
-                        "Excellent soft tissue characterisation",
+                        "Clear soft tissue characterisation",
                         "Visualises pancreatic duct communication",
                         "Tracks cyst size changes over time",
                       ].map((item, idx) => (
@@ -414,7 +414,7 @@ const PancreaticCyst = () => {
                 <div className="bg-background rounded-xl p-6 border border-emerald-200 dark:border-emerald-800/30">
                   <h3 className="text-lg font-semibold text-foreground mb-3">Surgical Referral</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    For high-risk cysts, surgical resection offers the best chance of cure. Coordinated 
+                    For high-risk cysts, surgical resection is a primary clinical objective for high-risk cases. Coordinated 
                     referral to experienced pancreatic surgeons when indicated.
                   </p>
                 </div>
@@ -434,7 +434,7 @@ const PancreaticCyst = () => {
               className="max-w-3xl mx-auto text-center"
             >
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
-                Expert Pancreatic Cyst Management
+                Clinical Management of Pancreatic Cysts
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Dr. Prem provides comprehensive evaluation and ongoing surveillance of pancreatic cysts, 
