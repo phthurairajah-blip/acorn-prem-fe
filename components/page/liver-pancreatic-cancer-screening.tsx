@@ -56,7 +56,7 @@ const pancreaticCancerRiskFactors = [
 
 const screeningBenefits = [
   { icon: Shield, title: "Early Detection", desc: "Find cancer at treatable stages" },
-  { icon: Search, title: "Accurate Diagnosis", desc: "Advanced imaging and tumour markers" },
+  { icon: Search, title: "Accurate Diagnosis", desc: "Specialized imaging and clinical tumour markers" },
   { icon: Activity, title: "Better Outcomes", desc: "Early treatment improves survival" },
 ];
 
@@ -86,7 +86,7 @@ const liverScreeningSteps = [
 const pancreaticScreeningSteps: { step: string; desc: string; image: string; link?: string }[] = [
   {
     step: "Endoscopic Ultrasound (EUS)",
-    desc: "The most sensitive test for detecting small pancreatic lesions. A thin tube with an ultrasound probe is passed through the mouth to get close-up images of the pancreas. Recommended annually for high-risk individuals.",
+    desc: "A highly sensitive diagnostic modality for detecting small pancreatic lesions. A thin tube with an ultrasound probe is passed through the mouth to get close-up images of the pancreas. Recommended annually for high-risk individuals.",
     image: eusImage,
     link: "/eus",
   },
@@ -221,7 +221,7 @@ const LiverPancreaticCancer = () => {
                   </h2>
                 </div>
                 <p className="text-muted-foreground mb-6">
-                  Hepatocellular carcinoma is the most common type of primary liver cancer and the 4th most common cancer in Singapore.
+                  Hepatocellular carcinoma is a prevalent type of primary liver cancer and the 4th most common cancer in Singapore.
                 </p>
                 <ul className="space-y-3">
                   {liverCancerRiskFactors.map((factor, index) => (
@@ -306,7 +306,7 @@ const LiverPancreaticCancer = () => {
                   </h2>
                 </div>
                 <p className="text-muted-foreground mb-6">
-                  Pancreatic cancer is one of the most aggressive cancers. Early detection significantly improves treatment options.
+                  Pancreatic cancer often requires timely clinical evaluation and management. Early detection significantly improves treatment options.
                 </p>
                 <ul className="space-y-3">
                   {pancreaticCancerRiskFactors.map((factor, index) => (
@@ -417,7 +417,7 @@ const LiverPancreaticCancer = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-white mb-4">
-                Take Control of Your Health
+                Schedule a Clinical Assessment for Cancer Screening
               </h2>
               <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
                 If you have risk factors for liver or pancreatic cancer, early screening could save your life. 
