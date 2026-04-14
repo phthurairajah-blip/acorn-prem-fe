@@ -55,7 +55,7 @@ const preparationSteps = [
   },
   {
     title: "Bowel Preparation",
-    description: "You will be prescribed a bowel preparation solution to cleanse the colon. Follow instructions carefully for best results.",
+    description: "You will be prescribed a bowel preparation solution to cleanse the colon. Follow instructions carefully for optimal diagnostic results.",
   },
   {
     title: "Medication Review",
@@ -121,7 +121,7 @@ export const Colonoscopy = () => {
                 Colonoscopy
               </h1>
               <p className="text-lg text-muted-foreground leading-loose mb-8">
-                Colonoscopy is the gold standard for examining the large intestine and is essential for 
+                Colonoscopy is the primary clinical modality for examining the large intestine and is essential for 
                 colorectal cancer screening. This minimally invasive procedure allows for direct visualisation, 
                 biopsy collection, and removal of precancerous polyps.
               </p>
@@ -154,13 +154,13 @@ export const Colonoscopy = () => {
                 <p>
                   <strong className="text-foreground">Colonoscopy</strong> uses a flexible instrument 
                   inserted through the rectum to examine the entire large intestine (colon) and the end of 
-                  the small intestine (terminal ileum). It is the gold standard for colorectal cancer screening 
+                  the small intestine (terminal ileum). It is the established diagnostic tool for colorectal cancer screening 
                   and allows for the detection and removal of precancerous polyps, potentially preventing 
                   cancer from developing.
                 </p>
                 <p>
                   The procedure is performed under sedation for comfort and typically takes 20-45 minutes. 
-                  High-definition cameras provide excellent visualisation of the bowel lining, allowing 
+                  High-definition cameras provide clear visualization of the bowel lining, allowing 
                   detection of even small abnormalities.
                 </p>
               </div>
