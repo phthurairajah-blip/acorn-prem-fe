@@ -97,7 +97,7 @@ const faqs = [
   },
   {
     question: "What is the difference between FIT test and colonoscopy?",
-    answer: "The FIT (Faecal Immunochemical Test) is a non-invasive stool test that detects hidden blood, which may indicate polyps or cancer. Colonoscopy is a direct visual examination that can both detect and remove polyps. FIT is a screening tool done annually, while colonoscopy is the gold standard for diagnosis and prevention.",
+    answer: "The FIT (Faecal Immunochemical Test) is a non-invasive stool test that detects hidden blood, which may indicate polyps or cancer. Colonoscopy is a direct visual examination that can both detect and remove polyps. FIT is a screening tool done annually, while colonoscopy is a primary diagnostic method for diagnosis and prevention.",
   },
   {
     question: "Is colorectal cancer screening covered by insurance or Medisave?",
