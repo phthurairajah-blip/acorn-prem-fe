@@ -30,7 +30,7 @@ const relatedConditions = [
   },
   {
     title: "Epigastric Pain",
-    description: "Expert diagnosis and treatment of upper abdominal pain, gastritis and peptic ulcer disease.",
+    description: "Comprehensive diagnosis and treatment of upper abdominal pain, gastritis and peptic ulcer disease.",
     link: "/epigastric-pain",
   },
 ];
@@ -106,7 +106,7 @@ export const GerdHeartBurn = () => {
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                   Gastro-oesophageal reflux disease (GERD) is a common condition that affects quality of life 
-                  and can lead to complications if untreated. Expert management focuses on symptom relief 
+                  and can lead to complications if untreated. Specialized clinical management focuses on symptom relief 
                   and preventing long-term complications.
                 </p>
                 <Button asChild size="lg" className="gap-2">
@@ -390,7 +390,7 @@ export const GerdHeartBurn = () => {
                         "Small capsule attached to the oesophageal wall",
                         "Transmits pH data wirelessly to a recorder",
                         "More comfortable than traditional catheter-based tests",
-                        "Gold standard for quantifying acid reflux episodes",
+                        "Primary clinical modality for quantifying acid reflux episodes",
                       ].map((item, idx) => (
                         <li key={idx} className="flex items-start gap-3 text-sm">
                           <CheckCircle className="h-4 w-4 text-blue-500 shrink-0 mt-0.5" />
