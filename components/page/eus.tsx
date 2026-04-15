@@ -73,9 +73,9 @@ const therapeuticApplications = [
 const advantages = [
   "High-resolution imaging of structures close to the GI tract",
   "Ability to visualise and biopsy lesions not accessible by other methods",
-  "Real-time guidance for precise needle placement",
+  "Real-time guidance for targeted needle placement",
   "No radiation exposure (unlike CT scans)",
-  "Can be combined with ERCP for comprehensive evaluation",
+  "Can be combined with ERCP for thorough clinical evaluation",
   "Minimally invasive alternative to surgical biopsy",
 ];
 
@@ -112,7 +112,7 @@ const Eus = () => {
               className="max-w-3xl"
             >
               <span className="text-emerald-600 dark:text-emerald-400 text-sm font-medium tracking-widest uppercase">
-                Advanced Diagnostic Imaging
+                Specialized Diagnostic Imaging
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
                 Endoscopic Ultrasound
@@ -158,8 +158,8 @@ const Eus = () => {
                 </p>
                 <p>
                   Because the ultrasound probe is inside the body and close to these organs, EUS provides 
-                  much higher resolution images than external ultrasound or CT scans. This makes it 
-                  particularly valuable for detecting small lesions and for accurate cancer staging.
+                  high-resolution images of internal structures. This is utilized for the detection of 
+                  small lesions and for accurate cancer staging.
                 </p>
               </div>
 
@@ -196,7 +196,7 @@ const Eus = () => {
                 Therapeutic Applications
               </h2>
               <p className="text-base text-muted-foreground mb-10 leading-relaxed">
-                Beyond diagnosis, EUS enables a range of minimally invasive therapeutic procedures 
+                Beyond diagnosis, EUS enables a range of targeted therapeutic procedures 
                 guided by real-time ultrasound imaging.
               </p>
 
@@ -379,7 +379,7 @@ const Eus = () => {
               className="text-center max-w-2xl mx-auto"
             >
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-                Advanced EUS Services
+                Specialized EUS Services
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-8">
                 If you have been referred for EUS or have a pancreatic or biliary condition requiring 
