@@ -40,7 +40,7 @@ const procedures = [
   {
     title: "EUS (Endoscopic Ultrasound)",
     description:
-      "Advanced imaging that combines endoscopy and ultrasound for detailed evaluation of the pancreas, bile ducts, gastrointestinal wall, and surrounding structures, including tissue sampling where appropriate.",
+      "Specialized imaging that combines endoscopy and ultrasound for detailed evaluation of the pancreas, bile ducts, gastrointestinal wall, and surrounding structures, including tissue sampling where appropriate.",
     image: eusImage,
     link: "/eus",
   },
@@ -258,7 +258,7 @@ export const Procedures = () => {
             Procedures & Services
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            From preventive health screening to advanced diagnostic and therapeutic procedures, Dr Prem provides a comprehensive range of gastroenterology and hepatology services, guided by clinical assessment and delivered with care and attention to patient wellbeing.
+            From preventive health screening to specialized diagnostic and therapeutic procedures, Dr Prem provides a comprehensive range of gastroenterology and hepatology services, guided by clinical assessment and delivered with care and attention to patient wellbeing.
           </p>
         </motion.div>
 
