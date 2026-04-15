@@ -33,14 +33,14 @@ const bravoFaqs = [
   },
   {
     question: "How accurate is Bravo pH monitoring?",
-    answer: "Bravo pH monitoring is considered the gold standard for objectively measuring acid reflux. The extended monitoring period (48-96 hours) provides more comprehensive data than traditional 24-hour catheter studies.",
+    answer: "Bravo pH monitoring is a primary clinical modality for objectively measuring acid reflux. The extended monitoring period (48-96 hours) provides more comprehensive data than traditional 24-hour catheter studies.",
   },
 ];
 
 const relatedProcedures = [
   {
     title: "Heartburn",
-    description: "Expert treatment of acid reflux, heartburn, and related oesophageal conditions.",
+    description: "Specialized treatment of acid reflux, heartburn, and related oesophageal conditions.",
     link: "/gerd-heartburn",
   },
   {
@@ -82,8 +82,8 @@ const advantages = [
   },
   {
     icon: CheckCircle,
-    title: "Gold Standard Accuracy",
-    description: "Provides precise measurement of acid exposure time, number of reflux episodes, and symptom correlation.",
+    title: "Clinically Validated Accuracy",
+    description: "Provides objective measurement of acid exposure time, number of reflux episodes, and symptom correlation.",
   },
 ];
 
@@ -222,7 +222,7 @@ const BravoCapsule = () => {
                 Wireless pH Monitoring
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                The Bravo capsule is a revolutionary wireless system for measuring acid reflux in the 
+                The Bravo capsule is a wireless monitoring system for measuring acid reflux in the 
                 oesophagus. Unlike traditional catheter-based pH tests, this tiny capsule attaches 
                 temporarily to your oesophagus and transmits pH data wirelessly, allowing you to 
                 go about your normal activities during the test.
@@ -253,7 +253,7 @@ const BravoCapsule = () => {
               
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
                 <p>
-                  Bravo pH monitoring is the gold standard for objectively measuring acid reflux. It helps 
+                  Bravo pH monitoring is a clinically recognized tool for objectively measuring acid reflux. It helps 
                   confirm or exclude gastro-oesophageal reflux disease (GERD) when the diagnosis is uncertain, 
                   and provides crucial information for treatment planning.
                 </p>
@@ -532,7 +532,7 @@ const BravoCapsule = () => {
               className="text-center max-w-2xl mx-auto"
             >
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-                Get Accurate Reflux Diagnosis
+               Clinical Evaluation for Reflux Symptoms
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-8">
                 If you have persistent heartburn symptoms or need objective confirmation of acid reflux, 
