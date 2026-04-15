@@ -61,7 +61,7 @@ export const WhyChoose = () => {
             Why Patients Choose Us
           </h2>
           <p className="text-base text-primary-foreground/80 leading-relaxed">
-            Specialist gastroenterology care delivered with clinical expertise, clear communication, and a patient-centred approach, grounded in evidence-based medicine.
+            Specialist gastroenterology care delivered with clinical experience, clear communication, and a patient-centred approach, grounded in evidence-based medicine.
           </p>
         </motion.div>
 
