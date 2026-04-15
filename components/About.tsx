@@ -202,7 +202,7 @@ const credentials = [{
 }, {
   icon: Award,
   title: "Awards & Professional Recognition",
-  items: ["Best Publication Award (2020) – Singapore Medical Association", "Best Oral Presentation in Viral Hepatitis – British Association for the Study of the Liver", "Member – National Hepatitis C Elimination Steering Committee, Singapore"]
+  items: ["Member – National Hepatitis C Elimination Steering Committee, Singapore"]
 }];
 export const About = () => {
   const [showAllPublications, setShowAllPublications] = useState(false);
