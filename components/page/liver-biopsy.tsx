@@ -49,7 +49,7 @@ const indications = [
 const preparationSteps = [
   {
     title: "Blood Tests",
-    description: "Blood clotting tests (PT/INR) and platelet count will be checked to ensure safe biopsy.",
+    description: "Blood clotting tests (PT/INR) and platelet count will be checked to prioritize patient safety during the biopsy.",
   },
   {
     title: "Medication Review",
@@ -65,7 +65,7 @@ const preparationSteps = [
   },
   {
     title: "Imaging",
-    description: "An ultrasound may be performed beforehand to identify the optimal biopsy site.",
+    description: "An ultrasound may be performed beforehand to identify a suitable biopsy site.",
   },
 ];
 
@@ -174,7 +174,7 @@ export const LiverBiopsy = () => {
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                 A liver biopsy is a procedure to obtain a small sample of liver tissue for microscopic 
-                examination. It remains the gold standard for diagnosing and staging many liver diseases 
+                examination. It remains an established clinical method for diagnosing and staging many liver diseases 
                 and provides information that cannot be obtained from blood tests or imaging alone.
               </p>
               <Button asChild size="lg" className="gap-2">
@@ -204,8 +204,8 @@ export const LiverBiopsy = () => {
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
                 <p>
                   While non-invasive tests like FibroScan and blood markers have reduced the need for liver 
-                  biopsy, it remains essential in certain situations where definitive tissue diagnosis is 
-                  required. A liver biopsy can reveal the exact type, cause, and severity of liver disease.
+                  biopsy, it remains a clinically indicated procedure in certain situations where definitive tissue diagnosis is 
+                  required. A liver biopsy can provide detailed information on the type, cause, and severity of liver disease.
                 </p>
               </div>
 
@@ -412,18 +412,18 @@ export const LiverBiopsy = () => {
               className="max-w-4xl mx-auto"
             >
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
-                Expert Hepatology Care
+                Specialized Hepatology Care
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-loose">
                 <p>
                   Dr. Prem Thurairajah is a Senior Consultant in Gastroenterology and Hepatology with 
                   extensive experience in liver biopsy and liver disease management. His training at 
-                  major UK liver transplant centres and PhD in hepatitis C research ensures expert 
-                  care for patients requiring liver biopsy.
+                  major UK liver transplant centres and PhD in hepatitis C is the basis for specialized care
+                  for patients requiring liver biopsy.
                 </p>
                 <p>
                   All biopsies are performed with ultrasound guidance to maximise safety and accuracy, 
-                  and tissue samples are reviewed by experienced liver pathologists to ensure accurate diagnosis.
+                  and tissue samples are reviewed by experienced liver pathologists to support a reliable diagnosis.
                 </p>
               </div>
             </motion.div>

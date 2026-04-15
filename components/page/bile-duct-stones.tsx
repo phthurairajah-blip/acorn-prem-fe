@@ -23,7 +23,7 @@ const relatedConditions = [
   },
   {
     title: "Jaundice",
-    description: "Expert evaluation of biliary causes of jaundice.",
+    description: "Clinical evaluation of biliary causes of jaundice.",
     link: "/jaundice",
   },
   {
@@ -101,7 +101,7 @@ const diagnosticTests: { name: string; description: string; image: string; link?
 const treatmentOptions: { name: string; description: string; image: string; link?: string }[] = [
   {
     name: "ERCP Stone Removal",
-    description: "The gold standard treatment. A flexible endoscope is passed through the mouth to the bile duct opening. Stones are removed using a balloon or basket after sphincterotomy.",
+    description: "The primary clinical modality for stone removal. A flexible endoscope is passed through the mouth to the bile duct opening. Stones are removed using a balloon or basket after sphincterotomy.",
     image: ercpImage,
     link: "/ercp",
   },
@@ -205,7 +205,7 @@ const BileDuctStones = () => {
                 <Activity className="h-10 w-10 text-emerald-500 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-foreground mb-2">Treatment Success</h3>
                 <p className="text-base text-muted-foreground">
-                  ERCP successfully removes stones in over 90% of cases
+                  ERCP is an effective clinical procedure for stone removal.
                 </p>
               </motion.div>
               <motion.div
@@ -441,7 +441,7 @@ const BileDuctStones = () => {
               </h2>
               <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
                 Don&apos;t delay treatment for bile duct stones. Dr. Prem Thurairajah is an experienced 
-                ERCP specialist who can provide expert evaluation and treatment.
+                ERCP specialist who can provide specialised clinical evaluation.
               </p>
               <Button asChild size="lg" variant="secondary" className="gap-2 text-white">
                 <Link href="/#contact">

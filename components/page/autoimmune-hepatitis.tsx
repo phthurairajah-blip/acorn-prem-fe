@@ -16,12 +16,12 @@ import Image from "next/image";
 const relatedConditions = [
   {
     title: "Liver Cirrhosis",
-    description: "Advanced care for chronic liver disease and complications.",
+    description: "Comprehensive care for chronic liver disease and complications.",
     link: "/liver-cirrhosis",
   },
   {
     title: "Jaundice",
-    description: "Expert evaluation and management of liver-related jaundice.",
+    description: "Clinical evaluation and management of liver-related jaundice.",
     link: "/jaundice",
   },
   {
@@ -86,7 +86,7 @@ const treatmentOptions = [
   },
   {
     step: "Maintenance Therapy",
-    desc: "Once remission is achieved, lower doses of medication are continued long-term to prevent relapse. Many patients require treatment for years or lifelong.",
+    desc: "Once remission is achieved, lower doses of medication continued long-term to help reduce the risk of relapse. Many patients require treatment for years or lifelong.",
   },
   {
     step: "Alternative Medications",
@@ -126,7 +126,7 @@ export const AutoimmuneHepatitis = () => {
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-6">
                   Autoimmune hepatitis is a chronic condition where the body&apos;s immune system attacks liver cells, 
-                  causing inflammation. Early diagnosis and proper treatment can prevent progression to cirrhosis.
+                  causing inflammation. Early diagnosis and proper treatment aims to reduce the risk of progression to cirrhosis.
                 </p>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
@@ -344,8 +344,8 @@ export const AutoimmuneHepatitis = () => {
                   <li className="flex items-start gap-3">
                     <Shield className="h-5 w-5 text-emerald-500 mt-1 shrink-0" />
                     <div>
-                      <span className="font-semibold text-foreground">Achieve Remission</span>
-                      <p className="text-sm mt-1">Normalise liver enzymes and reduce inflammation</p>
+                      <span className="font-semibold text-foreground">Aim to Achieve Remission</span>
+                      <p className="text-sm mt-1">Seek to normalise liver enzymes and reduce inflammation</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -389,7 +389,7 @@ export const AutoimmuneHepatitis = () => {
               </h2>
               <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
                 If you&apos;re experiencing symptoms or have been diagnosed with autoimmune hepatitis, 
-                Dr. Prem Thurairajah can provide expert evaluation and personalised treatment.
+                Dr. Prem Thurairajah can provide specialised clinical evaluation and personalised treatment.
               </p>
               <Button asChild size="lg" variant="secondary" className="gap-2 text-white">
                 <Link href="/#contact">

@@ -25,7 +25,7 @@ const enzymeMedicationImage = "/enzyme-medication.jpeg";
 const relatedConditions = [
   {
     title: "Pancreatic Cyst",
-    description: "Expert surveillance and management of pancreatic cysts.",
+    description: "Clinical surveillance and management of pancreatic cysts.",
     link: "/pancreatic-cyst",
   },
   {
@@ -35,7 +35,7 @@ const relatedConditions = [
   },
   {
     title: "EUS (Endoscopic Ultrasound)",
-    description: "Advanced imaging for detailed pancreatic assessment.",
+    description: "Specialised imaging for detailed pancreatic assessment.",
     link: "/eus",
   },
 ];
@@ -248,8 +248,8 @@ const ChronicPancreatitis = () => {
                 </p>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   With proper management, including lifestyle modifications, pain control, enzyme replacement, 
-                  and when needed, endoscopic or surgical intervention, many patients can achieve significant 
-                  improvement in their symptoms and quality of life.
+                  and when needed, endoscopic or surgical intervention, many patients may see significant improvement
+                  in their symptoms and quality of life.
                 </p>
               </div>
             </motion.div>
@@ -394,7 +394,7 @@ const ChronicPancreatitis = () => {
                 Potential Complications
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Early diagnosis and proper management can help prevent or delay these complications.
+                Early diagnosis and proper management aims to reduce the risk of these complications.
               </p>
             </motion.div>
 
@@ -539,11 +539,11 @@ const ChronicPancreatitis = () => {
             >
               <Stethoscope className="h-12 w-12 text-white/90 mx-auto mb-6" />
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white mb-6">
-                Expert Pancreatic Care
+                Specialised Pancreatic Care
               </h2>
               <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
                 Dr. Prem Thurairajah has extensive experience in managing chronic pancreatitis, 
-                with advanced training in therapeutic ERCP and EUS from leading centres in the UK. 
+                with specialised training in therapeutic ERCP and EUS from recognised centres in the UK. 
                 He provides comprehensive care from diagnosis through long-term management.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

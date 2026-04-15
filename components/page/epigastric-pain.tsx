@@ -17,12 +17,12 @@ const hPyloriTestImage = "/h-pylori-ubt-test.jpeg";
 const relatedConditions = [
   {
     title: "GERD (Heartburn)",
-    description: "Expert management of acid reflux and heartburn symptoms.",
+    description: "Specialized management of acid reflux and heartburn symptoms.",
     link: "/gerd-heartburn",
   },
   {
     title: "Gastroscopy & Colonoscopy",
-    description: "Comprehensive endoscopic examination of the digestive tract.",
+    description: "Detailed endoscopic examination of the digestive tract.",
     link: "/gastroscopy-colonoscopy",
   },
   {
@@ -308,7 +308,7 @@ export const EpigastricPain = () => {
                       Gastroscopy (OGD)
                     </h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      The gold standard for evaluating epigastric pain. A flexible camera examines the oesophagus, stomach, and duodenum directly.
+                      The primary clinical modality for evaluating epigastric pain. A flexible camera examines the oesophagus, stomach, and duodenum directly.
                     </p>
                     <ul className="space-y-2 mb-4">
                       {[
@@ -402,7 +402,7 @@ export const EpigastricPain = () => {
                     {[
                       "14-day course of antibiotics + PPI",
                       "Typically 2-3 antibiotics used",
-                      "85-90% success rate with first-line therapy",
+                      "85-90% eradication rate observed in clinical studies",
                       "Confirmation of eradication after treatment",
                       "Reduces ulcer recurrence significantly",
                     ].map((item, idx) => (
@@ -447,7 +447,7 @@ export const EpigastricPain = () => {
               className="text-center max-w-2xl mx-auto"
             >
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
-                Get Relief from Stomach Pain
+                Clinical Assessment for Stomach Pain
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-8">
                 If you&apos;re experiencing persistent epigastric pain, schedule a consultation 

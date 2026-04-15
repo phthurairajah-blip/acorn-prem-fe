@@ -41,7 +41,7 @@ const transplantIndications = [
   },
   {
     condition: "Hepatocellular Carcinoma (HCC)",
-    description: "Liver cancer within specific criteria (Milan criteria) where transplant offers the best chance of cure.",
+    description: "Liver cancer within specific criteria (Milan criteria) where transplant is a primary clinical modality for suitable candidates.",
   },
   {
     condition: "Chronic Hepatitis B or C",
@@ -119,7 +119,7 @@ const LiverTransplantPage = () => {
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8 text-justify">
                   Liver transplantation is a life-saving treatment for patients with end-stage liver disease 
                   or liver cancer. Dr. Prem Thurairajah is a transplant hepatologist with over 25 years of 
-                  international clinical experience, including training at internationally renowned liver 
+                  international clinical experience, including specialist training at recognized liver 
                   transplant centres in the UK (Queen Elizabeth Hospital Birmingham and St. James&apos;s University 
                   Hospital Leeds) and the USA (University of Kentucky).
                 </p>
@@ -446,7 +446,7 @@ const LiverTransplantPage = () => {
               
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
                 <p>
-                  After a successful liver transplant, most patients can return to a near-normal quality of life. 
+                  After a successful liver transplant, most patients can return to daily activities following a successful recovery period. 
                   However, lifelong follow-up care is essential to monitor for rejection, infection, and recurrence 
                   of the original disease.
                 </p>
@@ -481,7 +481,7 @@ const LiverTransplantPage = () => {
               className="max-w-4xl mx-auto"
             >
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
-                Expert Transplant Hepatology Care
+                Specialized Transplant Hepatology Care
               </h2>
               
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-loose">
@@ -494,10 +494,10 @@ const LiverTransplantPage = () => {
                   <li><strong>National University Health System (NUHS), Singapore</strong> – Senior Consultant in Hepatology</li>
                   <li><strong>University of Kentucky, USA</strong> – Assistant Professor of Medicine in the Liver Transplant Unit</li>
                   <li><strong>St. James&apos;s University Hospital, Leeds, UK</strong> – Consultant Transplant Hepatologist</li>
-                  <li><strong>Queen Elizabeth Hospital, Birmingham, UK</strong> – Fellowship in Transplant Hepatology at one of Europe&apos;s largest liver transplant programmes</li>
+                  <li><strong>Queen Elizabeth Hospital, Birmingham, UK</strong> – Fellowship in Transplant Hepatology at an established liver transplant programme in Europe</li>
                 </ul>
                 <p className="mt-4">
-                  His comprehensive training allows him to manage the complete spectrum of transplant hepatology, 
+                  His specialized training allows him to manage the complete spectrum of transplant hepatology, 
                   from initial assessment and listing decisions through to long-term post-transplant care.
                 </p>
               </div>
@@ -520,8 +520,8 @@ const LiverTransplantPage = () => {
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 If you or a loved one has been told you may need a liver transplant, or if you have advanced 
-                liver disease and want to understand your options, Dr. Prem can provide expert guidance and 
-                coordinate your care with Singapore&apos;s transplant centres.
+                liver disease and want to understand your options, Dr. Prem can provide clinical guidance 
+                and coordinate your care with Singapore&apos;s transplant centres.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2">

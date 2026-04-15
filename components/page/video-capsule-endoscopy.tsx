@@ -43,16 +43,16 @@ const advantages = [
   {
     icon: Eye,
     title: "Complete Small Bowel Visualisation",
-    description: "The only non-invasive method to directly visualise the entire small intestine, an area unreachable by standard endoscopy.",
+    description: "An established non-invasive method to directly visualise the entire small intestine, an area unreachable by standard endoscopy.",
   },
   {
     icon: CheckCircle,
-    title: "Non-Invasive & Painless",
-    description: "Simply swallow a pill-sized camera. No sedation, no discomfort, no recovery time needed.",
+    title: "Minimally Invasive & Designed for Comfort",
+    description: "Minimal discomfort for most patients. No sedation, no recovery time needed.",
   },
   {
     icon: Clock,
-    title: "High-Quality Imaging",
+    title: "Detailed Digital Imaging",
     description: "Takes thousands of high-resolution images as it travels through your digestive tract over 8-12 hours.",
   },
   {
@@ -205,7 +205,7 @@ const VideoCapsuleEndoscopy = () => {
                 Small Bowel Camera
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Video capsule endoscopy is a breakthrough technology that allows complete visualisation 
+                Video capsule endoscopy is a specialized diagnostic technology that allows for extensive visualisation 
                 of the small intestine - an area that cannot be reached by standard gastroscopy or 
                 colonoscopy. By swallowing a tiny camera in a capsule, we can diagnose conditions 
                 that would otherwise require complex procedures or remain undetected.

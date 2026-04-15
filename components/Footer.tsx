@@ -25,7 +25,7 @@ export const Footer = () => {
               Dr. Prem Thurairajah
             </h3>
             <p className="text-background/70 leading-relaxed mb-6 max-w-md">
-              Providing expert medical care with a patient-centred approach. 
+              Providing specialized medical care with a patient-centred approach. 
               Located at Mount Elizabeth Orchard, serving patients across Singapore.
             </p>
             <div className="flex gap-4">

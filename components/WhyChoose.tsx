@@ -14,7 +14,7 @@ const reasons = [
   {
     icon: Stethoscope,
     title: "Extensive Specialist Expertise",
-    description: "Over 25 years of clinical experience in gastroenterology and hepatology, with advanced specialist training from leading institutions in Singapore, the United Kingdom, and the United States.",
+    description: "Over 25 years of clinical experience in gastroenterology and hepatology, with specialized clinical training from recognized institutions in Singapore, the United Kingdom, and the United States.",
   },
   {
     icon: MessageSquare,
@@ -61,7 +61,7 @@ export const WhyChoose = () => {
             Why Patients Choose Us
           </h2>
           <p className="text-base text-primary-foreground/80 leading-relaxed">
-            Specialist gastroenterology care delivered with clinical expertise, clear communication, and a patient-centred approach, grounded in evidence-based medicine.
+            Specialist gastroenterology care delivered with clinical experience, clear communication, and a patient-centred approach, grounded in evidence-based medicine.
           </p>
         </motion.div>
 

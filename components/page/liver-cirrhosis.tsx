@@ -378,8 +378,8 @@ export const LiverCirrhosis = () => {
                 Liver Transplantation
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-justify">
-                For patients with advanced cirrhosis or those who develop decompensation, liver transplantation 
-                may be the best treatment option. With my training and experience in liver transplant medicine 
+                For patients with decompensated cirrhosis or those who develop decompensation, liver transplantation 
+                is a definitive therapeutic option for patients with end-stage cirrhosis. With my training and experience in liver transplant medicine 
                 from Queen Elizabeth Hospital Birmingham and the University of Kentucky, I provide:
               </p>
               <div className="space-y-4 mb-8">
@@ -414,7 +414,7 @@ export const LiverCirrhosis = () => {
             duration: 0.6
           }} className="text-center max-w-2xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
-                Expert Cirrhosis Management
+               Specialized Cirrhosis Management
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-justify">
                 Living with cirrhosis requires expert care and regular monitoring. Schedule a consultation 

@@ -10,12 +10,12 @@ import Image from "next/image";
 
 const colonoscopyImage = "/colonoscopy-procedure-new.jpeg";
 const mediterraneanDietImage = "/mediterranean-diet.jpeg";
-const constipationHeroImage = "/constipation-hero.jpeg";
+const constipationHeroImage = "/constipation-updated.jpeg";
 
 const relatedConditions = [
   {
     title: "Irritable Bowel Syndrome",
-    description: "Expert management of IBS symptoms including constipation-predominant IBS.",
+    description: "Specialised management of IBS symptoms including constipation-predominant IBS.",
     link: "/irritable-bowel-syndrome",
   },
   {
@@ -121,7 +121,7 @@ export const Constipation = () => {
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                   Chronic constipation affects up to 20% of adults and significantly impacts quality of life. 
-                  Understanding the underlying cause is key to effective, lasting treatment.
+                  Understanding the underlying cause is key to evidence-based clinical management.
                 </p>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
@@ -480,7 +480,7 @@ export const Constipation = () => {
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Chronic constipation can significantly impact your quality of life. Dr. Prem provides 
-                comprehensive evaluation and personalised treatment plans to help you find lasting relief.
+                comprehensive evaluation and personalised treatment plans to help you manage your symptoms effectively.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2">
