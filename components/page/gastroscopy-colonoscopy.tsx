@@ -14,7 +14,7 @@ const stomachViewsImage = "/stomach-endoscopy-views.jpeg";
 const safetyFaqs = [
   {
     question: "Is gastroscopy painful?",
-    answer: "No, gastroscopy is not painful. You will receive sedation through an IV line which ensures you are comfortable and relaxed throughout the procedure. Most patients have no memory of the procedure afterwards.",
+    answer: "Gastroscopy is typically performed under sedation to ensure patient comfort. You will receive sedation through an IV line which is used to prioritize patient comfort and relaxed throughout the procedure. Most patients have no memory of the procedure afterwards.",
   },
   {
     question: "Do I need to be admitted overnight?",
@@ -114,8 +114,8 @@ const GastroscopyColonoscopy = () => {
               </h1>
               <p className="text-lg text-muted-foreground leading-loose mb-8">
                 Gastroscopy, also known as OGD (oesophago-gastro-duodenoscopy) or upper endoscopy, is a minimally invasive 
-                procedure that allows direct visualisation of the upper digestive tract. This procedure is 
-                essential for diagnosing conditions, performing biopsies, and treating various upper GI disorders.
+                procedure that allows direct visualisation of the upper digestive tract. This procedure is a primary 
+                clinical modality for diagnosing conditions, performing biopsies, and treating various upper GI disorders.
               </p>
               <Button asChild size="lg" className="gap-2">
                 <Link href="/#contact">
@@ -237,7 +237,7 @@ const GastroscopyColonoscopy = () => {
                   height={720}
                 />
                 <div className="p-4 bg-background">
-                  <p className="text-sm text-muted-foreground text-center">High-definition endoscopic views of stomach anatomy</p>
+                  <p className="text-sm text-muted-foreground text-center">Clear endoscopic views of stomach anatomy</p>
                 </div>
               </div>
             </div>
