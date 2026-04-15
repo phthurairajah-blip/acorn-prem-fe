@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 
-const jaundiceEye = "/jaundice-eye.jpg";
+const jaundiceEye = "/jaundice-updated.jpeg";
 const ultrasoundAbdomen = "/ultrasound-abdomen.jpg";
 const ercpImage = "/ercp-jaundice.jpg";
 const ctScanImage = "/ct-scan-jaundice.jpg";
@@ -23,12 +23,12 @@ const liverBiopsyImage = "/liver-biopsy-jaundice.jpg";
 const relatedConditions = [
   {
     title: "Liver Cirrhosis",
-    description: "Advanced care for chronic liver disease, complications, and transplant assessment.",
+    description: "Clinical care for chronic liver disease, complications, and transplant assessment.",
     link: "/liver-cirrhosis",
   },
   {
     title: "Liver & Pancreatic Cancer Screening",
-    description: "Comprehensive imaging and tumour marker evaluation for early diagnosis.",
+    description: "Targeted imaging and tumour marker evaluation for early diagnosis.",
     link: "/liver-pancreatic-cancer-screening",
   },
   {
@@ -378,12 +378,12 @@ const Jaundice = () => {
               className="max-w-3xl mx-auto text-center"
             >
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
-                Get Expert Evaluation
+                Get Clinical Evaluation
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-justify">
                 If you or a loved one is experiencing jaundice, early evaluation is crucial. 
-                As a hepatologist with expertise in both liver disease and ERCP and EUS, 
-                I offer comprehensive care to identify the cause and provide appropriate treatment.
+                As a hepatologist with clinical experience in both liver disease and ERCP and EUS, 
+                I offer clinical care to identify the cause and provide appropriate treatment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg">
