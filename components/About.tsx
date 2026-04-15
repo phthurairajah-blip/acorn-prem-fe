@@ -259,8 +259,8 @@ export const About = () => {
                 <strong className="text-foreground">over 25 years of international clinical and academic experience</strong> across the United Kingdom, United States, and Singapore.
               </p>
               <p className="text-justify">
-                He trained in Internal Medicine and Gastroenterology through the West Midlands Deanery in Birmingham, UK, and completed advanced subspecialty fellowships in Transplant Hepatology and Hepatobiliary Endoscopy. He holds a{" "}
-                <strong className="text-foreground">double fellowship</strong> from the Queen Elizabeth Hospital Liver Unit, Birmingham, and University College London (UCL), specialising in complex liver disease and therapeutic advanced endoscopic procedures in cancer detection, ERCP and EUS.
+                He trained in Internal Medicine and Gastroenterology through the West Midlands Deanery in Birmingham, UK, and completed specialized subspecialty fellowships in Transplant Hepatology and Hepatobiliary Endoscopy. He holds a{" "}
+                <strong className="text-foreground">double fellowship</strong> from the Queen Elizabeth Hospital Liver Unit, Birmingham, and University College London (UCL), specialising in complex liver disease and therapeutic complex endoscopic procedures in cancer detection, ERCP and EUS.
               </p>
               <p className="text-justify">
                 Dr. Prem has served as a <strong className="text-foreground">Consultant Transplant Hepatologist</strong> at St James&apos;s University Hospital, Leeds, and later as an{" "}
@@ -280,7 +280,7 @@ export const About = () => {
                 In Singapore, he previously served as <strong className="text-foreground">Director of Hepatology</strong> at Changi General Hospital and as a Senior Consultant at the National University Hospital (NUH). He was core faculty within both the SingHealth and NUHS residency programmes, training senior residents and fellows in gastroenterology and hepatology.
               </p>
               <p className="text-justify">
-                His clinical practice today focuses on <strong className="text-foreground">evidence-based, patient-centred care</strong>, combining advanced diagnostics, modern endoscopy, and thoughtful long-term management of digestive and liver diseases.
+                His clinical practice today focuses on <strong className="text-foreground">evidence-based, patient-centred care</strong>, combining targeted diagnostics, modern endoscopy, and thoughtful long-term management of digestive and liver diseases.
               </p>
             </div>
 
