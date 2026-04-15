@@ -357,7 +357,7 @@ export const Ercp = () => {
                 </p>
                 <p>
                   With extensive experience in complex ERCP procedures, including difficult stone extraction, 
-                  stricture management, and biliary stenting, patients can be confident of receiving expert care.
+                  stricture management, and biliary stenting, patients can be confident of receiving specialized care.
                 </p>
               </div>
             </motion.div>
@@ -415,7 +415,7 @@ export const Ercp = () => {
               className="text-center max-w-2xl mx-auto"
             >
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-                Expert ERCP Services
+                Specialized ERCP Services
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-8">
                 If you have been referred for ERCP or have a bile duct or pancreatic condition requiring 
