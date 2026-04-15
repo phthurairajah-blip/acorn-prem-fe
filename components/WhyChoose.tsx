@@ -14,7 +14,7 @@ const reasons = [
   {
     icon: Stethoscope,
     title: "Extensive Specialist Expertise",
-    description: "Over 25 years of clinical experience in gastroenterology and hepatology, with advanced specialist training from leading institutions in Singapore, the United Kingdom, and the United States.",
+    description: "Over 25 years of clinical experience in gastroenterology and hepatology, with specialized clinical training from recognized institutions in Singapore, the United Kingdom, and the United States.",
   },
   {
     icon: MessageSquare,
