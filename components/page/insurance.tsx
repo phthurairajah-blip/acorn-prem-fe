@@ -76,7 +76,7 @@ const InsurancePage = () => {
                 Insurance & Payment
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed text-justify">
-                We strive to make specialist gastroenterology care accessible.
+               We strive to provide comprehensive specialist gastroenterology care.
               </p>
             </motion.div>
           </div>
@@ -99,7 +99,7 @@ const InsurancePage = () => {
                 </h2>
               </div>
               <p className="text-base text-muted-foreground mb-10 leading-relaxed">
-                We work with major Integrated Shield Plans, corporate medical benefit schemes, and employer-sponsored health insurance plans.
+                We work with established Integrated Shield Plans, corporate medical benefit schemes, and employer-sponsored health insurance plans.
               </p>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mb-10">
