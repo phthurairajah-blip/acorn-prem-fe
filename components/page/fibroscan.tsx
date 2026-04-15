@@ -28,7 +28,7 @@ const fibroscanFaqs = [
   },
   {
     question: "How accurate is FibroScan?",
-    answer: "FibroScan has excellent accuracy for detecting significant fibrosis and cirrhosis, with over 90% accuracy in many studies. It is widely used as an alternative to liver biopsy for fibrosis assessment.",
+    answer: "FibroScan has high accuracy for detecting significant fibrosis and cirrhosis, with over 90% accuracy in many studies. It is widely used as an alternative to liver biopsy for fibrosis assessment.",
   },
   {
     question: "Can FibroScan replace liver biopsy?",
@@ -134,9 +134,9 @@ const Fibroscan = () => {
                 Transient Elastography
               </p>
               <p className="text-lg text-muted-foreground leading-loose mb-8">
-                FibroScan is a revolutionary non-invasive technology that assesses liver health in just minutes. 
+                FibroScan is an established non-invasive technology that assesses liver health in just minutes. 
                 Using painless ultrasound-based technology, it measures both liver stiffness (indicating fibrosis) 
-                and liver fat content, providing valuable information without the need for a liver biopsy.
+                and liver fat content, providing essential clinical information without the need for a liver biopsy.
               </p>
               <Button asChild size="lg" className="gap-2">
                 <Link href="/#contact">
@@ -170,7 +170,7 @@ const Fibroscan = () => {
                 </p>
                 <p>
                   The same device also measures the Controlled Attenuation Parameter (CAP), which quantifies 
-                  the amount of fat in the liver. Together, these measurements provide a comprehensive 
+                  the amount of fat in the liver. Together, these measurements provide a targeted clinical 
                   assessment of liver health that previously required an invasive biopsy.
                 </p>
               </div>
@@ -332,7 +332,7 @@ const Fibroscan = () => {
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-loose">
                 <p>
-                  While FibroScan is an excellent tool, there are some limitations to be aware of:
+                  While FibroScan is a recognized clinical tool, there are some limitations to be aware of:
                 </p>
                 <ul className="space-y-2 text-base">
                   <li className="leading-relaxed">Results may be less reliable in patients with significant obesity, narrow rib spaces, or ascites (fluid in the abdomen)</li>
