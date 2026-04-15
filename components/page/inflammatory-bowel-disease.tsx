@@ -80,7 +80,7 @@ const ucFeatures = [
 const diagnosticTests = [
   {
     title: "Colonoscopy with Biopsies",
-    description: "Gold standard for diagnosis, allowing direct visualisation and tissue sampling.",
+    description: "A primary clinical modality for diagnosis, allowing direct visualisation and tissue sampling.",
   },
   {
     title: "Blood Tests",
@@ -175,7 +175,7 @@ export const InflammatoryBowelDisease = () => {
                   Inflammatory Bowel Disease
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-                  Expert diagnosis and comprehensive management of Crohn&apos;s disease and ulcerative colitis with modern biologic therapies and personalised care.
+                  Specialized diagnosis and comprehensive management of Crohn&apos;s disease and ulcerative colitis with established biologic therapies and personalised care.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
@@ -225,7 +225,7 @@ export const InflammatoryBowelDisease = () => {
                   Inflammatory Bowel Disease (IBD) refers to chronic conditions characterised by inflammation of the gastrointestinal tract. The two main types are <strong>Crohn&apos;s disease</strong> and <strong>ulcerative colitis</strong>.
                 </p>
                 <p>
-                  Unlike Irritable Bowel Syndrome (IBS), IBD involves actual structural damage to the bowel wall and can lead to serious complications if not properly managed. Early diagnosis and appropriate treatment are essential to achieve remission and prevent long-term damage.
+                  Unlike Irritable Bowel Syndrome (IBS), IBD involves actual structural damage to the bowel wall and can lead to serious complications if not properly managed. Early diagnosis and appropriate treatment are aims to induce and maintain remission and manage long-term risks.
                 </p>
                 <p>
                   IBD is a lifelong condition that typically follows a relapsing-remitting course. With modern treatments including biologic therapies, most patients can achieve good disease control and maintain quality of life.
@@ -421,7 +421,7 @@ export const InflammatoryBowelDisease = () => {
                 </h2>
               </div>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Modern IBD treatment aims to induce and maintain remission, heal the bowel lining, and prevent complications.
+                Current IBD treatment protocols aim to induce and maintain remission, heal the bowel lining, and prevent complications.
               </p>
             </motion.div>
 
@@ -503,12 +503,12 @@ export const InflammatoryBowelDisease = () => {
                 Comprehensive IBD Care
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Dr. Prem Thurairajah provides expert IBD management with a focus on achieving disease remission, optimising quality of life, and preventing long-term complications through individualised treatment plans.
+                Dr. Prem Thurairajah provides specialized IBD management with a focus on achieving disease remission, optimising quality of life, and preventing long-term complications through individualised treatment plans.
               </p>
               <div className="grid md:grid-cols-3 gap-6 text-left">
                 <div className="bg-background p-6 rounded-xl border border-border">
                   <CheckCircle className="h-8 w-8 text-emerald-500 mb-3" />
-                  <h4 className="font-semibold mb-2">Expert Colonoscopy</h4>
+                  <h4 className="font-semibold mb-2">Diagnostic Colonoscopy</h4>
                   <p className="text-sm text-muted-foreground">
                     High-quality diagnostic and surveillance colonoscopy with chromoendoscopy for dysplasia detection.
                   </p>
@@ -517,7 +517,7 @@ export const InflammatoryBowelDisease = () => {
                   <CheckCircle className="h-8 w-8 text-emerald-500 mb-3" />
                   <h4 className="font-semibold mb-2">Biologic Therapies</h4>
                   <p className="text-sm text-muted-foreground">
-                    Access to the latest biologic and small molecule therapies for moderate-severe IBD.
+                    Access to clinical biologic and small molecule therapies for moderate-severe IBD.
                   </p>
                 </div>
                 <div className="bg-background p-6 rounded-xl border border-border">
@@ -544,7 +544,7 @@ export const InflammatoryBowelDisease = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">
-                Expert IBD Care in Singapore
+                Specialized IBD Care in Singapore
               </h2>
               <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
                 If you&apos;re experiencing symptoms of inflammatory bowel disease or need specialist management for Crohn&apos;s disease or ulcerative colitis, schedule a consultation today.
