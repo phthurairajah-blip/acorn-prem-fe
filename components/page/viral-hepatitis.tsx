@@ -16,7 +16,7 @@ const ultrasoundImage = "/ultrasound-abdomen.jpg";
 const relatedConditions = [
   {
     title: "Liver Cirrhosis",
-    description: "Advanced care for chronic liver disease, complications, and transplant assessment.",
+    description: "Comprehensive care for chronic liver disease, complications, and transplant assessment.",
     link: "/liver-cirrhosis",
   },
   {
@@ -26,7 +26,7 @@ const relatedConditions = [
   },
   {
     title: "Fatty Liver Disease",
-    description: "Expert management of metabolic liver disease and lifestyle interventions.",
+    description: "Specialized management of metabolic liver disease and lifestyle interventions.",
     link: "/fatty-liver-disease",
   },
 ];
@@ -131,8 +131,8 @@ export const ViralHepatitis = () => {
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8 text-justify">
                   Hepatitis B and C are viral infections that affect the liver and can lead to serious complications 
-                  including cirrhosis and liver cancer if left untreated. With modern treatments, Hepatitis C can 
-                  now be cured in over 95% of cases, while Hepatitis B can be effectively controlled with antiviral 
+                  including cirrhosis and liver cancer if left untreated. With established antiviral therapies, Sustained virological
+                  response (SVR) is achievable in over 95% of cases, while Hepatitis B can be effectively controlled with antiviral 
                   therapy. Early detection and treatment are key to preventing liver damage.
                 </p>
                 <Button asChild size="lg" className="gap-2">
@@ -214,7 +214,7 @@ export const ViralHepatitis = () => {
                 <p>
                   <strong>Hepatitis C</strong> is primarily transmitted through blood-to-blood contact. Unlike Hepatitis B, 
                   it can now be completely cured with a short course of direct-acting antiviral (DAA) medications, 
-                  representing one of the greatest advances in modern medicine.
+                  representing a significant development in clinical medicine.
                 </p>
               </div>
             </motion.div>
@@ -310,7 +310,7 @@ export const ViralHepatitis = () => {
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
                 <p>
                   Hepatitis C can now be <strong>completely cured</strong> with a short course of direct-acting 
-                  antiviral (DAA) medications. This is one of the greatest advances in modern medicine – a chronic 
+                  antiviral (DAA) medications. This is one of the greatest advances in clinical medicine – a chronic 
                   viral infection that previously led to cirrhosis and liver cancer can now be eliminated in 
                   8-12 weeks of oral treatment with cure rates exceeding 95%.
                 </p>
@@ -351,7 +351,7 @@ export const ViralHepatitis = () => {
                   <p className="mt-4">
                     Dr. Prem has extensive experience in treating Hepatitis C and was instrumental in developing 
                     community-based Hepatitis C treatment programs in Singapore. His work in this area was 
-                    recognised with the Singapore Medical Association&apos;s Best Publication Award.
+                    recognised with the Singapore Medical Association Publication Award (2020).
                   </p>
                 </div>
               </div>
@@ -411,7 +411,7 @@ export const ViralHepatitis = () => {
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-loose">
                 <p className="mb-10">
-                  A comprehensive assessment determines your viral hepatitis status, disease activity, 
+                  A clinical assessment determines your viral hepatitis status, disease activity, 
                   and any liver damage that may have occurred.
                 </p>
               </div>
@@ -607,7 +607,7 @@ export const ViralHepatitis = () => {
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Dr. Prem Thurairajah has extensive experience in treating both Hepatitis B and C, having 
-                completed specialist training at leading liver transplant centres in the UK and pioneered 
+                completed specialist training at recognised liver transplant centres in the UK and pioneered 
                 community-based Hepatitis C treatment programs in Singapore.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
