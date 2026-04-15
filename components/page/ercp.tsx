@@ -114,7 +114,7 @@ export const Ercp = () => {
               className="max-w-3xl"
             >
               <span className="text-emerald-600 dark:text-emerald-400 text-sm font-medium tracking-widest uppercase">
-                Advanced Therapeutic Endoscopy
+                Specialized Therapeutic Endoscopy
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
                 ERCP
@@ -160,7 +160,7 @@ export const Ercp = () => {
                 </p>
                 <p>
                   This allows the doctor to identify any abnormalities such as stones, strictures, or tumours, 
-                  and perform therapeutic procedures in the same session. ERCP is considered an advanced 
+                  and perform therapeutic procedures in the same session. ERCP is considered a complex 
                   endoscopic procedure requiring specialised training and expertise.
                 </p>
               </div>
@@ -352,7 +352,7 @@ export const Ercp = () => {
                 <p>
                   ERCP requires advanced training beyond standard gastroenterology fellowship. 
                   Dr. Thurairajah completed sub-specialist training in advanced hepatobiliary endoscopy, 
-                  including ERCP and EUS, at University College London (UCL), one of the leading centres 
+                  including ERCP and EUS, at University College London (UCL), a recognized centre 
                   for therapeutic endoscopy in the UK.
                 </p>
                 <p>
