@@ -14,12 +14,12 @@ const abdominalPainImage = "/abdominal-pain-jaundice.jpg";
 const relatedConditions = [
   {
     title: "Constipation",
-    description: "Comprehensive assessment and treatment of chronic constipation.",
+    description: "Clinical assessment and treatment of chronic constipation.",
     link: "/constipation",
   },
   {
     title: "GERD (Heartburn)",
-    description: "Expert management of acid reflux and upper GI symptoms.",
+    description: "Specialized management of acid reflux and upper GI symptoms.",
     link: "/gerd-heartburn",
   },
   {
@@ -143,8 +143,8 @@ export const Ibs = () => {
                   Irritable Bowel Syndrome
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  IBS is one of the most common gastrointestinal conditions, affecting 10-15% of the population. 
-                  With proper diagnosis and personalised management, most patients achieve significant symptom improvement.
+                  IBS is a common gastrointestinal condition, affecting 10-15% of the population. 
+                  With proper diagnosis and personalised management, most patients achieve symptom improvement through individualized management.
                 </p>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
@@ -543,11 +543,11 @@ export const Ibs = () => {
               className="max-w-3xl mx-auto text-center"
             >
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
-                Take Control of Your IBS
+                Management of Your IBS
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Living with IBS doesn&apos;t have to mean constant discomfort. Dr. Prem provides comprehensive 
-                evaluation and personalised treatment plans to help you regain control and improve your quality of life.
+                Living with IBS doesn&apos;t have to mean constant discomfort. Dr. Prem provides 
+                clinical evaluation and personalised treatment plans for the management of symptoms and improve your quality of life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2">
