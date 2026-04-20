@@ -76,7 +76,7 @@ export const Hero = () => {
             </h1>
 
             <p className="text-base md:text-lg text-primary-foreground/80 mb-4 leading-relaxed text-justify">
-              I provide specialist gastroenterology and hepatology care grounded in the latest medical evidence, delivered with clarity, compassion, and integrity. My approach is centred on listening carefully, explaining clearly, and tailoring care to each individual patient.
+              We provide specialist gastroenterology and hepatology care grounded in the latest medical evidence, delivered with clarity, compassion, and integrity. My approach is centred on listening carefully, explaining clearly, and tailoring care to each individual patient.
             </p>
 
             <p className="text-base md:text-lg text-primary-foreground/80 mb-4 leading-relaxed text-justify">I care for patients with a wide range of digestive and liver conditions, including acid reflux, bowel habit changes, irritable bowel syndrome, fatty liver and pancreatic disorders. I also have a strong focus on prevention and early detection, including bowel cancer screening and specialized endoscopic assessment.</p>
