@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { X } from "lucide-react";
 
 type CategoryModalProps = {
@@ -18,14 +18,6 @@ const CategoryModal = ({
   onClose,
   onSubmit,
 }: CategoryModalProps) => {
-  const [name, setName] = useState(initialName);
-
-  useEffect(() => {
-    if (open) {
-      setName(initialName);
-    }
-  }, [open, initialName]);
-
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -40,12 +32,12 @@ const CategoryModal = ({
 
   if (!open) return null;
 
-  const trimmedName = name.trim();
-
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    if (!trimmedName) return;
-    await onSubmit(trimmedName);
+    const formData = new FormData(event.currentTarget as HTMLFormElement);
+    const name = String(formData.get("name") ?? "").trim();
+    if (!name) return;
+    await onSubmit(name);
   };
 
   return (
@@ -80,9 +72,9 @@ const CategoryModal = ({
         <div className="mt-6">
           <label className="text-sm font-medium text-foreground">Category name</label>
           <input
+            name="name"
             type="text"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
+            defaultValue={initialName}
             placeholder="Enter category name"
             className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-base font-medium text-foreground focus:border-emerald-500 focus:outline-none"
           />
@@ -98,7 +90,6 @@ const CategoryModal = ({
           </button>
           <button
             type="submit"
-            disabled={!trimmedName}
             className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-70"
           >
             {mode === "create" ? "Create" : "Save"}

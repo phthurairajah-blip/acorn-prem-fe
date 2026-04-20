@@ -1,0 +1,82 @@
+name: Deploy Application
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
+          NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
+
+      - name: Prepare standalone bundle
+        run: |
+          mkdir -p deploy-package/.next
+          cp -R .next/standalone/. deploy-package/
+          cp -R .next/static deploy-package/.next/static
+          cp -R public deploy-package/public
+
+      - name: Upload standalone bundle to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
+          port: ${{ secrets.VPS_PORT || '22' }}
+          source: "deploy-package/*"
+          target: ${{ secrets.VPS_APP_DIR }}
+          rm: false
+          overwrite: true
+          strip_components: 0
+          tar_dereference: true
+
+      - name: Write env file and restart app on VPS
+        uses: appleboy/ssh-action@v1.2.0
+        env:
+          VPS_APP_DIR: ${{ secrets.VPS_APP_DIR }}
+          ENV_PRODUCTION: ${{ secrets.ENV_PRODUCTION }}
+          RESTART_COMMAND: ${{ secrets.VPS_RESTART_COMMAND }}
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
+          port: ${{ secrets.VPS_PORT || '22' }}
+          envs: VPS_APP_DIR,ENV_PRODUCTION,RESTART_COMMAND
+          script_stop: true
+          script: |
+            set -eu
+            mkdir -p "$VPS_APP_DIR"
+            cd "$VPS_APP_DIR"
+
+            cat > .env.production <<'EOF'
+            $ENV_PRODUCTION
+            EOF
+
+            sh -lc "$RESTART_COMMAND"

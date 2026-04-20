@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Image as ImageIcon, Link2, UploadCloud } from "lucide-react";
 import { IMAGE_HELPER_TEXT } from "@/lib/blog-validation";
 
@@ -22,13 +22,9 @@ const ACCEPTED_FILE_TYPES = "image/png,image/jpeg";
 const FeatureImagePicker = ({ value, onChange }: FeatureImagePickerProps) => {
   const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
   const fileInputRef = useRef<HTMLInputElement | null>(null);
-  const [link, setLink] = useState(value?.url ?? "");
   const [filePreview, setFilePreview] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    setLink(value?.url ?? "");
-  }, [value?.url]);
+  const link = value?.type === "url" ? value.url ?? "" : "";
 
   const preview = useMemo(() => {
     const url = value?.url || "";
@@ -42,7 +38,6 @@ const FeatureImagePicker = ({ value, onChange }: FeatureImagePickerProps) => {
   }, [value, filePreview, API_URL]);
 
   const handleLinkChange = (next: string) => {
-    setLink(next);
     setError(null);
     if (!next.trim()) {
       onChange?.({ type: "none" });
@@ -73,7 +68,6 @@ const FeatureImagePicker = ({ value, onChange }: FeatureImagePickerProps) => {
   };
 
   const handleClear = () => {
-    setLink("");
     setFilePreview(null);
     setError(null);
     if (fileInputRef.current) {

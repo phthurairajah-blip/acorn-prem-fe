@@ -17,16 +17,17 @@ const TOOLBAR = [
 const RichTextEditor = ({ initialValue = "", placeholder, onChange }: RichTextEditorProps) => {
   const editorRef = useRef<HTMLDivElement | null>(null);
   const [value, setValue] = useState(initialValue);
+  const [isDirty, setIsDirty] = useState(false);
 
   useEffect(() => {
-    if (editorRef.current && editorRef.current.innerHTML !== initialValue) {
+    if (!isDirty && editorRef.current && editorRef.current.innerHTML !== initialValue) {
       editorRef.current.innerHTML = initialValue;
-      setValue(initialValue);
     }
-  }, [initialValue]);
+  }, [initialValue, isDirty]);
 
   const handleInput = useCallback(() => {
     const html = editorRef.current?.innerHTML ?? "";
+    setIsDirty(true);
     setValue(html);
     onChange?.(html);
   }, [onChange]);
@@ -42,8 +43,8 @@ const RichTextEditor = ({ initialValue = "", placeholder, onChange }: RichTextEd
   );
 
   const isEmpty = useMemo(
-    () => value.replace(/<[^>]*>/g, "").trim().length === 0,
-    [value]
+    () => (isDirty ? value : initialValue).replace(/<[^>]*>/g, "").trim().length === 0,
+    [initialValue, isDirty, value]
   );
 
   return (
@@ -75,6 +76,7 @@ const RichTextEditor = ({ initialValue = "", placeholder, onChange }: RichTextEd
           contentEditable
           suppressContentEditableWarning
           onInput={handleInput}
+          dangerouslySetInnerHTML={{ __html: initialValue }}
           className="min-h-[320px] rounded-xl border border-slate-200 px-4 py-3 text-sm leading-7 text-foreground focus:border-emerald-500 focus:outline-none"
         />
       </div>
