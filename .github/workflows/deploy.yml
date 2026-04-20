@@ -43,6 +43,23 @@ jobs:
           cp -R .next/static deploy-package/.next/static
           cp -R public deploy-package/public
 
+      - name: Clean old standalone files on VPS
+        uses: appleboy/ssh-action@v1.2.0
+        env:
+          VPS_APP_DIR: ${{ secrets.VPS_APP_DIR }}
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
+          port: ${{ secrets.VPS_PORT || '22' }}
+          envs: VPS_APP_DIR
+          script_stop: true
+          script: |
+            set -eu
+            mkdir -p "$VPS_APP_DIR"
+            cd "$VPS_APP_DIR"
+            rm -rf .next public server.js package.json
+
       - name: Upload standalone bundle to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -54,7 +71,7 @@ jobs:
           target: ${{ secrets.VPS_APP_DIR }}
           rm: false
           overwrite: true
-          strip_components: 0
+          strip_components: 1
           tar_dereference: true
 
       - name: Write env file and restart app on VPS
