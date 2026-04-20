@@ -2,7 +2,7 @@
 export const WhatsAppButton = () => {
   return (
     <a
-      href="https://wa.me/6580533322"
+      href="https://api.whatsapp.com/send/?phone=6580533322&text=Hi,%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr%20Prem%20Thurairajah.%0AName:%0APreferred%20Date%20and%20Time:%0APreferred%20Hospital%20Location:%20(Mount Elizabeth%20/%20Farrer Park Hospital%20/%20Thomson Medical Centre)%0AReason for Visit:"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
