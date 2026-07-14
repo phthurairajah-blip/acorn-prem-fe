@@ -272,7 +272,7 @@ export const Contact = () => {
           >
             <Image
               src={drPremConsultationImage}
-              alt="Dr. Prem Thurairajah consulting with a patient"
+              alt="gastroscopy (ogd) procedure"
               width={1200}
               height={900}
               className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"

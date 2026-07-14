@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import { Colonoscopy } from "@/components/page/colonoscopy";
 
 export const metadata: Metadata = {
-  title: "Colonoscopy | Dr. Prem Thurairajah - Gastroenterologist Singapore",
+  title: "Colonoscopy Specialist Singapore | Dr. Prem Thurairajah",
   description:
-    "Expert colonoscopy procedure in Singapore. Bowel cancer screening, polyp removal, and lower GI endoscopy by Dr. Prem Thurairajah for diagnosis and prevention.",
+    "Trusted colonoscopy specialist in Singapore for screening, bowel symptoms and polyp removal. Find out how colonoscopy works and when to book.",
   keywords: [
     "colonoscopy",
     "bowel cancer screening",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Singapore gastroenterologist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/colonoscopy",
+    canonical: "https://drpremgastro.sg/colonoscopy",
   },
 };
 

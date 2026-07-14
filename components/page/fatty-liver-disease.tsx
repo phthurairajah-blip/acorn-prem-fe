@@ -2,8 +2,14 @@
 
 import { motion } from "framer-motion";
 import { RelatedConditions } from "@/components/RelatedConditions";
-import { ArrowLeft, AlertTriangle, CheckCircle, Calendar, TrendingUp } from "lucide-react";
+import { ArrowLeft, AlertTriangle, CheckCircle, Calendar, TrendingUp, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -69,6 +75,63 @@ const stagesOfDisease = [
   },
 ];
 
+const liverAssessmentReasons = [
+  { text: "Persistently abnormal liver function tests" },
+  { text: "Elevated liver enzymes (such as ALT or AST) that remain abnormal over time may require further evaluation." },
+  { text: "Fatty liver detected on ultrasound or imaging" },
+  { text: "Not all fatty liver disease is harmless. Specialist assessment can help determine whether there is significant liver inflammation or fibrosis." },
+  { text: "Diabetes or metabolic syndrome" },
+];
+
+const risks = [
+  "Type 2 diabetes",
+  "Obesity",
+  "High blood pressure",
+  "High cholesterol",
+];
+
+const specialistReferralSigns = [
+  {
+    title: "Persistent fatigue",
+    description: "",
+  },
+  {
+    title: "Right upper abdominal discomfort",
+    description: "",
+  },
+  {
+    title: "Unexplained weight loss",
+    description: "",
+  },
+  {
+    title: "Jaundice",
+    description: "",
+  },
+  {
+    title: "Abdominal swelling",
+    description: "",
+  },
+  {
+    title: "Leg swelling",
+    description: "",
+  },
+  {
+    title: "Evidence of liver fibrosis or cirrhosis",
+    description:
+      "Certain blood tests, FibroScan assessments or imaging findings may suggest liver scarring and warrant specialist input.",
+  },
+  {
+    title: "Significant alcohol intake",
+    description:
+      "Alcohol can contribute to liver injury and may accelerate progression of fatty liver disease.",
+  },
+  {
+    title: "Family history of liver disease",
+    description:
+      "A family history of cirrhosis, fatty liver or liver cancer may increase concern for progressive disease.",
+  },
+];
+
 const lifestyleRecommendations = [
   {
     category: "Diet",
@@ -99,6 +162,39 @@ const lifestyleRecommendations = [
   },
 ];
 
+const fattyLiverFaqs = [
+  {
+    question: "When should I see a fatty liver specialist in Singapore?",
+    answer:
+      "You should consider seeing a fatty liver specialist (hepatologist or gastroenterologist) in Singapore if you have persistently raised liver enzymes (ALT/AST) on blood tests, an ultrasound or health screening report suggesting a fatty liver, or risk factors such as type 2 diabetes, obesity, high cholesterol, high blood pressure, or a strong family history of liver disease. Early referral is especially important if you are over 50 and have diabetes.",
+  },
+  {
+    question: "What tests are used to diagnose fatty liver disease?",
+    answer:
+      "Diagnosis usually starts with blood tests (liver function tests, fasting glucose, HbA1c, lipid panel) and an abdominal ultrasound to detect fat in the liver. To assess how much scarring (fibrosis) is present, specialists in Singapore commonly use non-invasive scores like FIB-4 and APRI, FibroScan (transient elastography with CAP) to measure both liver stiffness and fat, and sometimes MRI-PDFF or MR elastography. A liver biopsy is now only used in selected cases where the diagnosis is unclear or other liver diseases need to be ruled out.",
+  },
+  {
+    question: "Can fatty liver be reversed with treatment?",
+    answer:
+      "Yes, in most people early fatty liver can be reversed. Losing 7–10% of body weight has been shown to significantly reduce liver fat, inflammation, and even early fibrosis. Controlling diabetes, cholesterol, and blood pressure, cutting out alcohol, and regular exercise all help. Once advanced scarring (cirrhosis) has developed, full reversal is less likely, but progression can still be slowed and complications prevented with proper treatment.",
+  },
+  {
+    question: "What is the difference between fatty liver, MASLD, and MASH?",
+    answer:
+      "Fatty liver simply means excess fat in liver cells. MASLD (Metabolic dysfunction-Associated Steatotic Liver Disease) is the updated term for fatty liver linked to metabolic risk factors such as obesity, diabetes, or high cholesterol — it has replaced the older term NAFLD. MASH (Metabolic dysfunction-Associated Steatohepatitis), previously called NASH, is a more aggressive form of MASLD where the fat causes inflammation and liver cell damage, and can progress to fibrosis, cirrhosis, or liver cancer if untreated.",
+  },
+  {
+    question: "What foods should I avoid if I have fatty liver?",
+    answer:
+      "Limit sugary drinks (soft drinks, bubble tea, sweetened kopi/teh), fruit juices, and foods high in fructose or refined sugar. Cut back on deep-fried hawker foods, fatty meats, processed snacks, white rice and refined carbs in large portions, and avoid or eliminate alcohol. A Mediterranean-style diet rich in vegetables, whole grains, legumes, fish, nuts, olive oil, and lean protein is generally recommended for patients with fatty liver.",
+  },
+  {
+    question: "How is fatty liver treatment in Singapore tailored to different stages of disease?",
+    answer:
+      "Treatment is matched to the stage of disease. For simple steatosis (early fatty liver), the focus is lifestyle change — diet, exercise, and weight loss, with control of diabetes and cholesterol. For MASH with significant fibrosis, specialists may add medications such as GLP-1 receptor agonists, pioglitazone, vitamin E, or newer MASH-specific therapies where appropriate, alongside structured weight-loss programmes or bariatric surgery in selected patients. For advanced fibrosis or cirrhosis, care includes regular surveillance for liver cancer and varices, management of complications, and referral for liver transplant evaluation when needed.",
+  },
+];
+
 export const FattyLiverDisease = () => {
   return (
     <main className="pt-20">
@@ -123,13 +219,12 @@ export const FattyLiverDisease = () => {
                   Metabolic Liver Disease
                 </span>
                 <h1 className="text-5xl md:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
-                  Fatty Liver Disease
+                  Fatty Liver Specialist in Singapore
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8 text-justify">
-                  Metabolic dysfunction-associated steatotic liver disease (MASLD) has become the most common liver condition worldwide, 
-                  affecting approximately 1 in 3 adults in Singapore. While often asymptomatic in early stages, 
-                  it can progress to serious liver damage. Clinical evidence suggests that early-stage MASLD may 
-                  be manageable through lifestyle intervention.
+                  Fatty liver disease, also known as metabolic dysfunction-associated steatotic liver disease (MASLD), 
+                  is a prevalent condition in Singapore, affecting approximately 1 in 3 adults. While often asymptomatic in early stages, MASLD can progress to serious liver damage, 
+                  including cirrhosis and liver cancer. Clinical evidence suggests that early-stage MASLD may be manageable through lifestyle interventions, including dietary changes and increased physical activity.
                 </p>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
@@ -195,14 +290,14 @@ export const FattyLiverDisease = () => {
               
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
                 <p>
-                  Fatty liver disease occurs when excess fat accumulates in liver cells. In metabolic dysfunction-associated 
+                  Fatty liver disease, or MASLD, occurs when excess fat accumulates in liver cells, often linked to metabolic risk 
+                  factors such as obesity, diabetes, and high cholesterol. In metabolic dysfunction-associated 
                   steatotic liver disease (MASLD), this happens in people with metabolic risk factors. It is closely 
                   linked to metabolic conditions such as obesity, diabetes, and high cholesterol.
                 </p>
                 <p>
-                  The condition exists on a spectrum, ranging from simple fat accumulation (steatosis) to 
-                  metabolic dysfunction-associated steatohepatitis (MASH), which involves inflammation and can lead to liver 
-                  scarring (fibrosis) and eventually cirrhosis.
+                  MASLD exists on a spectrum, ranging from simple fat accumulation (steatosis) to metabolic dysfunction-associated steatohepatitis (MASH), 
+                  which involves inflammation and can lead to liver scarring (fibrosis) and eventually cirrhosis. 
                 </p>
               </div>
 
@@ -283,11 +378,116 @@ export const FattyLiverDisease = () => {
                       }`}>
                         Stage {index + 1}
                       </span>
-                      <h4 className="font-semibold text-foreground text-lg">{stage.stage}</h4>
+                      <h3 className="font-semibold text-foreground text-lg">{stage.stage}</h3>
                     </div>
                     <p className="text-base text-muted-foreground leading-relaxed">{stage.description}</p>
                   </motion.div>
                 ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-20">
+          <div className="container mx-auto px-2 sm:px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto"
+            >
+            <h3 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
+                Fatty Liver Symptoms and Warning Signs
+            </h3>
+            <p className="text-base text-muted-foreground mb-4 leading-relaxed">
+                Fatty Liver often causes no symptoms at all, especially in the early stages. Many people only discover it after abnormal liver blood tests
+                , an ultrasound scan, health screening investigation for diabetes, obesity, or high cholesterol.
+            </p>
+            <p className="text-base text-muted-foreground mb-10 leading-relaxed">
+                When symptoms do occur, they are often quite non-specific, therefore early screening and intervention prevents chronic liver disease.
+            </p>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-20">
+          <div className="container mx-auto px-2 sm:px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto"
+            >
+            <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
+                When should you seek specialist review?
+            </h2>
+            <div className="space-y-8">
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1, duration: 0.4 }}
+                    className="bg-background rounded-xl p-6 border border-emerald-200 dark:border-emerald-800/30"
+                  >
+                    <p className="text-base text-muted-foreground mb-4 leading-relaxed">
+                      You should consider seeing a gastroenterologist or hepatologist if you have:
+                    </p>
+                    <ul className="space-y-3">
+                      {liverAssessmentReasons.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                          <span className="text-base text-muted-foreground leading-relaxed">{item.text}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2, duration: 0.4 }}
+                    className="bg-background rounded-xl p-6 border border-emerald-200 dark:border-emerald-800/30"
+                  >
+                    <p className="text-base text-muted-foreground mb-4 leading-relaxed">
+                      Patients with:
+                    </p>
+                    <ul className="space-y-3">
+                      {risks.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                          <span className="text-base text-muted-foreground leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-base text-muted-foreground mt-4 leading-relaxed">
+                      are at increased risk of developing more advanced liver disease. 
+                      Symptoms suggestive of liver disease.
+                    </p>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3, duration: 0.4 }}
+                    className="bg-background rounded-xl p-6 border border-emerald-200 dark:border-emerald-800/30"
+                  >
+                    <p className="text-base text-muted-foreground mb-4 leading-relaxed">
+                      Patients with:
+                    </p>
+                    <ul className="space-y-3">
+                      {specialistReferralSigns.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                          <div className="flex" style={{flexDirection: "column"}}>
+                          <span className="text-base text-muted-foreground leading-relaxed">{item.title}</span>
+                          <span className="text-sm text-muted-foreground">{item.description}</span>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
               </div>
             </motion.div>
           </div>
@@ -324,7 +524,7 @@ export const FattyLiverDisease = () => {
                     height={720}
                   />
                   <div className="p-4 bg-emerald-50 dark:bg-emerald-900/20">
-                    <h4 className="font-semibold text-foreground mb-1 text-lg">Blood Tests</h4>
+                    <h3 className="font-semibold text-foreground mb-1 text-lg">Blood Tests</h3>
                     <p className="text-base text-muted-foreground leading-relaxed">Liver enzymes, metabolic panel, fibrosis scores (FIB-4, NFS)</p>
                   </div>
                 </div>
@@ -337,7 +537,7 @@ export const FattyLiverDisease = () => {
                     height={720}
                   />
                   <div className="p-4 bg-emerald-50 dark:bg-emerald-900/20">
-                    <h4 className="font-semibold text-foreground mb-1 text-lg">Ultrasound</h4>
+                    <h3 className="font-semibold text-foreground mb-1 text-lg">Ultrasound</h3>
                     <p className="text-base text-muted-foreground leading-relaxed">Detects fatty changes and rules out other conditions</p>
                   </div>
                 </div>
@@ -350,7 +550,7 @@ export const FattyLiverDisease = () => {
                     height={720}
                   />
                   <div className="p-4 bg-emerald-50 dark:bg-emerald-900/20">
-                    <h4 className="font-semibold text-foreground mb-1 text-lg">FibroScan</h4>
+                    <h3 className="font-semibold text-foreground mb-1 text-lg">FibroScan</h3>
                     <p className="text-base text-muted-foreground leading-relaxed">Measures liver stiffness and fat content (CAP score)</p>
                     <Link 
                       href="/fibroscan" 
@@ -369,7 +569,7 @@ export const FattyLiverDisease = () => {
                     height={720}
                   />
                   <div className="p-4 bg-emerald-50 dark:bg-emerald-900/20">
-                    <h4 className="font-semibold text-foreground mb-1 text-lg">MRI-PDFF</h4>
+                    <h3 className="font-semibold text-foreground mb-1 text-lg">MRI-PDFF</h3>
                     <p className="text-base text-muted-foreground leading-relaxed">Most accurate non-invasive method to quantify liver fat</p>
                   </div>
                 </div>
@@ -382,7 +582,7 @@ export const FattyLiverDisease = () => {
                     height={720}
                   />
                   <div className="p-4 bg-emerald-50 dark:bg-emerald-900/20">
-                    <h4 className="font-semibold text-foreground mb-1 text-lg">Liver Biopsy</h4>
+                    <h3 className="font-semibold text-foreground mb-1 text-lg">Liver Biopsy</h3>
                     <p className="text-base text-muted-foreground leading-relaxed">Distinguishes MASH from simple steatosis</p>
                     <Link 
                       href="/liver-biopsy" 
@@ -408,7 +608,7 @@ export const FattyLiverDisease = () => {
               className="max-w-4xl mx-auto"
             >
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
-                Lifestyle-Based Treatment
+                Lifestyle-Based Treatment for Fatty Liver in Singapore
               </h2>
               <p className="text-base text-muted-foreground mb-10 leading-relaxed">
                 Lifestyle modification is the cornerstone of fatty liver disease treatment. Weight loss of 
@@ -426,7 +626,7 @@ export const FattyLiverDisease = () => {
                     height={720}
                   />
                   <div className="p-4 bg-emerald-50 dark:bg-emerald-900/20">
-                    <h4 className="font-semibold text-foreground text-lg">Mediterranean Diet</h4>
+                    <h3 className="font-semibold text-foreground text-lg">Mediterranean Diet</h3>
                     <p className="text-base text-muted-foreground">Rich in healthy fats, lean proteins, and antioxidants</p>
                   </div>
                 </div>
@@ -439,7 +639,7 @@ export const FattyLiverDisease = () => {
                     height={720}
                   />
                   <div className="p-4 bg-emerald-50 dark:bg-emerald-900/20">
-                    <h4 className="font-semibold text-foreground text-lg">Regular Exercise</h4>
+                    <h3 className="font-semibold text-foreground text-lg">Regular Exercise</h3>
                     <p className="text-base text-muted-foreground">150+ minutes of moderate activity weekly</p>
                   </div>
                 </div>
@@ -482,7 +682,7 @@ export const FattyLiverDisease = () => {
               className="max-w-4xl mx-auto"
             >
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
-                Medical Treatment
+                Medical Treatments for Fatty Liver Disease
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-loose">
                 <p>
@@ -542,6 +742,51 @@ export const FattyLiverDisease = () => {
             </p>
           </div>
         </section>
+
+        {/* FAQ Section */}
+                <section className="py-14 lg:py-20">
+                  <div className="container mx-auto px-2 sm:px-4">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6 }}
+                      className="text-center mb-10"
+                    >
+                      <div className="flex items-center justify-center gap-3 mb-4">
+                        <HelpCircle className="h-6 w-6 text-emerald-500" />
+                        <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
+                          Frequently Asked Questions
+                        </h2>
+                      </div>
+                    </motion.div>
+        
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
+                      className="max-w-3xl mx-auto"
+                    >
+                      <Accordion type="single" collapsible className="w-full space-y-3">
+                        {fattyLiverFaqs.map((faq, index) => (
+                          <AccordionItem 
+                            key={index} 
+                            value={`faq-${index}`}
+                            className="bg-card rounded-xl border border-border px-4"
+                          >
+                            <AccordionTrigger className="hover:no-underline py-4 text-left">
+                              <h3 className="font-medium text-lg text-foreground">{faq.question}</h3>
+                            </AccordionTrigger>
+                            <AccordionContent className="pb-4 text-base text-muted-foreground">
+                              {faq.answer}
+                            </AccordionContent>
+                          </AccordionItem>
+                        ))}
+                      </Accordion>
+                    </motion.div>
+                  </div>
+          </section>
       </main>
   )
 }

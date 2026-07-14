@@ -7,9 +7,9 @@ import { FattyLiverDisease } from "@/components/page/fatty-liver-disease";
 
 export const metadata: Metadata = {
   title:
-    "Fatty Liver Disease (MASLD/MASH) | Dr. Prem Thurairajah - Gastroenterologist Singapore",
+    "Fatty Liver Treatment Singapore | Dr. Prem Thurairajah",
   description:
-    "Expert diagnosis and management of fatty liver disease (MASLD/MASH) in Singapore. Lifestyle-based treatment and comprehensive care by Dr. Prem Thurairajah.",
+    "Consult with the Fatty Liver Specialist in Singapore for comprehensive management and treatment of fatty liver disease (MASLD/MASH) with lifestyle-based solutions.",
   keywords: [
     "fatty liver",
     "MASLD",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Singapore hepatologist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/fatty-liver-disease",
+    canonical: "https://drpremgastro.sg/fatty-liver-disease",
   },
 };
 

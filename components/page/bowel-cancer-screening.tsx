@@ -48,34 +48,34 @@ const screeningBenefits = [
 const colonoscopySteps = [
   {
     step: 1,
-    title: "Consultation",
-    desc: "Meet your specialist to discuss your health history, symptoms, and screening needs. You'll receive clear instructions for preparation.",
+    title: " Before the procedure: bowel preparation",
+    desc: "<p>Good bowel preparation is very important. A clean bowel allows the doctor to see the lining clearly and detect small polyps.</p><p><strong>A few days before</strong><br>You may be asked to avoid high-fibre foods such as seeds, nuts, whole grains, raw vegetables, and fruit with skin. Some medications, especially blood thinners, diabetes medicines, and iron tablets, may need special instructions.</p><p><strong>The day before</strong><br>You will usually take a bowel-cleansing drink. This causes frequent watery stools to empty the bowel. Most patients describe this as the least pleasant part, but it is temporary and important.</p><p><strong>Diet and fasting</strong><br>You may be placed on a low-residue or clear-fluid diet, depending on your instructions. Clear fluids may include water, clear soup, apple juice, isotonic drinks, and tea or coffee without milk. Avoid red or purple drinks. Fasting is required before sedation; least 6 hours for food and 2 hours for clear fluids.</p>",
   },
   {
     step: 2,
-    title: "Bowel Preparation",
-    desc: "Follow a special diet 1-2 days before and take prescribed laxatives to cleanse the bowel. This ensures clear visibility.",
+    title: " On the day of the colonoscopy",
+    desc: "<p>You will register at the endoscopy centre and change into a gown. A nurse will check your blood pressure, pulse, oxygen level, medical history, allergies, and consent.</p><p><strong>Sedation options</strong><br>Most colonoscopies are done with sedation to keep you comfortable. This may range from mild sedation to deeper sedation, depending on the centre, your health, and your preference. You may feel sleepy and may not remember much of the procedure.</p><p><strong>During the procedure</strong><br>The colonoscope is gently passed through the anus into the colon. Air or carbon dioxide is used to open the bowel so the lining can be seen. If polyps are found, they may be removed during the same procedure. Biopsies may also be taken if needed.</p><p><strong>How long it takes</strong><br>The procedure itself often takes about 30 minutes, though the total visit may take a few hours including preparation, sedation, recovery, and discharge.</p>",
   },
   {
     step: 3,
-    title: "Day of Procedure",
-    desc: "The colonoscopy typically takes 20-30 minutes. You'll receive sedation for comfort and won't feel any discomfort during the procedure.",
+    title: " After the procedure",
+    desc: "<p>You will rest in a recovery area until the sedation wears off. Some bloating, mild cramps, or passing wind is common because air was introduced into the bowel. This usually improves quickly. Most patients can eat later the same day unless advised otherwise.</p><p>Because sedation affects reflexes and judgment, you should not drive, drink alcohol, operate machinery, or make important decisions until the next day. Arrange for someone to take you home.</p>",
   },
-  {
-    step: 4,
-    title: "During Colonoscopy",
-    desc: "A flexible scope with a camera examines your entire colon. If polyps are found, they can usually be removed immediately.",
-  },
-  {
-    step: 5,
-    title: "Recovery",
-    desc: "Rest in the recovery area for 30-60 minutes as sedation wears off. You'll need someone to accompany you home.",
-  },
-  {
-    step: 6,
-    title: "Results & Follow-up",
-    desc: "Your specialist will discuss preliminary findings on the same day. Detailed pathology results (if applicable) within 1-2 weeks.",
-  },
+  // {
+  //   step: 4,
+  //   title: "During Colonoscopy",
+  //   desc: "A flexible scope with a camera examines your entire colon. If polyps are found, they can usually be removed immediately.",
+  // },
+  // {
+  //   step: 5,
+  //   title: "Recovery",
+  //   desc: "Rest in the recovery area for 30-60 minutes as sedation wears off. You'll need someone to accompany you home.",
+  // },
+  // {
+  //   step: 6,
+  //   title: "Results & Follow-up",
+  //   desc: "Your specialist will discuss preliminary findings on the same day. Detailed pathology results (if applicable) within 1-2 weeks.",
+  // },
 ];
 
 const faqs = [
@@ -143,7 +143,7 @@ export const BowelCancerScreeningPage = () => {
                   Bowel (Colorectal) Cancer Screening
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                  Many bowel cancers start as small growths (polyps) that can be removed before they turn into cancer. Screening helps detect early disease—often before symptoms appear.
+                  In Singapore, colonoscopy screening is an important procedure for early detection of colorectal cancer. It can identify and remove small polyps before they develop into cancer—often before patients experience any symptoms.
                 </p>
                 <Button asChild size="lg" className="gap-2">
                   <a href="/#contact">
@@ -161,7 +161,7 @@ export const BowelCancerScreeningPage = () => {
               >
                 <Image
                   src={colonoscopyImage}
-                  alt="Colonoscopy procedure"
+                  alt="Colonoscopy screening procedure in Singapore"
                   width={1280}
                   height={720}
                   className="rounded-2xl shadow-lg w-full object-cover aspect-video"
@@ -289,10 +289,11 @@ export const BowelCancerScreeningPage = () => {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
-                  What to Expect from a Colonoscopy
+                  Colonoscopy Screening Procedure and What To Expect
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Understanding the process helps you feel prepared and confident. Here&apos;s what happens at each step.
+                  A colonoscopy is a procedure that allows the doctor to examine the inside of the large bowel using a thin flexible camera. 
+                  It is commonly done for bowel cancer screening, change in bowel habit, bleeding, anaemia, abdominal symptoms, or follow-up of previous polyps.
                 </p>
                 <Accordion type="single" collapsible className="w-full space-y-3">
                   {colonoscopySteps.map((item, index) => (
@@ -315,8 +316,17 @@ export const BowelCancerScreeningPage = () => {
                     </AccordionItem>
                   ))}
                 </Accordion>
+                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                  Common patient experiences
+                </h2>
+                <p className="text-muted-foreground mt-6 text-base">
+                  Many patients say the bowel preparation is the hardest part, not the procedure itself. During the colonoscopy, most are comfortable because of sedation. Afterward, it is common to feel a little drowsy, bloated, or hungry. Patients are often relieved once the test is completed, especially if polyps are removed early or the results are reassuring.
+                </p>
+                <p className="text-muted-foreground mt-6 text-base">
+                  Seek medical advice urgently if you develop severe abdominal pain, persistent vomiting, fever, heavy rectal bleeding, dizziness, or black stools after the procedure.
+                </p>
                 <p className="text-muted-foreground mt-6 italic text-base">
-                  Most patients report the procedure was easier than expected
+                  Most patients report that the colonoscopy screening procedure was easier than expected.
                 </p>
                 <Link
                   href="/colonoscopy"

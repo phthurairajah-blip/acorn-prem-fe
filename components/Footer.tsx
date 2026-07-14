@@ -68,7 +68,7 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <p className="font-semibold mb-4">Quick Links</p>
             <ul className="space-y-3 text-sm">
               <li>
               <a href="/#about" className="text-background/70 hover:text-background transition-colors">
@@ -100,7 +100,7 @@ export const Footer = () => {
 
           {/* Clinic Hours */}
           <div>
-            <h4 className="font-semibold mb-4">Clinic Hours</h4>
+            <p className="font-semibold mb-4">Clinic Hours</p>
             <ul className="space-y-2 text-sm text-background/70">
               <li className="flex justify-between">
                 <span>Monday – Friday</span>

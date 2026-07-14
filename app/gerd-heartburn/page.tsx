@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import {GerdHeartBurn} from '@/components/page/gerd-heartburn';
 
 export const metadata: Metadata = {
-  title: "Acid Reflux & Heartburn Treatment | Dr. Prem Thurairajah - Gastroenterologist Singapore",
+  title: "Gerd Specialist Singapore | Heartburn Treatment | Dr. Prem Thurairajah",
   description:
-    "Expert treatment of heartburn and acid reflux in Singapore. Reflux management, lifestyle modifications, and advanced treatment options by Dr. Prem Thurairajah.",
+    "Looking for a GERD specialist in Singapore? Dr. Prem Thurairajah provides effective treatment for GERD and related conditions. Schedule your consultation today!",
   keywords: [
     "heartburn",
     "acid reflux",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "gastroenterologist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/gerd-heartburn",
+    canonical: "https://drpremgastro.sg/gerd-heartburn",
   },
 };
 

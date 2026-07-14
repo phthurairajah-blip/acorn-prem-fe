@@ -415,3 +415,25 @@
     }
   }
 }
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border-color: var(--color-emerald-200);
+  border-width: 1px;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-table th {
+  font-weight: 600;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}

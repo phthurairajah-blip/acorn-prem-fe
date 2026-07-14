@@ -148,7 +148,7 @@ export const Navigation = ({
         <nav className="flex items-center justify-between h-20 min-w-0">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 min-w-0">
-            <Image src={acornLogo} alt="Acorn Gastroenterology" width={56} height={56} className="h-14 w-auto" />
+            <Image src={acornLogo} alt="acorn gastroenterology logo" width={56} height={56} className="h-14 w-auto" />
             <div className="hidden sm:flex flex-col min-w-0">
               <span
                 className={`font-serif text-lg font-semibold transition-colors truncate ${

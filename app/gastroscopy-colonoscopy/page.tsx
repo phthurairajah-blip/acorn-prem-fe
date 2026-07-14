@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import GastroscopyColonoscopy from "@/components/page/gastroscopy-colonoscopy";
 
 export const metadata: Metadata = {
-  title: "Gastroscopy (OGD) | Dr. Prem Thurairajah - Gastroenterologist Singapore",
+  title: "Gastroscopy Singapore | Dr. Prem Thurairajah",
   description:
-    "Expert gastroscopy (OGD) procedure in Singapore. Upper GI endoscopy by Dr. Prem Thurairajah for diagnosis, screening, and treatment of oesophageal and stomach conditions.",
+    "Expert gastroscopy (OGD) in Singapore. Upper GI endoscopy by Dr. Prem Thurairajah for diagnosis & treatment of oesophageal and stomach conditions. Book now.",
   keywords: [
     "gastroscopy",
     "OGD",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Singapore gastroenterologist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/gastroscopy-colonoscopy",
+    canonical: "https://drpremgastro.sg/gastroscopy-colonoscopy",
   },
 };
 

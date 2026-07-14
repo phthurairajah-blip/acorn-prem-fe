@@ -5,9 +5,9 @@ import { LiverCirrhosis } from "@/components/page/liver-cirrhosis";
 
 
 export const metadata: Metadata = {
-  title: "Liver Cirrhosis | Dr. Prem Thurairajah - Gastroenterologist Singapore",
+  title: "Liver Cirrhosis Treatment Singapore | Dr Prem Thurairajah",
   description:
-    "Expert management of liver cirrhosis in Singapore. Advanced care for chronic liver disease, complications, and liver transplant assessment by Dr. Prem Thurairajah.",
+    "Discover effective liver cirrhosis treatments offered by Dr Prem Thurairajah. Advanced care for chronic liver disease, complications, and liver transplant assessment.",
   keywords: [
     "liver cirrhosis",
     "chronic liver disease",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "hepatologist Singapore",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/liver-cirrhosis",
+    canonical: "https://drpremgastro.sg/liver-cirrhosis",
   },
 };
 
