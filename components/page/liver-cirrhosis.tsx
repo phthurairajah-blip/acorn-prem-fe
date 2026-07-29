@@ -228,6 +228,12 @@ const liverCirrhosisFaqs = [
     additionalInfo:
       "In Singapore, liver transplantation is available at SGH and NUH. Living donor liver transplant (from a willing family member) is an option given the limited deceased donor pool.",
   },
+  {
+    question:
+      "How is treatment different when cirrhosis is caused by hepatitis B, alcohol, or fatty liver disease?",
+    answer:
+      "<p class='text-base text-muted-foreground leading-relaxed'><strong>Hepatitis B cirrhosis:</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>Long-term antiviral therapy</strong> (tenofovir or entecavir) is the cornerstone — suppressing the virus slows progression and can allow partial fibrosis regression.</li><li>Continue antivirals indefinitely; stopping can trigger dangerous viral rebound (hepatitis flares).</li></ul><p class='text-base text-muted-foreground leading-relaxed'><strong>Alcohol-related cirrhosis:</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>Complete alcohol abstinence</strong> is the single most effective treatment — even advanced cirrhosis can stabilise or partially improve.</li><li><strong>Nutritional support</strong> is critical, as alcohol-related cirrhosis is commonly associated with severe malnutrition.</li><li>Transplant listing generally requires a sustained documented period of abstinence.</li></ul><p class='text-base text-muted-foreground leading-relaxed'><strong>Metabolic (fatty liver / MASH) cirrhosis:</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>Weight loss of ≥7–10% of body weight</strong> can meaningfully reduce liver inflammation and fibrosis.</li><li><strong>Tight control of diabetes, hypertension, and dyslipidaemia</strong> is essential for slowing liver disease progression.</li><li>New targeted therapies (e.g. resmetirom) are emerging but are not yet standard practice in Singapore.</li><li>Avoid further hepatotoxic medications and alcohol, even in small amounts.</li></ul>",
+  },
 ];
 
 export const LiverCirrhosis = () => {
@@ -772,13 +778,15 @@ export const LiverCirrhosis = () => {
                               <h3 className="font-medium text-lg text-foreground">{faq.question}</h3>
                             </AccordionTrigger>
                             <AccordionContent className="pb-4 text-base text-muted-foreground">
-                              {faq.answer}
-                              
+                              <div
+  dangerouslySetInnerHTML={{ __html: faq.answer }}
+/>
+                              {faq.points &&
                               <ul className="space-y-2 mt-4 mb-4">
                                 {faq.points.map((point, i) => (
                                 <li key={i} className="flex items-start text-muted-foreground leading-relaxed"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 mr-3 shrink-0"></span> {point}</li>
                                 ))}
-                              </ul>
+                              </ul> }
 
                               {faq.additionalInfo && <p>{faq.additionalInfo}</p>}
                             </AccordionContent>
