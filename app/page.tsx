@@ -11,9 +11,9 @@ import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dr. Prem Thurairajah | Specialist Medical Care in Singapore",
+  title: "Gastro & Liver Specialist Singapore | Dr. Prem Thurairajah",
   description:
-    "Dr. Prem Thurairajah provides expert specialist medical care in Singapore with over 25 years of experience. Book your consultation at Mount Elizabeth Orchard.",
+    "Expert liver specialist in Singapore with over 25 years of experience in gastroenterology. Book your appointment today!",
   keywords: [
     "specialist doctor Singapore",
     "medical consultation",
@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     "Dr Prem Thurairajah",
   ],
   alternates: {
-    canonical: "https://drprem.sg",
+    canonical: "https://drpremgastro.sg/",
   },
   openGraph: {
-    title: "Dr. Prem Thurairajah | Specialist Medical Care in Singapore",
+    title: "Gastro & Liver Specialist Singapore | Dr. Prem Thurairajah",
     description:
-      "Expert specialist medical care with a patient-centred approach. Book your consultation today.",
+      "Expert liver specialist in Singapore with over 25 years of experience in gastroenterology. Book your appointment today!",
     type: "website",
   },
 };

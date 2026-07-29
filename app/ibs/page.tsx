@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import { Ibs } from "@/components/page/ibs";
 
 export const metadata: Metadata = {
-  title: "Irritable Bowel Syndrome (IBS) | Expert Care | Dr. Prem Thurairajah",
+  title: "IBS Treatment | IBS Specialist Singapore | Dr. Prem Thurairajah",
   description:
-    "Expert diagnosis and personalised management of Irritable Bowel Syndrome (IBS) in Singapore. Dr. Prem Thurairajah provides comprehensive care including dietary guidance and symptom control.",
+    "Looking for a certified irritable bowel syndrome specialist in Singapore? Our expert team offers comprehensive diagnosis and treatment for Irritable Bowel Syndrome.",
   keywords: [
     "IBS",
     "irritable bowel syndrome",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Singapore gastroenterologist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/irritable-bowel-syndrome",
+    canonical: "https://drpremgastro.sg/ibs",
   },
 };
 

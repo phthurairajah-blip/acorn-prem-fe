@@ -27,70 +27,87 @@ const conditions: {
   title: string;
   image: string;
   link?: string;
+  alt?: string;
 }[] = [{
   title: "Acid Reflux & Heartburn",
   image: heartburnImage,
-  link: "/gerd-heartburn"
+  link: "/gerd-heartburn",
+  alt: "acid reflux & heartburn treatment",
 }, {
   title: "Autoimmune Hepatitis",
   image: autoimmuneImage,
-  link: "/autoimmune-hepatitis"
+  link: "/autoimmune-hepatitis",
+  alt: "autoimmune hepatitis condition",
 }, {
   title: "Bile Duct Stones",
   image: bileDuctImage,
-  link: "/bile-duct-stones"
+  link: "/bile-duct-stones",
+  alt: "bile duct stones treatment",
 }, {
   title: "Bowel Cancer Screening",
   image: colonImage,
-  link: "/bowel-cancer-screening"
+  link: "/bowel-cancer-screening",
+  alt: "bowel cancer screening procedure",
 }, {
   title: "Chronic Pancreatitis",
   image: chronicPancreatitisImage,
-  link: "/chronic-pancreatitis"
+  link: "/chronic-pancreatitis",
+  alt: "chronic pancreatitis condition",
 }, {
   title: "Constipation",
   image: constipationImage,
-  link: "/constipation"
+  link: "/constipation",
+  alt: "constipation condition",
 }, {
   title: "Epigastric Pain",
   image: epigastricImage,
-  link: "/epigastric-pain"
+  link: "/epigastric-pain",
+  alt: "epigastric pain symptoms",
 }, {
   title: "Fatty Liver Disease",
   image: fattyLiverImage,
-  link: "/fatty-liver-disease"
+  link: "/fatty-liver-disease",
+  alt: "fatty liver disease visual representation",
 }, {
   title: "Inflammatory Bowel Disease",
   image: ibdImage,
-  link: "/inflammatory-bowel-disease"
+  link: "/inflammatory-bowel-disease",
+  alt: "inflammatory bowel disease information",
 }, {
   title: "Irritable Bowel Syndrome",
   image: ibsImage,
-  link: "/ibs"
+  link: "/ibs",
+  alt: "irritable bowel syndrome symptoms",
 }, {
   title: "Jaundice",
   image: jaundiceImage,
-  link: "/jaundice"
+  link: "/jaundice",
+  alt: "jaundice symptoms and signs",
 }, {
   title: "Liver & Pancreatic Cancer Screening",
   image: cancerScreeningImage,
-  link: "/liver-pancreatic-cancer-screening"
+  link: "/liver-pancreatic-cancer-screening",
+  alt: "liver cancer & pancreatic cancer screening",
 }, {
   title: "Liver Cirrhosis",
   image: cirrhosisImage,
-  link: "/liver-cirrhosis"
+  link: "/liver-cirrhosis",
+  alt: "liver cirrhosis condition",
 }, {
   title: "Liver Transplantation",
   image: liverTransplantImage,
-  link: "/liver-transplantation"
+  link: "/liver-transplantation",
+  alt: "liver transplantation procedure",
 }, {
   title: "Pancreatic Cyst",
   image: pancreasImage,
-  link: "/pancreatic-cyst"
+  link: "/pancreatic-cyst",
+  alt: "pancreatic cyst condition",
 }, {
   title: "Viral Hepatitis (Hep B & C)",
   image: viralHepatitisImage,
-  link: "/viral-hepatitis"
+  link: "/viral-hepatitis",
+  alt: "viral hepatitis (hep b & c) information",
 }];
 
 const ConditionCard = ({
@@ -133,7 +150,7 @@ export const Conditions = () => {
           <span className="text-sky-600 dark:text-sky-400 text-sm font-medium tracking-widest uppercase">
             Areas of Expertise
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mt-3 mb-6">Conditions We Treat</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mt-3 mb-6">Gastroenterological Conditions We Treat</h2>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

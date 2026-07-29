@@ -224,7 +224,7 @@ export const About = () => {
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-medium">
               <Image
                 src={drPremAbout}
-                alt="Dr. Prem Thurairajah"
+                alt="Dr. Prem Thurairajah gastroenterology expert"
                 width={800}
                 height={1000}
                 className="w-full h-full object-cover object-top"
@@ -273,8 +273,8 @@ export const About = () => {
                 <strong className="text-foreground">over 30 peer-reviewed scientific papers</strong> in hepatology and gastroenterology.
               </p>
               <p className="text-justify">
-                Dr. Prem continues to contribute to national public health strategy as a member of Singapore&apos;s{" "}
-                <strong className="text-foreground">National Hepatitis C Elimination Steering Committee</strong>.
+                As a member of Singapore's National Hepatitis C Elimination Steering Committee, 
+                Dr. Prem is a trusted <strong className="text-foreground">liver specialist in Singapore.</strong>
               </p>
               <p className="text-justify">
                 In Singapore, he previously served as <strong className="text-foreground">Director of Hepatology</strong> at Changi General Hospital and as a Senior Consultant at the National University Hospital (NUH). He was core faculty within both the SingHealth and NUHS residency programmes, training senior residents and fellows in gastroenterology and hepatology.

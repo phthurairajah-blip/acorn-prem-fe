@@ -34,7 +34,7 @@ export const Hero = () => {
               <div className="aspect-[3/4] w-full rounded-2xl overflow-hidden border-4 border-card/20 shadow-glow relative">
                 <Image
                   src={drPremHeadshot}
-                  alt="Dr. Prem Thurairajah"
+                  alt="Dr. Prem Thurairajah liver specialist in singapore"
                   fill
                   sizes="(min-width: 1024px) 520px, 80vw"
                   className="w-full h-full object-cover object-top"
@@ -69,10 +69,10 @@ export const Hero = () => {
               Gastroenterology & Hepatology
             </motion.span>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-primary-foreground leading-tight mb-6 italic">
-              <span className="whitespace-nowrap">Evidence-Based Care,</span>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold text-primary-foreground leading-tight mb-6 italic">
+              <span className="whitespace-nowrap">Evidence-Based Gastroenterology</span>
               <br />
-              A Compassionate Approach to Your <span className="whitespace-nowrap">Digestive Health</span>
+              and Liver Care in Singapore
             </h1>
 
             <p className="text-base md:text-lg text-primary-foreground/80 mb-4 leading-relaxed text-justify">

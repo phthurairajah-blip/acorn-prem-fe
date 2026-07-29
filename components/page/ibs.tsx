@@ -2,8 +2,14 @@
 
 import { motion } from "framer-motion";
 import { RelatedConditions } from "@/components/RelatedConditions";
-import { ArrowLeft, AlertTriangle, CheckCircle, Calendar, Info, Stethoscope, Apple, Brain } from "lucide-react";
+import { ArrowLeft, AlertTriangle, CheckCircle, Calendar, Info, Stethoscope, Apple, Brain, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -27,6 +33,123 @@ const relatedConditions = [
     description: "Diagnostic examination to exclude other bowel conditions.",
     link: "/colonoscopy",
   },
+];
+
+const ibsComparisons = [
+  {
+    id: 1,
+    feature: "What is it?",
+    ibs: "A functional bowel disorder affecting how the digestive system works",
+    ibd: "A chronic inflammatory condition of the digestive tract",
+  },
+  {
+    id: 2,
+    feature: "Examples",
+    ibs: "IBS with diarrhoea, constipation, or mixed bowel habits",
+    ibd: "Crohn's disease and ulcerative colitis",
+  },
+  {
+    id: 3,
+    feature: "Common symptoms",
+    ibs: "Bloating, abdominal pain, diarrhoea, constipation, excess gas",
+    ibd: "Abdominal pain, diarrhoea, urgency, rectal bleeding, weight loss",
+  },
+  {
+    id: 4,
+    feature: "Blood in stool",
+    ibs: "Uncommon",
+    ibd: "Common",
+  },
+  {
+    id: 5,
+    feature: "Weight loss",
+    ibs: "Usually absent",
+    ibd: "More common",
+  },
+  {
+    id: 6,
+    feature: "Fever",
+    ibs: "No",
+    ibd: "Can occur during active inflammation",
+  },
+  {
+    id: 7,
+    feature: "Inflammation in the bowel",
+    ibs: "No visible inflammation",
+    ibd: "Yes",
+  },
+  {
+    id: 8,
+    feature: "Damage to the intestine",
+    ibs: "No",
+    ibd: "Can occur over time",
+  },
+  {
+    id: 9,
+    feature: "Symptoms during sleep",
+    ibs: "Uncommon",
+    ibd: "May occur",
+  },
+  {
+    id: 10,
+    feature: "Cause",
+    ibs: "Related to gut sensitivity, bowel movement changes, stress, and diet",
+    ibd: "Immune-related inflammation of the digestive tract",
+  },
+  {
+    id: 11,
+    feature: "Is it serious?",
+    ibs: "Not dangerous, but can affect quality of life",
+    ibd: "Can lead to complications if untreated",
+  },
+  {
+    id: 12,
+    feature: "Tests commonly performed",
+    ibs: "Usually diagnosed based on symptoms and simple tests",
+    ibd: "May require blood tests, stool tests, colonoscopy, and imaging",
+  },
+  {
+    id: 13,
+    feature: "Treatment",
+    ibs: "Diet, lifestyle changes, stress management, symptom control",
+    ibd: "Anti-inflammatory medication, immune therapy, and sometimes surgery",
+  },
+  {
+    id: 14,
+    feature: "Cancer risk",
+    ibs: "Does not increase bowel cancer risk",
+    ibd: "Long-standing disease may increase bowel cancer risk",
+  },
+  {
+    id: 15,
+    feature: "When to seek specialist review",
+    ibs: "Persistent or troublesome symptoms",
+    ibd: "Any ongoing diarrhoea, bleeding, weight loss, or worsening symptoms",
+  },
+];
+
+const lifestyleTips = [
+  "Regular exercise",
+  "Adequate sleep",
+  "Relaxation techniques or mindfulness",
+  "Stress management strategies",
+  "Avoiding excessive late nights and irregular routines",
+];
+
+const medications = [
+  "Antispasmodics for cramping",
+  "Anti-diarrhoeal medication for diarrhoea",
+  "Gentle laxatives for constipation",
+  "Probiotics in selected patients",
+];
+
+const specialistReviewSigns = [
+  "Symptoms are persistent or worsening",
+  "You develop blood in the stool",
+  "There is unexplained weight loss",
+  "Symptoms wake you from sleep",
+  "You develop fever or severe pain",
+  "Symptoms begin later in life or change significantly",
 ];
 
 const ibsSymptoms = [
@@ -116,6 +239,33 @@ const alarmSymptoms = [
   },
 ];
 
+const faqs = [
+  {
+    question: "What Is the Difference Between an IBS Specialist and a General Doctor?",
+    answer: "<p class='text-base text-muted-foreground leading-relaxed'>A general doctor can often diagnose and manage mild cases of Irritable Bowel Syndrome. However, an IBS specialist - usually a gastroenterologist - has additional expertise in digestive disorders and can help evaluate more persistent, complex, or troublesome symptoms.</p><p class='text-base text-muted-foreground leading-relaxed'>A gastroenterologist may:</p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li>Assess whether symptoms are truly due to IBS</li><li>Exclude other digestive conditions that may mimic IBS</li><li>Arrange specialised investigations when necessary</li><li>Provide tailored dietary and treatment strategies</li><li>Manage more severe or treatment-resistant symptoms</li></ul><p class='text-base text-muted-foreground leading-relaxed'>Specialist review is particularly important if there are &ldquo;red flag&rdquo; symptoms such as weight loss, rectal bleeding, anaemia, or symptoms that worsen over time.</p>",
+  },
+  {
+    question: "How Does an Irritable Bowel Syndrome Specialist Diagnose IBS?",
+    answer: "<p class='text-base text-muted-foreground leading-relaxed'>IBS is usually diagnosed based on a combination of symptoms, medical history, and exclusion of other conditions where appropriate.</p><p class='text-base text-muted-foreground leading-relaxed'>Your doctor may ask about:</p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li>Abdominal pain or bloating</li><li>Diarrhoea or constipation</li><li>Frequency and pattern of bowel motions</li><li>Food triggers</li><li>Stress and lifestyle factors</li><li>Family history of digestive diseases</li></ul><p class='text-base text-muted-foreground leading-relaxed'>In many cases, simple blood or stool tests may be performed to exclude conditions such as:</p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li>Inflammatory Bowel Disease</li><li>Celiac Disease</li><li>Infection or inflammation</li></ul><p class='text-base text-muted-foreground leading-relaxed'>Some patients may require further investigations such as colonoscopy, particularly if symptoms are atypical or associated with warning signs.</p>",
+  },
+  {
+    question: "What Are the Different Types of IBS Treatment Available?",
+    answer: "<p class='text-base text-muted-foreground leading-relaxed'>Treatment for IBS is highly individualised and depends on the type and severity of symptoms.</p><p class='text-base text-muted-foreground leading-relaxed'>Treatment options may include:</p><p class='text-base text-muted-foreground leading-relaxed'><strong>Dietary adjustments</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li>Regular meals</li><li>Increasing soluble fibre</li><li>Reducing trigger foods</li><li>Low FODMAP diet in selected patients</li></ul><p class='text-base text-muted-foreground leading-relaxed'><strong>Lifestyle measures</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li>Stress reduction</li><li>Regular exercise</li><li>Improving sleep quality</li><li>Maintaining hydration</li></ul><p class='text-base text-muted-foreground leading-relaxed'><strong>Medications</strong></p><p class='text-base text-muted-foreground leading-relaxed'>Depending on symptoms, treatment may include:</p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li>Antispasmodics for cramping</li><li>Medication for diarrhoea</li><li>Laxatives for constipation</li><li>Probiotics in selected patients</li></ul><p class='text-base text-muted-foreground leading-relaxed'>Some patients with more severe symptoms may benefit from additional therapies targeting the gut&ndash;brain interaction.</p>",
+  },
+  {
+    question: "How Long Does It Take to See Improvement With IBS Treatment?",
+    answer: "<p class='text-base text-muted-foreground leading-relaxed'>Improvement varies between individuals. Some people notice improvement within a few weeks after dietary or lifestyle changes, while others may require a longer period of adjustment and treatment optimisation.</p><p class='text-base text-muted-foreground leading-relaxed'>IBS is often a long-term condition with periods of flare-ups and remission. The goal of treatment is usually to improve symptom control, quality of life, and reduce the frequency and severity of flare-ups.</p><p class='text-base text-muted-foreground leading-relaxed'>Close follow-up may sometimes be needed to fine-tune treatment strategies.</p>",
+  },
+  {
+    question: "What Should I Expect During My First Consultation?",
+    answer: "<p class='text-base text-muted-foreground leading-relaxed'>During your first consultation, your doctor will usually take a detailed history of your symptoms and overall digestive health.</p><p class='text-base text-muted-foreground leading-relaxed'>This may include discussion about:</p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li>Your bowel habits</li><li>Abdominal pain or bloating</li><li>Diet and food triggers</li><li>Stress and lifestyle factors</li><li>Previous medical conditions</li><li>Family history of digestive diseases</li></ul><p class='text-base text-muted-foreground leading-relaxed'>A physical examination may also be performed. Depending on your symptoms, blood tests, stool tests, or imaging may be recommended.</p><p class='text-base text-muted-foreground leading-relaxed'>The consultation is also an opportunity to discuss your concerns, ask questions, and develop a personalised management plan.</p>",
+  },
+  {
+    question: "Can an IBS Specialist Help With Stress-Related IBS Flare-Ups?",
+    answer: "<p class='text-base text-muted-foreground leading-relaxed'>Yes. Stress and emotional health can play an important role in IBS symptoms because of the close connection between the brain and the digestive system, often referred to as the &ldquo;gut&ndash;brain axis.&rdquo;</p><p class='text-base text-muted-foreground leading-relaxed'>An IBS specialist can help identify possible stress-related triggers and recommend strategies to better manage flare-ups. This may include:</p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li>Lifestyle and sleep optimisation</li><li>Dietary adjustments</li><li>Stress management techniques</li><li>Exercise recommendations</li><li>Referral to other healthcare professionals when appropriate</li></ul><p class='text-base text-muted-foreground leading-relaxed'>Managing stress does not mean symptoms are &ldquo;all in the mind.&rdquo; IBS is a genuine medical condition, and stress can influence how sensitive and active the digestive tract becomes.</p>",
+  },
+];
+
 export const Ibs = () => {
   return (
      <main className="pt-20">
@@ -140,11 +290,11 @@ export const Ibs = () => {
                   Functional GI Disorders
                 </span>
                 <h1 className="text-5xl md:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
-                  Irritable Bowel Syndrome
+                  Irritable Bowel Syndrome Treatment Singapore
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  IBS is a common gastrointestinal condition, affecting 10-15% of the population. 
-                  With proper diagnosis and personalised management, most patients achieve symptom improvement through individualized management.
+                  In Singapore, approximately <a href="https://www.nuhs.edu.sg/patient-care/find-a-condition/irritable-bowel-syndrome-ibs">10% of the population is diagnosed with IBS</a>, making it a significant health concern locally.
+                  With accurate diagnosis and personalized treatment plans, most patients experience significant symptom relief under the care of an irritable bowel syndrome specialist doctor.
                 </p>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
@@ -183,7 +333,7 @@ export const Ibs = () => {
               <div className="flex items-center gap-3 mb-6">
                 <Info className="h-8 w-8 text-emerald-600" />
                 <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
-                  Understanding IBS
+                  Understanding Irritable Bowel Syndrome (IBS)
                 </h2>
               </div>
               
@@ -194,9 +344,10 @@ export const Ibs = () => {
                   bowel disease, IBS does not cause visible damage to the bowel or increase cancer risk.
                 </p>
                 <p>
-                  IBS results from complex interactions between the gut and brain (the &quot;gut-brain axis&quot;), 
-                  involving altered gut motility, visceral hypersensitivity, changes in gut microbiome, 
-                  and psychological factors. Understanding these mechanisms guides effective treatment.
+                  Irritable Bowel Syndrome (IBS) arises from intricate interactions between the gut and brain 
+                  (the 'gut-brain axis'), encompassing altered gut motility, visceral hypersensitivity, gut microbiome changes, 
+                  and psychological factors, necessitating comprehensive IBS treatment approaches. 
+                  Understanding these mechanisms guides effective treatment.
                 </p>
               </div>
 
@@ -331,6 +482,9 @@ export const Ibs = () => {
                   </motion.div>
                 ))}
               </div>
+              <p className="text-base text-muted-foreground leading-relaxed mb-4 mt-8">Many digestive symptoms such as abdominal discomfort, bloating, diarrhoea, constipation, and changes in bowel habits are commonly attributed to&nbsp;Irritable Bowel Syndrome. However, some of these symptoms can also occur in&nbsp;Inflammatory Bowel Disease, a group of conditions that cause ongoing inflammation within the digestive tract.</p>
+              <p className="text-base text-muted-foreground leading-relaxed mb-4">Although IBS and IBD may share certain symptoms, they are fundamentally different conditions. IBS is considered a functional bowel disorder, meaning the bowel appears normal but does not function normally. In contrast, IBD involves actual inflammation and damage to the lining of the digestive tract and may lead to more serious complications if left untreated.</p>
+              <p className="text-base text-muted-foreground leading-relaxed mb-6">Understanding the differences between IBS and IBD is important, as the investigations, treatment approaches, and long-term implications can vary significantly.</p>
             </motion.div>
           </div>
         </section>
@@ -430,6 +584,41 @@ export const Ibs = () => {
                 </motion.div>
               </div>
             </motion.div>
+            <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="max-w-6xl mx-auto"
+                >
+                <p className="text-muted-foreground leading-relaxed mb-4 mt-8">
+                  Many digestive symptoms such as abdominal discomfort, bloating, diarrhoea, constipation, and changes in bowel habits are commonly attributed to Irritable Bowel Syndrome. However, some of these symptoms can also occur in Inflammatory Bowel Disease, a group of conditions that cause ongoing inflammation within the digestive tract.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Although IBS and IBD may share certain symptoms, they are fundamentally different conditions. IBS is considered a functional bowel disorder, meaning the bowel appears normal but does not function normally. In contrast, IBD involves actual inflammation and damage to the lining of the digestive tract and may lead to more serious complications if left untreated.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  Understanding the differences between IBS and IBD is important, as the investigations, treatment approaches, and long-term implications can vary significantly.
+                </p>
+                <table className="comparison-table border bg-background">
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    <th>Irritable Bowel Syndrome</th>
+                    <th>Inflammatory Bowel Disease</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ibsComparisons.map((compare) => (
+                    <tr key={compare.id}>
+                      <td>{compare.feature}</td>
+                      <td>{compare.ibs}</td>
+                      <td>{compare.ibd}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </motion.div>
           </div>
         </section>
 
@@ -446,12 +635,12 @@ export const Ibs = () => {
               <div className="flex items-center gap-3 mb-6">
                 <Stethoscope className="h-8 w-8 text-emerald-600" />
                 <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
-                  Treatment Approach
+                  IBS Treatment Approach
                 </h2>
               </div>
               <p className="text-lg text-muted-foreground mb-10 max-w-3xl">
-                IBS management is highly individualised, combining dietary changes, lifestyle modifications, 
-                and targeted medications based on predominant symptoms.
+                Effective IBS management in Singapore is highly individualized, integrating dietary changes, lifestyle modifications, 
+                and targeted medications tailored to predominant symptoms, under the guidance of an experienced IBS specialist doctor.
               </p>
               
               <div className="grid lg:grid-cols-2 gap-8">
@@ -540,14 +729,68 @@ export const Ibs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="max-w-3xl mx-auto text-center"
+              className="max-w-6xl mx-auto text-left"
             >
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
                 Management of Your IBS
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Living with IBS doesn&apos;t have to mean constant discomfort. Dr. Prem provides 
-                clinical evaluation and personalised treatment plans for the management of symptoms and improve your quality of life.
+                Living with IBS doesn&apos;t have to mean constant discomfort. It is crucial to consult 
+                an IBS specialist for accurate diagnosis and tailored treatment plans to effectively manage 
+                your symptoms.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Managing IBS Flare-Ups</h3>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Living with Irritable Bowel Syndrome can be frustrating, particularly during periods when symptoms 
+                suddenly worsen or &ldquo;flare.&rdquo; Common symptoms during a flare-up may include abdominal discomfort, 
+                bloating, diarrhoea, constipation, excess gas, or an urgent need to open the bowels.
+              </p>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Although IBS does not cause permanent damage to the digestive tract, flare-ups can significantly affect daily 
+                life and quality of life. Fortunately, many people are able to improve their symptoms with a combination of 
+                dietary adjustments, lifestyle measures, and targeted treatment.
+              </p>
+              <h4 className="text-xl font-semibold text-foreground mb-4">Common triggers for IBS flare-ups</h4>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                IBS symptoms can vary from person to person, but common triggers include:
+              </p>
+              <ul className="space-y-2 mt-4 mb-8">
+                {lifestyleTips.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-sm">
+                    <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />  
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <h4 className="text-xl font-semibold text-foreground mb-4">Medications</h4>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Depending on symptoms, medications may help:
+              </p>
+              <ul className="space-y-2 mt-4 mb-4">
+                {medications.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-sm">
+                    <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />  
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-base text-muted-foreground leading-relaxed mb-8">
+                Treatment is usually tailored to the individual&rsquo;s symptoms and pattern of IBS.
+              </p>
+              <h4 className="text-xl font-semibold text-foreground mb-4">When to seek medical review</h4>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                You should seek medical attention if:
+              </p>
+              <ul className="space-y-2 mt-4 mb-4">
+                {specialistReviewSigns.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-sm">
+                    <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />  
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-base text-muted-foreground leading-relaxed mb-8">
+                A gastroenterologist can help confirm the diagnosis, exclude other digestive conditions, and provide a personalised treatment plan to help improve symptom control and quality of life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2">
@@ -568,6 +811,51 @@ export const Ibs = () => {
 
         {/* Related Conditions */}
         <RelatedConditions conditions={relatedConditions} />
+
+        {/* FAQ Section */}
+        <section className="py-14 lg:py-20">
+          <div className="container mx-auto px-2 sm:px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-10"
+            >
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <HelpCircle className="h-6 w-6 text-emerald-500" />
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
+                  Frequently Asked Questions
+                </h2>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="max-w-3xl mx-auto"
+            >
+              <Accordion type="single" collapsible className="w-full space-y-3">
+                {faqs.map((faq, index) => (
+                  <AccordionItem 
+                    key={index} 
+                    value={`faq-${index}`}
+                    className="bg-card rounded-xl border border-border px-4"
+                  >
+                    <AccordionTrigger className="hover:no-underline py-4 text-left">
+                      <span className="font-medium text-lg text-foreground">{faq.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4 text-base text-muted-foreground">
+                      <div dangerouslySetInnerHTML={{ __html: faq.answer }}></div>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </motion.div>
+          </div>
+        </section>
       </main>
   )
 }

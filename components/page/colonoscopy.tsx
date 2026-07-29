@@ -118,7 +118,7 @@ export const Colonoscopy = () => {
                 Diagnostic & Therapeutic Endoscopy
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
-                Colonoscopy
+                Colonoscopy Specialist in Singapore
               </h1>
               <p className="text-lg text-muted-foreground leading-loose mb-8">
                 Colonoscopy is the primary clinical modality for examining the large intestine and is essential for 
@@ -176,6 +176,174 @@ export const Colonoscopy = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+{/* Undergo Colonoscopy */}
+        <section className="py-16 lg:py-20">
+          <div className="container mx-auto px-2 sm:px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+                Who Should Undergo a Colonoscopy in Singapore?
+              </h2>
+              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4">
+                Screening for adults over 45 and patients with higher risk
+              </h3>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  Colonoscopy is commonly recommended as a screening test for colorectal cancer in adults aged 45 and above, 
+                  even in the absence of symptoms. The aim is to detect and remove precancerous polyps early, 
+                  before they progress to cancer.
+                </p>
+                <p>
+                  Some individuals may require earlier or more frequent screening because of higher underlying risk factors, including:
+                </p>
+              </div>
+              <ul className="space-y-3 mb-6">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    A family history of colorectal cancer or colon polyps
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    A personal history of colon polyps
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Long-standing inflammatory bowel disease such as ulcerative colitis or Crohn’s disease
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Certain hereditary colorectal cancer syndromes
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Previous colorectal cancer treatment
+  </li>
+</ul>
+<div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-12 leading-loose">
+                <p>The timing and frequency of screening depend on the individual’s risk profile, previous colonoscopy findings, and overall health.</p>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4">
+               Symptoms that should prompt earlier assessment
+              </h3>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>While screening colonoscopy is often performed before symptoms develop, certain symptoms should prompt earlier medical evaluation regardless of age. These include:</p>
+              </div>
+              <ul className="space-y-3 mb-6">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Rectal bleeding or blood in the stool
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Persistent changes in bowel habits
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Unexplained diarrhoea or constipation
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Abdominal pain or bloating
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Unexplained weight loss
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Iron deficiency anaemia
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Persistent fatigue without a clear cause
+  </li>
+</ul>
+<div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-12 leading-loose">
+                <p>Although these symptoms do not always indicate serious disease, 
+                  they should be assessed appropriately to exclude colorectal cancer, significant polyps, inflammation, 
+                  or other gastrointestinal conditions.</p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-20">
+          <div className="container mx-auto px-2 sm:px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+                What Are the Risks or Complications of Colonoscopy?
+              </h2>
+              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4">
+                Most side effects are mild and short-lived
+              </h3>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  Colonoscopy is generally considered a safe and commonly performed procedure. Most patients tolerate 
+                  it well and recover quickly after the examination. Mild bloating, cramping, or temporary discomfort 
+                  from the air introduced during the procedure can occur but usually settles within a few hours.
+                </p>
+                <p>
+                  Sedation-related side effects such as drowsiness, nausea, or light-headedness may occasionally occur 
+                  and are typically short-lived. Patients are usually advised not to drive or operate machinery for the 
+                  remainder of the day after sedation.
+                </p>
+                <p>
+                  Although uncommon, more significant complications can occur, including:
+                </p>
+              </div>
+              <ul className="space-y-3 mb-6">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Bleeding, particularly after removal of a polyp
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Perforation or a tear in the bowel wall
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Adverse reactions to sedation
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Infection, which is rare
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Incomplete examination due to poor bowel preparation or technical difficulty
+  </li>
+</ul>
+<div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-12 leading-loose">
+                <p>We will discuss the potential risks and benefits of the procedure before the examination.</p>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4">
+               What happens if polyps are found
+              </h3>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
+                <p>If polyps are identified during colonoscopy, they can often be removed during the same procedure using specialised 
+                  instruments passed through the scope. Removing polyps helps reduce the future risk of colorectal cancer.</p>
+                <p>The removed tissue is usually sent for laboratory analysis to determine the type of polyp and whether any precancerous changes are present. 
+                  Follow-up recommendations depend on the number, size, and histology of the polyps removed. Some patients may only require routine surveillance, while others may need closer follow-up colonoscopy at shorter intervals.</p>
               </div>
             </motion.div>
           </div>

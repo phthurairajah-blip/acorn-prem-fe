@@ -110,7 +110,7 @@ const GastroscopyColonoscopy = () => {
                 Diagnostic & Therapeutic Endoscopy
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
-                Gastroscopy (OGD)
+                Gastroscopy in Singapore - OGD Procedure
               </h1>
               <p className="text-lg text-muted-foreground leading-loose mb-8">
                 Gastroscopy, also known as OGD (oesophago-gastro-duodenoscopy) or upper endoscopy, is a minimally invasive 
@@ -139,7 +139,7 @@ const GastroscopyColonoscopy = () => {
               className="max-w-4xl mx-auto"
             >
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
-                Understanding Gastroscopy
+                What is Gastroscopy?
               </h2>
               
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
@@ -167,8 +167,515 @@ const GastroscopyColonoscopy = () => {
           </div>
         </section>
 
+        <section className="py-16 lg:py-20">
+          <div className="container mx-auto px-2 sm:px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+                Who May Need a Gastroscopy in Singapore?
+              </h2>
+              
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
+                <p>
+                  Anyone who has symptoms of heartburn , indigestion, difficulty with swallowing, who has lost weight or 
+                  stomach pains and those with a familty history of oeospahgeal and stomach cancer.
+                </p>
+              </div>
+
+              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-6">
+                Symptoms that may require gastroscopy
+              </h3>
+              <ul className="space-y-3 mb-10">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Heartburn
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Difficulty in swallowing
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Stomach pains
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Bloating
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Anaemia
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Unexplained weight loss
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Recurrent vomiting
+  </li>
+</ul>
+<h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-6">
+                Who may need screening even without severe symptoms
+              </h3>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
+                <p>
+                  Family history of gastric cancer
+                </p>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-6">
+                When to seek urgent medical attention
+              </h3>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  When you have red flag symptoms such as:
+                </p>
+              </div>
+              <ul className="space-y-3 mb-12">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Weight loss
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Difficulty in swallowing
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Vomiting blood
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+     Passing black tarry stools 
+  </li>
+</ul>
+            </motion.div>
+          </div>
+        </section>
+
+ <section className="py-16 lg:py-20">
+          <div className="container mx-auto px-2 sm:px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+                What Can a Gastroscopy Detect or Treat?
+              </h2>
+              
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
+                <p>
+                  A gastroscopy allows your gastroenterologist to examine the lining of the oesophagus (food pipe), 
+                  stomach and the first part of the small intestine (duodenum). It helps identify the cause of symptoms 
+                  such as persistent heartburn, difficulty swallowing, upper abdominal pain, unexplained nausea, vomiting, 
+                  anaemia, or gastrointestinal bleeding.
+                </p>
+              </div>
+
+              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-6">
+                Conditions a Gastroscopy Can Detect
+              </h3>
+              <ul className="space-y-3 mb-12">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    <strong>Acid reflux disease (GERD)</strong> and inflammation of the oesophagus (oesophagitis)
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    <strong>Barrett's oesophagus,</strong> a condition associated with long-standing reflux
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    <strong>Inflammation of the stomach (gastritis)</strong> and duodenum (duodenitis)
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    <strong>Stomach and duodenal ulcers</strong>
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    <strong><em>Helicobacter pylori</em> (H. pylori) infection</strong>
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    <strong>Coeliac disease</strong> and other causes of malabsorption
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    <strong>Difficulty swallowing (dysphagia)</strong> due to narrowing, strictures, rings or webs
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    <strong>Hiatus hernia</strong>
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    <strong>Stomach polyps</strong>
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    <strong>Abnormal growths, tumours, and early cancers</strong> of the oesophagus, stomach or duodenum
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    <strong>Sources of upper gastrointestinal bleeding,</strong> including ulcers, varices and vascular abnormalities
+  </li>
+</ul>
+<h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4">
+                What Can Be Treated During a Gastroscopy?
+              </h3>
+               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  In addition to diagnosis, a gastroscopy can often be used to perform treatment during the same procedure, including:
+                </p>
+              </div>
+              <ul className="space-y-3 mb-6">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Taking <strong>biopsies</strong> (small tissue samples) for laboratory analysis
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Removing selected <strong>polyps</strong>
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Stretching <strong>(dilating)</strong>  narrowed areas of the oesophagus
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Treating bleeding ulcers or blood vessels
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Managing oesophageal varices (swollen veins) with banding therapy
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Removing certain swallowed foreign objects
+  </li>
+</ul>
+<div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-12 leading-loose">
+                <p>
+                  A gastroscopy is one of the most effective ways to diagnose and treat conditions affecting the upper digestive tract, often without the need for surgery.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+         <section className="py-16 lg:py-20">
+          <div className="container mx-auto px-2 sm:px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+                When a Biopsy May Be Performed
+              </h2>
+              
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  During a gastroscopy, your doctor may take a small tissue sample (biopsy) from the lining of the oesophagus, 
+                  stomach, or duodenum. This is a routine part of the procedure and is completely painless, as the digestive 
+                  tract does not contain the same pain-sensitive nerves as the skin.
+                </p>
+                <p>A biopsy may be performed to:</p>
+              </div>
+              <ul className="space-y-3 mb-6">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Test for infections such as <strong><em>Helicobacter pylori</em> (H. pylori)</strong>
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Assess inflammation in the oesophagus, stomach, or small intestine
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Investigate conditions such as coeliac disease
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Evaluate ulcers or abnormal areas seen during the examination
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Check for precancerous changes or cancer
+  </li>
+</ul>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-16 leading-loose">
+                <p>
+                  The tissue samples are sent to a specialised laboratory for detailed analysis by a pathologist. 
+                  Results are usually available within a few days, and your doctor will discuss the findings and any 
+                  recommended treatment or follow-up care with you.
+                </p>
+              </div>
+              
+               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+                Therapeutic Procedures During a Gastroscopy
+              </h2>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  In some cases, treatment can be performed during the same procedure, avoiding the need for additional interventions. 
+                  Depending on your condition, this may include:
+                </p>
+              </div>
+              <ul className="space-y-3 mb-6">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Removing polyps (small growths)
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Taking biopsies (tissue samples) for further analysis
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Treating bleeding ulcers or blood vessels
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Dilating (widening) a narrowed section of the oesophagus
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Treating oesophageal varices (enlarged veins)
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Placing a feeding tube when required
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Removing certain swallowed foreign objects
+  </li>
+</ul>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-16 leading-loose">
+                <p>
+                  Your doctor will discuss any planned therapeutic procedures with you before your gastroscopy.
+                </p>
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+                What Are the Risks and Complications of Gastroscopy?
+              </h2>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  Gastroscopy is a safe and commonly performed procedure. Serious complications are uncommon, 
+                  and most patients experience no significant problems.
+                </p>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4">
+                Common Mild Side Effects
+              </h3>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  After the procedure, you may experience:
+                </p>
+              </div>
+              <ul className="space-y-3 mb-6">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    A mild sore throat for one to two days
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Bloating or a feeling of fullness due to the air used during the examination
+  </li>
+
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Temporary nausea, drowsiness, or dizziness from the sedation
+  </li>
+</ul>
+<div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
+                <p>
+                  These symptoms are usually mild and resolve on their own within a short period.
+                </p>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4">
+                Uncommon Risks
+              </h3>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  Although rare, potential complications include:
+                </p>
+              </div>
+              <ul className="space-y-3 mb-10">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Bleeding, particularly if biopsies are taken or polyps are removed
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Perforation (a tear in the wall of the oesophagus, stomach, or intestine)
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Adverse reactions to sedation or medications
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Aspiration (stomach contents entering the lungs)
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Infection, although this is very uncommon
+  </li>
+</ul>
+<h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4">
+                How Risks Are Reduced
+              </h3>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  Your safety is our priority. Before the procedure, your gastroenterologist will review your medical history, allergies, and current medications. 
+                  The procedure is performed using modern equipment and strict infection-control standards.
+                </p>
+                <p>
+                  Throughout the examination, your heart rate, blood pressure, and oxygen levels will 
+                  be monitored by trained healthcare professionals. Our team will continue to observe you during your 
+                  recovery to ensure you are comfortable and ready to go home safely.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-20">
+          <div className="container mx-auto px-2 sm:px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+                How Do I Prepare for a Gastroscopy?
+              </h2>
+              
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  To allow a clear view of the upper digestive tract, your stomach must be empty.
+                </p>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-6">
+               Fasting Instructions
+              </h3>
+              <ul className="space-y-3 mb-10">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Do not eat or drink for at least 6 hours before your procedure.
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Small sips of plain water may be permitted up to 2 hours before your appointment, unless advised otherwise.
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Follow the specific fasting instructions provided by your doctor or endoscopy team.
+  </li>
+</ul>
+            <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-6">
+               Which Medicines Should I Stop or Continue?
+              </h3>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  Most regular medications can be taken with a small sip of water on the day of the procedure. 
+                  However, certain medicines may require special instructions:
+                </p>
+              </div>
+              <ul className="space-y-3 mb-6">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Blood-thinning medications (such as warfarin, apixaban, rivaroxaban, aspirin, or clopidogrel)
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Diabetes medications, including insulin
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Iron supplements
+  </li>
+</ul>
+<div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-16 leading-loose">
+                <p>
+                  Please do not stop any prescribed medication without consulting your doctor. 
+                  Our team will provide personalised guidance based on your medical condition and 
+                  the type of procedure planned.
+                </p>
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+                What to Bring on the Day
+              </h2>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
+                <p>
+                  Please bring the following:
+                </p>
+              </div>
+              <ul className="space-y-3 mb-6">
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Your appointment letter and any completed forms
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    A list of your current medications
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Your identification and insurance documents (if applicable)
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Comfortable, loose-fitting clothing
+  </li>
+  <li className="flex items-start gap-3 text-base text-muted-foreground">
+    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+    Any relevant medical records or investigation results
+  </li>
+</ul>
+<div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
+                <p>
+                  If you are having sedation, you must arrange for a responsible adult to accompany you home. 
+                  You should not drive, operate machinery, sign important documents, or consume alcohol for the 
+                  remainder of the day.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Preparation */}
-        <section className="py-16 lg:py-20 bg-amber-50 dark:bg-amber-950/20">
+        {/* <section className="py-16 lg:py-20 bg-amber-50 dark:bg-amber-950/20">
           <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -210,7 +717,7 @@ const GastroscopyColonoscopy = () => {
               </div>
             </motion.div>
           </div>
-        </section>
+        </section> */}
 
         {/* Image Section */}
         <section className="py-12 bg-muted/30">
@@ -257,7 +764,7 @@ const GastroscopyColonoscopy = () => {
               <div className="flex items-center gap-3 mb-6">
                 <Clock className="h-7 w-7 text-primary" />
                 <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
-                  What to Expect
+                  What to Expect During Gastroscopy
                 </h2>
               </div>
 
