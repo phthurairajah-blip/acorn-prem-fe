@@ -489,7 +489,7 @@ const PancreaticCyst = () => {
                 Are there signs I should be seen sooner rather than later?
               </h3>
               <p className="text-muted-foreground mb-10 text-lg">
-                  In most cases, your specialist will arrange a follow-up scan in 6-12 months. But certain signs — either on the scan or in how you're feeling — mean you may need to be seen sooner or have further tests done.
+                  In most cases, your specialist will arrange a follow-up scan in 6-12 months. But certain signs — either on the scan or in how you&#39;re feeling — mean you may need to be seen sooner or have further tests done.
               </p>
               <p className="text-muted-foreground font-semibold mb-4 text-lg">
                  Tell your doctor straight away if you have:
@@ -630,7 +630,7 @@ const PancreaticCyst = () => {
                 An MRI uses magnets and radio waves to build detailed images of your organs. It does not use radiation, which is one reason it is preferred for follow-up over many years.
               </p>
               <p className="text-muted-foreground mb-10 text-lg">
-                When your doctor asks for a 'pancreatic protocol MRI' or an 'MRCP', they are asking for a version of the scan that is specially designed to look at the pancreas and the ducts (tubes) that drain it. MRCP stands for Magnetic Resonance Cholangiopancreatography — a long word that simply means a detailed map of the drainage tubes in and around your pancreas and liver.
+                When your doctor asks for a &#39;pancreatic protocol MRI&#39; or an &#39;MRCP&#39;, they are asking for a version of the scan that is specially designed to look at the pancreas and the ducts (tubes) that drain it. MRCP stands for Magnetic Resonance Cholangiopancreatography — a long word that simply means a detailed map of the drainage tubes in and around your pancreas and liver.
               </p>
               <div className="p-6 flex items-center gap-3 mb-10 bg-background rounded-xl p-6 border border-border/50">
                 <Info className="h-8 w-8 text-emerald-600" />
