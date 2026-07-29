@@ -540,13 +540,13 @@ export const LiverCirrhosis = () => {
                 ))}
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4 mb-8 text-justify">
-                Treating the cause does not undo existing scarring, but it can prevent new scarring from forming and meaningfully extend the liver's functional life.
+                Treating the cause does not undo existing scarring, but it can prevent new scarring from forming and meaningfully extend the liver&#39;s functional life.
               </p>
               <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
                 Managing Complications Before They Become Emergencies
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4 text-justify">
-                As cirrhosis progresses, the liver's internal pressure rises and its ability to perform essential functions declines. 
+                As cirrhosis progresses, the liver&#39;s internal pressure rises and its ability to perform essential functions declines. 
                 This creates a predictable set of complications — all of which are far more manageable when caught early.
               </p>
               <div className="space-y-4 mb-8">
@@ -617,7 +617,7 @@ export const LiverCirrhosis = () => {
               <p className="text-lg text-muted-foreground leading-relaxed mb-4 text-justify">
                 <strong>Review every medication with your doctor</strong> The liver processes most medications, and a cirrhotic liver 
                 does this more slowly and less efficiently. This matters for prescribed drugs, but also for things people often 
-                don't think to mention — paracetamol at higher doses, NSAIDs such as ibuprofen, herbal supplements, and vitamins. 
+                don&#39;t think to mention — paracetamol at higher doses, NSAIDs such as ibuprofen, herbal supplements, and vitamins. 
                 Some of these are genuinely harmful in cirrhosis. Nothing should be started, stopped, or changed without checking first.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4 text-justify">

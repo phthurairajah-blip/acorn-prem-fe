@@ -273,7 +273,7 @@ export const About = () => {
                 <strong className="text-foreground">over 30 peer-reviewed scientific papers</strong> in hepatology and gastroenterology.
               </p>
               <p className="text-justify">
-                As a member of Singapore's National Hepatitis C Elimination Steering Committee, 
+                As a member of Singapore&#39;s National Hepatitis C Elimination Steering Committee, 
                 Dr. Prem is a trusted <strong className="text-foreground">liver specialist in Singapore.</strong>
               </p>
               <p className="text-justify">

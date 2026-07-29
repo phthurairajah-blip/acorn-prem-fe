@@ -427,8 +427,8 @@ const PancreaticCyst = () => {
               <div className="p-6 flex items-center gap-3 mb-10 bg-emerald-50 dark:bg-emerald-900/10 rounded-2xl border border-emerald-200 dark:border-emerald-800/30">
                 <Heart className="h-8 w-8 text-emerald-500" />
                 <p className="text-muted-foreground mb-2">
-                  <strong>Finding a cyst doesn't mean you have cancer.</strong><br></br>
-                  Most pancreatic cysts found by accident during a scan are harmless. But some do need monitoring — so it's always worth getting it checked properly. This guide explains what to expect.
+                  <strong>Finding a cyst doesn&#39;t mean you have cancer.</strong><br></br>
+                  Most pancreatic cysts found by accident during a scan are harmless. But some do need monitoring — so it&#39;s always worth getting it checked properly. This guide explains what to expect.
                 </p>
               </div>
 
@@ -436,7 +436,7 @@ const PancreaticCyst = () => {
                 The scan found a cyst on my pancreas — what should I do?
               </h3>
               <p className="text-muted-foreground mb-10 text-lg">
-                  Finding a cyst in your pancreas on a scan done for another reason is actually quite common. Most people who discover this feel worried — which is completely understandable. But here's the important thing to know:
+                  Finding a cyst in your pancreas on a scan done for another reason is actually quite common. Most people who discover this feel worried — which is completely understandable. But here&#39;s the important thing to know:
               </p>
               <div className="p-6 flex items-center gap-3 mb-10 bg-amber-50 dark:bg-amber-900/10 rounded-2xl border border-amber-200 dark:border-amber-800/30">
                 <AlertTriangle className="h-8 w-8 text-amber-600" />

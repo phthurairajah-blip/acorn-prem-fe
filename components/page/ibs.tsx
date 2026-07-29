@@ -345,7 +345,7 @@ export const Ibs = () => {
                 </p>
                 <p>
                   Irritable Bowel Syndrome (IBS) arises from intricate interactions between the gut and brain 
-                  (the 'gut-brain axis'), encompassing altered gut motility, visceral hypersensitivity, gut microbiome changes, 
+                  (the &#39;gut-brain axis&#39;), encompassing altered gut motility, visceral hypersensitivity, gut microbiome changes, 
                   and psychological factors, necessitating comprehensive IBS treatment approaches. 
                   Understanding these mechanisms guides effective treatment.
                 </p>
