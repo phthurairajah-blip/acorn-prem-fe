@@ -299,7 +299,7 @@ const GastroscopyColonoscopy = () => {
   </li>
   <li className="flex items-start gap-3 text-base text-muted-foreground">
     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    <strong>Barrett's oesophagus,</strong> a condition associated with long-standing reflux
+    <strong>Barrett&#39;s oesophagus,</strong> a condition associated with long-standing reflux
   </li>
   <li className="flex items-start gap-3 text-base text-muted-foreground">
     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
