@@ -43,7 +43,12 @@ const RichTextEditor = ({ initialValue = "", placeholder, onChange }: RichTextEd
   );
 
   const isEmpty = useMemo(
-    () => (isDirty ? value : initialValue).replace(/<[^>]*>/g, "").trim().length === 0,
+    () =>
+      (isDirty ? value : initialValue)
+        .replace(/<br\s*\/?>/gi, "")
+        .replace(/<[^>]*>/g, "")
+        .replace(/&nbsp;/g, " ")
+        .trim().length === 0,
     [initialValue, isDirty, value]
   );
 
@@ -76,7 +81,6 @@ const RichTextEditor = ({ initialValue = "", placeholder, onChange }: RichTextEd
           contentEditable
           suppressContentEditableWarning
           onInput={handleInput}
-          dangerouslySetInnerHTML={{ __html: initialValue }}
           className="min-h-[320px] rounded-xl border border-slate-200 px-4 py-3 text-sm leading-7 text-foreground focus:border-emerald-500 focus:outline-none"
         />
       </div>
