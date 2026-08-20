@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "IBD specialist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/inflammatory-bowel-disease",
+    canonical: "https://drpremgastro.sg/inflammatory-bowel-disease",
   },
 };
 

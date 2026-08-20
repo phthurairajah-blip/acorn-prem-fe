@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Singapore gastroenterologist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/ercp",
+    canonical: "https://drpremgastro.sg/ercp",
   },
 };
 

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "liver specialist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/viral-hepatitis",
+    canonical: "https://drpremgastro.sg/viral-hepatitis",
   },
 };
 

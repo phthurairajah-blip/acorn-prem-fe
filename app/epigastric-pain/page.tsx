@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "dyspepsia",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/epigastric-pain",
+    canonical: "https://drpremgastro.sg/epigastric-pain",
   },
 };
 

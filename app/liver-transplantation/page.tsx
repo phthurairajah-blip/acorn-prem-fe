@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "transplant assessment",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/liver-transplantation",
+    canonical: "https://drpremgastro.sg/liver-transplantation",
   },
 };
 

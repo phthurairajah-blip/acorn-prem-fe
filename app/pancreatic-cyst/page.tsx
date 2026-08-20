@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "pancreatic cancer prevention",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/pancreatic-cyst",
+    canonical: "https://drpremgastro.sg/pancreatic-cyst",
   },
 };
 

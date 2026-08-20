@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Singapore gastroenterologist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/video-capsule-endoscopy",
+    canonical: "https://drpremgastro.sg/video-capsule-endoscopy",
   },
 };
 

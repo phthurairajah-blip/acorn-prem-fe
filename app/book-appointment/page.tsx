@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "Farrer Park Hospital",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/book-appointment",
+    canonical: "https://drpremgastro.sg/book-appointment",
   },
 };
 

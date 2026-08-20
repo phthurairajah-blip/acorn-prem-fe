@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "hepatologist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/autoimmune-hepatitis",
+    canonical: "https://drpremgastro.sg/autoimmune-hepatitis",
   },
 };
 

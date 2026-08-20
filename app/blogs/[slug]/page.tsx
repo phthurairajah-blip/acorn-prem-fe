@@ -77,7 +77,7 @@ export const generateMetadata = async ({
     title: `${blog.title} | Dr. Prem Thurairajah`,
     description: blog.contentHtml.replace(/<[^>]*>/g, " ").slice(0, 160),
     alternates: {
-      canonical: `https://drpremgastro.com/blogs/${blog.slug}`,
+      canonical: `https://drpremgastro.sg/blogs/${blog.slug}`,
     },
   };
 };

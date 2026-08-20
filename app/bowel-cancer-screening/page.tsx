@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "gastroenterologist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/bowel-cancer-screening",
+    canonical: "https://drpremgastro.sg/bowel-cancer-screening",
   },
 };
 
