@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "pelvic floor dysfunction",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/constipation",
+    canonical: "https://drpremgastro.sg/constipation",
   },
 };
 

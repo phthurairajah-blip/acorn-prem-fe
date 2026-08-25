@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Singapore hepatologist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/fibroscan",
+    canonical: "https://drpremgastro.sg/fibroscan",
   },
 };
 

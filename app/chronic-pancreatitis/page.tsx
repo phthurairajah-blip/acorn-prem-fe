@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "pancreatic enzyme replacement",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/chronic-pancreatitis",
+    canonical: "https://drpremgastro.sg/chronic-pancreatitis",
   },
 };
 

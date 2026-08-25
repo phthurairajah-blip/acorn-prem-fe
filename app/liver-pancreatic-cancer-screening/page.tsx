@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Singapore gastroenterologist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/liver-pancreatic-cancer-screening",
+    canonical: "https://drpremgastro.sg/liver-pancreatic-cancer-screening",
   },
 };
 

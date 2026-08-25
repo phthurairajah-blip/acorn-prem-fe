@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "medical insurance",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/insurance",
+    canonical: "https://drpremgastro.sg/insurance",
   },
 };
 

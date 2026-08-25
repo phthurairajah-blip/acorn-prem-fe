@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Singapore gastroenterologist",
   ],
   alternates: {
-    canonical: "https://drpremgastro.com/bile-duct-stones",
+    canonical: "https://drpremgastro.sg/bile-duct-stones",
   },
 };
 
