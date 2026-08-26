@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import {GerdHeartBurn} from '@/components/page/gerd-heartburn';
 
 export const metadata: Metadata = {
-  title: "Gerd Specialist Singapore | Heartburn Treatment | Dr. Prem Thurairajah",
+  title: "GERD Specialist Singapore | Heartburn Treatment | Dr. Prem Thurairajah",
   description:
     "Looking for a GERD specialist in Singapore? Dr. Prem Thurairajah provides effective treatment for GERD and related conditions. Schedule your consultation today!",
   keywords: [
