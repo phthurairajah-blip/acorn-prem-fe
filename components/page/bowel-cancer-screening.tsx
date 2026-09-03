@@ -4,7 +4,6 @@
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { RelatedConditions } from "@/components/RelatedConditions";
 import { ArrowLeft, CheckCircle, AlertTriangle, Calendar, Shield, Heart, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -48,17 +47,17 @@ const screeningBenefits = [
 const colonoscopySteps = [
   {
     step: 1,
-    title: " Before the procedure: bowel preparation",
-    desc: "<p>Good bowel preparation is very important. A clean bowel allows the doctor to see the lining clearly and detect small polyps.</p><p><strong>A few days before</strong><br>You may be asked to avoid high-fibre foods such as seeds, nuts, whole grains, raw vegetables, and fruit with skin. Some medications, especially blood thinners, diabetes medicines, and iron tablets, may need special instructions.</p><p><strong>The day before</strong><br>You will usually take a bowel-cleansing drink. This causes frequent watery stools to empty the bowel. Most patients describe this as the least pleasant part, but it is temporary and important.</p><p><strong>Diet and fasting</strong><br>You may be placed on a low-residue or clear-fluid diet, depending on your instructions. Clear fluids may include water, clear soup, apple juice, isotonic drinks, and tea or coffee without milk. Avoid red or purple drinks. Fasting is required before sedation; least 6 hours for food and 2 hours for clear fluids.</p>",
+    title: "Before the procedure: bowel preparation",
+    desc: "<p>Good bowel preparation is very important. A clean bowel allows the doctor to see the lining clearly and detect small polyps.</p><p><strong>A few days before</strong><br>You may be asked to avoid high-fibre foods such as seeds, nuts, whole grains, raw vegetables, and fruit with skin. Some medications, especially blood thinners, diabetes medicines, and iron tablets, may need special instructions.</p><p><strong>The day before</strong><br>You will usually take a bowel-cleansing drink. This causes frequent watery stools to empty the bowel. Most patients describe this as the least pleasant part, but it is temporary and important.</p><p><strong>Diet and fasting</strong><br>You may be placed on a low-residue or clear-fluid diet, depending on your instructions. Clear fluids may include water, clear soup, apple juice, isotonic drinks, and tea or coffee without milk. Avoid red or purple drinks. Fasting is required before sedation: at least 6 hours for food and 2 hours for clear fluids.</p>",
   },
   {
     step: 2,
-    title: " On the day of the colonoscopy",
+    title: "On the day of the colonoscopy",
     desc: "<p>You will register at the endoscopy centre and change into a gown. A nurse will check your blood pressure, pulse, oxygen level, medical history, allergies, and consent.</p><p><strong>Sedation options</strong><br>Most colonoscopies are done with sedation to keep you comfortable. This may range from mild sedation to deeper sedation, depending on the centre, your health, and your preference. You may feel sleepy and may not remember much of the procedure.</p><p><strong>During the procedure</strong><br>The colonoscope is gently passed through the anus into the colon. Air or carbon dioxide is used to open the bowel so the lining can be seen. If polyps are found, they may be removed during the same procedure. Biopsies may also be taken if needed.</p><p><strong>How long it takes</strong><br>The procedure itself often takes about 30 minutes, though the total visit may take a few hours including preparation, sedation, recovery, and discharge.</p>",
   },
   {
     step: 3,
-    title: " After the procedure",
+    title: "After the procedure",
     desc: "<p>You will rest in a recovery area until the sedation wears off. Some bloating, mild cramps, or passing wind is common because air was introduced into the bowel. This usually improves quickly. Most patients can eat later the same day unless advised otherwise.</p><p>Because sedation affects reflexes and judgment, you should not drive, drink alcohol, operate machinery, or make important decisions until the next day. Arrange for someone to take you home.</p>",
   },
   // {
@@ -233,7 +232,7 @@ export const BowelCancerScreeningPage = () => {
                     Are You at Risk?
                   </h2>
                 </div>
-                <p className="text-lg text-muted-foreground mb-6">
+                <p className="text-base text-muted-foreground mb-6">
                   Screening is recommended at age 45, or earlier if you have risk factors.
                 </p>
                 
@@ -242,7 +241,7 @@ export const BowelCancerScreeningPage = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-3">Average Risk Factors</h3>
                   <ul className="space-y-3">
                     {riskFactors.map((factor, index) => (
-                      <li key={index} className="flex items-center gap-3 text-lg text-foreground">
+                      <li key={index} className="flex items-center gap-3 text-base text-foreground">
                         <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
                         {factor}
                       </li>
@@ -256,15 +255,15 @@ export const BowelCancerScreeningPage = () => {
                     High Risk – Consider Earlier Screening
                   </h3>
                   <ul className="space-y-2 mb-4">
-                    <li className="flex items-center gap-3 text-lg text-foreground">
+                    <li className="flex items-center gap-3 text-base text-foreground">
                       <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
                       Family history of colorectal cancer (parent, sibling, or child)
                     </li>
-                    <li className="flex items-center gap-3 text-lg text-foreground">
+                    <li className="flex items-center gap-3 text-base text-foreground">
                       <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
                       Personal history of polyps or inflammatory bowel disease
                     </li>
-                    <li className="flex items-center gap-3 text-lg text-foreground">
+                    <li className="flex items-center gap-3 text-base text-foreground">
                       <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
                       Hereditary syndromes (Lynch syndrome, FAP)
                     </li>
@@ -291,7 +290,7 @@ export const BowelCancerScreeningPage = () => {
                 <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
                   Colonoscopy Screening Procedure and What To Expect
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6">
+                <p className="text-base text-muted-foreground mb-6">
                   A colonoscopy is a procedure that allows the doctor to examine the inside of the large bowel using a thin flexible camera. 
                   It is commonly done for bowel cancer screening, change in bowel habit, bleeding, anaemia, abdominal symptoms, or follow-up of previous polyps.
                 </p>
@@ -307,27 +306,35 @@ export const BowelCancerScreeningPage = () => {
                           <div className="flex items-center justify-center h-10 w-10 rounded-full bg-emerald-500 text-white font-semibold shrink-0">
                             {item.step}
                           </div>
-                          <span className="font-semibold text-lg text-foreground text-left">{item.title}</span>
+                          <span className="font-semibold text-base text-foreground text-left">{item.title}</span>
                         </div>
                       </AccordionTrigger>
-                      <AccordionContent className="pl-14 pb-4 text-base text-muted-foreground">
-                        {item.desc}
+                      <AccordionContent className="pl-14 pr-3 pb-5">
+                        <div
+                          className="space-y-4 text-base leading-7 text-muted-foreground [&_p]:m-0 [&_strong]:font-semibold [&_strong]:text-foreground"
+                          dangerouslySetInnerHTML={{ __html: item.desc }}
+                        />
                       </AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                <h2 className="mt-10 lg:mt-12 text-3xl md:text-4xl font-serif font-semibold text-foreground">
                   Common patient experiences
                 </h2>
-                <p className="text-muted-foreground mt-6 text-base">
-                  Many patients say the bowel preparation is the hardest part, not the procedure itself. During the colonoscopy, most are comfortable because of sedation. Afterward, it is common to feel a little drowsy, bloated, or hungry. Patients are often relieved once the test is completed, especially if polyps are removed early or the results are reassuring.
-                </p>
-                <p className="text-muted-foreground mt-6 text-base">
-                  Seek medical advice urgently if you develop severe abdominal pain, persistent vomiting, fever, heavy rectal bleeding, dizziness, or black stools after the procedure.
-                </p>
-                <p className="text-muted-foreground mt-6 italic text-base">
-                  Most patients report that the colonoscopy screening procedure was easier than expected.
-                </p>
+                <div className="mt-5 space-y-4 text-base leading-7 text-muted-foreground">
+                  <p>
+                    For many patients, the bowel preparation is the most inconvenient part of the process. The colonoscopy itself is usually well tolerated because sedation is given to keep you comfortable.
+                  </p>
+                  <p>
+                    After the procedure, you may feel drowsy for a few hours and experience temporary bloating or wind. Most people are able to eat and drink again once they are fully awake, and many feel reassured once the examination is complete and the findings have been explained.
+                  </p>
+                  <p>
+                    Seek urgent medical advice if you develop severe or worsening abdominal pain, persistent vomiting, fever, heavy rectal bleeding, dizziness, or black stools after the procedure.
+                  </p>
+                  <p className="italic">
+                    Most patients find that the colonoscopy itself is easier than they expected.
+                  </p>
+                </div>
                 <Link
                   href="/colonoscopy"
                   className="inline-flex items-center text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline mt-4"
@@ -370,7 +377,7 @@ export const BowelCancerScreeningPage = () => {
                   Frequently Asked Questions
                 </h2>
               </div>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-base text-muted-foreground max-w-2xl mx-auto">
                 Get answers to common questions about colorectal cancer screening.
               </p>
             </motion.div>
@@ -380,17 +387,17 @@ export const BowelCancerScreeningPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="max-w-3xl mx-auto"
+              className="max-w-3xl mx-auto pb-8"
             >
               <Accordion type="single" collapsible className="w-full space-y-3">
                 {faqs.map((faq, index) => (
                   <AccordionItem 
                     key={index} 
                     value={`faq-${index}`}
-                    className="bg-card rounded-xl border border-border px-4"
+                    className="bg-card rounded-xl border border-border px-4 last:border-b last:border-border"
                   >
-                    <AccordionTrigger className="hover:no-underline py-4 text-left">
-                      <span className="font-medium text-lg text-foreground">{faq.question}</span>
+                    <AccordionTrigger className="hover:no-underline py-4 text-left font-sans">
+                      <span className="font-sans font-semibold text-base text-foreground">{faq.question}</span>
                     </AccordionTrigger>
                     <AccordionContent className="pb-4 text-base text-muted-foreground">
                       {faq.answer}
@@ -415,7 +422,7 @@ export const BowelCancerScreeningPage = () => {
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
                 Take the First Step
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-base text-muted-foreground mb-8">
                 Don&apos;t wait for symptoms. Schedule your screening today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -430,7 +437,42 @@ export const BowelCancerScreeningPage = () => {
           </div>
         </section>
 
-        <RelatedConditions conditions={relatedConditions} />
+        {/* Related Conditions */}
+        <section className="py-14 lg:py-20 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-10"
+            >
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
+                Related Conditions
+              </h2>
+              <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+                You may also be interested in learning about these related conditions.
+              </p>
+            </motion.div>
+
+            <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
+              {relatedConditions.map((condition) => (
+                <Link
+                  key={condition.link}
+                  href={condition.link}
+                  className="block h-full rounded-xl border border-border bg-card p-6 transition-shadow hover:shadow-md"
+                >
+                  <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
+                    {condition.title}
+                  </h3>
+                  <p className="text-base leading-7 text-muted-foreground">
+                    {condition.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
