@@ -42,14 +42,12 @@ const relatedConditions = [
 ];
 
 const heartburnSymptoms = [
-  "Heartburn (burning sensation in the chest)",
-  "Regurgitation of food or sour liquid",
-  "Difficulty swallowing (dysphagia)",
+  "Heartburn (a burning sensation behind the breastbone)",
+  "Regurgitation of food or sour-tasting fluid",
   "Sensation of a lump in the throat",
-  "Chronic cough, especially at night",
-  "Hoarseness or sore throat",
-  "Chest pain (must rule out cardiac causes)",
-  "Disrupted sleep due to reflux",
+  "Chronic cough, particularly at night",
+  "Hoarseness or throat irritation",
+  "Reflux that disturbs sleep",
 ];
 
 const faqs = [
@@ -57,37 +55,37 @@ const faqs = [
     question:
       "When should I see a GERD specialist instead of treating heartburn on my own?",
     answer:
-      "Occasional heartburn after certain meals is common and may improve with lifestyle adjustments or short-term medication. However, you should consider seeing a gastroenterologist if symptoms occur frequently, persist despite treatment, disturb sleep, interfere with daily life, or recur soon after stopping medication. Specialist review is also important if you develop difficulty swallowing, unexplained weight loss, vomiting, anaemia, or chest discomfort.",
+      "Occasional heartburn can often be managed with lifestyle measures or short-term medication. See a gastroenterologist if symptoms are frequent, persistent, disturb sleep, recur after treatment, or are accompanied by warning symptoms such as difficulty swallowing, bleeding or unexplained weight loss.",
   },
   {
     question:
-      "How do I know if my symptoms are caused by acid reflux, GERD, or another upper digestive condition?",
+      "How do I know if my symptoms are caused by acid reflux or another digestive condition?",
     answer:
-      "Symptoms such as heartburn, sour regurgitation, chest discomfort, chronic throat irritation, bloating, nausea, or upper abdominal pain can overlap with several upper digestive conditions. These may include GERD, gastritis, peptic ulcer disease, functional dyspepsia, eosinophilic oesophagitis, or motility disorders. A gastroenterologist can help distinguish between these conditions based on your symptoms, examination findings, and appropriate investigations.",
+      "Reflux symptoms can overlap with other upper digestive conditions. If symptoms are persistent, unusual or do not respond as expected to treatment, further assessment can help establish the cause.",
   },
   {
     question:
-      "What tests might a gastroenterologist recommend for persistent reflux symptoms in Singapore?",
+      "What tests might I need for persistent reflux symptoms?",
     answer:
-      "Depending on your symptoms and clinical history, investigations may include gastroscopy to assess the oesophagus, stomach, and duodenum; biopsies to look for inflammation or other underlying conditions; testing for Helicobacter pylori; ambulatory pH monitoring to assess acid exposure; and oesophageal manometry to evaluate swallowing and oesophageal muscle function. Not all patients require extensive testing, and investigations are tailored to the individual clinical situation.",
+      "Not everyone needs testing. Depending on your symptoms, investigations may include gastroscopy, oesophageal pH monitoring or oesophageal manometry.",
   },
   {
     question:
-      "If antacids or PPIs help only partly, what should I do next?",
+      "What if antacids or PPIs only partly relieve my symptoms?",
     answer:
-      "Partial response to antacids or proton pump inhibitors (PPIs) does not always mean the symptoms are purely acid-related. Further evaluation may be needed to assess whether symptoms are due to persistent reflux, non-acid reflux, functional heartburn, delayed stomach emptying, or another gastrointestinal condition. Your gastroenterologist may review medication timing and dosing, assess dietary and lifestyle triggers, or recommend further investigations.",
+      "Persistent symptoms despite treatment may not be entirely acid-related. Your medication can be reviewed and, when appropriate, further testing can determine whether reflux or another condition is responsible.",
   },
   {
     question:
-      "What are the warning signs that reflux may be causing complications such as inflammation, narrowing, or Barrett’s oesophagus?",
+      "What are the warning signs of complications from reflux?",
     answer:
-      "Potential warning signs include difficulty or pain when swallowing, food getting stuck in the chest, persistent vomiting, gastrointestinal bleeding or black stools, iron deficiency anaemia, unexplained weight loss, and long-standing reflux symptoms, particularly in patients with additional risk factors. These symptoms may warrant further evaluation with gastroscopy.",
+      "Difficulty or pain when swallowing, food sticking, gastrointestinal bleeding, black stools, persistent vomiting, anaemia or unexplained weight loss should prompt medical assessment.",
   },
   {
     question:
-      "When is reflux severe enough to need more than lifestyle changes and medication?",
+      "When might reflux need treatment beyond medication?",
     answer:
-      "More advanced treatment may be considered if reflux symptoms remain troublesome despite appropriate lifestyle measures and medical therapy, if there are complications such as severe oesophagitis or Barrett’s oesophagus, or if symptoms significantly affect quality of life. In selected patients, further assessment for endoscopic or surgical anti-reflux procedures may be appropriate.",
+      "Further treatment may be considered when symptoms remain troublesome despite appropriate medical therapy, complications develop, or testing confirms reflux that may benefit from an endoscopic or surgical anti-reflux procedure.",
   },
 ];
 
@@ -153,13 +151,16 @@ export const GerdHeartBurn = () => {
                   Upper GI Conditions
                 </span>
                 <h1 className="text-5xl md:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
-                  Gerd Specialist in Singapore
+                  Acid Reflux &amp; Heartburn Specialist in Singapore
                 </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  Gastro-oesophageal reflux disease (GERD) is a common condition that affects quality of life 
-                  and can lead to complications if untreated. Specialized clinical management focuses on symptom relief 
-                  and preventing long-term complications.
-                </p>
+                <div className="max-w-xl space-y-4 text-xl text-muted-foreground leading-relaxed mb-8">
+                  <p>
+                    Acid reflux and heartburn are common digestive symptoms caused by stomach contents flowing back into the oesophagus. When these symptoms occur frequently or cause complications, the condition is known as <strong className="font-semibold text-foreground">gastro-oesophageal reflux disease (GERD)</strong>.
+                  </p>
+                  <p>
+                    GERD can affect quality of life and, if left untreated, may lead to inflammation or other complications. Effective treatment focuses on controlling symptoms, identifying contributing factors and preventing long-term problems.
+                  </p>
+                </div>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
                     <Calendar className="h-5 w-5" />
@@ -186,7 +187,7 @@ export const GerdHeartBurn = () => {
           </div>
         </section>
 
-        {/* Heartburn Section */}
+        {/* What Is GERD Section */}
         <section className="py-16 lg:py-20">
           <div className="container mx-auto px-2 sm:px-4">
             <motion.div
@@ -194,24 +195,26 @@ export const GerdHeartBurn = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="max-w-4xl mx-auto"
+              className="max-w-6xl mx-auto"
             >
-              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
-                Understanding Acid Reflux & Heartburn
-              </h2>
-              
-              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
-                <p>
-                  Heartburn, a common symptom of GERD, occurs when stomach acid frequently flows back into the oesophagus, 
-                  leading to irritation and potential complications. As a GERD specialist in Singapore, 
-                  Dr. Prem Thurairajah provides comprehensive evaluation and treatment for heartburn and related symptoms.
-                </p>
+              <div className="max-w-none">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
+                  What Is GERD?
+                </h2>
+
+                <div className="space-y-4 text-base text-muted-foreground leading-relaxed mb-10">
+                  <p>
+                    <strong className="font-semibold text-foreground">Gastro-oesophageal reflux disease (GERD)</strong> occurs when stomach contents repeatedly flow back into the oesophagus. <strong className="font-semibold text-foreground">Acid reflux</strong> describes this backward flow, while <strong className="font-semibold text-foreground">heartburn</strong> is the burning sensation in the chest that many people experience as a result.
+                  </p>
+                  <p>
+                    Occasional acid reflux is common. GERD refers to reflux that is frequent, troublesome, or causes inflammation or other complications. Symptoms can vary considerably and are not always limited to heartburn.
+                  </p>
+                </div>
               </div>
 
-              {/* Symptoms */}
-              <div className="bg-background rounded-xl p-6 border border-border mb-10">
-                <h3 className="text-xl font-semibold text-foreground mb-4">Common Symptoms</h3>
-                <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">
+              <div className="bg-muted/30 rounded-2xl p-6 md:p-8 border border-border/80 shadow-sm">
+                <h3 className="text-xl font-semibold text-foreground mb-5">Common Symptoms</h3>
+                <div className="grid md:grid-cols-2 gap-x-10 gap-y-3">
                   {heartburnSymptoms.map((symptom, index) => (
                     <div key={index} className="flex items-start gap-3 text-base text-muted-foreground leading-relaxed">
                       <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
@@ -224,6 +227,52 @@ export const GerdHeartBurn = () => {
           </div>
         </section>
 
+        {/* When to Seek Review */}
+        <section className="py-16 lg:py-20 bg-muted/20">
+          <div className="container mx-auto px-2 sm:px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-6xl mx-auto"
+            >
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
+                When Should You See a Doctor for Acid Reflux or Heartburn?
+              </h2>
+
+              <div className="space-y-4 text-base text-muted-foreground leading-relaxed mb-9">
+                <p>
+                  Occasional reflux after a large or heavy meal is common and does not necessarily mean you have GERD. Medical assessment may be appropriate when symptoms become frequent, persistent, worsening or begin to interfere with everyday life.
+                </p>
+                <p>
+                  Consider seeing a gastroenterologist if heartburn or regurgitation occurs regularly, symptoms persist despite lifestyle changes or over-the-counter treatment, reflux frequently disturbs your sleep, or persistent cough, throat irritation or hoarseness may be related to reflux.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-amber-200/80 dark:border-amber-800/40 bg-amber-50/60 dark:bg-amber-950/10 p-6 md:p-8 mb-7">
+                <div className="flex items-center gap-3 mb-4">
+                  <AlertTriangle className="h-6 w-6 text-amber-600 shrink-0" />
+                  <h3 className="text-xl font-semibold text-foreground">
+                    Symptoms that need prompt medical assessment
+                  </h3>
+                </div>
+                <p className="text-base text-muted-foreground leading-relaxed mb-4">
+                  Seek prompt medical assessment if you develop difficulty or pain when swallowing, food feeling stuck, unexplained weight loss or loss of appetite, persistent or recurrent vomiting, vomiting blood, black stools or unexplained anaemia.
+                </p>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  New, severe or unexplained chest pain should not automatically be assumed to be acid reflux, particularly when accompanied by breathlessness, sweating, dizziness or pain radiating to the arm or jaw. Urgent medical assessment may be required.
+                </p>
+              </div>
+
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Your doctor may recommend further investigation depending on your age, symptoms, family history and other risk factors, particularly when symptoms are new or accompanied by warning signs.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Diagnosis Overview */}
         <section className="py-16 lg:py-20">
           <div className="container mx-auto px-2 sm:px-4">
             <motion.div
@@ -234,151 +283,40 @@ export const GerdHeartBurn = () => {
               className="max-w-6xl mx-auto"
             >
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
-                When to See a GERD Specialist in Singapore
+                How Is GERD Diagnosed?
               </h2>
-              <p className="text-lg text-muted-foreground mb-12">
-                Gastro-oesophageal reflux disease (GERD) is a common condition that occurs when stomach acid repeatedly flows back into the oesophagus (food pipe), 
-                causing irritation and symptoms such as heartburn or regurgitation. While occasional reflux can happen in many people, 
-                persistent or worsening symptoms may require specialist evaluation.
-              </p>
-              <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-                Heartburn, Acid Reflux and GERD Are Not the Same
-              </h3>
-              <p className="text-muted-foreground mb-6">Many people use the terms “heartburn”, “acid reflux”, and “GERD” interchangeably, but they are slightly different.</p>
-              <ul className="space-y-3 mb-6">
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    <strong>Acid reflux</strong> refers to the backflow of stomach contents
-    into the oesophagus.
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    <strong>Heartburn</strong> is the burning sensation in the chest that
-    reflux can cause.
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    <strong>GERD</strong> is a more chronic condition where reflux occurs
-    frequently and may lead to inflammation or complications over time.
-  </li>
-</ul>
-<p className="text-muted-foreground mb-12">Occasional reflux after a heavy or spicy meal is common. However, symptoms that occur regularly, disturb sleep, or affect daily life may suggest GERD rather than simple indigestion.</p>
-            <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-                Signs You Should Book a Specialist Review
-              </h3>
-              <p className="text-muted-foreground mb-6">You should consider seeing a gastroenterologist if you experience:</p>
-            <ul className="space-y-3 mb-6">
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Frequent heartburn or reflux symptoms occurring several times a week
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Symptoms persisting despite lifestyle changes or over-the-counter
-    medication
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Difficulty swallowing or food feeling stuck
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Persistent nausea, bloating, or upper abdominal discomfort
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Chronic cough, throat irritation, hoarseness, or worsening asthma
-    symptoms linked to reflux
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Unexplained weight loss, reduced appetite, or anaemia
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Recurrent vomiting or vomiting blood
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Black stools or evidence of gastrointestinal bleeding
-  </li>
-</ul>
-<p className="text-muted-foreground mb-12">People above the age of 40–50 with new-onset reflux symptoms, especially in Asian populations where gastric cancer risk remains relevant, may also benefit from further assessment.</p>
-             <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-                What a GERD Assessment May Involve
-              </h3>
-              <p className="text-muted-foreground mb-2">A specialist consultation usually begins with a detailed review of your symptoms, diet, medications, and lifestyle factors.</p>
-               <p className="text-muted-foreground mb-6">Depending on your symptoms and risk profile, further investigations may include:</p>
-              <ul className="space-y-3 mb-10">
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    <strong>Gastroscopy (OGD)</strong> to examine the oesophagus, stomach, and upper small intestine
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Biopsies to assess for inflammation, Barrett’s oesophagus, or other conditions
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Testing for <em>Helicobacter pylori</em> infection where appropriate
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Oesophageal pH monitoring to assess acid exposure
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Oesophageal manometry to evaluate swallowing function and oesophageal muscle activity
-  </li>
-</ul>
-<p className="text-muted-foreground mb-12">Not every patient requires extensive testing. In many cases, assessment is tailored according to symptom severity, duration, and response to treatment.</p>
-            <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-                When Reflux May Need More Than Medication
-              </h3>
-              <p className="text-muted-foreground mb-6">Lifestyle changes and acid-suppressing medication are often effective for mild reflux symptoms. These may include:</p>
-            <ul className="space-y-3 mb-6">
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Weight management
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Avoiding late-night meals
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Reducing alcohol, caffeine, or trigger foods
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Elevating the head during sleep
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Smoking cessation
-  </li>
-</ul>
-<p className="text-muted-foreground mb-2">However, some patients continue to have symptoms despite medication, while others may develop complications such as oesophagitis, strictures, or Barrett’s oesophagus.</p>
-<p className="text-muted-foreground mb-6">In these situations, a specialist review is important to:</p>
-            <ul className="space-y-3 mb-6">
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Confirm the diagnosis
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Exclude other upper gastrointestinal conditions
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Optimise long-term treatment
-  </li>
-  <li className="flex items-start gap-3 text-base text-muted-foreground">
-    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Assess whether advanced therapies or anti-reflux procedures may be appropriate
-  </li>
-</ul>
-<p className="text-muted-foreground mb-10">Early assessment can help prevent complications and improve long-term symptom control.</p>
+
+              <div className="space-y-4 text-base text-muted-foreground leading-relaxed mb-8">
+                <p>
+                  Diagnosis usually begins with a careful review of your symptoms, how often they occur, possible triggers, medications and lifestyle factors. In many people, the history and response to treatment provide much of the information needed.
+                </p>
+                <p>
+                  Further investigations may be recommended when symptoms are persistent, the diagnosis is uncertain, treatment has not been effective, or warning symptoms are present.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-border/80 bg-background shadow-sm p-6 md:p-8 mb-7">
+                <ul className="space-y-4">
+                  <li className="text-base text-muted-foreground leading-relaxed">
+                    <strong className="font-semibold text-foreground">Gastroscopy (OGD)</strong> — examines the oesophagus and stomach for inflammation, narrowing, ulcers or other abnormalities.
+                  </li>
+                  <li className="text-base text-muted-foreground leading-relaxed">
+                    <strong className="font-semibold text-foreground">Biopsies</strong> — small tissue samples may be taken during gastroscopy when needed, for example to assess inflammation or Barrett&apos;s oesophagus.
+                  </li>
+                  <li className="text-base text-muted-foreground leading-relaxed">
+                    <strong className="font-semibold text-foreground">Oesophageal pH monitoring</strong> — measures reflux and acid exposure over a period of time when the diagnosis remains uncertain.
+                  </li>
+                  <li className="text-base text-muted-foreground leading-relaxed">
+                    <strong className="font-semibold text-foreground">Oesophageal manometry</strong> — measures oesophageal muscle function and can be useful when swallowing problems are present or before certain anti-reflux procedures.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="border-l-4 border-emerald-500 pl-5 py-1">
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  <strong className="font-semibold text-foreground">Not everyone with reflux needs a gastroscopy or specialised testing.</strong> Investigations are selected according to your symptoms, age, risk factors and response to treatment.
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -399,8 +337,8 @@ export const GerdHeartBurn = () => {
                   Risk Factors
                 </h2>
               </div>
-              <p className="text-lg text-muted-foreground mb-10 max-w-3xl">
-                Understanding the risk factors for heartburn can help you make lifestyle changes to reduce your symptoms and prevent complications.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-none">
+                Understanding your risk factors can help reduce reflux symptoms and prevent complications.
               </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -449,8 +387,8 @@ export const GerdHeartBurn = () => {
                   Potential Complications
                 </h2>
               </div>
-              <p className="text-lg text-muted-foreground mb-10 max-w-3xl">
-                Untreated acid reflux can lead to serious complications affecting the oesophagus. Early diagnosis and treatment can prevent these conditions.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-none">
+                Persistent acid reflux can damage the oesophagus and, over time, lead to complications.
               </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -521,11 +459,11 @@ export const GerdHeartBurn = () => {
               <div className="flex items-center gap-3 mb-8">
                 <Search className="h-8 w-8 text-blue-600" />
                 <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
-                  Investigations for Heartburn
+                  Investigations for Acid Reflux & GERD
                 </h2>
               </div>
-              <p className="text-lg text-muted-foreground mb-10 max-w-3xl">
-                Accurate diagnosis of heartburn often requires specialised tests to assess the extent of acid reflux and any damage to the oesophagus.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-none">
+                Further tests may be needed to confirm reflux and assess the oesophagus.
               </p>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -638,7 +576,7 @@ export const GerdHeartBurn = () => {
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 Heartburn Treatment
               </h2>
-              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-loose">
+              <div className="prose dark:prose-invert max-w-none text-base text-muted-foreground leading-relaxed">
                 <p>
                   Treatment for heartburn is tailored to the severity of symptoms and presence of complications:
                 </p>
@@ -708,19 +646,19 @@ export const GerdHeartBurn = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="max-w-3xl mx-auto"
+              className="max-w-3xl mx-auto pb-8"
             >
               <Accordion type="single" collapsible className="w-full space-y-3">
                 {faqs.map((faq, index) => (
                   <AccordionItem 
                     key={index} 
                     value={`faq-${index}`}
-                    className="bg-card rounded-xl border border-border px-4"
+                    className="bg-card rounded-xl border border-border px-4 last:border-b last:border-border"
                   >
-                    <AccordionTrigger className="hover:no-underline py-4 text-left">
-                      <span className="font-medium text-lg text-foreground">{faq.question}</span>
+                    <AccordionTrigger className="hover:no-underline py-4 text-left font-sans">
+                      <span className="font-sans font-semibold text-lg text-foreground">{faq.question}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="pb-4 text-base text-muted-foreground">
+                    <AccordionContent className="pb-4 text-base text-muted-foreground leading-relaxed">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
