@@ -261,6 +261,7 @@ export const GerdGastricScreeningPage = () => {
                                 </p>
                                 <div className="p-5 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-200 dark:border-amber-800">
                   <p className="text-lg text-muted-foreground mb-6">
+                    <h3 className="text-xl font-semibold text-foreground mb-2">Does long-standing GERD mean you need a gastroscopy?</h3>
                                  Long-standing Gastroesophageal Reflux Disease may increase the risk of complications such as oesophagitis or Barrett’s oesophagus, a condition where the lining of the lower oesophagus changes due to chronic acid exposure.
                                 </p>
                                 <p className="text-lg text-muted-foreground mb-6">

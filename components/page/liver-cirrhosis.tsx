@@ -217,7 +217,7 @@ const liverCirrhosisFaqs = [
     question:
       "Can liver cirrhosis be managed without a transplant, and when is transplant assessment necessary?",
     answer:
-      "Yes — most patients with compensated cirrhosis do not need a transplant and can be managed medically for many years with good monitoring and lifestyle changes.<br><br>Medical management includes treating the underlying cause, preventing complications (varices, infections, HCC), and managing ascites or encephalopathy when they arise.",
+      "Yes — most patients with compensated cirrhosis do not need a transplant and can be managed medically for many years with good monitoring and lifestyle changes.<br><br>Medical management includes treating the underlying cause, preventing complications (varices, infections, HCC), and managing ascites or encephalopathy when they arise.<br><br>Transplant assessment should be considered when:",
     points: [
       "MELD score ≥ 15–20, indicating significant 90-day mortality risk",
       "Recurrent or refractory ascites not responding to diuretics",

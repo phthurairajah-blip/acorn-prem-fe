@@ -67,7 +67,7 @@ const faqs = [
     question:
       "What tests might I need for persistent reflux symptoms?",
     answer:
-      "Not everyone needs testing. Depending on your symptoms, investigations may include gastroscopy, oesophageal pH monitoring or oesophageal manometry.",
+      "Depending on your symptoms and clinical history, investigations may include: <ul class='space-y-2 mb-4'><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Gastroscopy to assess the oesophagus, stomach, and duodenum</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Biopsies to look for inflammation or other underlying conditions</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Testing for <em>Helicobacter pylori</em></li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Ambulatory pH monitoring to assess acid exposure</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Oesophageal manometry to evaluate swallowing and oesophageal muscle function</li></ul> Not all patients require extensive testing, and investigations are tailored to the individual clinical situation.",
   },
   {
     question:
@@ -79,7 +79,7 @@ const faqs = [
     question:
       "What are the warning signs of complications from reflux?",
     answer:
-      "Difficulty or pain when swallowing, food sticking, gastrointestinal bleeding, black stools, persistent vomiting, anaemia or unexplained weight loss should prompt medical assessment.",
+      "Potential warning signs include: <ul class='space-y-2 mb-4'><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Difficulty or pain when swallowing</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Food getting stuck in the chest</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Persistent vomiting</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Gastrointestinal bleeding or black stools</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Iron deficiency anaemia</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Unexplained weight loss</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Long-standing reflux symptoms, particularly in patients with additional risk factors</li></ul> These symptoms may warrant further evaluation with gastroscopy.",
   },
   {
     question:
@@ -658,9 +658,11 @@ export const GerdHeartBurn = () => {
                     <AccordionTrigger className="hover:no-underline py-4 text-left font-sans">
                       <span className="font-sans font-semibold text-lg text-foreground">{faq.question}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="pb-4 text-base text-muted-foreground leading-relaxed">
-                      {faq.answer}
-                    </AccordionContent>
+                    <AccordionContent
+  className='pb-4 text-base text-muted-foreground'
+>
+  <div dangerouslySetInnerHTML={{ __html: faq.answer }}></div>
+</AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
