@@ -474,7 +474,7 @@ export const FattyLiverDisease = () => {
                     className="bg-background rounded-xl p-6 border border-emerald-200 dark:border-emerald-800/30"
                   >
                     <p className="text-base text-muted-foreground mb-4 leading-relaxed">
-                      Patients with:
+                      Although many patients have no symptoms, medical review is advisable if you develop:
                     </p>
                     <ul className="space-y-3">
                       {specialistReferralSigns.map((item, idx) => (

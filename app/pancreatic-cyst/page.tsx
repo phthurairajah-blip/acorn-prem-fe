@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import PancreaticCyst from "@/components/page/pancreatic-cyst";
 
 export const metadata: Metadata = {
-  title: "Pancreatic Cyst | Surveillance & Management | Dr. Prem Thurairajah",
+  title: "Pancreatic Cysts Specialist Singapore | Dr. Prem Thurairajah",
   description:
-    "Specialist evaluation and surveillance of pancreatic cysts in Singapore. Dr. Prem Thurairajah provides expert assessment, risk stratification, and management strategies.",
+    "Expert pancreatic cysts specialist in Singapore. Comprehensive evaluation and management by Dr. Prem Thurairajah.",
   keywords: [
     "pancreatic cyst",
     "IPMN",

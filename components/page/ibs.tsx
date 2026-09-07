@@ -128,6 +128,26 @@ const ibsComparisons = [
   },
 ];
 
+const commonFlareUps = [
+  "Stress and anxiety",
+  "Irregular meals",
+  "Poor sleep",
+  "Certain foods or drinks",
+  "Large or heavy meals",
+  "Excess caffeine or alcohol",
+  "Spicy or fatty foods",
+  "Hormonal changes in some individuals",
+];
+
+const dietaryAdjustments = [
+  "Eat regular meals and avoid skipping meals",
+  "Avoid overeating or very large meals",
+  "Reduce intake of highly processed or fatty foods",
+  "Limit caffeine, fizzy drinks, and alcohol if they worsen symptoms",
+  "Maintain adequate hydration",
+  "Increase fibre gradually, particularly soluble fibre such as oats or psyllium",
+];
+
 const lifestyleTips = [
   "Regular exercise",
   "Adequate sleep",
@@ -485,6 +505,119 @@ export const Ibs = () => {
               <p className="text-base text-muted-foreground leading-relaxed mb-4 mt-8">Many digestive symptoms such as abdominal discomfort, bloating, diarrhoea, constipation, and changes in bowel habits are commonly attributed to&nbsp;Irritable Bowel Syndrome. However, some of these symptoms can also occur in&nbsp;Inflammatory Bowel Disease, a group of conditions that cause ongoing inflammation within the digestive tract.</p>
               <p className="text-base text-muted-foreground leading-relaxed mb-4">Although IBS and IBD may share certain symptoms, they are fundamentally different conditions. IBS is considered a functional bowel disorder, meaning the bowel appears normal but does not function normally. In contrast, IBD involves actual inflammation and damage to the lining of the digestive tract and may lead to more serious complications if left untreated.</p>
               <p className="text-base text-muted-foreground leading-relaxed mb-6">Understanding the differences between IBS and IBD is important, as the investigations, treatment approaches, and long-term implications can vary significantly.</p>
+
+              <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">   When Should I See a Gastroenterologist for IBS Symptoms? </h3>
+
+<p className="text-lg text-muted-foreground mb-4 mx-auto">
+  Many people experience symptoms such as bloating, abdominal discomfort, diarrhoea, constipation, or changes in bowel habits from time to time. These can sometimes be caused by Irritable Bowel Syndrome (IBS), a common condition affecting the digestive system.
+</p>
+
+<p className="text-lg text-muted-foreground mb-4 mx-auto">
+  While IBS is not dangerous, it is important to seek medical advice if symptoms are persistent, worsening, or affecting your daily life.
+</p>
+
+<h4 className="text-xl font-semibold text-foreground mb-3">   You should consider seeing a gastroenterologist if: </h4>
+
+<ul className="space-y-2 mb-4">
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Your symptoms continue for several weeks or months
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Abdominal pain, bloating, diarrhoea, or constipation are affecting your work, sleep, or quality of life
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Symptoms are becoming more frequent or severe
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Dietary changes or over-the-counter medications are not helping
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    You are uncertain whether your symptoms are truly due to IBS
+  </li>
+</ul>
+
+<h4 className="text-xl font-semibold text-foreground mb-3">   Certain symptoms may require more urgent medical attention </h4>
+
+<p className="text-lg text-muted-foreground mb-6">
+  Please seek medical review if you experience:
+</p>
+
+<ul className="space-y-2 mb-4">
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Blood in the stool
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Unexplained weight loss
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Persistent vomiting
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Fever
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Difficulty swallowing
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Severe or worsening abdominal pain
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Symptoms that wake you from sleep
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    A new change in bowel habits after the age of 45–50
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    A family history of bowel cancer, inflammatory bowel disease, or coeliac disease
+  </li>
+</ul>
+
+<h4 className="text-xl font-semibold text-foreground mb-3">   Why see a gastroenterologist? </h4>
+
+<p className="text-lg text-muted-foreground mb-6">
+  A gastroenterologist can help:
+</p>
+
+<ul className="space-y-2 mb-4">
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Confirm whether your symptoms are due to IBS
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Exclude other digestive conditions that may mimic IBS
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Recommend appropriate tests if needed
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Provide personalised treatment and dietary advice
+  </li>
+  <li className="flex items-center gap-3 text-lg text-foreground">
+    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+    Help improve symptom control and quality of life
+  </li>
+</ul>
+
+<p className="text-lg text-muted-foreground mx-auto">
+  In many cases, IBS can be managed successfully with the right combination of dietary changes, lifestyle measures, and medical treatment. Early assessment can also provide reassurance and help identify any underlying conditions that may require further attention.
+</p>
             </motion.div>
           </div>
         </section>
@@ -750,9 +883,39 @@ export const Ibs = () => {
                 life and quality of life. Fortunately, many people are able to improve their symptoms with a combination of 
                 dietary adjustments, lifestyle measures, and targeted treatment.
               </p>
-              <h4 className="text-xl font-semibold text-foreground mb-4">Common triggers for IBS flare-ups</h4>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Common triggers for IBS flare-ups</h3>
               <p className="text-base text-muted-foreground leading-relaxed">
                 IBS symptoms can vary from person to person, but common triggers include:
+              </p>
+              <ul className="space-y-2 mt-4 mb-8">
+                {commonFlareUps.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-sm">
+                    <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />  
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-base text-muted-foreground leading-relaxed mb-8">
+                Keeping a food and symptom diary may help identify personal triggers.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Dietary measures that may help</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Simple dietary adjustments can often reduce symptoms:
+              </p>
+              <ul className="space-y-2 mt-4 mb-8">
+                {dietaryAdjustments.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-sm">
+                    <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />  
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-base text-muted-foreground leading-relaxed mb-8">
+                Some patients may benefit from a low FODMAP diet under the guidance of a healthcare professional or dietitian.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Managing stress and lifestyle factors</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                The gut and brain are closely connected, and stress can worsen IBS symptoms. Helpful measures may include:
               </p>
               <ul className="space-y-2 mt-4 mb-8">
                 {lifestyleTips.map((item, idx) => (
@@ -762,7 +925,7 @@ export const Ibs = () => {
                   </li>
                 ))}
               </ul>
-              <h4 className="text-xl font-semibold text-foreground mb-4">Medications</h4>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Medications</h3>
               <p className="text-base text-muted-foreground leading-relaxed">
                 Depending on symptoms, medications may help:
               </p>

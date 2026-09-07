@@ -202,6 +202,176 @@ export const BowelCancerScreeningPage = () => {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="py-14 lg:py-20">
+          <div className="container mx-auto px-2 sm:px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-10"
+            >
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
+                  Understanding Colorectal Cancer
+                </h2>
+              </div>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Colorectal cancer (also known as bowel or colon cancer) is one of the most common cancers in Singapore and worldwide. It develops in the colon or rectum, often starting as small growths called polyps. 
+                Over time, some polyps may become cancerous. Colonoscopy allows these polyps to be detected and removed before cancer develops.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="max-w-3xl mx-auto"
+            >
+              <h3 className="text-xl font-semibold text-foreground mb-3">Colorectal Cancer in Singapore</h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                  According to the Health Promotion Board and Singapore Cancer Society, colorectal cancer remains one of the leading cancers locally. 
+                  One challenge is that early colorectal cancer often causes no symptoms, which is why screening is important.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Risk Factors</h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                  Several factors can increase the risk of colorectal cancer:
+              </p>
+              <ul className="space-y-2 mb-4">
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Age above 50
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Family history of colorectal cancer or polyps
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Personal history of polyps or inflammatory bowel disease
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Smoking and excess alcohol intake
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Obesity and sedentary lifestyle
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Diets high in processed or red meat and low in fibre
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Type 2 diabetes and metabolic disease
+                    </li>
+                </ul>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Although risk increases with age, colorectal cancer is increasingly being seen in younger adults.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Symptoms</h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                 Early colorectal cancer may not cause symptoms. When symptoms occur, they may include:
+              </p>
+              <ul className="space-y-2 mb-4">
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                     Blood in the stool or rectal bleeding
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Change in bowel habits
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Persistent diarrhoea or constipation
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Abdominal pain or bloating
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Unexplained weight loss
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Fatigue or anemia
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Narrow stools or incomplete bowel emptying
+                    </li>
+                </ul>
+                <p className="text-lg text-muted-foreground mb-6">
+                 These symptoms are not always caused by cancer, but persistent or unexplained symptoms should be medically evaluated.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Why Early Detection Matters</h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                 When detected early, colorectal cancer is often highly treatable. Screening can also identify and remove polyps before they become cancerous.
+              </p>
+              <p className="text-lg text-muted-foreground mb-6">
+                 Common screening methods include stool-based tests and colonoscopy. Colonoscopy remains the most comprehensive investigation as 
+                 it allows direct examination of the bowel and removal of polyps during the same procedure.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Who Should Consider Screening?</h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                 In general:
+              </p>
+               <ul className="space-y-2 mb-4">
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                     Average-risk individuals are advised to begin screening from age 45–50
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Patients with a family history may require earlier screening
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Anyone with concerning symptoms should seek medical review regardless of age
+                    </li>
+                </ul>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Reducing Your Risk</h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                 You may help reduce your risk by:
+              </p>
+              <ul className="space-y-2 mb-4">
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                     Maintaining a healthy weight
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Exercising regularly
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Avoiding smoking
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Limiting alcohol intake
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Increasing dietary fibre
+                    </li>
+                    <li className="flex items-center gap-3 text-lg text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                      Participating in regular screening
+                    </li>
+                </ul>
+                 <p className="text-lg text-muted-foreground mb-6">
+                 Early assessment and screening can provide reassurance, identify treatable conditions, and potentially detect colorectal cancer at a more curable stage.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Risk Factors with Image */}
         <section className="py-14 lg:py-20 bg-muted/30">
           <div className="container mx-auto px-2 sm:px-4">
@@ -289,7 +459,7 @@ export const BowelCancerScreeningPage = () => {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
-                  Colonoscopy Screening Procedure and What To Expect
+                  Colonoscopy: What to Expect
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6">
                   A colonoscopy is a procedure that allows the doctor to examine the inside of the large bowel using a thin flexible camera. 
@@ -311,12 +481,12 @@ export const BowelCancerScreeningPage = () => {
                         </div>
                       </AccordionTrigger>
                       <AccordionContent className="pl-14 pb-4 text-base text-muted-foreground">
-                        {item.desc}
+                        <div dangerouslySetInnerHTML={{__html: item.desc}} />
                       </AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                <h2 className="text-3xl md:text-4xl mt-4 font-serif font-semibold text-foreground">
                   Common patient experiences
                 </h2>
                 <p className="text-muted-foreground mt-6 text-base">

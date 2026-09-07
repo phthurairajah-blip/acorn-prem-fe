@@ -69,7 +69,7 @@ const faqs = [
     question:
       "What tests might a gastroenterologist recommend for persistent reflux symptoms in Singapore?",
     answer:
-      "Depending on your symptoms and clinical history, investigations may include gastroscopy to assess the oesophagus, stomach, and duodenum; biopsies to look for inflammation or other underlying conditions; testing for Helicobacter pylori; ambulatory pH monitoring to assess acid exposure; and oesophageal manometry to evaluate swallowing and oesophageal muscle function. Not all patients require extensive testing, and investigations are tailored to the individual clinical situation.",
+      "Depending on your symptoms and clinical history, investigations may include: <ul class='space-y-2 mb-4'><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Gastroscopy to assess the oesophagus, stomach, and duodenum</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Biopsies to look for inflammation or other underlying conditions</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Testing for <em>Helicobacter pylori</em></li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Ambulatory pH monitoring to assess acid exposure</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Oesophageal manometry to evaluate swallowing and oesophageal muscle function</li></ul> Not all patients require extensive testing, and investigations are tailored to the individual clinical situation.",
   },
   {
     question:
@@ -81,7 +81,7 @@ const faqs = [
     question:
       "What are the warning signs that reflux may be causing complications such as inflammation, narrowing, or Barrett’s oesophagus?",
     answer:
-      "Potential warning signs include difficulty or pain when swallowing, food getting stuck in the chest, persistent vomiting, gastrointestinal bleeding or black stools, iron deficiency anaemia, unexplained weight loss, and long-standing reflux symptoms, particularly in patients with additional risk factors. These symptoms may warrant further evaluation with gastroscopy.",
+      "Potential warning signs include: <ul class='space-y-2 mb-4'><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Difficulty or pain when swallowing</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Food getting stuck in the chest</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Persistent vomiting</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Gastrointestinal bleeding or black stools</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Iron deficiency anaemia</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Unexplained weight loss</li><li class='flex items-center gap-3 text-lg text-foreground'><span class='h-2 w-2 rounded-full bg-amber-500 shrink-0'></span>Long-standing reflux symptoms, particularly in patients with additional risk factors</li></ul> These symptoms may warrant further evaluation with gastroscopy.",
   },
   {
     question:
@@ -720,9 +720,11 @@ export const GerdHeartBurn = () => {
                     <AccordionTrigger className="hover:no-underline py-4 text-left">
                       <span className="font-medium text-lg text-foreground">{faq.question}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="pb-4 text-base text-muted-foreground">
-                      {faq.answer}
-                    </AccordionContent>
+                    <AccordionContent
+  className='pb-4 text-base text-muted-foreground'
+>
+  <div dangerouslySetInnerHTML={{ __html: faq.answer }}></div>
+</AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
