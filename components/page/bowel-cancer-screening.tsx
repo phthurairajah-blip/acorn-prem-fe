@@ -60,21 +60,6 @@ const colonoscopySteps = [
     title: "After the procedure",
     desc: "<p class='text-base text-muted-foreground mb-6'>You will rest in a recovery area until the sedation wears off. Some bloating, mild cramps, or passing wind is common because air was introduced into the bowel. This usually improves quickly. Most patients can eat later the same day unless advised otherwise.</p><p class='text-base text-muted-foreground mb-6'>Because sedation affects reflexes and judgment, you should not drive, drink alcohol, operate machinery, or make important decisions until the next day. Arrange for someone to take you home.</p>",
   },
-  // {
-  //   step: 4,
-  //   title: "During Colonoscopy",
-  //   desc: "A flexible scope with a camera examines your entire colon. If polyps are found, they can usually be removed immediately.",
-  // },
-  // {
-  //   step: 5,
-  //   title: "Recovery",
-  //   desc: "Rest in the recovery area for 30-60 minutes as sedation wears off. You'll need someone to accompany you home.",
-  // },
-  // {
-  //   step: 6,
-  //   title: "Results & Follow-up",
-  //   desc: "Your specialist will discuss preliminary findings on the same day. Detailed pathology results (if applicable) within 1-2 weeks.",
-  // },
 ];
 
 const faqs = [
