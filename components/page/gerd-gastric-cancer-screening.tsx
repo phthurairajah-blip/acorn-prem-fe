@@ -61,7 +61,7 @@ const recoverySteps = [
 
 const biopsisDiagnose = [
   "Inflammation or gastritis",
-  "Infection with Helicobacter pylori",
+  "Infection with Helicobacter pylori Infection",
   "Coeliac disease",
   "Barrett's oesophagus",
   "Polyps or abnormal tissue changes",
