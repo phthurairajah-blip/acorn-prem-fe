@@ -219,7 +219,7 @@ export const FattyLiverDisease = () => {
                   Metabolic Liver Disease
                 </span>
                 <h1 className="text-5xl md:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
-                  Fatty Liver Specialist in Singapore
+                  Fatty Liver
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8 text-justify">
                   Fatty liver disease, also known as metabolic dysfunction-associated steatotic liver disease (MASLD), 
@@ -474,7 +474,7 @@ export const FattyLiverDisease = () => {
                     className="bg-background rounded-xl p-6 border border-emerald-200 dark:border-emerald-800/30"
                   >
                     <p className="text-base text-muted-foreground mb-4 leading-relaxed">
-                      Although many patients have no symptoms, medical review is advisable if you develop:
+                      Patients with:
                     </p>
                     <ul className="space-y-3">
                       {specialistReferralSigns.map((item, idx) => (
@@ -766,14 +766,14 @@ export const FattyLiverDisease = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.2 }}
-                      className="max-w-3xl mx-auto"
+                      className="max-w-3xl mx-auto pb-10"
                     >
                       <Accordion type="single" collapsible className="w-full space-y-3">
                         {fattyLiverFaqs.map((faq, index) => (
                           <AccordionItem 
                             key={index} 
                             value={`faq-${index}`}
-                            className="bg-card rounded-xl border border-border px-4"
+                            className="bg-card rounded-xl border border-border px-4 last:border-b last:border-border"
                           >
                             <AccordionTrigger className="hover:no-underline py-4 text-left">
                               <h3 className="font-medium text-lg text-foreground">{faq.question}</h3>

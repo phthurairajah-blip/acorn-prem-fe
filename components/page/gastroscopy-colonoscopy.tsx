@@ -14,7 +14,7 @@ const stomachViewsImage = "/stomach-endoscopy-views.jpeg";
 const safetyFaqs = [
   {
     question: "Is gastroscopy painful?",
-    answer: "Gastroscopy is typically performed under sedation to ensure patient comfort. You will receive sedation through an IV line which is used to prioritize patient comfort and relaxed throughout the procedure. Most patients have no memory of the procedure afterwards.",
+    answer: "Gastroscopy is commonly performed with sedation to improve comfort. If sedation is used, it is given through an IV line and you will be monitored throughout the procedure. Many patients remember little or none of the procedure afterwards.",
   },
   {
     question: "Do I need to be admitted overnight?",
@@ -109,13 +109,11 @@ const GastroscopyColonoscopy = () => {
               <span className="text-emerald-600 dark:text-emerald-400 text-sm font-medium tracking-widest uppercase">
                 Diagnostic & Therapeutic Endoscopy
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
-                Gastroscopy in Singapore - OGD Procedure
+              <h1 className="text-5xl md:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
+                Gastroscopy (OGD) – Upper GI Endoscopy
               </h1>
-              <p className="text-lg text-muted-foreground leading-loose mb-8">
-                Gastroscopy, also known as OGD (oesophago-gastro-duodenoscopy) or upper endoscopy, is a minimally invasive 
-                procedure that allows direct visualisation of the upper digestive tract. This procedure is a primary 
-                clinical modality for diagnosing conditions, performing biopsies, and treating various upper GI disorders.
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+                Gastroscopy, also known as OGD (oesophago-gastro-duodenoscopy) or upper endoscopy, allows your doctor to examine the oesophagus, stomach and first part of the small intestine. During the same procedure, biopsies can be taken when needed and certain conditions can also be treated.
               </p>
               <Button asChild size="lg" className="gap-2">
                 <Link href="/#contact">
@@ -138,7 +136,7 @@ const GastroscopyColonoscopy = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 What is Gastroscopy?
               </h2>
               
@@ -176,18 +174,12 @@ const GastroscopyColonoscopy = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
-                Who May Need a Gastroscopy in Singapore?
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
+                Who May Need a Gastroscopy?
               </h2>
-              
-              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
-                <p>
-                  Anyone who has symptoms of heartburn , indigestion, difficulty with swallowing, who has lost weight or 
-                  stomach pains and those with a familty history of oeospahgeal and stomach cancer.
-                </p>
-              </div>
 
-              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-6">
+
+              <h3 className="text-xl md:text-2xl font-serif font-semibold text-foreground mb-6">
                 Symptoms that may require gastroscopy
               </h3>
               <ul className="space-y-3 mb-10">
@@ -198,12 +190,12 @@ const GastroscopyColonoscopy = () => {
 
   <li className="flex items-start gap-3 text-base text-muted-foreground">
     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Difficulty in swallowing
+    Difficulty swallowing
   </li>
 
   <li className="flex items-start gap-3 text-base text-muted-foreground">
     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Stomach pains
+    Abdominal pain
   </li>
 
   <li className="flex items-start gap-3 text-base text-muted-foreground">
@@ -226,22 +218,18 @@ const GastroscopyColonoscopy = () => {
     Recurrent vomiting
   </li>
 </ul>
-<h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-6">
-                Who may need screening even without severe symptoms
+<h3 className="text-xl md:text-2xl font-serif font-semibold text-foreground mb-6">
+                Gastroscopy for Screening
               </h3>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
                 <p>
-                  Family history of gastric cancer
+                  Gastroscopy may be considered for people at increased risk of gastric cancer, including those with a strong family history. Your individual risk and the need for screening or surveillance can be discussed during consultation.
                 </p>
               </div>
-              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-6">
-                When to seek urgent medical attention
+              <h3 className="text-xl md:text-2xl font-serif font-semibold text-foreground mb-6">
+                When to Seek Urgent Medical Attention
               </h3>
-              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
-                <p>
-                  When you have red flag symptoms such as:
-                </p>
-              </div>
+
               <ul className="space-y-3 mb-12">
   <li className="flex items-start gap-3 text-base text-muted-foreground">
     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
@@ -250,7 +238,7 @@ const GastroscopyColonoscopy = () => {
 
   <li className="flex items-start gap-3 text-base text-muted-foreground">
     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-    Difficulty in swallowing
+    Difficulty swallowing
   </li>
 
   <li className="flex items-start gap-3 text-base text-muted-foreground">
@@ -276,7 +264,7 @@ const GastroscopyColonoscopy = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 What Can a Gastroscopy Detect or Treat?
               </h2>
               
@@ -289,7 +277,7 @@ const GastroscopyColonoscopy = () => {
                 </p>
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-6">
+              <h3 className="text-xl md:text-2xl font-serif font-semibold text-foreground mb-6">
                 Conditions a Gastroscopy Can Detect
               </h3>
               <ul className="space-y-3 mb-12">
@@ -390,7 +378,7 @@ const GastroscopyColonoscopy = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 When a Biopsy May Be Performed
               </h2>
               
@@ -436,7 +424,7 @@ const GastroscopyColonoscopy = () => {
                 </p>
               </div>
               
-               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 Therapeutic Procedures During a Gastroscopy
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
@@ -481,7 +469,7 @@ const GastroscopyColonoscopy = () => {
                 </p>
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 What Are the Risks and Complications of Gastroscopy?
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
@@ -576,7 +564,7 @@ const GastroscopyColonoscopy = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 How Do I Prepare for a Gastroscopy?
               </h2>
               
@@ -585,7 +573,7 @@ const GastroscopyColonoscopy = () => {
                   To allow a clear view of the upper digestive tract, your stomach must be empty.
                 </p>
               </div>
-              <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-6">
+              <h3 className="text-xl md:text-2xl font-serif font-semibold text-foreground mb-6">
                Fasting Instructions
               </h3>
               <ul className="space-y-3 mb-10">
@@ -602,7 +590,7 @@ const GastroscopyColonoscopy = () => {
     Follow the specific fasting instructions provided by your doctor or endoscopy team.
   </li>
 </ul>
-            <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-6">
+            <h3 className="text-xl md:text-2xl font-serif font-semibold text-foreground mb-6">
                Which Medicines Should I Stop or Continue?
               </h3>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
@@ -633,7 +621,7 @@ const GastroscopyColonoscopy = () => {
                 </p>
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 What to Bring on the Day
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
@@ -686,7 +674,7 @@ const GastroscopyColonoscopy = () => {
             >
               <div className="flex items-center gap-3 mb-6">
                 <Info className="h-7 w-7 text-amber-600" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
                   Preparation Guidelines
                 </h2>
               </div>
@@ -763,7 +751,7 @@ const GastroscopyColonoscopy = () => {
             >
               <div className="flex items-center gap-3 mb-6">
                 <Clock className="h-7 w-7 text-primary" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
                   What to Expect During Gastroscopy
                 </h2>
               </div>
@@ -788,7 +776,7 @@ const GastroscopyColonoscopy = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 lg:py-20 bg-muted/30">
+        <section className="py-16 lg:py-20 bg-muted/30 pb-20">
           <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -799,7 +787,7 @@ const GastroscopyColonoscopy = () => {
             >
               <div className="flex items-center gap-3 mb-6">
                 <HelpCircle className="h-7 w-7 text-primary" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
                   Frequently Asked Questions
                 </h2>
               </div>
@@ -807,14 +795,14 @@ const GastroscopyColonoscopy = () => {
                 Common questions about gastroscopy safety and what to expect.
               </p>
 
-              <Accordion type="single" collapsible className="space-y-4">
+              <Accordion type="single" collapsible className="space-y-4 pb-8">
                 {safetyFaqs.map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`faq-${index}`}
-                    className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-md transition-shadow"
+                    className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-md transition-shadow last:border-b last:border-border"
                   >
-                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5 text-lg font-medium">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-5">
@@ -837,7 +825,7 @@ const GastroscopyColonoscopy = () => {
               transition={{ duration: 0.6 }}
               className="text-center max-w-2xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
                 Schedule Your Procedure
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-8">

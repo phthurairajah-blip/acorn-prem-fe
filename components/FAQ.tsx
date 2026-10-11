@@ -51,10 +51,10 @@ export const FAQ = () => {
             <span className="text-accent text-sm font-medium tracking-widest uppercase">
               Common Questions
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mt-3 mb-6">
+            <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mt-3 mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-base text-muted-foreground leading-relaxed mb-6">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               Find answers to common questions about our practice, appointments, 
               and what to expect during your visit.
             </p>
@@ -75,8 +75,8 @@ export const FAQ = () => {
           >
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-border">
-                  <AccordionTrigger className="text-left font-serif text-foreground hover:text-primary transition-colors">
+                <AccordionItem key={index} value={`item-${index}`} className="border-border last:border-b">
+                  <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-primary transition-colors">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-base text-muted-foreground leading-relaxed">

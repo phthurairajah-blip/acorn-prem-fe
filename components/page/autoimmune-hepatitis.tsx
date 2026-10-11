@@ -112,7 +112,7 @@ export const AutoimmuneHepatitis = () => {
               Back to Conditions
             </Link>
 
-            <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -172,26 +172,27 @@ export const AutoimmuneHepatitis = () => {
         {/* Symptoms Section */}
         <section className="py-14 lg:py-20">
           <div className="container mx-auto px-2 sm:px-4">
-            <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div className="max-w-4xl mx-auto space-y-8">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
+                className="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-sm"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <Stethoscope className="h-6 w-6 text-emerald-500" />
+                  <Stethoscope className="h-6 w-6 text-emerald-500 shrink-0" />
                   <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
                     Signs & Symptoms
                   </h2>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   Symptoms can range from mild to severe. Some patients are asymptomatic and diagnosed incidentally through blood tests.
                 </p>
-                <ul className="space-y-3">
+                <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
                   {symptoms.map((symptom, index) => (
-                    <li key={index} className="flex items-center gap-3 text-foreground">
-                      <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
+                    <li key={index} className="flex items-start gap-3 text-base text-foreground leading-relaxed">
+                      <span className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
                       {symptom}
                     </li>
                   ))}
@@ -199,24 +200,25 @@ export const AutoimmuneHepatitis = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="rounded-2xl border border-amber-200 dark:border-amber-800/40 bg-amber-50/50 dark:bg-amber-950/10 p-6 md:p-8 shadow-sm"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <AlertTriangle className="h-6 w-6 text-amber-600" />
+                  <AlertTriangle className="h-6 w-6 text-amber-600 shrink-0" />
                   <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
                     Risk Factors
                   </h2>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   While the exact cause is unknown, certain factors increase the risk of developing autoimmune hepatitis.
                 </p>
-                <ul className="space-y-3">
+                <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
                   {riskFactors.map((factor, index) => (
-                    <li key={index} className="flex items-center gap-3 text-foreground">
-                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                    <li key={index} className="flex items-start gap-3 text-base text-foreground leading-relaxed">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 mt-2 shrink-0" />
                       {factor}
                     </li>
                   ))}
@@ -225,7 +227,6 @@ export const AutoimmuneHepatitis = () => {
             </div>
           </div>
         </section>
-
         {/* Diagnosis Section */}
         <section className="py-14 lg:py-20">
           <div className="container mx-auto px-2 sm:px-4">
@@ -290,12 +291,13 @@ export const AutoimmuneHepatitis = () => {
         {/* Treatment Section */}
         <section className="py-14 lg:py-20">
           <div className="container mx-auto px-2 sm:px-4">
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
+            <div className="max-w-4xl mx-auto space-y-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
+                className="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-sm"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Pill className="h-6 w-6 text-emerald-500" />
@@ -303,7 +305,7 @@ export const AutoimmuneHepatitis = () => {
                     Treatment Options
                   </h2>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   The goal of treatment is to suppress the immune system&apos;s attack on the liver, reduce inflammation, and prevent progression to cirrhosis.
                 </p>
 
@@ -312,17 +314,17 @@ export const AutoimmuneHepatitis = () => {
                     <AccordionItem
                       key={index}
                       value={`treatment-${index}`}
-                      className="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl border-none px-4"
+                      className="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl border border-emerald-100 dark:border-emerald-800/30 px-5"
                     >
-                      <AccordionTrigger className="hover:no-underline py-4">
+                      <AccordionTrigger className="hover:no-underline py-5">
                         <div className="flex items-center gap-4">
                           <div className="flex items-center justify-center h-10 w-10 rounded-full bg-emerald-500 text-white font-semibold shrink-0">
                             {index + 1}
                           </div>
-                          <span className="font-semibold text-foreground text-left">{item.step}</span>
+                          <span className="text-lg font-semibold text-foreground text-left">{item.step}</span>
                         </div>
                       </AccordionTrigger>
-                      <AccordionContent className="pl-14 pb-4 text-muted-foreground">
+                      <AccordionContent className="pl-14 pr-2 pb-5 text-base leading-7 text-muted-foreground">
                         {item.desc}
                       </AccordionContent>
                     </AccordionItem>
@@ -335,38 +337,38 @@ export const AutoimmuneHepatitis = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl p-8 border border-emerald-200 dark:border-emerald-800/30"
+                className="rounded-2xl border border-emerald-200 dark:border-emerald-800/30 bg-emerald-50 dark:bg-emerald-900/20 p-6 md:p-8 shadow-sm"
               >
-                <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                   Treatment Goals
-                </h3>
+                </h2>
                 <ul className="space-y-4 text-muted-foreground">
                   <li className="flex items-start gap-3">
                     <Shield className="h-5 w-5 text-emerald-500 mt-1 shrink-0" />
                     <div>
                       <span className="font-semibold text-foreground">Aim to Achieve Remission</span>
-                      <p className="text-sm mt-1">Seek to normalise liver enzymes and reduce inflammation</p>
+                      <p className="text-base leading-relaxed mt-1">Seek to normalise liver enzymes and reduce inflammation</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Shield className="h-5 w-5 text-emerald-500 mt-1 shrink-0" />
                     <div>
                       <span className="font-semibold text-foreground">Prevent Fibrosis</span>
-                      <p className="text-sm mt-1">Stop progression to liver scarring and cirrhosis</p>
+                      <p className="text-base leading-relaxed mt-1">Stop progression to liver scarring and cirrhosis</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Shield className="h-5 w-5 text-emerald-500 mt-1 shrink-0" />
                     <div>
                       <span className="font-semibold text-foreground">Maintain Quality of Life</span>
-                      <p className="text-sm mt-1">Minimise medication side effects while controlling disease</p>
+                      <p className="text-base leading-relaxed mt-1">Minimise medication side effects while controlling disease</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Shield className="h-5 w-5 text-emerald-500 mt-1 shrink-0" />
                     <div>
                       <span className="font-semibold text-foreground">Long-term Monitoring</span>
-                      <p className="text-sm mt-1">Regular blood tests to monitor response and adjust treatment</p>
+                      <p className="text-base leading-relaxed mt-1">Regular blood tests to monitor response and adjust treatment</p>
                     </div>
                   </li>
                 </ul>

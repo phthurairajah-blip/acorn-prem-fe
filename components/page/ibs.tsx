@@ -128,26 +128,6 @@ const ibsComparisons = [
   },
 ];
 
-const commonFlareUps = [
-  "Stress and anxiety",
-  "Irregular meals",
-  "Poor sleep",
-  "Certain foods or drinks",
-  "Large or heavy meals",
-  "Excess caffeine or alcohol",
-  "Spicy or fatty foods",
-  "Hormonal changes in some individuals",
-];
-
-const dietaryAdjustments = [
-  "Eat regular meals and avoid skipping meals",
-  "Avoid overeating or very large meals",
-  "Reduce intake of highly processed or fatty foods",
-  "Limit caffeine, fizzy drinks, and alcohol if they worsen symptoms",
-  "Maintain adequate hydration",
-  "Increase fibre gradually, particularly soluble fibre such as oats or psyllium",
-];
-
 const lifestyleTips = [
   "Regular exercise",
   "Adequate sleep",
@@ -173,20 +153,19 @@ const specialistReviewSigns = [
 ];
 
 const ibsSymptoms = [
-  "Abdominal pain or cramping related to bowel movements",
+  "Recurrent abdominal pain or cramping",
   "Bloating and abdominal distension",
   "Diarrhoea, constipation, or alternating between both",
-  "Urgency or incomplete evacuation",
-  "Passage of mucus in stool",
-  "Symptoms often worse after eating",
-  "Symptom relief after passing stool or gas",
-  "Symptoms may worsen with stress",
+  "Changes in stool frequency or consistency",
+  "Urgency or a feeling of incomplete evacuation",
+  "Passage of mucus in the stool",
+  "Symptoms that fluctuate and may be triggered by meals or stress",
 ];
 
 const ibsSubtypes = [
   {
     title: "IBS-D (Diarrhoea-predominant)",
-    description: "Characterised by frequent loose stools, urgency, and often morning diarrhoea. May be associated with anxiety.",
+    description: "Characterised by frequent loose stools and urgency. Symptoms may be more noticeable at particular times of day, including the morning.",
     color: "amber"
   },
   {
@@ -232,10 +211,10 @@ const triggers = [
     category: "Other",
     items: [
       "Hormonal changes (menstruation)",
-      "Post-infectious (gastroenteritis)",
+      "Recent gastrointestinal infection",
       "Antibiotic use",
       "Food intolerances",
-      "Small intestinal bacterial overgrowth",
+      "A previous episode of gastroenteritis",
     ]
   },
 ];
@@ -243,19 +222,19 @@ const triggers = [
 const alarmSymptoms = [
   {
     title: "Rectal Bleeding",
-    description: "Blood in stool is not a feature of IBS and requires investigation."
+    description: "Blood in the stool is not explained by IBS and should be medically assessed."
   },
   {
-    title: "Unexplained Weight Loss",
-    description: "Significant unintentional weight loss needs further evaluation."
+    title: "Unexplained Weight Loss or Anaemia",
+    description: "Unintentional weight loss or unexplained anaemia may indicate another condition and needs further evaluation."
   },
   {
-    title: "Onset After Age 45",
-    description: "New symptoms in older adults warrant colonoscopy."
+    title: "Night-Time or Progressive Symptoms",
+    description: "Symptoms that regularly wake you from sleep, become progressively worse, or are accompanied by fever warrant review."
   },
   {
-    title: "Nocturnal Symptoms",
-    description: "Symptoms waking you from sleep suggest organic disease."
+    title: "New or Changing Symptoms",
+    description: "New symptoms later in life, a significant change in bowel habit, or a relevant family history may require further investigation."
   },
 ];
 
@@ -310,11 +289,11 @@ export const Ibs = () => {
                   Functional GI Disorders
                 </span>
                 <h1 className="text-5xl md:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
-                  Irritable Bowel Syndrome Treatment Singapore
+                  Irritable Bowel Syndrome
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  In Singapore, approximately <a href="https://www.nuhs.edu.sg/patient-care/find-a-condition/irritable-bowel-syndrome-ibs">10% of the population is diagnosed with IBS</a>, making it a significant health concern locally.
-                  With accurate diagnosis and personalized treatment plans, most patients experience significant symptom relief under the care of an irritable bowel syndrome specialist doctor.
+                  Irritable bowel syndrome (IBS) is a common disorder of gut–brain interaction that can cause abdominal pain, bloating and changes in bowel habit, including diarrhoea, constipation or both.
+                  A careful assessment helps confirm the diagnosis, identify warning features and tailor treatment to your predominant symptoms and triggers.
                 </p>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
@@ -359,15 +338,10 @@ export const Ibs = () => {
               
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
                 <p>
-                  Irritable Bowel Syndrome is a functional gastrointestinal disorder characterised by 
-                  recurrent abdominal pain associated with changes in bowel habits. Unlike inflammatory 
-                  bowel disease, IBS does not cause visible damage to the bowel or increase cancer risk.
+                  Irritable bowel syndrome (IBS) is a disorder of gut–brain interaction characterised by recurrent abdominal pain associated with bowel movements and changes in stool frequency or form. The bowel usually appears structurally normal, but its movement and sensitivity can be altered.
                 </p>
                 <p>
-                  Irritable Bowel Syndrome (IBS) arises from intricate interactions between the gut and brain 
-                  (the &#39;gut-brain axis&#39;), encompassing altered gut motility, visceral hypersensitivity, gut microbiome changes, 
-                  and psychological factors, necessitating comprehensive IBS treatment approaches. 
-                  Understanding these mechanisms guides effective treatment.
+                  Symptoms can be influenced by several factors, including gut sensitivity, bowel motility, diet, stress, sleep and, in some people, a previous episode of gastroenteritis. IBS does not cause bowel inflammation and does not itself increase colorectal cancer risk.
                 </p>
               </div>
 
@@ -467,7 +441,7 @@ export const Ibs = () => {
           </div>
         </section>
 
-        {/* Alarm Symptoms Section */}
+        {/* When Should You See a Doctor? Section */}
         <section className="py-16 lg:py-20 bg-red-50/50 dark:bg-red-950/10">
           <div className="container mx-auto px-2 sm:px-4">
             <motion.div
@@ -480,11 +454,11 @@ export const Ibs = () => {
               <div className="flex items-center gap-3 mb-8">
                 <AlertTriangle className="h-8 w-8 text-red-600" />
                 <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
-                  Alarm Symptoms
+                  When Should You See a Doctor?
                 </h2>
               </div>
               <p className="text-lg text-muted-foreground mb-10 max-w-3xl">
-                These symptoms are NOT typical of IBS and require investigation to exclude other conditions.
+                IBS itself does not usually cause bleeding, unexplained weight loss, anaemia, fever or steadily progressive symptoms. These features should prompt medical assessment.
               </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -502,122 +476,7 @@ export const Ibs = () => {
                   </motion.div>
                 ))}
               </div>
-              <p className="text-base text-muted-foreground leading-relaxed mb-4 mt-8">Many digestive symptoms such as abdominal discomfort, bloating, diarrhoea, constipation, and changes in bowel habits are commonly attributed to&nbsp;Irritable Bowel Syndrome. However, some of these symptoms can also occur in&nbsp;Inflammatory Bowel Disease, a group of conditions that cause ongoing inflammation within the digestive tract.</p>
-              <p className="text-base text-muted-foreground leading-relaxed mb-4">Although IBS and IBD may share certain symptoms, they are fundamentally different conditions. IBS is considered a functional bowel disorder, meaning the bowel appears normal but does not function normally. In contrast, IBD involves actual inflammation and damage to the lining of the digestive tract and may lead to more serious complications if left untreated.</p>
-              <p className="text-base text-muted-foreground leading-relaxed mb-6">Understanding the differences between IBS and IBD is important, as the investigations, treatment approaches, and long-term implications can vary significantly.</p>
 
-              <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">   When Should I See a Gastroenterologist for IBS Symptoms? </h3>
-
-<p className="text-lg text-muted-foreground mb-4 mx-auto">
-  Many people experience symptoms such as bloating, abdominal discomfort, diarrhoea, constipation, or changes in bowel habits from time to time. These can sometimes be caused by Irritable Bowel Syndrome (IBS), a common condition affecting the digestive system.
-</p>
-
-<p className="text-lg text-muted-foreground mb-4 mx-auto">
-  While IBS is not dangerous, it is important to seek medical advice if symptoms are persistent, worsening, or affecting your daily life.
-</p>
-
-<h4 className="text-xl font-semibold text-foreground mb-3">   You should consider seeing a gastroenterologist if: </h4>
-
-<ul className="space-y-2 mb-4">
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Your symptoms continue for several weeks or months
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Abdominal pain, bloating, diarrhoea, or constipation are affecting your work, sleep, or quality of life
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Symptoms are becoming more frequent or severe
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Dietary changes or over-the-counter medications are not helping
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    You are uncertain whether your symptoms are truly due to IBS
-  </li>
-</ul>
-
-<h4 className="text-xl font-semibold text-foreground mb-3">   Certain symptoms may require more urgent medical attention </h4>
-
-<p className="text-lg text-muted-foreground mb-6">
-  Please seek medical review if you experience:
-</p>
-
-<ul className="space-y-2 mb-4">
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Blood in the stool
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Unexplained weight loss
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Persistent vomiting
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Fever
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Difficulty swallowing
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Severe or worsening abdominal pain
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Symptoms that wake you from sleep
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    A new change in bowel habits after the age of 45–50
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    A family history of bowel cancer, inflammatory bowel disease, or coeliac disease
-  </li>
-</ul>
-
-<h4 className="text-xl font-semibold text-foreground mb-3">   Why see a gastroenterologist? </h4>
-
-<p className="text-lg text-muted-foreground mb-6">
-  A gastroenterologist can help:
-</p>
-
-<ul className="space-y-2 mb-4">
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Confirm whether your symptoms are due to IBS
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Exclude other digestive conditions that may mimic IBS
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Recommend appropriate tests if needed
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Provide personalised treatment and dietary advice
-  </li>
-  <li className="flex items-center gap-3 text-lg text-foreground">
-    <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-    Help improve symptom control and quality of life
-  </li>
-</ul>
-
-<p className="text-lg text-muted-foreground mx-auto">
-  In many cases, IBS can be managed successfully with the right combination of dietary changes, lifestyle measures, and medical treatment. Early assessment can also provide reassurance and help identify any underlying conditions that may require further attention.
-</p>
             </motion.div>
           </div>
         </section>
@@ -671,7 +530,7 @@ export const Ibs = () => {
                         "Family history of colorectal cancer or IBD",
                         "Symptoms not responding to treatment",
                       ].map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-sm">
+                        <li key={idx} className="flex items-start gap-3 text-base">
                           <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
                           <span className="text-muted-foreground">{item}</span>
                         </li>
@@ -699,19 +558,19 @@ export const Ibs = () => {
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-medium text-foreground mb-1">Blood Tests</h4>
-                      <p className="text-sm text-muted-foreground">Full blood count, inflammatory markers, coeliac serology, thyroid function.</p>
+                      <p className="text-base text-muted-foreground leading-relaxed">Full blood count, inflammatory markers, coeliac serology, thyroid function.</p>
                     </div>
                     <div>
                       <h4 className="font-medium text-foreground mb-1">Stool Tests</h4>
-                      <p className="text-sm text-muted-foreground">Calprotectin (to exclude IBD), stool cultures, ova and parasites.</p>
+                      <p className="text-base text-muted-foreground leading-relaxed">Calprotectin (to exclude IBD), stool cultures, ova and parasites.</p>
                     </div>
                     <div>
                       <h4 className="font-medium text-foreground mb-1">Breath Tests</h4>
-                      <p className="text-sm text-muted-foreground">Hydrogen breath tests for lactose intolerance or SIBO (small intestinal bacterial overgrowth).</p>
+                      <p className="text-base text-muted-foreground leading-relaxed">Hydrogen breath tests for lactose intolerance or SIBO (small intestinal bacterial overgrowth).</p>
                     </div>
                     <div>
                       <h4 className="font-medium text-foreground mb-1">Food Intolerance Testing</h4>
-                      <p className="text-sm text-muted-foreground">Structured elimination diets may identify specific triggers.</p>
+                      <p className="text-base text-muted-foreground leading-relaxed">Structured elimination diets may identify specific triggers.</p>
                     </div>
                   </div>
                 </motion.div>
@@ -733,24 +592,37 @@ export const Ibs = () => {
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   Understanding the differences between IBS and IBD is important, as the investigations, treatment approaches, and long-term implications can vary significantly.
                 </p>
-                <table className="comparison-table border bg-background">
-                <thead>
-                  <tr>
-                    <th>Feature</th>
-                    <th>Irritable Bowel Syndrome</th>
-                    <th>Inflammatory Bowel Disease</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {ibsComparisons.map((compare) => (
-                    <tr key={compare.id}>
-                      <td>{compare.feature}</td>
-                      <td>{compare.ibs}</td>
-                      <td>{compare.ibd}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                  <div className="rounded-2xl border border-emerald-200/80 bg-emerald-50/60 dark:bg-emerald-950/10 dark:border-emerald-800/40 p-6 md:p-8">
+                    <div className="text-center mb-6">
+                      <h3 className="text-3xl font-serif font-semibold text-emerald-700 dark:text-emerald-400">IBS</h3>
+                      <p className="text-base text-muted-foreground mt-1">Irritable Bowel Syndrome</p>
+                    </div>
+                    <div className="space-y-5">
+                      {ibsComparisons.map((compare) => (
+                        <div key={`ibs-${compare.id}`} className="min-h-[118px] border-t border-emerald-200/70 dark:border-emerald-800/30 pt-4 first:border-t-0 first:pt-0">
+                          <p className="font-semibold text-base text-foreground mb-1">{compare.feature}</p>
+                          <p className="text-base text-muted-foreground leading-relaxed">{compare.ibs}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="rounded-2xl border border-amber-200/80 bg-amber-50/60 dark:bg-amber-950/10 dark:border-amber-800/40 p-6 md:p-8">
+                    <div className="text-center mb-6">
+                      <h3 className="text-3xl font-serif font-semibold text-amber-700 dark:text-amber-400">IBD</h3>
+                      <p className="text-base text-muted-foreground mt-1">Inflammatory Bowel Disease</p>
+                    </div>
+                    <div className="space-y-5">
+                      {ibsComparisons.map((compare) => (
+                        <div key={`ibd-${compare.id}`} className="min-h-[118px] border-t border-amber-200/70 dark:border-amber-800/30 pt-4 first:border-t-0 first:pt-0">
+                          <p className="font-semibold text-base text-foreground mb-1">{compare.feature}</p>
+                          <p className="text-base text-muted-foreground leading-relaxed">{compare.ibd}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
             </motion.div>
           </div>
         </section>
@@ -868,103 +740,99 @@ export const Ibs = () => {
                 Management of Your IBS
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Living with IBS doesn&apos;t have to mean constant discomfort. It is crucial to consult 
-                an IBS specialist for accurate diagnosis and tailored treatment plans to effectively manage 
-                your symptoms.
+                IBS management works best when treatment is tailored to your predominant symptoms, bowel pattern and individual triggers. The aim is to reduce flare-ups, improve day-to-day comfort and help you maintain a more predictable routine.
               </p>
+
               <h3 className="text-xl font-semibold text-foreground mb-4">Managing IBS Flare-Ups</h3>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Living with Irritable Bowel Syndrome can be frustrating, particularly during periods when symptoms 
-                suddenly worsen or &ldquo;flare.&rdquo; Common symptoms during a flare-up may include abdominal discomfort, 
-                bloating, diarrhoea, constipation, excess gas, or an urgent need to open the bowels.
+              <p className="text-base text-muted-foreground mb-8 leading-relaxed">
+                Flare-ups can cause abdominal pain, bloating, diarrhoea, constipation, urgency or a feeling of incomplete evacuation. Symptoms often vary over time, so management may need to change depending on whether diarrhoea, constipation, pain or bloating is most troublesome.
               </p>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Although IBS does not cause permanent damage to the digestive tract, flare-ups can significantly affect daily 
-                life and quality of life. Fortunately, many people are able to improve their symptoms with a combination of 
-                dietary adjustments, lifestyle measures, and targeted treatment.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Common triggers for IBS flare-ups</h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                IBS symptoms can vary from person to person, but common triggers include:
-              </p>
-              <ul className="space-y-2 mt-4 mb-8">
-                {commonFlareUps.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />  
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
+
+              <h4 className="text-xl font-semibold text-foreground mb-4">Common Triggers for IBS Flare-Ups</h4>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mb-10">
+                {[
+                  "Irregular meals",
+                  "Poor sleep",
+                  "Stress or emotional strain",
+                  "Certain foods or large meals",
+                  "Reduced physical activity",
+                  "Recent gastrointestinal infection",
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-background rounded-xl border border-emerald-200 dark:border-emerald-800/30 p-4 shadow-sm flex items-start gap-3"
+                  >
+                    <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-base text-muted-foreground leading-relaxed">{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
+
+              <h4 className="text-xl font-semibold text-foreground mb-5">How IBS Is Managed</h4>
+              <div className="grid md:grid-cols-2 gap-5 mb-10">
+                {[
+                  {
+                    title: "Diet and eating pattern",
+                    text: "Regular meals, adequate hydration and identifying personal food triggers can be helpful. A low-FODMAP diet may be useful in selected patients, ideally with dietetic guidance.",
+                  },
+                  {
+                    title: "Bowel-pattern treatment",
+                    text: "Treatment can be directed at the predominant bowel pattern, for example constipation, diarrhoea or mixed symptoms.",
+                  },
+                  {
+                    title: "Pain and bloating",
+                    text: "Antispasmodics, peppermint oil or other symptom-directed treatments may help selected patients.",
+                  },
+                  {
+                    title: "Gut–brain therapies",
+                    text: "Stress management, cognitive behavioural therapy and gut-directed hypnotherapy can be useful when symptoms are strongly influenced by the gut–brain interaction.",
+                  },
+                  {
+                    title: "Lifestyle",
+                    text: "Regular exercise, adequate sleep and a consistent daily routine can help reduce symptom variability.",
+                  },
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    className={`bg-background rounded-xl border border-border p-5 ${idx === 4 ? "md:col-span-2 md:w-[calc(50%-0.625rem)] md:justify-self-center" : ""}`}
+                  >
+                    <h5 className="text-lg font-semibold text-foreground mb-2">{item.title}</h5>
+                    <p className="text-base text-muted-foreground leading-relaxed">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+
+              <h4 className="text-xl font-semibold text-foreground mb-4">When to Seek Further Medical Review</h4>
+              <p className="text-base text-muted-foreground leading-relaxed mb-5">
+                Seek medical assessment if any of the following warning signs are present:
+              </p>
+
+              <div className="grid sm:grid-cols-2 gap-3 mb-6">
+                {[
+                  "Symptoms that are persistent or worsening",
+                  "Rectal bleeding",
+                  "Unexplained weight loss or anaemia",
+                  "Fever or significant night-time symptoms",
+                  "A marked change in your usual bowel pattern",
+                ].map((warning, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-start gap-3 rounded-xl border border-red-200 bg-red-50/70 dark:border-red-900/40 dark:bg-red-950/10 p-4"
+                  >
+                    <AlertTriangle className="h-5 w-5 text-red-600 shrink-0 mt-0.5" />
+                    <span className="text-base text-foreground leading-relaxed">{warning}</span>
+                  </div>
+                ))}
+              </div>
+
               <p className="text-base text-muted-foreground leading-relaxed mb-8">
-                Keeping a food and symptom diary may help identify personal triggers.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Dietary measures that may help</h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Simple dietary adjustments can often reduce symptoms:
-              </p>
-              <ul className="space-y-2 mt-4 mb-8">
-                {dietaryAdjustments.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />  
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-base text-muted-foreground leading-relaxed mb-8">
-                Some patients may benefit from a low FODMAP diet under the guidance of a healthcare professional or dietitian.
-              </p>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Managing stress and lifestyle factors</h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                The gut and brain are closely connected, and stress can worsen IBS symptoms. Helpful measures may include:
-              </p>
-              <ul className="space-y-2 mt-4 mb-8">
-                {lifestyleTips.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />  
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Medications</h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Depending on symptoms, medications may help:
-              </p>
-              <ul className="space-y-2 mt-4 mb-4">
-                {medications.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />  
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-base text-muted-foreground leading-relaxed mb-8">
-                Treatment is usually tailored to the individual&rsquo;s symptoms and pattern of IBS.
-              </p>
-              <h4 className="text-xl font-semibold text-foreground mb-4">When to seek medical review</h4>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                You should seek medical attention if:
-              </p>
-              <ul className="space-y-2 mt-4 mb-4">
-                {specialistReviewSigns.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm">
-                    <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />  
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-base text-muted-foreground leading-relaxed mb-8">
-                A gastroenterologist can help confirm the diagnosis, exclude other digestive conditions, and provide a personalised treatment plan to help improve symptom control and quality of life.
+                A gastroenterologist can help confirm the diagnosis, exclude other digestive conditions and tailor treatment to your individual symptom pattern.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
                     <Calendar className="h-5 w-5" />
                     Book a Consultation
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/gerd-heartburn">
-                    Learn About GERD
                   </Link>
                 </Button>
               </div>
@@ -976,7 +844,7 @@ export const Ibs = () => {
         <RelatedConditions conditions={relatedConditions} />
 
         {/* FAQ Section */}
-        <section className="py-14 lg:py-20">
+        <section className="pt-14 pb-20 lg:pt-20 lg:pb-28">
           <div className="container mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -998,14 +866,14 @@ export const Ibs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="max-w-3xl mx-auto"
+              className="max-w-3xl mx-auto pb-6"
             >
               <Accordion type="single" collapsible className="w-full space-y-3">
                 {faqs.map((faq, index) => (
                   <AccordionItem 
                     key={index} 
                     value={`faq-${index}`}
-                    className="bg-card rounded-xl border border-border px-4"
+                    className="bg-card rounded-xl border border-border px-4 last:border-b last:border-border"
                   >
                     <AccordionTrigger className="hover:no-underline py-4 text-left">
                       <span className="font-medium text-lg text-foreground">{faq.question}</span>

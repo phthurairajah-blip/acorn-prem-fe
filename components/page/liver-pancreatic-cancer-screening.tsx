@@ -68,7 +68,7 @@ const liverScreeningSteps = [
   },
   {
     step: "Alpha-fetoprotein (AFP) Blood Test",
-    desc: "A tumour marker that may be elevated in liver cancer. Used in combination with ultrasound for better detection. Recommended every 6 months for high-risk individuals.",
+    desc: "Alpha-fetoprotein (AFP) is a blood marker that may be elevated in liver cancer. It can be used alongside ultrasound but should not be relied upon by itself.",
     image: bloodTestImage,
   },
   {
@@ -97,7 +97,7 @@ const pancreaticScreeningSteps: { step: string; desc: string; image: string; lin
   },
   {
     step: "CA 19-9 Blood Test",
-    desc: "A tumour marker that may be elevated in pancreatic cancer. However, it is not recommended for general screening due to limited sensitivity and specificity.",
+    desc: "CA 19-9 can be elevated in pancreatic cancer, but it is not sufficiently accurate to be used as a general screening test. It may be useful in selected clinical circumstances alongside imaging and specialist assessment.",
     image: bloodTestImage,
   },
 ];
@@ -129,9 +129,9 @@ const LiverPancreaticCancer = () => {
                   Liver & Pancreatic Cancer Screening
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                  Liver and pancreatic cancers are among the leading causes of cancer deaths in Singapore. 
-                  Early detection through appropriate screening can significantly improve treatment outcomes.
+                  Early detection and appropriate surveillance are important for people at increased risk of certain liver and pancreatic cancers. A personalised assessment can help determine whether screening is appropriate for you and which tests, if any, are recommended.
                 </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6"><strong className="font-semibold text-foreground">Routine pancreatic cancer screening is not recommended for people at average risk.</strong> Surveillance may be considered for selected individuals at substantially increased risk because of a strong family history of pancreatic cancer or certain inherited genetic conditions.</p>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
                     <Calendar className="h-5 w-5" />
@@ -182,7 +182,7 @@ const LiverPancreaticCancer = () => {
                 >
                   <benefit.icon className="h-10 w-10 text-emerald-500 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-foreground mb-2">{benefit.title}</h3>
-                  <p className="text-base text-muted-foreground">{benefit.desc}</p>
+                  <p className="text-base text-muted-foreground leading-relaxed">{benefit.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -220,12 +220,12 @@ const LiverPancreaticCancer = () => {
                     Liver Cancer Risk Factors
                   </h2>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   Hepatocellular carcinoma is a prevalent type of primary liver cancer and the 4th most common cancer in Singapore.
                 </p>
                 <ul className="space-y-3">
                   {liverCancerRiskFactors.map((factor, index) => (
-                    <li key={index} className="flex items-center gap-3 text-foreground">
+                    <li key={index} className="flex items-start gap-3 text-base text-foreground leading-relaxed">
                       <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
                       {factor}
                     </li>
@@ -271,7 +271,7 @@ const LiverPancreaticCancer = () => {
                       height={720}
                     />
                     <div className="p-4">
-                      <h3 className="text-lg font-semibold text-foreground mb-2">{item.step}</h3>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">{item.step}</h3>
                       <p className="text-base text-muted-foreground leading-relaxed">{item.desc}</p>
                       {item.step === "Fibroscan" && (
                         <Link 
@@ -305,12 +305,12 @@ const LiverPancreaticCancer = () => {
                     Pancreatic Cancer Risk Factors
                   </h2>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   Pancreatic cancer often requires timely clinical evaluation and management. Early detection significantly improves treatment options.
                 </p>
                 <ul className="space-y-3">
                   {pancreaticCancerRiskFactors.map((factor, index) => (
-                    <li key={index} className="flex items-center gap-3 text-foreground">
+                    <li key={index} className="flex items-start gap-3 text-base text-foreground leading-relaxed">
                       <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
                       {factor}
                     </li>
@@ -389,7 +389,7 @@ const LiverPancreaticCancer = () => {
                       height={720}
                     />
                     <div className="p-4">
-                      <h3 className="text-lg font-semibold text-foreground mb-2">{item.step}</h3>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">{item.step}</h3>
                       <p className="text-base text-muted-foreground leading-relaxed">{item.desc}</p>
                       {item.link && (
                         <Link 

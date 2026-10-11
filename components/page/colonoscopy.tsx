@@ -39,7 +39,7 @@ const colonoscopyFaqs = [
 ];
 
 const colonoscopyIndications = [
-  "Colorectal cancer screening (recommended from age 45, or earlier with family history)",
+  "Colorectal cancer screening (generally recommended from age 50 for average-risk adults; earlier if clinically indicated)",
   "Investigation of blood in stools or rectal bleeding",
   "Persistent change in bowel habits",
   "Unexplained abdominal pain or weight loss",
@@ -83,7 +83,7 @@ const whatToExpect = [
 ];
 export const Colonoscopy = () => {
   return (
-    
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="relative py-16 lg:py-24 overflow-hidden">
@@ -118,11 +118,11 @@ export const Colonoscopy = () => {
                 Diagnostic & Therapeutic Endoscopy
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
-                Colonoscopy Specialist in Singapore
+                Colonoscopy
               </h1>
               <p className="text-lg text-muted-foreground leading-loose mb-8">
-                Colonoscopy is the primary clinical modality for examining the large intestine and is essential for 
-                colorectal cancer screening. This minimally invasive procedure allows for direct visualisation, 
+                Colonoscopy is the primary clinical modality for examining the large intestine and is essential for
+                colorectal cancer screening. This minimally invasive procedure allows for direct visualisation,
                 biopsy collection, and removal of precancerous polyps.
               </p>
               <Button asChild size="lg" className="gap-2">
@@ -149,18 +149,18 @@ export const Colonoscopy = () => {
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
                 Understanding Colonoscopy
               </h2>
-              
+
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
                 <p>
-                  <strong className="text-foreground">Colonoscopy</strong> uses a flexible instrument 
-                  inserted through the rectum to examine the entire large intestine (colon) and the end of 
-                  the small intestine (terminal ileum). It is the established diagnostic tool for colorectal cancer screening 
-                  and allows for the detection and removal of precancerous polyps, potentially preventing 
+                  <strong className="text-foreground">Colonoscopy</strong> uses a flexible instrument
+                  inserted through the rectum to examine the entire large intestine (colon) and the end of
+                  the small intestine (terminal ileum). It is the established diagnostic tool for colorectal cancer screening
+                  and allows for the detection and removal of precancerous polyps, potentially preventing
                   cancer from developing.
                 </p>
                 <p>
-                  The procedure is performed under sedation for comfort and typically takes 20-45 minutes. 
-                  High-definition cameras provide clear visualization of the bowel lining, allowing 
+                  The procedure is performed under sedation for comfort and typically takes 20-45 minutes.
+                  High-definition cameras provide clear visualization of the bowel lining, allowing
                   detection of even small abnormalities.
                 </p>
               </div>
@@ -192,15 +192,15 @@ export const Colonoscopy = () => {
               className="max-w-4xl mx-auto"
             >
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
-                Who Should Undergo a Colonoscopy in Singapore?
+                Who Should Undergo a Colonoscopy?
               </h2>
               <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4">
-                Screening for adults over 45 and patients with higher risk
+                Screening from age 50 and for people at higher risk
               </h3>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
                 <p>
-                  Colonoscopy is commonly recommended as a screening test for colorectal cancer in adults aged 45 and above, 
-                  even in the absence of symptoms. The aim is to detect and remove precancerous polyps early, 
+                  Colonoscopy is commonly recommended as a screening test for colorectal cancer in average-risk adults aged 50 and above,
+                  even in the absence of symptoms. The aim is to detect and remove precancerous polyps early,
                   before they progress to cancer.
                 </p>
                 <p>
@@ -273,8 +273,8 @@ export const Colonoscopy = () => {
   </li>
 </ul>
 <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-12 leading-loose">
-                <p>Although these symptoms do not always indicate serious disease, 
-                  they should be assessed appropriately to exclude colorectal cancer, significant polyps, inflammation, 
+                <p>Although these symptoms do not always indicate serious disease,
+                  they should be assessed appropriately to exclude colorectal cancer, significant polyps, inflammation,
                   or other gastrointestinal conditions.</p>
               </div>
             </motion.div>
@@ -298,13 +298,13 @@ export const Colonoscopy = () => {
               </h3>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-6 leading-loose">
                 <p>
-                  Colonoscopy is generally considered a safe and commonly performed procedure. Most patients tolerate 
-                  it well and recover quickly after the examination. Mild bloating, cramping, or temporary discomfort 
+                  Colonoscopy is generally considered a safe and commonly performed procedure. Most patients tolerate
+                  it well and recover quickly after the examination. Mild bloating, cramping, or temporary discomfort
                   from the air introduced during the procedure can occur but usually settles within a few hours.
                 </p>
                 <p>
-                  Sedation-related side effects such as drowsiness, nausea, or light-headedness may occasionally occur 
-                  and are typically short-lived. Patients are usually advised not to drive or operate machinery for the 
+                  Sedation-related side effects such as drowsiness, nausea, or light-headedness may occasionally occur
+                  and are typically short-lived. Patients are usually advised not to drive or operate machinery for the
                   remainder of the day after sedation.
                 </p>
                 <p>
@@ -340,9 +340,9 @@ export const Colonoscopy = () => {
                What happens if polyps are found
               </h3>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-10 leading-loose">
-                <p>If polyps are identified during colonoscopy, they can often be removed during the same procedure using specialised 
+                <p>If polyps are identified during colonoscopy, they can often be removed during the same procedure using specialised
                   instruments passed through the scope. Removing polyps helps reduce the future risk of colorectal cancer.</p>
-                <p>The removed tissue is usually sent for laboratory analysis to determine the type of polyp and whether any precancerous changes are present. 
+                <p>The removed tissue is usually sent for laboratory analysis to determine the type of polyp and whether any precancerous changes are present.
                   Follow-up recommendations depend on the number, size, and histology of the polyps removed. Some patients may only require routine surveillance, while others may need closer follow-up colonoscopy at shorter intervals.</p>
               </div>
             </motion.div>
@@ -366,8 +366,8 @@ export const Colonoscopy = () => {
                 </h2>
               </div>
               <p className="text-base text-muted-foreground mb-10 leading-relaxed">
-                Proper bowel preparation is essential for a successful colonoscopy. A clean bowel allows 
-                for optimal visualisation and accurate diagnosis. You will receive detailed instructions 
+                Proper bowel preparation is essential for a successful colonoscopy. A clean bowel allows
+                for optimal visualisation and accurate diagnosis. You will receive detailed instructions
                 specific to your procedure.
               </p>
 
@@ -474,25 +474,25 @@ export const Colonoscopy = () => {
             >
               <div className="flex items-center gap-3 mb-6">
                 <HelpCircle className="h-7 w-7 text-primary" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                <h2 className="font-serif font-semibold text-foreground text-4xl md:text-5xl">
                   Frequently Asked Questions
                 </h2>
               </div>
-              <p className="text-base text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-muted-foreground mb-8 leading-relaxed text-lg">
                 Common questions about colonoscopy and what to expect.
               </p>
 
-              <Accordion type="single" collapsible className="space-y-4">
+              <Accordion type="single" collapsible className="space-y-4 pb-8">
                 {colonoscopyFaqs.map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`faq-${index}`}
-                    className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-md transition-shadow"
+                    className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-md transition-shadow last:border-b last:border-border"
                   >
-                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5 text-lg">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-5">
+                    <AccordionContent className="text-muted-foreground leading-relaxed pb-5 text-base leading-relaxed">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -516,7 +516,7 @@ export const Colonoscopy = () => {
                 Schedule Your Colonoscopy
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-8">
-                Whether you need a screening colonoscopy or have symptoms requiring investigation, 
+                Whether you need a screening colonoscopy or have symptoms requiring investigation,
                 book a consultation to discuss your needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -535,9 +535,9 @@ export const Colonoscopy = () => {
         <section className="py-8 bg-muted/50">
           <div className="container mx-auto px-2 sm:px-4">
             <p className="text-xs text-muted-foreground text-center max-w-3xl mx-auto">
-              <strong>Disclaimer:</strong> The information provided on this page is for educational purposes only and 
-              is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek 
-              the advice of your physician or other qualified health provider with any questions you may have regarding 
+              <strong>Disclaimer:</strong> The information provided on this page is for educational purposes only and
+              is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek
+              the advice of your physician or other qualified health provider with any questions you may have regarding
               a medical procedure.
             </p>
           </div>

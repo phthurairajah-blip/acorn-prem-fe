@@ -246,7 +246,7 @@ export const BookAppointmentComponent = () => {
                 <span className="block text-primary text-sm font-medium tracking-widest uppercase">
                   Schedule Your Visit
                 </span>
-                <h1 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mt-2 mb-4">
+                <h1 className="text-5xl md:text-6xl font-serif font-semibold text-foreground mt-2 mb-4">
                   Request an Appointment
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -300,7 +300,7 @@ export const BookAppointmentComponent = () => {
               >
                 <div className="flex items-center gap-3 mb-6">
                   <Calendar className="h-6 w-6 text-primary" />
-                  <h2 className="text-2xl font-serif font-semibold text-foreground">
+                  <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
                     Request an Appointment
                   </h2>
                 </div>
@@ -433,7 +433,7 @@ export const BookAppointmentComponent = () => {
               >
                 {/* Quick Contact */}
                 <div>
-                  <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
+                  <h3 className="text-2xl font-serif font-semibold text-foreground mb-4">
                     Need Immediate Assistance?
                   </h3>
                   <div className="flex flex-col sm:flex-row gap-3 w-full min-w-0">
@@ -458,7 +458,7 @@ export const BookAppointmentComponent = () => {
 
                 {/* Contact Details */}
                 <div className="bg-muted/30 rounded-2xl p-6">
-                  <h3 className="text-lg font-serif font-semibold text-foreground mb-4">
+                  <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
                     Contact Information
                   </h3>
                   <div className="space-y-4">
@@ -487,7 +487,7 @@ export const BookAppointmentComponent = () => {
 
                 {/* Clinic Locations */}
                 <div>
-                  <h3 className="text-lg font-serif font-semibold text-foreground mb-4">
+                  <h3 className="text-xl font-serif font-semibold text-foreground mb-4">
                     Clinic Locations
                   </h3>
                   <div className="space-y-4">

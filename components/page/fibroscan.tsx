@@ -157,7 +157,7 @@ const Fibroscan = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 What is FibroScan?
               </h2>
               
@@ -201,7 +201,7 @@ const Fibroscan = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-10 text-center">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-10 text-center">
                 Advantages of FibroScan
               </h2>
 
@@ -239,7 +239,7 @@ const Fibroscan = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 Understanding Your Results
               </h2>
               <p className="text-base text-muted-foreground mb-10 leading-relaxed">
@@ -298,7 +298,7 @@ const Fibroscan = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 What to Expect
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-loose">
@@ -327,7 +327,7 @@ const Fibroscan = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 Limitations
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-loose">
@@ -357,26 +357,26 @@ const Fibroscan = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="max-w-4xl mx-auto"
+              className="max-w-4xl mx-auto pb-8"
             >
               <div className="flex items-center gap-3 mb-6">
                 <HelpCircle className="h-7 w-7 text-primary" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
                   Frequently Asked Questions
                 </h2>
               </div>
-              <p className="text-base text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Common questions about FibroScan and what to expect.
               </p>
 
-              <Accordion type="single" collapsible className="space-y-4">
+              <Accordion type="single" collapsible className="space-y-4 pb-4">
                 {fibroscanFaqs.map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`faq-${index}`}
-                    className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-md transition-shadow"
+                    className="bg-background border border-border rounded-xl px-6 last:border-b last:border-border data-[state=open]:shadow-md transition-shadow"
                   >
-                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                    <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:no-underline py-5">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-5">
@@ -399,7 +399,7 @@ const Fibroscan = () => {
               transition={{ duration: 0.6 }}
               className="text-center max-w-2xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
                 Check Your Liver Health
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-8">

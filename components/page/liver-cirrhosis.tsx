@@ -167,9 +167,9 @@ const liverCirrhosisFaqs = [
   },
   {
     question:
-      "How often should I go for scans, blood tests, and specialist follow-up in Singapore?",
+      "How often should I go for scans, blood tests, and specialist follow-up?",
     answer:
-      "Your schedule depends on whether your cirrhosis is compensated or decompensated, but general guidance from liver specialists in Singapore includes:",
+      "Your follow-up schedule depends on whether your cirrhosis is compensated or decompensated, but general monitoring usually includes:",
     points: [
       "Liver ultrasound + AFP: Every 6 months for hepatocellular carcinoma (HCC) surveillance",
       "Blood tests (LFT, FBC, INR, renal panel): Every 3–6 months depending on stability",
@@ -177,7 +177,7 @@ const liverCirrhosisFaqs = [
       "Hepatology specialist review: Minimum every 6 months; more frequently if decompensated or new symptoms arise",
       "MELD score reassessment: Periodically to gauge transplant eligibility if liver function declines",
     ],
-    additionalInfo: "Restructure these visits under the Subsidised Outpatient Specialist care pathway at SGH, NUH, or TTSH to manage out-of-pocket costs"
+    additionalInfo: ""
   },
   {
     question:
@@ -217,7 +217,7 @@ const liverCirrhosisFaqs = [
     question:
       "Can liver cirrhosis be managed without a transplant, and when is transplant assessment necessary?",
     answer:
-      "Yes — most patients with compensated cirrhosis do not need a transplant and can be managed medically for many years with good monitoring and lifestyle changes.<br><br>Medical management includes treating the underlying cause, preventing complications (varices, infections, HCC), and managing ascites or encephalopathy when they arise.<br><br>Transplant assessment should be considered when:",
+      "Yes — most patients with compensated cirrhosis do not need a transplant and can be managed medically for many years with good monitoring and lifestyle changes.<br><br>Medical management includes treating the underlying cause, preventing complications (varices, infections, HCC), and managing ascites or encephalopathy when they arise.",
     points: [
       "MELD score ≥ 15–20, indicating significant 90-day mortality risk",
       "Recurrent or refractory ascites not responding to diuretics",
@@ -226,13 +226,13 @@ const liverCirrhosisFaqs = [
       "Recurrent spontaneous bacterial peritonitis",
     ],
     additionalInfo:
-      "In Singapore, liver transplantation is available at SGH and NUH. Living donor liver transplant (from a willing family member) is an option given the limited deceased donor pool.",
+      "Liver transplantation may involve either deceased-donor or living-donor transplantation, depending on suitability and donor availability.",
   },
   {
     question:
       "How is treatment different when cirrhosis is caused by hepatitis B, alcohol, or fatty liver disease?",
     answer:
-      "<p class='text-base text-muted-foreground leading-relaxed'><strong>Hepatitis B cirrhosis:</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>Long-term antiviral therapy</strong> (tenofovir or entecavir) is the cornerstone — suppressing the virus slows progression and can allow partial fibrosis regression.</li><li>Continue antivirals indefinitely; stopping can trigger dangerous viral rebound (hepatitis flares).</li></ul><p class='text-base text-muted-foreground leading-relaxed'><strong>Alcohol-related cirrhosis:</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>Complete alcohol abstinence</strong> is the single most effective treatment — even advanced cirrhosis can stabilise or partially improve.</li><li><strong>Nutritional support</strong> is critical, as alcohol-related cirrhosis is commonly associated with severe malnutrition.</li><li>Transplant listing generally requires a sustained documented period of abstinence.</li></ul><p class='text-base text-muted-foreground leading-relaxed'><strong>Metabolic (fatty liver / MASH) cirrhosis:</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>Weight loss of ≥7–10% of body weight</strong> can meaningfully reduce liver inflammation and fibrosis.</li><li><strong>Tight control of diabetes, hypertension, and dyslipidaemia</strong> is essential for slowing liver disease progression.</li><li>New targeted therapies (e.g. resmetirom) are emerging but are not yet standard practice in Singapore.</li><li>Avoid further hepatotoxic medications and alcohol, even in small amounts.</li></ul>",
+      "<p class='text-base text-muted-foreground leading-relaxed'><strong>Hepatitis B cirrhosis:</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>Long-term antiviral therapy</strong> (tenofovir or entecavir) is the cornerstone — suppressing the virus slows progression and can allow partial fibrosis regression.</li><li>Continue antivirals indefinitely; stopping can trigger dangerous viral rebound (hepatitis flares).</li></ul><p class='text-base text-muted-foreground leading-relaxed'><strong>Alcohol-related cirrhosis:</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>Complete alcohol abstinence</strong> is the single most effective treatment — even advanced cirrhosis can stabilise or partially improve.</li><li><strong>Nutritional support</strong> is critical, as alcohol-related cirrhosis is commonly associated with severe malnutrition.</li><li>Transplant listing generally requires a sustained documented period of abstinence.</li></ul><p class='text-base text-muted-foreground leading-relaxed'><strong>Metabolic (fatty liver / MASH) cirrhosis:</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>Weight loss of ≥7–10% of body weight</strong> can meaningfully reduce liver inflammation and fibrosis.</li><li><strong>Tight control of diabetes, hypertension, and dyslipidaemia</strong> is essential for slowing liver disease progression.</li><li>Targeted therapies may be considered in selected patients, depending on the stage of liver disease and current treatment recommendations.</li><li>Avoid further hepatotoxic medications and alcohol, even in small amounts.</li></ul>",
   },
 ];
 
@@ -261,13 +261,16 @@ export const LiverCirrhosis = () => {
                   Chronic Liver Disease
                 </span>
                 <h1 className="text-5xl md:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
-                 Liver Cirrhosis Treatment in Singapore
+                 Liver Cirrhosis
                 </h1>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-justify">
-                  Cirrhosis represents the end stage of chronic liver disease, where normal liver tissue is replaced 
-                  by scar tissue (fibrosis). Although liver cirrhosis cannot be reversed, early detection and appropriate treatment 
-                  in Singapore can slow its progression, prevent complications, and significantly enhance quality of life.
-                </p>
+                <div className="space-y-4 text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+                  <p>
+                    <strong className="font-semibold text-foreground">Liver cirrhosis</strong> develops when long-term liver injury causes healthy liver tissue to be replaced by scar tissue. In its earlier stages, the liver may continue to function well and you may have few or no symptoms.
+                  </p>
+                  <p>
+                    As cirrhosis progresses, complications such as fluid retention, internal bleeding, confusion and liver cancer can occur. Identifying the cause, monitoring liver function and treating complications early can help many people remain stable for years.
+                  </p>
+                </div>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
                     <Calendar className="h-5 w-5" />
@@ -365,7 +368,7 @@ export const LiverCirrhosis = () => {
                   Complications of Cirrhosis
                 </h2>
               </div>
-              <p className="text-lg text-muted-foreground mb-10 leading-relaxed text-center max-w-2xl mx-auto text-justify">
+              <p className="text-lg text-muted-foreground mb-10 leading-relaxed text-center max-w-2xl mx-auto">
                 As liver cirrhosis advances, complications such as portal hypertension, ascites, hepatic encephalopathy, spontaneous bacterial peritonitis, 
                 hepatorenal syndrome, and liver cancer (HCC) can develop. Recognizing these signs is crucial for timely treatment in Singapore.
               </p>
@@ -389,7 +392,7 @@ export const LiverCirrhosis = () => {
                     />
                     <div className="p-5 flex flex-col justify-center">
                       <h3 className="text-lg font-semibold text-foreground mb-2">{complication.name}</h3>
-                      <p className="text-base text-muted-foreground leading-relaxed text-justify">{complication.description}</p>
+                      <p className="text-base text-muted-foreground leading-relaxed">{complication.description}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -415,7 +418,7 @@ export const LiverCirrhosis = () => {
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 Diagnosis and Assessment
               </h2>
-              <p className="text-lg text-muted-foreground mb-10 leading-relaxed text-justify">
+              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
                 Diagnosing cirrhosis and assessing its severity involves multiple approaches to determine the extent of liver damage and guide treatment decisions.
               </p>
 
@@ -438,7 +441,7 @@ export const LiverCirrhosis = () => {
                     />
                     <div className="p-4">
                       <h3 className="text-lg font-semibold text-foreground mb-2">{test.name}</h3>
-                      <p className="text-base text-muted-foreground leading-relaxed text-justify">{test.description}</p>
+                      <p className="text-base text-muted-foreground leading-relaxed">{test.description}</p>
                       {test.link && (
                         <Link 
                           href={test.link} 
@@ -472,7 +475,7 @@ export const LiverCirrhosis = () => {
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 Management Strategies for Liver Cirrhosis
               </h2>
-              <p className="text-lg text-muted-foreground mb-10 leading-relaxed text-justify">
+              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
                 Effective management of cirrhosis requires a comprehensive, multidisciplinary approach focused 
                 on treating the underlying cause, preventing complications, and maintaining quality of life.
               </p>
@@ -491,7 +494,7 @@ export const LiverCirrhosis = () => {
                 duration: 0.4
               }} className="flex items-start gap-4 p-4 bg-background rounded-lg border border-emerald-200 dark:border-emerald-800/30">
                     <CheckCircle className="h-6 w-6 text-emerald-500 shrink-0 mt-0.5" />
-                    <p className="text-lg text-foreground leading-relaxed text-justify">{strategy}</p>
+                    <p className="text-lg text-foreground leading-relaxed">{strategy}</p>
                   </motion.div>)}
               </div>
             </motion.div>
@@ -500,158 +503,98 @@ export const LiverCirrhosis = () => {
 
         <section className="py-16 lg:py-20">
           <div className="container mx-auto px-2 sm:px-4">
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            duration: 0.6
-          }} className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
-                How Is Liver Cirrhosis Treated?
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-justify">
-                Cirrhosis cannot be reversed once scarring has formed, but treatment can slow its progression significantly, 
-                manage symptoms, and in some cases allow the liver to stabilise. The approach depends on two things: 
-                addressing whatever caused the damage in the first place, and staying ahead of the complications that cirrhosis tends to produce over time.
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">How Is Liver Cirrhosis Treated?</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Cirrhosis is a serious condition, but its progression can often be slowed or stopped when the underlying cause is treated. In some people, liver function can improve and scarring may partially regress over time.
               </p>
-              <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-                Treating the Underlying Cause
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4 text-justify">
-                The single most important step is removing or controlling the source of ongoing liver injury. 
-                If that damage continues, scarring will keep advancing regardless of other treatment.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+                Treatment has two main goals: <strong>to control the cause of liver damage and to prevent or manage complications of cirrhosis.</strong>
               </p>
-              <div className="space-y-4 mb-8">
+
+              <h3 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">Treating the Underlying Cause</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">Controlling the source of ongoing liver injury is one of the most important parts of treatment.</p>
+              <div className="grid md:grid-cols-2 gap-5 mb-8">
                 {[
-                "Hepatitis B can be suppressed with antiviral medications, reducing the viral load to levels where liver inflammation settles down.", 
-                "Hepatitis C is now curable in most people with a short course of direct-acting antivirals — often eight to twelve weeks of tablets with very high success rates.", 
-                "Alcohol-related liver disease requires stopping alcohol completely. Even in advanced cirrhosis, abstinence gives the liver the best possible chance to stabilise, and some inflammation can resolve over time.", 
-                "Metabolic dysfunction-associated fatty liver disease (MASLD), previously called NAFLD, is managed through weight loss, blood sugar control, and treating high cholesterol or diabetes — there are also newer medications being used in this area.", 
-                "Autoimmune hepatitis is treated with corticosteroids and immunosuppressant drugs to calm the immune system's attack on liver tissue."].map((item, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <p className="text-lg text-foreground leading-relaxed text-justify">{item}</p>
+                  { title: "Hepatitis B", text: "Antiviral medication can suppress the virus, reduce liver inflammation and lower the risk of further liver damage." },
+                  { title: "Hepatitis C", text: "Hepatitis C can now be cured in most patients with direct-acting antiviral tablets, often taken for 8–12 weeks." },
+                  { title: "Alcohol-related liver disease", text: "Complete abstinence from alcohol is essential. Even in advanced cirrhosis, stopping alcohol can improve liver function and reduce the risk of further deterioration." },
+                  { title: "Metabolic dysfunction-associated steatotic liver disease (MASLD)", text: "Treatment focuses on weight management, physical activity and control of associated conditions such as diabetes, high cholesterol and high blood pressure. Medication may also be appropriate for selected patients." },
+                  { title: "Autoimmune hepatitis", text: "Corticosteroids and other immunosuppressive medications may be used to control inflammation and prevent further liver injury." },
+                ].map((item, index) => (
+                  <div key={index} className={`bg-background rounded-xl border border-emerald-200 dark:border-emerald-800/30 p-5 ${index === 4 ? "md:col-span-2 md:w-[calc(50%-0.625rem)] md:justify-self-center" : ""}`}>
+                    <h4 className="text-lg font-semibold text-foreground mb-2">{item.title}</h4>
+                    <p className="text-base text-muted-foreground leading-relaxed">{item.text}</p>
                   </div>
                 ))}
               </div>
-              <p className="text-lg text-muted-foreground leading-relaxed mt-4 mb-8 text-justify">
-                Treating the cause does not undo existing scarring, but it can prevent new scarring from forming and meaningfully extend the liver&#39;s functional life.
-              </p>
-              <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-                Managing Complications Before They Become Emergencies
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4 text-justify">
-                As cirrhosis progresses, the liver&#39;s internal pressure rises and its ability to perform essential functions declines. 
-                This creates a predictable set of complications — all of which are far more manageable when caught early.
-              </p>
-              <div className="space-y-4 mb-8">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10">Treating the underlying cause can prevent further damage and, in some patients, allow liver function and fibrosis to improve.</p>
+
+              <h3 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">Preventing and Managing Complications</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">Cirrhosis can increase pressure within the liver circulation and reduce the liver&apos;s ability to perform its normal functions. Regular monitoring allows many complications to be identified and treated before they become more serious.</p>
+              <div className="grid md:grid-cols-2 gap-5 mb-10">
                 {[
-                "Varices are enlarged, fragile veins that develop in the oesophagus or stomach when blood cannot flow normally through a scarred liver. They carry a risk of sudden, serious bleeding. Regular endoscopies monitor their size, and beta-blocker medications or small banding procedures can reduce that risk considerably.", 
-                "Ascites is a build-up of fluid in the abdomen, causing bloating and discomfort. It's managed with a low-salt diet and diuretic medications. When fluid accumulates quickly, it can be drained directly through a procedure called paracentesis.", 
-                "Hepatic encephalopathy happens when the liver can no longer filter toxins from the blood effectively, and those toxins affect brain function — causing confusion, forgetfulness, or in severe cases, disorientation. Lactulose (a laxative that reduces toxin absorption) and antibiotics such as rifaximin are used to keep this under control.", 
-                "Liver cancer surveillance is recommended for everyone with cirrhosis, because scarred liver tissue carries a higher risk of developing hepatocellular carcinoma. An ultrasound scan and a blood test every six months allows any changes to be caught at a stage when treatment is still most effective."].map((item, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <p className="text-lg text-foreground leading-relaxed text-justify">{item}</p>
+                  { title: "Varices", text: "Enlarged veins can develop in the oesophagus or stomach and may cause serious bleeding. Screening endoscopy and, where appropriate, non-selective beta-blockers or endoscopic band ligation can reduce this risk." },
+                  { title: "Ascites", text: "Fluid can accumulate within the abdomen, causing swelling and discomfort. Treatment may include reducing dietary salt and taking diuretics. Larger amounts of fluid may need to be drained by paracentesis." },
+                  { title: "Hepatic encephalopathy", text: "When the liver cannot adequately clear certain toxins from the blood, patients may develop confusion, forgetfulness, changes in behaviour or drowsiness. Treatment commonly includes lactulose and, in selected patients, rifaximin." },
+                  { title: "Liver cancer surveillance", text: "Cirrhosis increases the risk of hepatocellular carcinoma (HCC). Regular liver imaging, usually every six months, is recommended so that liver cancer can be detected at an earlier and more treatable stage." },
+                ].map((item, index) => (
+                  <div key={index} className="bg-background rounded-xl border border-border p-5">
+                    <h4 className="text-lg font-semibold text-foreground mb-2">{item.title}</h4>
+                    <p className="text-base text-muted-foreground leading-relaxed">{item.text}</p>
                   </div>
                 ))}
               </div>
-              <p className="text-lg text-muted-foreground leading-relaxed mt-4 mb-8 text-justify">
-                Staying on top of these complications is not just about comfort — it directly affects how long the liver continues to function and how much time a person has before more significant decisions need to be made.
-              </p>
-              <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-                When a Liver Transplant Is Considered
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-                For most people with cirrhosis, the treatments above provide years of stable, manageable life. 
-                But when the liver has deteriorated to the point where complications can no longer be controlled — 
-                or when liver function has declined to a level that poses a serious risk — a transplant moves from a 
-                distant possibility to an active conversation.
-              </p>
+
+              <h3 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">When Is Liver Transplantation Considered?</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10">Most people with compensated cirrhosis do not require a liver transplant. However, transplantation may be considered when liver function becomes significantly impaired or complications can no longer be adequately controlled. This may include recurrent ascites, variceal bleeding, hepatic encephalopathy, worsening jaundice or liver failure. Selected patients with hepatocellular carcinoma may also be considered for transplantation.</p>
             </motion.div>
           </div>
-          </section>
+        </section>
 
-                  <section className="py-16 lg:py-20">
+        <section className="py-16 lg:py-20 bg-emerald-50 dark:bg-emerald-950/20">
           <div className="container mx-auto px-2 sm:px-4">
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            duration: 0.6
-          }} className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
-                What Are the Tips and Precautions if Living with Liver Cirrhosis?
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-justify">
-                Living with cirrhosis means working with your liver rather than against it. The liver has a remarkable ability to compensate — 
-                to keep doing its job even when significantly damaged — but that capacity is not unlimited. The daily choices and habits below 
-                are not abstract lifestyle advice; they directly affect how well the liver continues to function and how quickly complications develop.
-              </p>
-              <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-                Daily Precautions That Matter
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4 text-justify">
-                <strong>Avoid alcohol completely</strong> This applies even if alcohol was not the original cause of cirrhosis. 
-                A liver that is already scarred has almost no tolerance for additional toxic injury. 
-                Even moderate drinking accelerates scarring, increases the risk of liver cancer, and can tip a 
-                stable liver into crisis. There is no safe level once cirrhosis is established.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4 text-justify">
-                <strong>Be careful with salt</strong> If ascites or fluid retention has been a problem, a low-sodium diet 
-                is one of the most effective tools for keeping it under control. This means avoiding processed foods, 
-                cured meats, tinned soups, and adding salt at the table — not just cutting back slightly. Many people with 
-                cirrhosis are advised to keep sodium below 2,000 mg per day, though your doctor will give specific guidance 
-                based on your situation.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4 text-justify">
-                <strong>Review every medication with your doctor</strong> The liver processes most medications, and a cirrhotic liver 
-                does this more slowly and less efficiently. This matters for prescribed drugs, but also for things people often 
-                don&#39;t think to mention — paracetamol at higher doses, NSAIDs such as ibuprofen, herbal supplements, and vitamins. 
-                Some of these are genuinely harmful in cirrhosis. Nothing should be started, stopped, or changed without checking first.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4 text-justify">
-                <strong>Eat well, and eat enough</strong> Malnutrition is surprisingly common in cirrhosis, partly because a 
-                congested liver affects digestion and appetite. Protein is particularly important — it supports muscle maintenance 
-                and helps prevent encephalopathy. Small, frequent meals tend to work better than large ones. 
-                A late evening snack, particularly something with complex carbohydrates or protein, helps prevent the overnight 
-                fasting period that can stress a struggling liver.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-justify">
-                <strong>Keep all follow-up appointments</strong> Cirrhosis is a condition that changes over time, and many of its 
-                most dangerous complications develop silently. Regular blood tests, ultrasound scans, endoscopies and clinical reviews 
-                are not routine box-ticking — they are how problems get caught early enough to be managed. Missing appointments is one of the most common 
-                and preventable reasons people end up in hospital with complications that could have been intercepted.
-              </p>
-              <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-                When to Seek Urgent Review
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4 text-justify">
-                Most days with cirrhosis are manageable, but there are specific symptoms that should never be waited out or monitored at home. 
-                If any of the following occur, seek emergency medical attention the same day — or call emergency services if severe:
-              </p>
-              <ul className="space-y-4">
-                {liverEmergencySigns.map((item, index) => (
-                  <li key={index} className="flex">
-                    <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5 mr-4" />
-                    <span><strong>{item.title}</strong> — {item.description}</span>
-                  </li>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">Living With Liver Cirrhosis</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10">Living well with cirrhosis means protecting the remaining liver function, maintaining good nutrition and detecting complications early.</p>
+
+              <h3 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-5">Daily Precautions</h3>
+              <div className="grid md:grid-cols-2 gap-5 mb-10">
+                {[
+                  { title: "Avoid alcohol completely", text: "Once cirrhosis is established, alcohol can cause further liver injury regardless of the original cause. Avoiding alcohol gives the liver the best opportunity to remain stable." },
+                  { title: "Reduce salt if you have fluid retention", text: "For patients with ascites or swelling, reducing dietary sodium helps prevent fluid accumulation. Your doctor or dietitian can advise you on an appropriate daily intake." },
+                  { title: "Check medications and supplements", text: "Some medicines may need to be avoided or adjusted in cirrhosis. NSAIDs such as ibuprofen can be particularly problematic in advanced liver disease, and some herbal or complementary medicines can cause liver injury." },
+                  { title: "Maintain good nutrition and muscle strength", text: "Loss of muscle mass and malnutrition are common in cirrhosis. Adequate calories and protein are important, and protein should not routinely be restricted because of hepatic encephalopathy. Small, frequent meals and a late-evening snack can help reduce prolonged fasting and muscle breakdown." },
+                  { title: "Keep physically active", text: "Regular activity and resistance exercise, where appropriate, can help maintain muscle mass, strength and overall health." },
+                  { title: "Attend regular follow-up", text: "Blood tests, imaging, endoscopy and clinical review allow complications to be detected and treated early, even when they have not yet caused obvious symptoms." },
+                ].map((item, index) => (
+                  <div key={index} className="bg-background rounded-xl border border-emerald-200 dark:border-emerald-800/30 p-5">
+                    <h4 className="text-lg font-semibold text-foreground mb-2">{item.title}</h4>
+                    <p className="text-base text-muted-foreground leading-relaxed">{item.text}</p>
+                  </div>
                 ))}
-              </ul>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4 mt-4 text-justify">
-                When in doubt, it is always better to be seen and reassured than to wait. 
-                These symptoms do not always mean the worst, but they all need a clinical assessment the same day.
-              </p>
+              </div>
+
+              <h3 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">When to Seek Urgent Medical Attention</h3>
+              <div className="rounded-2xl border border-red-200 dark:border-red-800/30 bg-red-50 dark:bg-red-950/10 p-6 mb-6">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4">Seek urgent medical assessment if you develop:</p>
+                <ul className="space-y-3">
+                  {[
+                    "Vomiting blood or coffee-ground material — this may indicate bleeding from the upper digestive tract.",
+                    "Black, tarry stools — this can be a sign of gastrointestinal bleeding.",
+                    "Rapidly increasing abdominal swelling or new abdominal pain — this may indicate worsening ascites or infection.",
+                    "New or rapidly worsening jaundice — increasing yellowing of the skin or eyes can indicate deterioration in liver function.",
+                    "Confusion, unusual drowsiness or changes in behaviour — these may be signs of hepatic encephalopathy.",
+                    "Fever or other signs of infection — infections can become serious more quickly in people with advanced cirrhosis.",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3 text-base text-muted-foreground leading-relaxed">
+                      <AlertTriangle className="h-5 w-5 text-red-600 shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed">If these symptoms occur, seek medical assessment promptly rather than waiting for them to resolve on their own.</p>
             </motion.div>
           </div>
         </section>
@@ -673,16 +616,15 @@ export const LiverCirrhosis = () => {
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 Liver Transplantation
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-justify">
-                For patients with decompensated liver cirrhosis or those who develop decompensation, 
-                liver transplantation is a definitive therapeutic option for end-stage liver cirrhosis in Singapore. 
-                With my training and experience in liver transplant medicine from Queen Elizabeth Hospital Birmingham and the University of Kentucky, I provide:
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                For selected patients with decompensated cirrhosis or progressive liver failure, liver transplantation can offer definitive treatment.
+                With specialist training and experience in transplant hepatology at Queen Elizabeth Hospital Birmingham and the University of Kentucky, I provide:
               </p>
               <div className="space-y-4 mb-8">
                 {["Comprehensive assessment of transplant candidacy", "Optimisation of health while awaiting transplantation", "Coordination with transplant centres", "Long-term follow-up care"].map((item, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <p className="text-lg text-foreground leading-relaxed text-justify">{item}</p>
+                    <p className="text-lg text-foreground leading-relaxed">{item}</p>
                   </div>
                 ))}
               </div>
@@ -712,7 +654,7 @@ export const LiverCirrhosis = () => {
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
                Specialised Liver Cirrhosis Management
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-justify">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 Living with cirrhosis requires expert care and regular monitoring. Schedule a consultation 
                 to develop a personalised management plan.
               </p>
@@ -743,7 +685,7 @@ export const LiverCirrhosis = () => {
         </section>
 
         {/* FAQ Section */}
-                <section className="py-14 lg:py-20">
+                <section className="pt-14 pb-28 lg:pt-20 lg:pb-36 overflow-visible">
                   <div className="container mx-auto px-2 sm:px-4">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
@@ -765,14 +707,14 @@ export const LiverCirrhosis = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.2 }}
-                      className="max-w-3xl mx-auto"
+                      className="max-w-3xl mx-auto pb-12 overflow-visible"
                     >
-                      <Accordion type="single" collapsible className="w-full space-y-3">
+                      <Accordion type="single" collapsible className="w-full space-y-3 pb-4 overflow-visible">
                         {liverCirrhosisFaqs.map((faq, index) => (
                           <AccordionItem 
                             key={index} 
                             value={`faq-${index}`}
-                            className="bg-card rounded-xl border border-border px-4"
+                            className="bg-card rounded-xl border border-border px-4 overflow-visible last:border-b last:border-border last:mb-2"
                           >
                             <AccordionTrigger className="hover:no-underline py-4 text-left">
                               <h3 className="font-medium text-lg text-foreground">{faq.question}</h3>
