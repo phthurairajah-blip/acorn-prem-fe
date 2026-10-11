@@ -2,11 +2,15 @@
 name: SSH Connection Test
 
 on:
+  push:
+    branches:
+      - ssh-connection-test
   workflow_dispatch:
 
 jobs:
   test-ssh:
     runs-on: ubuntu-latest
+
     steps:
       - name: Test VPS SSH login
         uses: appleboy/ssh-action@v1.2.0
