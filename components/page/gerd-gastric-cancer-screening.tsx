@@ -61,7 +61,7 @@ const recoverySteps = [
 
 const biopsisDiagnose = [
   "Inflammation or gastritis",
-  "Infection with Helicobacter pylori Infection",
+  "Infection with Helicobacter pylori",
   "Coeliac disease",
   "Barrett's oesophagus",
   "Polyps or abnormal tissue changes",
@@ -126,7 +126,7 @@ export const GerdGastricScreeningPage = () => {
       <main className="pt-20">
         {/* Hero Section with Image */}
         <section className="py-12 lg:py-20 bg-gradient-to-b from-emerald-50 to-background dark:from-emerald-950/30 dark:to-background">
-          <div className="container mx-auto px-2 sm:px-4">
+          <div className="container mx-auto px-4 sm:px-6">
             <Link
               href="/#conditions"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6"
@@ -142,10 +142,10 @@ export const GerdGastricScreeningPage = () => {
                 transition={{ duration: 0.6 }}
               >
                 <span className="text-emerald-600 dark:text-emerald-400 text-base font-medium tracking-widest uppercase">
-                  Screen early. Prevent cancer.
+                  Early Detection • Informed Screening
                 </span>
                 <h1 className="text-5xl md:text-6xl font-serif font-semibold text-foreground mt-6 mb-10">
-                  Gastroscopy Screening in Singapore
+                  Gastroscopy &amp; Gastric Cancer Screening
                 </h1>
                 <Button asChild size="lg" className="gap-2">
                   <a href="/#contact">
@@ -163,7 +163,7 @@ export const GerdGastricScreeningPage = () => {
               >
                 <Image
                   src={colonoscopyImage}
-                  alt="Colonoscopy screening procedure in Singapore"
+                  alt="Gastroscopy and upper digestive tract screening"
                   width={1280}
                   height={720}
                   className="rounded-2xl shadow-lg w-full object-cover aspect-video"
@@ -174,12 +174,12 @@ export const GerdGastricScreeningPage = () => {
         </section>
 
         <section className="py-14 lg:py-20">
-                  <div className="container mx-auto max-w-8xl px-4 sm:px-8">
+                  <div className="container mx-auto max-w-6xl px-4 sm:px-6">
                     <motion.h2
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-10 text-center"
+                      className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-8 text-left"
                     >
                       What Is Gastroscopy Screening?
                     </motion.h2>
@@ -188,267 +188,147 @@ export const GerdGastricScreeningPage = () => {
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      className="max-w-3xl mx-auto"
+                      className="max-w-6xl mx-auto"
                     >
-                        <p className="text-lg text-muted-foreground mb-6">
+                        <p className="text-base leading-relaxed text-muted-foreground mb-6">
                             A gastroscopy, also known as an upper endoscopy, is a procedure used to examine the lining of the oesophagus, stomach, and first part of the small intestine (duodenum). During the procedure, a thin flexible tube with a camera is gently passed through the mouth to allow direct visual assessment of the upper digestive tract.
                         </p>
-                        <p className="text-lg text-muted-foreground mb-6">
+                        <p className="text-base leading-relaxed text-muted-foreground mb-6">
                             Gastroscopy is commonly performed to investigate symptoms such as:
                         </p>
-                        <ul className="space-y-3">
+                        <div className="rounded-2xl border border-border bg-card p-6 md:p-8 mb-6">
+                          <h3 className="text-xl font-semibold text-foreground mb-5">Common Symptoms</h3>
+                        <ul className="grid md:grid-cols-2 gap-x-10 gap-y-3 mb-6">
                     {gastricSymptoms.map((symptom, index) => (
-                      <li key={index} className="flex items-center gap-3 text-lg text-foreground">
-                        <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0"></span>
+                      <li key={index} className="flex items-start gap-3 text-base leading-relaxed text-foreground">
+                        <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0 mt-2"></span>
                         {symptom}
                       </li>
                     ))}
                   </ul>
-                  <p className="text-lg text-muted-foreground">
+                        </div>
+                  <p className="text-base leading-relaxed text-muted-foreground">
                             In some patients, gastroscopy may also be used as a screening or surveillance tool to detect conditions such as ulcers, Barrett’s oesophagus, polyps, or early cancers of the upper digestive tract.
                         </p>
                         </motion.div>
                   </div>
                 </section>
 
+
+        {/* Advanced Endoscopic Imaging */}
+        <section className="py-14 lg:py-20 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">Advanced Endoscopic Imaging: Narrow Band Imaging</h2>
+            <p className="text-lg leading-relaxed text-muted-foreground mb-8">During gastroscopy, Narrow Band Imaging (NBI) can help assess selected areas of the stomach lining in greater detail.</p>
+            <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
+              <h3 className="text-xl font-semibold text-foreground mb-4">How NBI Helps</h3>
+              <p className="text-base leading-relaxed text-muted-foreground mb-5">NBI uses selected wavelengths of light to enhance superficial mucosal and blood-vessel patterns. It may help an experienced endoscopist examine suspicious areas and guide targeted biopsies. It complements high-definition white-light gastroscopy and does not replace tissue analysis when a biopsy is indicated.</p>
+              <figure className="max-w-3xl mx-auto">
+                <Image src="/images/gastric-nbi-six-panels-v4.jpg" alt="Clinical endoscopic images, panels A to F, illustrating narrow band imaging of gastric lesions" width={1200} height={900} className="w-full h-auto rounded-xl border border-border" />
+                <figcaption className="text-xs leading-relaxed text-muted-foreground mt-3">Figure 1 (panels A–F), adapted from Nagashima et al. (2022). <a className="underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9551476/" target="_blank" rel="noopener noreferrer">Original publication</a> · <a className="underline" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
                         <section className="py-14 lg:py-20 bg-muted/30">
-                          <div className="container mx-auto px-2 sm:px-4">
-                            <div className="grid lg:grid-cols-2 gap-10 items-center">
-                              <motion.div
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6 }}
-                              >
-                                <Image
-                                  src={familyHealthImage}
-                                  alt="Healthy family representing preventive healthcare"
-                                  width={1000}
-                                  height={1000}
-                                  className="rounded-2xl shadow-lg w-full object-cover aspect-square"
-                                />
-                              </motion.div>
-                
-                              <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: 0.2 }}
-                              >
-                                <div className="flex items-center gap-3 mb-4">
-                                  <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
-                                    Who Should Consider Gastroscopy Screening in Singapore?
-                                  </h2>
-                                </div>
-                                
-                                {/* Average Risk */}
-                                <div className="mb-6">
-                                  <p className="text-lg text-muted-foreground mb-3">
-                                    You may benefit from a gastroscopy if you have:
-                                </p>
-                                  <ul className="space-y-3">
-                                    {gastroscopyBenefit.map((factor, index) => (
-                                      <li key={index} className="flex items-center gap-3 text-lg text-foreground">
-                                        <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
-                                        {factor}
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                                
-                                <p className="text-lg text-muted-foreground mb-6">
-                                 In Singapore, gastroscopy is commonly recommended for individuals with persistent upper gastrointestinal symptoms, particularly when symptoms do not improve with medication or lifestyle measures.
-                                </p>
-                                <div className="p-5 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-200 dark:border-amber-800">
-                  <p className="text-lg text-muted-foreground mb-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Does long-standing GERD mean you need a gastroscopy?</h3>
-                                 Long-standing Gastroesophageal Reflux Disease may increase the risk of complications such as oesophagitis or Barrett’s oesophagus, a condition where the lining of the lower oesophagus changes due to chronic acid exposure.
-                                </p>
-                                <p className="text-lg text-muted-foreground mb-6">
-                                 A gastroscopy may be recommended if you:
-                                </p>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-center gap-3 text-lg text-foreground">
-                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-                      Have reflux symptoms for many years
+          <div className="container mx-auto px-4 sm:px-6">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-6xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
+                Who Should Consider Gastroscopy?
+              </h2>
+              <p className="text-lg leading-relaxed text-muted-foreground mb-8 max-w-4xl">
+                Gastroscopy may be recommended to investigate persistent upper digestive symptoms, particularly when they do not improve with medication or lifestyle measures. It may also be appropriate for people with certain risk factors.
+              </p>
+              <div className="rounded-2xl border border-border bg-card p-6 md:p-8 mb-8">
+                <h3 className="text-xl font-semibold text-foreground mb-5">Reasons to Consider Gastroscopy</h3>
+                <ul className="grid md:grid-cols-2 gap-x-12 gap-y-4">
+                  {gastroscopyBenefit.map((factor, index) => (
+                    <li key={index} className="flex items-start gap-3 text-base leading-relaxed text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0 mt-2" />
+                      <span>{factor}</span>
                     </li>
-                    <li className="flex items-center gap-3 text-lg text-foreground">
-                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-                     Require long-term acid suppression medication
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
+                <h3 className="text-xl font-semibold text-foreground mb-4">Long-standing Reflux and Barrett’s Oesophagus</h3>
+                <p className="text-base leading-relaxed text-muted-foreground mb-5">
+                  Long-standing Gastroesophageal Reflux Disease may increase the risk of complications such as oesophagitis or Barrett’s oesophagus, a condition where the lining of the lower oesophagus changes due to chronic acid exposure.
+                </p>
+                <p className="text-base leading-relaxed text-muted-foreground mb-4">A gastroscopy may be recommended if you:</p>
+                <ul className="grid md:grid-cols-2 gap-x-12 gap-y-3 mb-5">
+                  {[
+                    "Have reflux symptoms for many years",
+                    "Require long-term acid suppression medication",
+                    "Develop worsening symptoms despite treatment",
+                    "Experience difficulty swallowing",
+                    "Have associated weight loss, anaemia, or bleeding symptoms",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-base leading-relaxed text-foreground">
+                      <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0 mt-2" />
+                      <span>{item}</span>
                     </li>
-                    <li className="flex items-center gap-3 text-lg text-foreground">
-                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-                      Develop worsening symptoms despite treatment
-                    </li>
-                    <li className="flex items-center gap-3 text-lg text-foreground">
-                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-                      Experience difficulty swallowing
-                    </li>
-                    <li className="flex items-center gap-3 text-lg text-foreground">
-                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
-                      Have associated weight loss, anaemia, or bleeding symptoms
-                    </li>
-                  </ul>
-                  <p className="text-base font-medium text-amber-800 dark:text-amber-300">
-                    Your doctor will assess your symptoms, age, risk factors, and overall clinical history before recommending screening.
-                  </p>
-                </div>
-                              </motion.div>
-                            </div>
-                          </div>
-                        </section>
+                  ))}
+                </ul>
+                <p className="text-sm leading-relaxed text-muted-foreground border-t border-border pt-4">
+                  Your doctor will assess your symptoms, age, risk factors, and overall clinical history before recommending screening.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+
 
                 <section className="py-14 lg:py-20">
-                  <div className="container mx-auto px-2 sm:px-4">
-                    <motion.h2
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-10 text-center"
-                    >
-                      How to Prepare for Your Gastroscopy
-                    </motion.h2>
-
-                     <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      className="max-w-3xl mx-auto"
-                    >
-                        <p className="text-lg text-muted-foreground mb-6">
-                           Preparation for gastroscopy is usually straightforward.
-                        </p>
-                        <p className="text-lg text-muted-foreground mb-6">
-                            Patients are generally advised to:
-                        </p>
-                        <ul className="space-y-3">
-                    {preparationSteps.map((prep, index) => (
-                      <li key={index} className="flex items-center gap-3 text-lg text-foreground">
-                        <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0"></span>
-                        {prep}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="text-lg text-muted-foreground">
-                            Specific preparation instructions may vary depending on your medical condition and whether sedation is planned.
-                       </p>
-                        </motion.div>
-                  </div>
-                </section>
-
-                <section className="py-14 lg:py-20">
-                  <div className="container mx-auto px-2 sm:px-4">
-                    <motion.h2
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-10 text-center"
-                    >
-                      What to Expect During and After Gastroscopy
-                    </motion.h2>
-
-                     <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      className="max-w-3xl mx-auto"
-                    >
-                        <p className="text-lg text-muted-foreground mb-6">
-                          Gastroscopy is usually performed as a day procedure and typically takes about 10 to 20 minutes.
-                        </p>
-                        <p className="text-lg text-muted-foreground mb-6">
-                            <strong>During the procedure:</strong>
-                        </p>
-                        <ul className="space-y-3 mb-10">
-                    {procedureSteps.map((procedure, index) => (
-                      <li key={index} className="flex items-center gap-3 text-lg text-foreground">
-                        <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0"></span>
-                        {procedure}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="text-lg text-muted-foreground mb-6">
-                            <strong>After the procedure:</strong>
-                        </p>
-                        <ul className="space-y-3 mb-6">
-                    {recoverySteps.map((recover, index) => (
-                      <li key={index} className="flex items-center gap-3 text-lg text-foreground">
-                        <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0"></span>
-                        {recover}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="text-lg text-muted-foreground mb-6">
-                            Your doctor will usually discuss preliminary findings after the procedure, although biopsy results may take several days.
-                        </p>
-                        <h3 className="text-xl font-semibold text-foreground mb-2">Can biopsies or H. pylori testing be done during the same procedure?</h3>
-                        <p className="text-lg text-muted-foreground mb-6">
-                            Yes. Small tissue samples (biopsies) can be safely taken during gastroscopy if required. These biopsies are painless and may help diagnose:
-                        </p>
-                        <ul className="space-y-3 mb-6">
-                    {biopsisDiagnose.map((bio, index) => (
-                      <li key={index} className="flex items-center gap-3 text-lg text-foreground">
-                        <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0"></span>
-                        {bio}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="text-lg text-muted-foreground">
-                            Testing for H. pylori can often be performed using biopsy samples taken during the procedure.
-                </p>
-                        </motion.div>
-                  </div>
-                </section>
-
-                 <section className="py-14 lg:py-20">
-          <div className="container mx-auto px-2 sm:px-4">
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
-                  When Is Repeat Gastroscopy Needed?
-                </h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Repeat gastroscopy may be recommended in certain situations, including:
-                </p>
-<ul className="space-y-3 mb-6">
-                    {followUpReasons.map((follow, index) => (
-                      <li key={index} className="flex items-center gap-3 text-lg text-foreground">
-                        <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0"></span>
-                        {follow}
-                      </li>
-                    ))}
-                  </ul>
-                <p className="text-lg text-muted-foreground mb-6">
-                  The timing of repeat procedures depends on the underlying condition and biopsy findings.
-                </p>
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-5">Gastroscopy: What to Expect</h2>
+                <p className="text-lg leading-relaxed text-muted-foreground mb-7">Gastroscopy is usually a day procedure taking approximately 10 to 20 minutes. Explore each step below.</p>
+                <Accordion type="single" collapsible className="space-y-4">
+                  <AccordionItem value="before" className="rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border-0 px-5 last:border-b-0">
+                    <AccordionTrigger className="hover:no-underline py-5 text-left"><span className="flex items-center gap-4"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white font-serif text-xl">1</span><span className="font-serif font-semibold text-xl text-foreground">Before the procedure</span></span></AccordionTrigger>
+                    <AccordionContent className="pb-6 pl-1"><ul className="space-y-3">{preparationSteps.map((item,index)=>(<li key={index} className="flex items-start gap-3 text-base leading-relaxed"><span className="h-2 w-2 mt-2 shrink-0 rounded-full bg-emerald-500" />{item}</li>))}</ul><p className="text-base leading-relaxed text-muted-foreground mt-4">Follow the specific fasting and medication instructions provided by your care team.</p></AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="during" className="rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border-0 px-5 last:border-b-0">
+                    <AccordionTrigger className="hover:no-underline py-5 text-left"><span className="flex items-center gap-4"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white font-serif text-xl">2</span><span className="font-serif font-semibold text-xl text-foreground">During the gastroscopy</span></span></AccordionTrigger>
+                    <AccordionContent className="pb-6 pl-1"><ul className="space-y-3">{procedureSteps.map((item,index)=>(<li key={index} className="flex items-start gap-3 text-base leading-relaxed"><span className="h-2 w-2 mt-2 shrink-0 rounded-full bg-emerald-500" />{item}</li>))}</ul></AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="after" className="rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border-0 px-5 last:border-b-0">
+                    <AccordionTrigger className="hover:no-underline py-5 text-left"><span className="flex items-center gap-4"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white font-serif text-xl">3</span><span className="font-serif font-semibold text-xl text-foreground">After the procedure</span></span></AccordionTrigger>
+                    <AccordionContent className="pb-6 pl-1"><ul className="space-y-3">{recoverySteps.map((item,index)=>(<li key={index} className="flex items-start gap-3 text-base leading-relaxed"><span className="h-2 w-2 mt-2 shrink-0 rounded-full bg-emerald-500" />{item}</li>))}</ul><p className="text-base leading-relaxed text-muted-foreground mt-4">Preliminary findings are usually discussed after the procedure; biopsy results may take several days.</p></AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="biopsies" className="rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border-0 px-5 last:border-b-0">
+                    <AccordionTrigger className="hover:no-underline py-5 text-left"><span className="flex items-center gap-4"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white font-serif text-xl">4</span><span className="font-serif font-semibold text-xl text-foreground">Biopsies and H. pylori testing</span></span></AccordionTrigger>
+                    <AccordionContent className="pb-6 pl-1"><p className="text-base leading-relaxed text-muted-foreground mb-4">Biopsies can be taken during gastroscopy when indicated, including to investigate:</p><ul className="space-y-3">{biopsisDiagnose.map((item,index)=>(<li key={index} className="flex items-start gap-3 text-base leading-relaxed"><span className="h-2 w-2 mt-2 shrink-0 rounded-full bg-emerald-500" />{item}</li>))}</ul><p className="text-base leading-relaxed text-muted-foreground mt-4">H. pylori can often be tested using stomach biopsy samples.</p></AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <Image
-                  src={drPremConsultationImage}
-                  alt="Dr. Prem Thurairajah consulting with a patient about colonoscopy results"
-                  width={1200}
-                  height={900}
-                  className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"
-                />
+              <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="lg:sticky lg:top-28">
+                <Image src={drPremConsultationImage} alt="Dr Prem discussing gastroscopy and results with a patient" width={1200} height={900} className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]" />
               </motion.div>
             </div>
           </div>
         </section>
 
+        <section className="py-14 lg:py-20 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-5">What Patients Commonly Experience After Gastroscopy</h2>
+            <p className="text-lg leading-relaxed text-muted-foreground mb-8">People are often concerned about discomfort or how they will feel afterwards. Experiences vary, but these are some common observations:</p>
+            <div className="grid md:grid-cols-3 gap-5">
+              <div className="rounded-2xl border border-border bg-card p-6"><h3 className="text-xl font-serif font-semibold mb-3">Often easier than expected</h3><p className="text-base leading-relaxed text-muted-foreground">With sedation, many patients remember little of the procedure and find it more comfortable than they anticipated.</p></div>
+              <div className="rounded-2xl border border-border bg-card p-6"><h3 className="text-xl font-serif font-semibold mb-3">Mild, short-lived symptoms</h3><p className="text-base leading-relaxed text-muted-foreground">A slightly sore throat, bloating or temporary drowsiness can occur. These usually settle, although recovery varies.</p></div>
+              <div className="rounded-2xl border border-border bg-card p-6"><h3 className="text-xl font-serif font-semibold mb-3">Clarity about the next steps</h3><p className="text-base leading-relaxed text-muted-foreground">Initial findings are often explained before discharge. If biopsies are taken, a follow-up discussion may be needed when results are ready.</p></div>
+            </div>
+            <p className="text-sm text-muted-foreground mt-5">These are general experiences, not individual patient testimonials. Seek urgent medical advice for severe or worsening pain, significant bleeding, fever or persistent vomiting after gastroscopy.</p>
+          </div>
+        </section>
+
         {/* FAQ Section */}
                 <section className="py-14 lg:py-20">
-                  <div className="container mx-auto px-2 sm:px-4">
+                  <div className="container mx-auto px-4 sm:px-6">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -463,23 +343,23 @@ export const GerdGastricScreeningPage = () => {
                         </h2>
                       </div>
                       <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Get answers to common questions about colorectal cancer screening.
+                        Get answers to common questions about gastroscopy and upper digestive tract screening.
                       </p>
                     </motion.div>
-        
+
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.2 }}
-                      className="max-w-3xl mx-auto"
+                      className="max-w-3xl mx-auto pb-10"
                     >
                       <Accordion type="single" collapsible className="w-full space-y-3">
                         {faqs.map((faq, index) => (
-                          <AccordionItem 
-                            key={index} 
+                          <AccordionItem
+                            key={index}
                             value={`faq-${index}`}
-                            className="bg-card rounded-xl border border-border px-4"
+                            className="bg-card rounded-xl border border-border px-4 last:border-b last:border-border"
                           >
                             <AccordionTrigger className="hover:no-underline py-4 text-left">
                               <span className="font-medium text-lg text-foreground">{faq.question}</span>

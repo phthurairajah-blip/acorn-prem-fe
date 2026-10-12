@@ -372,29 +372,29 @@ export const Ercp = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="max-w-4xl mx-auto"
+              className="max-w-4xl mx-auto pb-8"
             >
               <div className="flex items-center gap-3 mb-6">
                 <HelpCircle className="h-7 w-7 text-primary" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                <h2 className="font-serif font-semibold text-foreground text-4xl md:text-5xl">
                   Frequently Asked Questions
                 </h2>
               </div>
-              <p className="text-base text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-muted-foreground mb-8 leading-relaxed text-lg">
                 Common questions about ERCP and what to expect.
               </p>
 
-              <Accordion type="single" collapsible className="space-y-4">
+              <Accordion type="single" collapsible className="space-y-4 pb-8">
                 {ercpFaqs.map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`faq-${index}`}
-                    className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-md transition-shadow"
+                    className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-md transition-shadow last:border-b last:border-border"
                   >
-                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5 text-lg">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-5">
+                    <AccordionContent className="text-muted-foreground leading-relaxed pb-5 text-base">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>

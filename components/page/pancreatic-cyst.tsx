@@ -197,15 +197,15 @@ const faqs = [
   },
   {
   question: "When is MRI or MRCP surveillance enough, and when is an endoscopic ultrasound needed?",
-  answer: "<p class='text-base text-muted-foreground leading-relaxed mb-4'>An MRI scan — and in particular a version called an MRCP, which maps the drainage tubes of the pancreas in detail — is the workhorse of routine cyst monitoring. It does not involve radiation, gives excellent images of the whole pancreas and its ducts, and is well suited to checking that a cyst has not changed in size or character between visits. For most patients with a stable, low-risk cyst, MRI or MRCP every 6 to 24 months is all that is needed.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'>An endoscopic ultrasound (EUS) is a different kind of procedure. A thin flexible tube is passed through your mouth while you are sedated, and a small ultrasound probe at its tip creates very detailed close-up images of the pancreas from inside the stomach. It is used selectively, not routinely, and tends to be called upon in specific situations.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'>An EUS is usually recommended when:</p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>The MRI shows a feature that is not quite clear</strong> — for example, something that might be a nodule inside the cyst but cannot be confirmed on the scan alone.</li><li><strong>The cyst has grown or changed</strong>, and your specialist wants a closer look before deciding whether to refer you for surgery.</li><li><strong>A sample of the fluid inside the cyst</strong> is needed to help identify what type of cyst it is.</li><li><strong>Your cyst is large</strong> (over 3 cm) or has features that place it in a higher-risk category.</li></ul>",
+  answer: "<p class='text-base text-muted-foreground leading-relaxed mb-4'>An MRI scan — and in particular a version called an MRCP, which maps the drainage tubes of the pancreas in detail — is the workhorse of routine cyst monitoring. It does not involve radiation, gives excellent images of the whole pancreas and its ducts, and is well suited to checking that a cyst has not changed in size or character between visits. For most patients with a stable, low-risk cyst, MRI or MRCP every 6 to 24 months is all that is needed.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'>An endoscopic ultrasound (EUS) is a different kind of procedure. A thin flexible tube is passed through your mouth while you are sedated, and a small ultrasound probe at its tip creates very detailed close-up images of the pancreas from inside the stomach. It is used selectively, not routinely, and tends to be called upon in specific situations.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'>An EUS is usually recommended when:</p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>The MRI shows an unclear feature</strong> — for example, something that might be a nodule inside the cyst but cannot be confirmed on the scan alone.</li><li><strong>The cyst has grown or changed</strong>, and your specialist wants a closer look before deciding whether to refer you for surgery.</li><li><strong>A sample of the fluid inside the cyst</strong> is needed to help identify what type of cyst it is.</li><li><strong>Your cyst is large</strong> (over 3 cm) or has features that place it in a higher-risk category.</li></ul>",
 },
   {
     question: "What features make a pancreatic cyst more concerning for cancer risk?",
-    answer: "<p class='text-base text-muted-foreground leading-relaxed mb-4'>The vast majority of incidentally found pancreatic cysts are not cancerous and will never become so. However, we look carefully for a specific set of features that suggest a cyst may be developing in a more worrying direction. These are often grouped into two categories: features that need urgent attention, and features that simply warrant closer monitoring.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'><strong>Features that need prompt specialist review</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>A solid lump or nodule growing inside the cyst</strong> — this is the feature taken most seriously, particularly if it is enhancing (lights up) on a contrast scan.</li><li><strong>A noticeably widened main pancreatic duct</strong> — the main drainage tube of the pancreas should be narrow; significant widening is associated with a higher-risk type of cyst.</li><li><strong>Jaundice (yellowing of the skin or eyes)</strong> alongside a cyst in the head of the pancreas.</li><li><strong>New abdominal or back pain</strong> that cannot be explained by something else.</li></ul><p class='text-base text-muted-foreground leading-relaxed mb-4'><strong>Features that warrant closer monitoring</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>A cyst larger than 3 cm.</strong></li><li><strong>Thickening or irregularity of the cyst wall.</strong></li><li><strong>A cyst that has grown noticeably since the last scan</strong> (roughly 5 mm or more over one to two years).</li><li><strong>New-onset diabetes</strong>, or existing diabetes that suddenly becomes harder to control.</li><li><strong>A raised blood test called CA 19-9</strong>, which can sometimes signal pancreatic activity.</li></ul>",
+    answer: "<p class='text-base text-muted-foreground leading-relaxed mb-4'>The vast majority of incidentally found pancreatic cysts are not cancerous and will never become so. However, we look carefully for a specific set of features that suggest a cyst may be developing in a more worrying direction. These are often grouped into two categories: features that need prompt specialist review, and features that warrant closer monitoring.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'><strong>Features that need prompt specialist review</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>A solid lump or nodule growing inside the cyst</strong> — this is the feature taken most seriously, particularly if it is enhancing (lights up) on a contrast scan.</li><li><strong>A noticeably widened main pancreatic duct</strong> — the main drainage tube of the pancreas should be narrow; significant widening is associated with a higher-risk type of cyst.</li><li><strong>Jaundice (yellowing of the skin or eyes)</strong> alongside a cyst in the head of the pancreas.</li><li><strong>New abdominal or back pain</strong> that cannot be explained by something else.</li></ul><p class='text-base text-muted-foreground leading-relaxed mb-4'><strong>Features that warrant closer monitoring</strong></p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>A cyst larger than 3 cm.</strong></li><li><strong>Thickening or irregularity of the cyst wall.</strong></li><li><strong>A cyst that has grown noticeably since the last scan</strong> (roughly 5 mm or more over one to two years).</li><li><strong>New-onset diabetes</strong>, or existing diabetes that suddenly becomes harder to control.</li><li><strong>A raised blood test called CA 19-9</strong>, which can sometimes signal pancreatic activity.</li></ul>",
   },
   {
   question: "How often should a pancreatic cyst be monitored?",
-  answer: "<p class='text-base text-muted-foreground leading-relaxed mb-4'>There is no single answer, because the right interval depends on the type of cyst, its size, whether it has any concerning features, and your overall health. Your specialist will tailor the schedule to your specific situation, guided by international clinical guidelines.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'>As a general sense of how follow-up is typically approached:</p><ul class='space-y-2 mt-4 mb-4 list-disc ml-6'><li><strong>A small, simple cyst under 1.5 cm</strong> with no worrisome features is usually checked every one to two years with an MRI.</li><li><strong>A cyst between 1.5 and 3 cm</strong> with no concerning signs is often checked every 6 to 12 months at first, then annually once it has shown itself to be stable.</li><li><strong>A cyst over 3 cm or with any worrisome feature</strong> will usually be reviewed more frequently — sometimes every three to six months — and may involve an endoscopic ultrasound (EUS).</li></ul><p class='text-base text-muted-foreground leading-relaxed mb-4'>If your cyst has been completely stable for several years, your specialist may extend the gaps between scans. This is not a sign that you are being forgotten — it reflects the fact that a long period of stability is genuinely reassuring and means that very frequent scanning adds little.</p>",
+  answer: "<p class='text-base text-muted-foreground leading-relaxed mb-4'>There is no single surveillance schedule for every pancreatic cyst. Follow-up depends first on <strong>what type of cyst it is</strong>, as well as its size, appearance, growth over time and whether there are any concerning features.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'><strong>Branch-duct IPMN:</strong> Current international guidance uses cyst size and risk features to help determine surveillance. As a general Kyoto 2024 framework, cysts under 2 cm may be followed with MRI after 6 months and then at longer intervals if stable; cysts 2–3 cm are usually followed more closely, often yearly after an initial period of shorter-interval imaging; and cysts 3 cm or larger generally require closer surveillance. Concerning features may prompt earlier EUS or surgical assessment.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'><strong>Mucinous cystic neoplasm (MCN):</strong> Smaller MCNs without concerning features may be monitored, while larger cysts, symptomatic cysts or those with mural nodules or other concerning features may require surgical assessment.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'><strong>Serous cystadenoma:</strong> These are generally benign. Once the diagnosis is secure and the cyst is not causing symptoms, long-term routine surveillance is often unnecessary.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'><strong>Pseudocyst:</strong> These occur in association with pancreatitis and do not require surveillance for cancer. Follow-up is determined by symptoms, persistence and complications.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'>If the type of cyst is uncertain, MRI/MRCP and sometimes EUS can help establish the diagnosis and determine the appropriate follow-up plan.</p>",
 },
 {
   question: "When would I need to be referred to a pancreatic surgeon rather than continue surveillance?",
@@ -213,7 +213,7 @@ const faqs = [
 },
  {
   question: "Can a pancreatic cyst stay stable for years without needing treatment?",
-  answer: "<p class='text-base text-muted-foreground leading-relaxed mb-4'>The short answer is yes, and for many people this is exactly what happens. Studies following large numbers of patients with incidentally found pancreatic cysts over many years consistently show that the majority remain completely stable and never require any intervention beyond monitoring.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'>Serous cysts, in particular, almost never become cancerous and can be watched indefinitely without any real concern. Even many mucinous cysts and low-risk IPMNs remain unchanged for a decade or longer.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'><strong>What stability actually means</strong></p><p class='text-base text-muted-foreground leading-relaxed mb-4'>Stability means the cyst has not grown significantly, no new internal features have appeared, and you remain without symptoms. A cyst that has been stable for five or more years with no concerning features at any point is genuinely reassuring, and at that stage many specialists will discuss either greatly extending the monitoring interval or stopping surveillance altogether.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'><strong>What about living day to day with a cyst?</strong></p><p class='text-base text-muted-foreground leading-relaxed mb-4'>For most patients, having a known pancreatic cyst does not need to change anything about daily life. You can eat normally, exercise, travel, and work as usual. There are no specific dietary restrictions linked to having a pancreatic cyst. The monitoring plan your specialist puts in place is there as a safety net, not because anything is expected to go wrong.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'>Some patients find the knowledge of having a cyst anxious-making, particularly around scan time. This is completely understandable. If you find the waiting difficult, it is worth mentioning this to your specialist — they may be able to adjust the schedule or offer a brief interim check-in to give you reassurance.</p>",
+  answer: "<p class='text-base text-muted-foreground leading-relaxed mb-4'>The short answer is yes, and for many people this is exactly what happens. Studies following large numbers of patients with incidentally found pancreatic cysts over many years consistently show that the majority remain completely stable and never require any intervention beyond monitoring.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'>Serous cysts, in particular, almost never become cancerous and can be watched indefinitely without any real concern. Even many mucinous cysts and low-risk IPMNs remain unchanged for a decade or longer.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'><strong>What stability actually means</strong></p><p class='text-base text-muted-foreground leading-relaxed mb-4'>Stability means the cyst has not grown significantly, no new internal features have appeared, and you remain without symptoms. A cyst that has been stable for five or more years with no concerning features at any point is genuinely reassuring, and at that stage many specialists will discuss either greatly extending the monitoring interval or stopping surveillance altogether.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'><strong>What about living day to day with a cyst?</strong></p><p class='text-base text-muted-foreground leading-relaxed mb-4'>For most patients, having a known pancreatic cyst does not need to change anything about daily life. You can eat normally, exercise, travel, and work as usual. There are no specific dietary restrictions linked to having a pancreatic cyst. The monitoring plan your specialist puts in place is there as a safety net, not because anything is expected to go wrong.</p><p class='text-base text-muted-foreground leading-relaxed mb-4'>Some patients find the knowledge of having a cyst anxiety-provoking, particularly around scan time. This is completely understandable. If you find the waiting difficult, it is worth mentioning this to your specialist — they may be able to adjust the schedule or offer a brief interim check-in to give you reassurance.</p>",
 },
 ];
 
@@ -242,13 +242,16 @@ const PancreaticCyst = () => {
                   Pancreatic Conditions
                 </span>
                 <h1 className="text-5xl md:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
-                  Pancreatic Cysts Specialist in Singapore
+                  Pancreatic Cysts
                 </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  Pancreatic cysts are increasingly detected with modern imaging. While most are benign, 
-                  some carry malignant potential. Specialized evaluation and appropriate surveillance 
-                  are essential for safe, evidence-based management.
-                </p>
+                <div className="space-y-4 text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+                  <p>
+                    Pancreatic cysts are fluid-filled lesions that are often discovered unexpectedly during a scan performed for another reason. Most pancreatic cysts are benign or have a very low risk of becoming cancerous.
+                  </p>
+                  <p>
+                    The important first step is to determine <strong className="font-semibold text-foreground">what type of cyst you have and whether it has any features that require closer monitoring or further investigation.</strong>
+                  </p>
+                </div>
                 <Button asChild size="lg" className="gap-2">
                   <Link href="/#contact">
                     <Calendar className="h-5 w-5" />
@@ -310,708 +313,204 @@ const PancreaticCyst = () => {
         </section>
 
         {/* Types of Pancreatic Cysts */}
-        <section className="py-16 lg:py-20 bg-emerald-50/50 dark:bg-emerald-950/10">
+        <section className="py-16 lg:py-20 bg-muted/30">
           <div className="container mx-auto px-2 sm:px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-6xl mx-auto"
-            >
-              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-10">
-                Types of Pancreatic Cysts
-              </h2>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                {cystTypes.map((type, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-background rounded-xl p-6 border border-emerald-200 dark:border-emerald-800/30 shadow-sm"
-                  >
-                    <div className="flex items-start justify-between mb-3">
-                      <h3 className="text-lg font-semibold text-foreground">{type.title}</h3>
-                      <span className={`text-xs font-medium px-2 py-1 rounded-full ${
-                        type.risk === "Very Low" 
-                          ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
-                          : type.risk === "None (Non-neoplastic)"
-                          ? "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400"
-                          : "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400"
-                      }`}>
-                        Risk: {type.risk}
-                      </span>
-                    </div>
-                    <p className="text-base text-muted-foreground leading-relaxed">{type.description}</p>
+            <div className="max-w-5xl mx-auto">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-10">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
+                  Common Types of Pancreatic Cysts
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                  Pancreatic cysts are not all the same. Identifying the type helps determine whether simple monitoring is enough or whether further assessment is needed.
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-2 gap-5">
+                {kindsCyst.map((item, index) => (
+                  <motion.div key={item.type} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }} className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                    <h3 className="text-xl font-semibold text-foreground mb-2">{item.type}</h3>
+                    <p className="text-base text-muted-foreground leading-relaxed">{item.description}</p>
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Risk Assessment Section */}
-        <section className="py-16 lg:py-20">
+        <section className="py-16 lg:py-20 bg-background">
           <div className="container mx-auto px-2 sm:px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-6xl mx-auto"
-            >
-              <div className="flex items-center gap-3 mb-8">
-                <AlertTriangle className="h-8 w-8 text-amber-600" />
-                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
-                  Risk Assessment
-                </h2>
-              </div>
-              <p className="text-lg text-muted-foreground mb-10 max-w-3xl">
-                International guidelines identify specific features that increase concern for malignancy. 
-                These guide the intensity of surveillance and need for further evaluation.
-              </p>
-              
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Worrisome Features */}
-                <div className="bg-amber-50 dark:bg-amber-950/20 rounded-xl p-6 border border-amber-200 dark:border-amber-800/30">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Worrisome Features</h3>
-                  <p className="text-muted-foreground mb-4 text-sm">
-                    Presence of these features warrants closer surveillance or further evaluation with EUS.
-                  </p>
-                  <ul className="space-y-3">
-                    {worrisomeFeatures.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-base text-muted-foreground">
-                        <span className="h-1.5 w-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
+            <div className="max-w-5xl mx-auto">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-10">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">Which Features Matter?</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                  Most cysts remain low risk. The features below help determine whether routine surveillance, closer monitoring or prompt specialist assessment is appropriate.
+                </p>
+              </motion.div>
+
+              <div className="space-y-5">
+                <div className="rounded-2xl border border-emerald-200 dark:border-emerald-800/40 bg-emerald-50/60 dark:bg-emerald-950/10 p-6 md:p-8">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-emerald-600 shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">Reassuring features</h3>
+                      <p className="text-base text-muted-foreground leading-relaxed">
+                        A small, simple and stable cyst without a solid component, significant pancreatic duct enlargement or meaningful growth over time is generally reassuring.
+                      </p>
+                      <p className="text-base font-medium text-emerald-700 dark:text-emerald-300 mt-3">Typical approach: routine surveillance.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-amber-200 dark:border-amber-800/40 bg-amber-50/60 dark:bg-amber-950/10 p-6 md:p-8">
+                  <div className="flex items-start gap-3 mb-4">
+                    <AlertTriangle className="h-6 w-6 text-amber-600 shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">Features needing closer monitoring</h3>
+                      <p className="text-base text-muted-foreground leading-relaxed">
+                        These findings do not necessarily mean cancer, but they may justify shorter surveillance intervals or additional assessment with EUS.
+                      </p>
+                    </div>
+                  </div>
+                  <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3">
+                    {worrisomeFeatures.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3 text-base text-foreground leading-relaxed">
+                        <span className="h-2 w-2 rounded-full bg-amber-500 mt-2 shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* High-Risk Stigmata */}
-                <div className="bg-red-50 dark:bg-red-950/20 rounded-xl p-6 border border-red-200 dark:border-red-800/30">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">High-Risk Stigmata</h3>
-                  <p className="text-muted-foreground mb-4 text-sm">
-                    These features indicate a high likelihood of malignancy and typically require surgical evaluation.
-                  </p>
+                <div className="rounded-2xl border border-red-200 dark:border-red-900/40 bg-red-50/70 dark:bg-red-950/10 p-6 md:p-8">
+                  <div className="flex items-start gap-3 mb-4">
+                    <AlertTriangle className="h-6 w-6 text-red-600 shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">Features needing prompt specialist assessment</h3>
+                      <p className="text-base text-muted-foreground leading-relaxed">
+                        These findings do not automatically mean cancer, but they usually require further assessment and sometimes surgical review.
+                      </p>
+                    </div>
+                  </div>
                   <ul className="space-y-3">
-                    {highRiskStigmata.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-base text-muted-foreground">
-                        <AlertTriangle className="h-4 w-4 text-red-500 shrink-0 mt-1" />
+                    {highRiskStigmata.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3 text-base text-foreground leading-relaxed">
+                        <span className="h-2 w-2 rounded-full bg-red-500 mt-2 shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Patient Guide */}
-        <section className="py-16 lg:py-20">
+        <section className="py-16 lg:py-20 bg-muted/30">
           <div className="container mx-auto px-2 sm:px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-6xl mx-auto"
-            >
-              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-10">
-                A Cyst Was Found on My Pancreas. What Happens Next?
-              </h2>
-              <p className="text-muted-foreground mb-2">
-                A plain-language guide for patients in Singapore
-              </p>
-              <div className="p-6 flex items-center gap-3 mb-10 bg-emerald-50 dark:bg-emerald-900/10 rounded-2xl border border-emerald-200 dark:border-emerald-800/30">
-                <Heart className="h-8 w-8 text-emerald-500" />
-                <p className="text-muted-foreground mb-2">
-                  <strong>Finding a cyst doesn&#39;t mean you have cancer.</strong><br></br>
-                  Most pancreatic cysts found by accident during a scan are harmless. But some do need monitoring — so it&#39;s always worth getting it checked properly. This guide explains what to expect.
-                </p>
-              </div>
-
-              <h3 className="text-3xl md:text-3xl font-serif font-semibold text-foreground mb-4">
-                The scan found a cyst on my pancreas — what should I do?
-              </h3>
-              <p className="text-muted-foreground mb-10 text-lg">
-                  Finding a cyst in your pancreas on a scan done for another reason is actually quite common. Most people who discover this feel worried — which is completely understandable. But here&#39;s the important thing to know:
-              </p>
-              <div className="p-6 flex items-center gap-3 mb-10 bg-amber-50 dark:bg-amber-900/10 rounded-2xl border border-amber-200 dark:border-amber-800/30">
-                <AlertTriangle className="h-8 w-8 text-amber-600" />
-                <p className="text-muted-foreground mb-2">
-                  <strong>Most incidental pancreatic cysts are benign (not cancer).</strong><br></br>
-                  They are found by chance during CT or MRI scans done for other reasons like back pain, kidney stones, or abdominal discomfort. The large majority never cause any problems.
-                </p>
-              </div>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                  What you should do next
-              </p>
-              <ul className="space-y-3 mb-10">
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />Ask your doctor for a copy of the scan report</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />Find out whether the radiologist (the specialist who reads scans) recommended any follow-up</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />Ask for a referral to a specialist — either a gastroenterologist (gut specialist) or an HPB surgeon (liver, pancreas and bile duct surgeon)</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />In Singapore, these specialists are available at SGH, NUH, NCCS, Tan Tock Seng Hospital, and private hospitals</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" /><strong>Do not search online late at night —</strong> most of what you will find refers to the worst-case scenarios, not the most common ones</li>
-              </ul>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                  What kind of cyst might it be?
-              </p>
-              <p className="text-muted-foreground mb-10 text-lg">
-                  There are several types of pancreatic cysts. Most are identified by their appearance on a scan. Your specialist may recommend an additional scan or a procedure called an endoscopic ultrasound (EUS) to get a clearer picture.
-              </p>
-              <table className="comparison-table border bg-background">
-                <thead>
-                  <tr>
-                    <th>Type of cyst</th>
-                    <th>What it means for you</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {kindsCyst.map((cyst) => (
-                    <tr key={cyst.type}>
-                      <td>{cyst.type}</td>
-                      <td>{cyst.description}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-6xl mx-auto mt-16"
-            >
-              <h3 className="text-3xl md:text-3xl font-serif font-semibold text-foreground mb-4">
-                Are there signs I should be seen sooner rather than later?
-              </h3>
-              <p className="text-muted-foreground mb-10 text-lg">
-                  In most cases, your specialist will arrange a follow-up scan in 6-12 months. But certain signs — either on the scan or in how you&#39;re feeling — mean you may need to be seen sooner or have further tests done.
-              </p>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 Tell your doctor straight away if you have:
-              </p>
-              <ul className="space-y-3 mb-10">
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" /><strong>New or worsening pain</strong> in your upper abdomen or back</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" /><strong>Yellowing of your skin or eyes (jaundice)</strong></li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />Unexplained weight loss</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" /><strong>New diabetes</strong> or your blood sugar suddenly becoming harder to control</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" /><strong>Feeling full quickly</strong> when eating, or ongoing nausea</li>
-              </ul>
-              <div className="p-6 flex items-center gap-3 mb-10 bg-amber-50 dark:bg-amber-900/10 rounded-2xl border border-amber-200 dark:border-amber-800/30">
-                <AlertTriangle className="h-8 w-8 text-amber-600" />
-                <p className="text-muted-foreground mb-2">
-                  <strong>Do not wait for your next routine appointment if you develop any of these symptoms.</strong><br></br>
-                  Contact your doctor or specialist promptly. These symptoms do not automatically mean something serious, but they need to be assessed.
-                </p>
-              </div>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 What scan features concern specialists?
-              </p>
-              <p className="text-muted-foreground mb-10 text-lg">
-                  When your doctor looks at the scan report, they look for certain features that can indicate a higher risk. You don’t need to understand all of these — but here is a plain-language summary:
-              </p>
-               <table className="comparison-table border bg-background">
-                <thead>
-                  <tr>
-                    <th>What the scan shows</th>
-                    <th>Why it matters</th>
-                    <th>What it means</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {specialistsConcerns.map((specialist) => (
-                    <tr key={specialist.feature}>
-                      <td>{specialist.feature}</td>
-                      <td>{specialist.concern}</td>
-                      <td>{specialist.recommendation}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-6xl mx-auto mt-16"
-            >
-              <h3 className="text-3xl md:text-3xl font-serif font-semibold text-foreground mb-4">
-                Do I need an operation, or just regular check-ups?
-              </h3>
-              <p className="text-muted-foreground mb-10 text-lg">
-                This is the question most patients ask. The honest answer is: it depends on the type of cyst, what it looks like on scans, 
-                how it changes over time, and your overall health. Surgery is not needed for most people.
-              </p>
-              <p className="text-muted-foreground font-semibold mb-6 text-lg">
-                 Most people will just need regular monitoring (surveillance)
-              </p>
-              <p className="text-muted-foreground mb-4 text-lg">
-                Monitoring usually means repeat MRI or CT scans every 6–12 months to check that nothing has changed. 
-                Over time, if everything remains stable, the gap between scans is often extended.
-              </p>
-              <ul className="space-y-3 mb-10">
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" /><strong>Small, stable cysts with no concerning features</strong> are usually just watched over time</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" /><strong>Serous cysts (SCA)</strong> rarely need surgery — routine imaging is usually all that is needed</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" /><strong>If you have other health conditions</strong> that make surgery risky, monitoring is often the right choice even for larger cysts</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" /><strong>You will not be abandoned</strong> — regular follow-up is active, protective care, not just waiting</li>
-              </ul>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 Most people will just need regular monitoring (surveillance)
-              </p>
-              <ul className="space-y-3 mb-10">
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />The scan shows a solid lump or nodule growing inside the cyst</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />The pancreatic duct is significantly widened</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />You have developed jaundice linked to the cyst</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />The cyst is causing pain, blockage, or other symptoms</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />The cyst is a type known to carry a higher risk of becoming cancerous</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />You are young and fit, and your doctor feels removal now prevents a bigger problem later</li>
-              </ul>
-              <div className="p-6 flex items-center gap-3 mb-10 bg-background rounded-xl p-6 border border-border/50">
-                <Info className="h-8 w-8 text-emerald-600" />
-                <p className="text-muted-foreground mb-2">
-                  <strong>What questions should I ask my specialist?</strong><br></br>
-                  What type of cyst do I have? • What is my risk of it becoming cancer? • How often do I need scans? • What changes should prompt me to call you? • Will I need surgery, and if so, when?
-                </p>
-              </div>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 What type of scan will I need for follow-up?
-              </p>
-              <ul className="space-y-3 mb-10">
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" /><span><strong>MRI (with MRCP):</strong> This is the preferred scan for follow-up. It gives excellent detail without radiation and is particularly good at showing the pancreatic ducts.</span></li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" /><span><strong>CT scan:</strong> Used when MRI is not possible. Involves a small amount of radiation.</span></li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" /><span><strong>Endoscopic ultrasound (EUS):</strong> A camera passed gently through your mouth while you are sedated, with an ultrasound probe at the tip. Gives very detailed images and allows your doctor to take a small fluid sample from the cyst if needed.</span></li>
-              </ul>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 Can I stop having scans eventually?
-              </p>
-              <p className="text-muted-foreground mb-10 text-lg">
-                Yes — in many cases, your specialist will recommend stopping surveillance if your cyst has been completely stable for several years, or if your age or health means that the result of further monitoring would not change your care. This is a decision made together with you.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Diagnose and Monitored */}
-        <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-2 sm:px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-6xl mx-auto"
-            >
-              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-10">
-                How Are Pancreatic Cysts Diagnosed and Monitored?
-              </h2>
-              <div className="p-6 flex items-center gap-3 mb-10 bg-emerald-50 dark:bg-emerald-900/10 rounded-2xl border border-emerald-200 dark:border-emerald-800/30">
-                <Heart className="h-8 w-8 text-emerald-500" />
-                <p className="text-muted-foreground mb-2">
-                  <strong>You don’t need to be a doctor to understand your own care.</strong><br></br>
-                  This guide explains the scans used to look at pancreatic cysts, what your doctor is looking for, and how they decide how often you need to come back. The more you understand, the easier it is to ask the right questions.
-                </p>
-              </div>
-
-              <h3 className="text-3xl md:text-3xl font-serif font-semibold text-foreground mb-4">
-                What scans are used, and what does each one actually do?
-              </h3>
-              <p className="text-muted-foreground mb-10 text-lg">
-                  When a cyst is found on your pancreas, your doctor needs to get a clearer picture of what kind of cyst it is and whether anything about it needs closer attention. There are two main tools used for this: a special type of MRI scan, and a procedure called an endoscopic ultrasound. They are used at different stages and for different reasons.
-              </p>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 The MRI scan (and something called MRCP)
-              </p>
-              <p className="text-muted-foreground mb-2 text-lg">
-                An MRI uses magnets and radio waves to build detailed images of your organs. It does not use radiation, which is one reason it is preferred for follow-up over many years.
-              </p>
-              <p className="text-muted-foreground mb-10 text-lg">
-                When your doctor asks for a &#39;pancreatic protocol MRI&#39; or an &#39;MRCP&#39;, they are asking for a version of the scan that is specially designed to look at the pancreas and the ducts (tubes) that drain it. MRCP stands for Magnetic Resonance Cholangiopancreatography — a long word that simply means a detailed map of the drainage tubes in and around your pancreas and liver.
-              </p>
-              <div className="p-6 flex items-center gap-3 mb-10 bg-background rounded-xl p-6 border border-border/50">
-                <Info className="h-8 w-8 text-emerald-600" />
-                <p className="text-muted-foreground mb-2">
-                  <strong>What is the MRCP actually looking at?</strong><br></br>
-                  The pancreas has a main drainage duct running through it, like a channel. If a cyst is pressing on this duct, or connected to it, or causing it to widen, that changes how your doctor manages things. The MRCP shows this clearly — better than a regular CT scan.
-                </p>
-              </div>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 What can MRI and MRCP tell your doctor?
-              </p>
-              <ul className="space-y-3 mb-10">
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />The size and shape of the cyst, and whether it has changed since the last scan</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />Whether the cyst has any solid areas or nodules growing inside it (a feature that warrants closer attention)</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />Whether the cyst is connected to the main pancreatic duct</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />Whether the main duct has become wider than normal — this can indicate a higher-risk type of cyst</li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />The number of cysts and where in the pancreas they sit (head, body, or tail)</li>
-              </ul>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 What an MRI cannot always tell your doctor
-              </p>
-              <p className="text-muted-foreground mb-10 text-lg">
-                MRI is excellent for the big picture, but it has limits. It can struggle to pick up very small nodules inside a cyst, and it cannot directly sample the fluid inside the cyst to test it. That is where the second tool comes in.
-              </p>
-               <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 The endoscopic ultrasound (EUS) — a closer look
-              </p>
-              <p className="text-muted-foreground mb-2 text-lg">
-                An endoscopic ultrasound is a procedure done while you are sedated (lightly asleep). A thin, flexible tube is passed gently through your mouth and down into your stomach. At the tip of the tube is a tiny ultrasound probe, 
-                which sends sound waves to create detailed images of the pancreas from the inside — much closer than any external scan can get.
-              </p>
-              <p className="text-muted-foreground mb-10 text-lg">
-                It sounds more daunting than it is. Most patients find it completely manageable, and you are kept comfortable throughout with sedation. The whole procedure usually takes 20 to 40 minutes.
-              </p>
-              <div className="p-6 flex items-center gap-3 mb-10 bg-background rounded-xl p-6 border border-border/50">
-                <Info className="h-8 w-8 text-emerald-600" />
-                <p className="text-muted-foreground mb-2">
-                  <strong>Why is getting closer such an advantage?</strong><br></br>
-                  The pancreas sits deep in the abdomen, surrounded by other organs. An external ultrasound or even a CT scan has to look through layers of tissue. An EUS probe sits right next to the pancreas with only the stomach wall in between. 
-                  This gives images that are far more detailed for small features like nodules or wall thickening inside a cyst.
-                </p>
-              </div>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 What can an EUS tell your doctor?
-              </p>
-              <ul className="space-y-3 mb-10">
-                <li className="flex items-start gap-3 text-base text-muted-foreground">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-                    A much more detailed look at the internal structure of the cyst —
-                    especially small nodules or thickening that an MRI might miss
-                </li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-                  Whether a nodule inside the cyst is truly solid (higher concern) or
-                  just a fold of tissue (less concern)
-                </li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-                  The exact relationship of the cyst to nearby blood vessels and the
-                  pancreatic duct
-                </li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-                  A sample of cyst fluid, if needed, by passing a fine needle through
-                  the scope (called EUS-FNA) — this fluid can be tested to help
-                  identify the type of cyst and its risk
-                </li>
-              </ul>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 How does cyst fluid testing help?
-              </p>
-              <p className="text-muted-foreground mb-10 text-lg">
-                The fluid inside different types of cysts has different characteristics. 
-                Measuring the level of a substance called CEA (carcinoembryonic antigen) in the fluid can help 
-                distinguish between a mucinous cyst — which carries a small but real risk — and a non-mucinous cyst, 
-                which is almost always benign. The fluid can also be tested for unusual cells. This is most useful 
-                when the scan picture is unclear and your specialist needs more information before deciding on a 
-                management plan.
-              </p>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 MRI vs EUS at a glance
-              </p>
-              <table className="comparison-table border bg-background">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>MRI / MRCP</th>
-                    <th>Endoscopic ultrasound (EUS)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {compareMriEus.map((mrieus) => (
-                    <tr key={mrieus.category}>
-                      <td>{mrieus.category}</td>
-                      <td>{mrieus.mri}</td>
-                      <td>{mrieus.eus}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-6xl mx-auto mt-16"
-            >
-              <h3 className="text-3xl md:text-3xl font-serif font-semibold text-foreground mb-4">
-                How does my doctor decide how often I need to come back?
-              </h3>
-              <p className="text-muted-foreground mb-10 text-lg">
-                One of the most common questions patients ask is: “How often do I really need these scans?” The answer is not the same for everyone. 
-                Your specialist will look at several factors together to decide on the right interval for you personally.
-              </p>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 The things your doctor weighs up
-              </p>
-              <ul className="space-y-3 mb-10">
-                <li className="flex items-start gap-3 text-base text-muted-foreground">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-                  <strong>What type of cyst it is —</strong> some types are inherently lower risk and
-                  need less frequent checks; others are watched more carefully
-                </li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-                  <strong>How big the cyst is —</strong> larger cysts are generally monitored more
-                  closely, at least initially
-                </li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-                  <strong>Whether the cyst has changed —</strong> a cyst that has been completely stable
-                  for several years is less worrying than one that has grown
-                </li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-                  <strong>Whether there are any concerning features —</strong> things like nodules, duct
-                  widening, or thickened walls change the timing of follow-up
-                </li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-                  <strong>Your age and general health —</strong> a younger, fit patient may need longer
-                  follow-up; for older patients with other health conditions, the
-                  balance of benefit shifts
-                </li>
-                <li className="flex items-start gap-3 text-base text-muted-foreground">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
-                  <strong>How you are feeling —</strong> if you develop new symptoms, the interval may be
-                  shortened or a different test arranged regardless of the schedule
-                </li>
-              </ul>
-              <div className="p-6 flex items-center gap-3 mb-10 bg-background rounded-xl p-6 border border-border/50">
-                <Info className="h-8 w-8 text-emerald-600" />
-                <p className="text-muted-foreground mb-2">
-                  <strong>Follow-up is not one-size-fits-all.</strong><br></br>
-                 International guidelines give doctors a framework, but your specialist will adapt this to your specific 
-                 cyst and your overall situation. If your interval feels too long or too short for your comfort, it is always 
-                 reasonable to ask your doctor to explain their reasoning.
-                </p>
-              </div>
-              <p className="text-muted-foreground font-semibold mb-4 text-lg">
-                 Typical follow-up intervals as a rough guide
-              </p>
-              <p className="text-muted-foreground mb-10 text-lg">
-                The table below gives a general sense of how intervals are typically set. Your own schedule may differ based on the specifics of your case.
-              </p>
-              <table className="comparison-table border bg-background">
-                <thead>
-                  <tr>
-                    <th>Situation</th>
-                    <th>Typical scan interval</th>
-                    <th>Type of scan usually used</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {followupGuide.map((guide) => (
-                    <tr key={guide.scenario}>
-                      <td>{guide.scenario}</td>
-                      <td>{guide.interval}</td>
-                      <td>{guide.test}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              <p className="text-muted-foreground font-semibold mb-4 mt-10 text-lg">
-                 Can my follow-up interval change over time?
-              </p>
-               <p className="text-muted-foreground mb-2 text-lg">
-                Yes, and this is actually a good sign. If your cyst remains completely stable over several years with no concerning features, 
-                your specialist will often extend the gap between scans. This is not them losing interest in your care — 
-                it reflects the fact that stable cysts over time carry a lower risk, and the benefit of very frequent scanning starts to diminish.
-              </p>
-              <p className="text-muted-foreground mb-10 text-lg">
-                On the other hand, if something changes — the cyst grows, a new symptom appears, or a scan shows a new feature — 
-                your interval will be brought forward and your doctor may arrange an EUS or refer you to a surgeon.
-              </p>
-              <div className="p-6 flex items-center gap-3 mb-10 bg-amber-50 dark:bg-amber-900/10 rounded-2xl border border-amber-200 dark:border-amber-800/30">
-                <AlertTriangle className="h-8 w-8 text-amber-600" />
-                <p className="text-muted-foreground mb-2">
-                  <strong>Do not wait for your next scheduled scan if you develop new symptoms.</strong><br></br>
-                 New abdominal or back pain, jaundice (yellowing of the skin or eyes), unexplained weight loss, 
-                 or a sudden change in how you feel should prompt you to contact your specialist promptly — 
-                 do not wait for the next routine appointment.
-                </p>
-              </div>
-              <p className="text-muted-foreground font-semibold mb-4 mt-10 text-lg">
-                 A note on radiation and scan safety
-              </p>
-              <p className="text-muted-foreground mb-10 text-lg">
-                Many patients worry about the cumulative effect of repeated scans. MRI does not use radiation at all, 
-                which is one reason it is the preferred tool for long-term cyst monitoring. CT scans do involve a small 
-                amount of radiation, but they are used selectively. Your doctor will always try to choose the scan that 
-                gives the most useful information with the least burden to you.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-
-
-        {/* Investigations Section */}
-        <section className="py-16 lg:py-20 bg-emerald-50/50 dark:bg-emerald-950/10">
-          <div className="container mx-auto px-2 sm:px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-6xl mx-auto"
-            >
-              <div className="flex items-center gap-3 mb-8">
-                <Search className="h-8 w-8 text-emerald-600" />
-                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
-                  Investigations
+            <div className="max-w-5xl mx-auto">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-10">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
+                  MRI / MRCP or Endoscopic Ultrasound?
                 </h2>
-              </div>
-              <p className="text-lg text-muted-foreground mb-10 max-w-3xl">
-                Comprehensive evaluation combines imaging and, when indicated, cyst fluid analysis.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* EUS Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className="bg-background rounded-xl overflow-hidden border border-emerald-200 dark:border-emerald-800/30 shadow-sm"
-                >
-                  <div className="aspect-video overflow-hidden">
-                    <Image
-                      src={eusImage}
-                      alt="Endoscopic Ultrasound for pancreatic cyst evaluation"
-                      className="w-full h-full object-cover"
-                      width={1280}
-                      height={720}
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-3">
-                      EUS with FNA
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                      Endoscopic ultrasound provides high-resolution imaging of pancreatic cysts and allows cyst fluid sampling.
-                    </p>
-                    <ul className="space-y-2 mb-4">
-                      {[
-                        "Detailed cyst characterisation",
-                        "Detection of mural nodules",
-                        "Cyst fluid analysis (CEA, amylase, cytology)",
-                        "Molecular markers for malignancy risk",
-                      ].map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-sm">
-                          <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link 
-                      href="/eus" 
-                      className="inline-flex items-center text-sm text-emerald-600 dark:text-emerald-400 hover:underline font-medium"
-                    >
-                      Learn more about this procedure →
-                    </Link>
-                  </div>
-                </motion.div>
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                  Both tests are useful, but they answer different questions. MRI/MRCP is usually the main surveillance test, while EUS provides a closer look when more detail is needed.
+                </p>
+              </motion.div>
 
-                {/* MRI/MRCP Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  className="bg-background rounded-xl overflow-hidden border border-emerald-200 dark:border-emerald-800/30 shadow-sm"
-                >
-                  <div className="aspect-video overflow-hidden">
-                    <Image
-                      src={mriScanImage}
-                      alt="MRI scan for pancreatic cyst surveillance"
-                      className="w-full h-full object-cover"
-                      width={1280}
-                      height={720}
-                    />
-                  </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-sm">
+                  <Image src={mriScanImage} alt="MRI scan for pancreatic cyst surveillance" width={1280} height={720} className="w-full h-48 object-cover" />
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-3">
-                      MRI/MRCP Surveillance
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                      MRI with MRCP is the preferred imaging modality for surveillance, avoiding radiation exposure.
-                    </p>
-                    <ul className="space-y-2">
-                      {[
-                        "No radiation exposure (safe for repeated imaging)",
-                        "Clear soft tissue characterisation",
-                        "Visualises pancreatic duct communication",
-                        "Tracks cyst size changes over time",
-                      ].map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-sm">
-                          <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <h3 className="text-2xl font-serif font-semibold text-foreground mb-4">MRI / MRCP</h3>
+                    <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
+                      <p><strong className="text-foreground">Best for:</strong> routine surveillance and assessing the whole pancreas and pancreatic ducts.</p>
+                      <p><strong className="text-foreground">What happens:</strong> you lie in an MRI scanner while detailed images are taken.</p>
+                      <p><strong className="text-foreground">Radiation:</strong> none.</p>
+                      <p><strong className="text-foreground">Main advantage:</strong> excellent non-invasive monitoring of cyst size and change over time.</p>
+                    </div>
                   </div>
-                </motion.div>
+                </div>
+
+                <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-sm">
+                  <Image src={eusImage} alt="Endoscopic ultrasound for pancreatic cyst assessment" width={1280} height={720} className="w-full h-48 object-cover" />
+                  <div className="p-6">
+                    <h3 className="text-2xl font-serif font-semibold text-foreground mb-4">Endoscopic Ultrasound (EUS)</h3>
+                    <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
+                      <p><strong className="text-foreground">Best for:</strong> examining a cyst in greater detail when MRI shows something uncertain or concerning.</p>
+                      <p><strong className="text-foreground">What happens:</strong> a flexible endoscope containing an ultrasound probe is passed through the mouth while you are sedated.</p>
+                      <p><strong className="text-foreground">Radiation:</strong> none.</p>
+                      <p><strong className="text-foreground">Main advantage:</strong> close-up imaging with the option to sample cyst fluid or tissue when needed.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </motion.div>
+
+              <p className="text-lg text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto mt-8">
+                For many low-risk cysts, MRI/MRCP is sufficient. EUS is generally reserved for cysts that require closer assessment.
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* Management Section */}
-        <section className="py-16 lg:py-20 bg-emerald-50 dark:bg-emerald-950/20">
+        {/* Surveillance Section */}
+        <section className="py-16 lg:py-20 bg-background">
           <div className="container mx-auto px-2 sm:px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-4xl mx-auto"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <Stethoscope className="h-8 w-8 text-emerald-600" />
-                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
-                  Management Approach
+            <div className="max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-10"
+              >
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">
+                  How Are Pancreatic Cysts Monitored?
                 </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                  <strong className="font-semibold text-foreground">Surveillance depends first on the type of pancreatic cyst.</strong> The size of the cyst, changes over time and the presence of concerning features then help determine how often imaging is required and whether further assessment with endoscopic ultrasound (EUS) or surgical review should be considered.
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-3 gap-5">
+                <div className="rounded-2xl border border-emerald-200 dark:border-emerald-800/40 bg-emerald-50/60 dark:bg-emerald-950/10 p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Branch-duct IPMN</h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Usually monitored with MRI/MRCP according to its size, stability and risk features. Larger or changing IPMNs may require closer surveillance or EUS.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-amber-200 dark:border-amber-800/40 bg-amber-50/60 dark:bg-amber-950/10 p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-3">MCN and other cystic neoplasms</h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Management depends on the cyst type, size, symptoms and concerning features. Some can be monitored, while others are better assessed for surgery.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-sky-200 dark:border-sky-800/40 bg-sky-50/60 dark:bg-sky-950/10 p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Benign or non-neoplastic cysts</h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    A confidently diagnosed asymptomatic serous cystadenoma generally does not require the same long-term surveillance as an IPMN. Pseudocysts are followed according to the underlying pancreatitis and any complications.
+                  </p>
+                </div>
               </div>
-              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-loose mb-8">
-                <p>
-                  Management is individualised based on cyst type, size, features, and patient factors. 
-                  Options range from surveillance to surgical resection.
+
+              <div className="rounded-2xl border border-border bg-card p-6 md:p-8 mt-10 shadow-sm">
+                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
+                  When Might Surgery Be Considered?
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  <strong className="font-semibold text-foreground">Most pancreatic cysts do not require surgery.</strong>
+                </p>
+                <p className="text-base text-muted-foreground leading-relaxed mb-4">
+                  Surgical assessment may be considered when a cyst develops higher-risk features, causes symptoms, progressively enlarges, or belongs to a cyst type where the long-term cancer risk may outweigh the risks of surgery.
+                </p>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  <strong className="font-semibold text-foreground">Being referred to a pancreatic surgeon does not necessarily mean you need an operation.</strong> It allows the risks of continued surveillance and surgery to be considered together.
                 </p>
               </div>
-              
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-background rounded-xl p-6 border border-emerald-200 dark:border-emerald-800/30">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Surveillance</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Regular MRI/MRCP imaging at intervals determined by cyst characteristics. Most low-risk 
-                    cysts can be safely monitored without intervention.
-                  </p>
-                </div>
-                <div className="bg-background rounded-xl p-6 border border-emerald-200 dark:border-emerald-800/30">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Enhanced Surveillance</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    More frequent imaging and EUS evaluation for cysts with worrisome features. Allows 
-                    early detection of concerning changes.
-                  </p>
-                </div>
-                <div className="bg-background rounded-xl p-6 border border-emerald-200 dark:border-emerald-800/30">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Surgical Referral</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    For high-risk cysts, surgical resection is a primary clinical objective for high-risk cases. Coordinated 
-                    referral to experienced pancreatic surgeons when indicated.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -1038,14 +537,14 @@ const PancreaticCyst = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="max-w-3xl mx-auto"
+              className="max-w-3xl mx-auto pb-10"
             >
               <Accordion type="single" collapsible className="w-full space-y-3">
                 {faqs.map((faq, index) => (
                   <AccordionItem 
                     key={index} 
                     value={`faq-${index}`}
-                    className="bg-card rounded-xl border border-border px-4"
+                    className="bg-card rounded-xl border border-border px-4 last:border-b last:border-border"
                   >
                     <AccordionTrigger className="hover:no-underline py-4 text-left">
                       <span className="font-medium text-lg text-foreground">{faq.question}</span>

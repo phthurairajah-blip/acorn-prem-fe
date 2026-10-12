@@ -45,14 +45,10 @@ const symptoms = [
 ];
 
 const riskFactors = [
-  "History of gallstones",
-  "Previous gallbladder removal (stones can form in bile duct)",
-  "Female gender",
-  "Age over 40 years",
-  "Obesity",
-  "Rapid weight loss",
-  "Pregnancy",
-  "Certain blood disorders (sickle cell disease)",
+  "A current or previous history of gallstones",
+  "Previous episodes of bile duct stones",
+  "Previous gallbladder removal — bile duct stones can occasionally still occur",
+  "Conditions that increase the formation of pigment stones, including some blood disorders",
 ];
 
 const complications = [
@@ -87,7 +83,7 @@ const diagnosticTests: { name: string; description: string; image: string; link?
   },
   {
     name: "MRCP",
-    description: "A specialised MRI scan that provides detailed pictures of the bile ducts and can detect stones with high accuracy. Non-invasive 'road map' before treatment.",
+    description: "A non-invasive MRI scan that provides detailed images of the bile ducts and can identify stones that may not be visible on ultrasound.",
     image: mrcpImage,
   },
   {
@@ -101,7 +97,7 @@ const diagnosticTests: { name: string; description: string; image: string; link?
 const treatmentOptions: { name: string; description: string; image: string; link?: string }[] = [
   {
     name: "ERCP Stone Removal",
-    description: "The primary clinical modality for stone removal. A flexible endoscope is passed through the mouth to the bile duct opening. Stones are removed using a balloon or basket after sphincterotomy.",
+    description: "ERCP is the main endoscopic treatment for bile duct stones. A flexible endoscope is passed through the mouth to the opening of the bile duct, and stones can usually be removed using a balloon or basket after the opening has been enlarged.",
     image: ercpImage,
     link: "/ercp",
   },
@@ -228,26 +224,27 @@ const BileDuctStones = () => {
         {/* Symptoms and Risk Factors */}
         <section className="py-14 lg:py-20 bg-muted/30">
           <div className="container mx-auto px-2 sm:px-4">
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
+            <div className="max-w-5xl mx-auto space-y-8">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
+                className="rounded-2xl border border-border bg-card p-6 md:p-8"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Stethoscope className="h-6 w-6 text-emerald-500" />
                   <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground">
-                    Signs & Symptoms
+                    Signs &amp; Symptoms
                   </h2>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   Symptoms typically occur when a stone causes obstruction of bile flow.
                 </p>
-                <ul className="space-y-3">
+                <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3">
                   {symptoms.map((symptom, index) => (
-                    <li key={index} className="flex items-center gap-3 text-foreground">
-                      <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
+                    <li key={index} className="flex items-start gap-3 text-base text-foreground leading-relaxed">
+                      <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0 mt-2" />
                       {symptom}
                     </li>
                   ))}
@@ -255,10 +252,11 @@ const BileDuctStones = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="rounded-2xl border border-border bg-card p-6 md:p-8"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <AlertTriangle className="h-6 w-6 text-amber-600" />
@@ -266,13 +264,13 @@ const BileDuctStones = () => {
                     Risk Factors
                   </h2>
                 </div>
-                <p className="text-muted-foreground mb-6">
-                  Factors that increase the likelihood of developing bile duct stones.
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Bile duct stones most commonly occur in people who have, or previously had, gallstones.
                 </p>
-                <ul className="space-y-3">
+                <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3">
                   {riskFactors.map((factor, index) => (
-                    <li key={index} className="flex items-center gap-3 text-foreground">
-                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
+                    <li key={index} className="flex items-start gap-3 text-base text-foreground leading-relaxed">
+                      <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0 mt-2" />
                       {factor}
                     </li>
                   ))}
@@ -298,7 +296,7 @@ const BileDuctStones = () => {
                   Potential Complications
                 </h2>
               </div>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 Untreated bile duct stones can lead to serious, potentially life-threatening complications.
               </p>
             </motion.div>
@@ -314,7 +312,7 @@ const BileDuctStones = () => {
                   className="p-6 bg-red-50 dark:bg-red-900/10 rounded-xl border border-red-200 dark:border-red-800/30"
                 >
                   <h3 className="text-lg font-semibold text-foreground mb-2">{complication.title}</h3>
-                  <p className="text-muted-foreground">{complication.desc}</p>
+                  <p className="text-base text-muted-foreground leading-relaxed">{complication.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -440,8 +438,7 @@ const BileDuctStones = () => {
                 Experiencing Biliary Symptoms?
               </h2>
               <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
-                Don&apos;t delay treatment for bile duct stones. Dr. Prem Thurairajah is an experienced 
-                ERCP specialist who can provide specialised clinical evaluation.
+                Bile duct stones can cause obstruction, infection or pancreatitis and should be assessed promptly when symptoms occur.
               </p>
               <Button asChild size="lg" variant="secondary" className="gap-2 text-white">
                 <Link href="/#contact">

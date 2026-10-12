@@ -187,7 +187,7 @@ const ChronicPancreatitis = () => {
                   Chronic Pancreatitis
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Chronic pancreatitis is a progressive inflammatory condition causing permanent damage to the pancreas. 
+                  Chronic pancreatitis is a progressive inflammatory condition causing permanent damage to the pancreas.
                   Early diagnosis and comprehensive management can help control symptoms and prevent complications.
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -196,9 +196,7 @@ const ChronicPancreatitis = () => {
                       Book a Consultation
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg">
-                    <Link href="/ercp">Learn About ERCP</Link>
-                  </Button>
+
                 </div>
               </motion.div>
 
@@ -237,17 +235,17 @@ const ChronicPancreatitis = () => {
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  Chronic pancreatitis is characterised by ongoing inflammation that leads to irreversible structural 
-                  changes in the pancreas, including fibrosis, calcifications, and loss of both exocrine 
+                  Chronic pancreatitis is characterised by ongoing inflammation that leads to irreversible structural
+                  changes in the pancreas, including fibrosis, calcifications, and loss of both exocrine
                   (digestive enzyme production) and endocrine (insulin production) function.
                 </p>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  Unlike acute pancreatitis, which may resolve completely, chronic pancreatitis causes permanent 
-                  damage that progressively worsens over time. The condition significantly impacts quality of life, 
+                  Unlike acute pancreatitis, which may resolve completely, chronic pancreatitis causes permanent
+                  damage that progressively worsens over time. The condition significantly impacts quality of life,
                   primarily through chronic pain and nutritional complications.
                 </p>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  With proper management, including lifestyle modifications, pain control, enzyme replacement, 
+                  With proper management, including lifestyle modifications, pain control, enzyme replacement,
                   and when needed, endoscopic or surgical intervention, many patients may see significant improvement
                   in their symptoms and quality of life.
                 </p>
@@ -293,7 +291,7 @@ const ChronicPancreatitis = () => {
                   />
                   <div className="p-5">
                     <h3 className="font-semibold text-lg text-foreground mb-2">{cause.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{cause.description}</p>
+                    <p className="text-base text-muted-foreground leading-relaxed">{cause.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -309,10 +307,10 @@ const ChronicPancreatitis = () => {
               <div className="flex items-start gap-4">
                 <AlertTriangle className="h-6 w-6 text-amber-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Other Causes</h4>
-                  <p className="text-muted-foreground">
-                    Other causes include autoimmune pancreatitis, tropical pancreatitis, metabolic disorders 
-                    (hypercalcaemia, hypertriglyceridaemia), anatomical abnormalities (pancreas divisum), 
+                  <h4 className="text-lg font-semibold text-foreground mb-2">Other Causes</h4>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Other causes include autoimmune pancreatitis, tropical pancreatitis, metabolic disorders
+                    (hypercalcaemia, hypertriglyceridaemia), anatomical abnormalities (pancreas divisum),
                     and idiopathic cases where no cause can be identified.
                   </p>
                 </div>
@@ -335,8 +333,8 @@ const ChronicPancreatitis = () => {
                   Signs & Symptoms
                 </h2>
                 <p className="text-muted-foreground text-lg mb-8">
-                  Symptoms vary depending on the stage and severity of the disease. Pain is often the 
-                  predominant symptom in early stages, while malabsorption becomes more prominent as 
+                  Symptoms vary depending on the stage and severity of the disease. Pain is often the
+                  predominant symptom in early stages, while malabsorption becomes more prominent as
                   the disease progresses.
                 </p>
                 <div className="grid gap-3">
@@ -350,7 +348,7 @@ const ChronicPancreatitis = () => {
                       className="flex items-center gap-3"
                     >
                       <CheckCircle className="h-5 w-5 text-emerald-600 flex-shrink-0" />
-                      <span className="text-foreground">{symptom}</span>
+                      <span className="text-base text-foreground leading-relaxed">{symptom}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -412,7 +410,7 @@ const ChronicPancreatitis = () => {
                     <AlertTriangle className="h-5 w-5 text-amber-600" />
                     <h3 className="font-semibold text-lg text-foreground">{complication.title}</h3>
                   </div>
-                  <p className="text-muted-foreground">{complication.description}</p>
+                  <p className="text-base text-muted-foreground leading-relaxed">{complication.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -433,7 +431,7 @@ const ChronicPancreatitis = () => {
                 Diagnostic Approach
               </h2>
               <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-                A combination of clinical assessment, imaging, and functional tests is used to diagnose 
+                A combination of clinical assessment, imaging, and functional tests is used to diagnose
                 chronic pancreatitis and assess disease severity.
               </p>
 
@@ -448,7 +446,7 @@ const ChronicPancreatitis = () => {
                     className="rounded-xl overflow-hidden shadow-medium bg-background border border-border"
                   >
                     <Image
-                      src={test.image} 
+                      src={test.image}
                       alt={test.name}
                       className="w-full h-48 object-cover"
                       width={1280}
@@ -458,8 +456,8 @@ const ChronicPancreatitis = () => {
                       <h3 className="text-lg font-semibold text-foreground mb-2">{test.name}</h3>
                       <p className="text-base text-muted-foreground leading-relaxed">{test.description}</p>
                       {test.link && (
-                        <Link 
-                          href={test.link} 
+                        <Link
+                          href={test.link}
                           className="inline-flex items-center text-sm text-emerald-600 dark:text-emerald-400 hover:underline mt-3 font-medium"
                         >
                           Learn more about this procedure →
@@ -487,7 +485,7 @@ const ChronicPancreatitis = () => {
                 Treatment Options
               </h2>
               <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-                A multidisciplinary approach combining medical, endoscopic, and surgical therapies 
+                A multidisciplinary approach combining medical, endoscopic, and surgical therapies
                 tailored to individual patient needs.
               </p>
 
@@ -501,8 +499,8 @@ const ChronicPancreatitis = () => {
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     className="rounded-xl overflow-hidden shadow-medium bg-background border border-border"
                   >
-                    <Image 
-                      src={treatment.image} 
+                    <Image
+                      src={treatment.image}
                       alt={treatment.title}
                       className="w-full h-48 object-cover"
                       width={1280}
@@ -512,8 +510,8 @@ const ChronicPancreatitis = () => {
                       <h3 className="text-lg font-semibold text-foreground mb-2">{treatment.title}</h3>
                       <p className="text-base text-muted-foreground leading-relaxed">{treatment.description}</p>
                       {treatment.link && (
-                        <Link 
-                          href={treatment.link} 
+                        <Link
+                          href={treatment.link}
                           className="inline-flex items-center text-sm text-emerald-600 dark:text-emerald-400 hover:underline mt-3 font-medium"
                         >
                           Learn more about this procedure →
@@ -542,8 +540,8 @@ const ChronicPancreatitis = () => {
                 Specialised Pancreatic Care
               </h2>
               <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
-                Dr. Prem Thurairajah has extensive experience in managing chronic pancreatitis, 
-                with specialised training in therapeutic ERCP and EUS from recognised centres in the UK. 
+                Dr. Prem Thurairajah has extensive experience in managing chronic pancreatitis,
+                with specialised training in therapeutic ERCP and EUS from recognised centres in the UK.
                 He provides comprehensive care from diagnosis through long-term management.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -568,9 +566,9 @@ const ChronicPancreatitis = () => {
           <div className="container mx-auto px-2 sm:px-4">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-sm text-muted-foreground">
-                <strong>Medical Disclaimer:</strong> The information provided on this page is for educational 
-                purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. 
-                Please consult Dr. Prem Thurairajah or another qualified healthcare provider for personalised 
+                <strong>Medical Disclaimer:</strong> The information provided on this page is for educational
+                purposes only and is not a substitute for professional medical advice, diagnosis, or treatment.
+                Please consult Dr. Prem Thurairajah or another qualified healthcare provider for personalised
                 medical guidance regarding chronic pancreatitis.
               </p>
             </div>

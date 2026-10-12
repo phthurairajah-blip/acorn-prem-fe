@@ -24,7 +24,7 @@ const relatedConditions = [
   {
     title: "Irritable Bowel Syndrome",
     description: "Differentiating IBS from IBD is crucial for appropriate treatment.",
-    link: "/irritable-bowel-syndrome",
+    link: "/ibs",
   },
 ];
 
@@ -171,12 +171,17 @@ export const InflammatoryBowelDisease = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground leading-tight mb-6">
+                <h1 className="text-5xl md:text-6xl font-serif font-semibold text-foreground leading-tight mb-6">
                   Inflammatory Bowel Disease
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-                  Specialized diagnosis and comprehensive management of Crohn&apos;s disease and ulcerative colitis with established biologic therapies and personalised care.
-                </p>
+                <div className="max-w-xl space-y-4 text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+                  <p>
+                    <strong className="font-semibold text-foreground">Inflammatory bowel disease (IBD)</strong> includes Crohn&apos;s disease and ulcerative colitis — chronic conditions that cause inflammation in the digestive tract. Symptoms can include persistent diarrhoea, abdominal pain, rectal bleeding, fatigue and weight loss.
+                  </p>
+                  <p>
+                    With accurate diagnosis and modern treatment, including biologic and targeted therapies, many people can achieve good disease control, reduce flare-ups and maintain their quality of life.
+                  </p>
+                </div>
                 <div className="flex flex-wrap gap-4">
                   <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                     <Link href="/book-appointment">
@@ -216,7 +221,7 @@ export const InflammatoryBowelDisease = () => {
             >
               <div className="flex items-center gap-3 mb-6">
                 <Info className="h-8 w-8 text-emerald-500" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold">
                   What is Inflammatory Bowel Disease?
                 </h2>
               </div>
@@ -244,7 +249,7 @@ export const InflammatoryBowelDisease = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-4">
                 Common Symptoms of IBD
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -279,7 +284,7 @@ export const InflammatoryBowelDisease = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-4">
                 Crohn&apos;s Disease vs Ulcerative Colitis
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -348,7 +353,7 @@ export const InflammatoryBowelDisease = () => {
               >
                 <div className="flex items-center gap-3 mb-6">
                   <Stethoscope className="h-8 w-8 text-emerald-500" />
-                  <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                  <h2 className="text-4xl md:text-5xl font-serif font-semibold">
                     How is IBD Diagnosed?
                   </h2>
                 </div>
@@ -366,7 +371,7 @@ export const InflammatoryBowelDisease = () => {
                       className="p-4 bg-background rounded-lg border border-border"
                     >
                       <h4 className="font-semibold text-foreground mb-1">{test.title}</h4>
-                      <p className="text-sm text-muted-foreground">{test.description}</p>
+                      <p className="text-base text-muted-foreground leading-relaxed">{test.description}</p>
                       {test.title === "Colonoscopy with Biopsies" && (
                         <Link
                           href="/colonoscopy"
@@ -416,7 +421,7 @@ export const InflammatoryBowelDisease = () => {
             >
               <div className="flex items-center justify-center gap-3 mb-4">
                 <Pill className="h-8 w-8 text-emerald-500" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold">
                   Treatment Options
                 </h2>
               </div>
@@ -463,7 +468,7 @@ export const InflammatoryBowelDisease = () => {
             >
               <div className="flex items-center justify-center gap-3 mb-4">
                 <Activity className="h-8 w-8 text-amber-500" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold">
                   Potential Complications
                 </h2>
               </div>
@@ -499,7 +504,7 @@ export const InflammatoryBowelDisease = () => {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto text-center"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-6">
                 Comprehensive IBD Care
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
@@ -543,7 +548,7 @@ export const InflammatoryBowelDisease = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-4">
                 Specialized IBD Care in Singapore
               </h2>
               <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">

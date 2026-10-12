@@ -169,7 +169,7 @@ export const LiverBiopsy = () => {
               <span className="text-emerald-600 dark:text-emerald-400 text-sm font-medium tracking-widest uppercase">
                 Diagnostic Procedure
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground mt-3 mb-6">
+              <h1 className="lg:text-6xl font-serif font-semibold text-foreground mt-3 mb-6 text-5xl md:text-6xl">
                 Liver Biopsy
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
@@ -197,7 +197,7 @@ export const LiverBiopsy = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="font-serif font-semibold text-foreground mb-6 text-4xl md:text-5xl">
                 Why is Liver Biopsy Performed?
               </h2>
               
@@ -236,7 +236,7 @@ export const LiverBiopsy = () => {
             >
               <div className="flex items-center gap-3 mb-8">
                 <Clock className="h-8 w-8 text-blue-600" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                <h2 className="font-serif font-semibold text-foreground text-4xl md:text-5xl">
                   Preparing for Your Biopsy
                 </h2>
               </div>
@@ -270,7 +270,7 @@ export const LiverBiopsy = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="font-serif font-semibold text-foreground mb-6 text-4xl md:text-5xl">
                 What Happens During the Procedure?
               </h2>
               <p className="text-base text-muted-foreground mb-10 leading-relaxed">
@@ -315,7 +315,7 @@ export const LiverBiopsy = () => {
             >
               <div className="flex items-center gap-3 mb-8">
                 <AlertTriangle className="h-8 w-8 text-amber-600" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                <h2 className="font-serif font-semibold text-foreground text-4xl md:text-5xl">
                   Risks and Complications
                 </h2>
               </div>
@@ -374,7 +374,7 @@ export const LiverBiopsy = () => {
             >
               <div className="flex items-center gap-3 mb-8">
                 <Shield className="h-8 w-8 text-emerald-600" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                <h2 className="font-serif font-semibold text-foreground text-4xl md:text-5xl">
                   After Your Biopsy
                 </h2>
               </div>
@@ -411,7 +411,7 @@ export const LiverBiopsy = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">
+              <h2 className="font-serif font-semibold text-foreground mb-6 text-4xl md:text-5xl">
                 Specialized Hepatology Care
               </h2>
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-loose">
@@ -442,25 +442,25 @@ export const LiverBiopsy = () => {
             >
               <div className="flex items-center gap-3 mb-6">
                 <HelpCircle className="h-7 w-7 text-primary" />
-                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground">
+                <h2 className="font-semibold text-foreground text-4xl md:text-5xl font-serif">
                   Frequently Asked Questions
                 </h2>
               </div>
-              <p className="text-base text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-muted-foreground mb-8 leading-relaxed text-lg">
                 Common questions about liver biopsy and what to expect.
               </p>
 
-              <Accordion type="single" collapsible className="space-y-4">
+              <Accordion type="single" collapsible className="space-y-4 pb-8">
                 {liverBiopsyFaqs.map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`faq-${index}`}
-                    className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-md transition-shadow"
+                    className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-md transition-shadow last:border-b last:border-border"
                   >
-                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                    <AccordionTrigger className="text-left text-foreground hover:no-underline py-5 text-lg font-medium">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-5">
+                    <AccordionContent className="text-muted-foreground leading-relaxed pb-5 text-base">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -480,7 +480,7 @@ export const LiverBiopsy = () => {
               transition={{ duration: 0.6 }}
               className="text-center max-w-2xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
+              <h2 className="font-serif font-semibold text-foreground mb-4 text-4xl md:text-5xl">
                 Need a Liver Biopsy?
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-8">

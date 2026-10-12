@@ -13,6 +13,7 @@ const acornLogo = "/acorn-logo-transparent.png";
 const conditions = [
   // Luminal
   { title: "Bowel Cancer Screening", link: "/bowel-cancer-screening", category: "Luminal" },
+  { title: "Gastric Cancer Screening", link: "/gerd-gastric-cancer-screening", category: "Luminal" },
   { title: "Acid Reflux & Heartburn", link: "/gerd-heartburn", category: "Luminal" },
   { title: "Epigastric Pain", link: "/epigastric-pain", category: "Luminal" },
   { title: "Constipation", link: "/constipation", category: "Luminal" },
@@ -194,7 +195,7 @@ export const Navigation = ({
                   {openDropdown === link.hasDropdown && (
                     <div className="absolute top-full left-0 pt-2 z-[60]">
                       {link.hasDropdown === "conditions" ? (
-                        <div className="bg-white border border-border rounded-lg shadow-lg p-4 z-50 grid grid-cols-3 gap-6 min-w-[520px]">
+                        <div className="bg-white border border-border rounded-lg shadow-lg p-4 z-50 grid grid-cols-3 gap-6 min-w-[620px]">
                           <div>
                             <div className="pb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider border-b border-border mb-2">Luminal</div>
                             {conditions.filter(c => c.category === "Luminal").map((item) => (
@@ -212,7 +213,7 @@ export const Navigation = ({
                             ))}
                           </div>
                           <div>
-                            <div className="pb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider border-b border-border mb-2">Biliary & Pancreatic</div>
+                            <div className="pb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider border-b border-border mb-2 whitespace-nowrap">Biliary & Pancreatic</div>
                             {conditions.filter(c => c.category === "HBP").map((item) => (
                               <Link key={item.link} href={item.link} className="block px-2 py-1.5 text-sm text-foreground/80 hover:bg-muted hover:text-primary transition-colors rounded">
                                 {item.title}

@@ -8,7 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import Image from "next/image";
 import Link from "next/link";
 const eusImage = "/eus-pancreas.jpeg";
-const eusFnaImage = "/eus-pancreas.jpeg";
+
 
 const eusFaqs = [
   {
@@ -219,46 +219,22 @@ const Eus = () => {
           </div>
         </section>
 
-        {/* Image Section */}
+        {/* EUS procedure photograph */}
         <section className="py-12 bg-muted/30">
           <div className="container mx-auto px-2 sm:px-4">
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="rounded-2xl overflow-hidden shadow-lg"
-              >
-                <Image
-                  src={eusImage}
-                  alt="Endoscopic Ultrasound procedure showing ultrasound probe"
-                  className="w-full h-64 object-cover"
-                  width={1280}
-                  height={720}
-                />
-                <div className="p-4 bg-background">
-                  <p className="text-sm text-muted-foreground text-center">EUS imaging of pancreatic structures</p>
-                </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="rounded-2xl overflow-hidden shadow-lg"
-              >
-                <Image
-                  src={eusFnaImage}
-                  alt="EUS-guided Fine Needle Aspiration of pancreatic mass"
-                  className="w-full h-64 object-cover"
-                  width={1280}
-                  height={720}
-                />
-                <div className="p-4 bg-background">
-                  <p className="text-sm text-muted-foreground text-center">EUS-guided Fine Needle Aspiration (FNA)</p>
-                </div>
-              </motion.div>
+            <div className="max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src={eusImage}
+                alt="Dr Prem performing an endoscopic ultrasound procedure"
+                className="w-full h-auto object-cover"
+                width={1280}
+                height={720}
+              />
+              <div className="p-4 bg-background">
+                <p className="text-sm text-muted-foreground text-center">
+                  Endoscopic ultrasound procedure
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -353,9 +329,10 @@ const Eus = () => {
                   <AccordionItem
                     key={index}
                     value={`faq-${index}`}
-                    className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-md transition-shadow"
+                    className="bg-background border border-border rounded-xl px-6 pb-2 last:border-b data-[state=open]:shadow-md transition-shadow"
+                    style={{ borderBottomWidth: "1px" }}
                   >
-                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                    <AccordionTrigger className="text-left text-lg font-serif font-semibold text-foreground hover:text-primary hover:no-underline py-5">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-5">
