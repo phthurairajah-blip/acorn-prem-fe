@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Health insights and patient resources on digestive and liver conditions by Dr. Prem Thurairajah.",
   alternates: {
-    canonical: "https://drpremgastro.com/blogs",
+    canonical: "https://drpremgastro.sg/blogs",
   },
 };
 
