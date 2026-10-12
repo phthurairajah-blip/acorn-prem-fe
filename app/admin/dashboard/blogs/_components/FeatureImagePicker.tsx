@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import { Image as ImageIcon, Link2, UploadCloud } from "lucide-react";
 import { IMAGE_HELPER_TEXT } from "@/lib/blog-validation";
 
@@ -124,10 +125,13 @@ const FeatureImagePicker = ({ value, onChange }: FeatureImagePickerProps) => {
       <div className="rounded-xl border border-dashed border-slate-200 bg-slate-50 p-4 text-center text-xs text-slate-500">
         {preview ? (
           <div className="space-y-3">
-            <img
+            <Image
               src={preview}
               alt="Feature preview"
-              className="mx-auto max-h-48 rounded-lg object-cover"
+              width={1200}
+              height={800}
+              unoptimized
+              className="mx-auto h-auto w-auto max-h-48 rounded-lg object-cover"
             />
             <p>Preview</p>
           </div>

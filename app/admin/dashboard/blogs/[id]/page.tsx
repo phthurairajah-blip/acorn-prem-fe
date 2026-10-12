@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Calendar, Edit3, User } from "lucide-react";
 import { useParams } from "next/navigation";
 import { getAdminAuthHeaders } from "@/lib/auth";
@@ -163,14 +164,17 @@ const BlogDetailPage = () => {
 
       {post.image_url ? (
         <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-          <img
+          <Image
             src={
               post.image_url.startsWith("http")
                 ? post.image_url
                 : `${API_URL}${post.image_url}`
             }
             alt={post.title}
-            className="w-full rounded-xl object-cover"
+            width={1200}
+            height={800}
+            unoptimized
+            className="h-auto w-full rounded-xl object-cover"
           />
         </section>
       ) : null}

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { FileText, MoreVertical, Plus } from "lucide-react";
+import { MoreVertical, Plus } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -139,7 +139,10 @@ const BlogsPage = () => {
   };
 
   useEffect(() => {
-    loadBlogs(0);
+    const timeoutId = window.setTimeout(() => {
+      void loadBlogs(0);
+    }, 0);
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   useEffect(() => {

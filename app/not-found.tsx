@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { ArrowLeft, Home, Search, AlertTriangle } from "lucide-react";
+import { Home, Search, AlertTriangle } from "lucide-react";
 
 const NotFound = () => {
   return (

@@ -116,39 +116,6 @@ const diagnosticTests: { name: string; description: string; image: string; alt: 
   },
 ];
 
-const liverEmergencySigns = [
-  {
-    title: "Vomiting blood, or material that looks like coffee grounds",
-    description:
-      "This may indicate bleeding from varices or ulcers and can become life-threatening very quickly.",
-  },
-  {
-    title: "Black, tarry, or foul-smelling stools",
-    description:
-      "A sign of bleeding higher up in the digestive tract that may not be immediately visible.",
-  },
-  {
-    title: "Sudden or rapidly worsening abdominal swelling",
-    description:
-      "Can signal a significant increase in ascites or, in some cases, infection of the abdominal fluid (spontaneous bacterial peritonitis), which requires urgent antibiotics.",
-  },
-  {
-    title: "Yellowing of the skin or eyes (jaundice) that appears or worsens quickly",
-    description:
-      "Suggests the liver is under acute stress and function is declining.",
-  },
-  {
-    title: "Confusion, unusual drowsiness, slurred speech or personality changes",
-    description:
-      "These are signs of hepatic encephalopathy and require prompt treatment to prevent deterioration.",
-  },
-  {
-    title: "Fever with no obvious cause",
-    description:
-      "People with cirrhosis are more vulnerable to serious infections, and what seems like a mild illness can escalate rapidly.",
-  },
-];
-
 const liverCirrhosisFaqs = [
   {
     question:

@@ -128,30 +128,6 @@ const ibsComparisons = [
   },
 ];
 
-const lifestyleTips = [
-  "Regular exercise",
-  "Adequate sleep",
-  "Relaxation techniques or mindfulness",
-  "Stress management strategies",
-  "Avoiding excessive late nights and irregular routines",
-];
-
-const medications = [
-  "Antispasmodics for cramping",
-  "Anti-diarrhoeal medication for diarrhoea",
-  "Gentle laxatives for constipation",
-  "Probiotics in selected patients",
-];
-
-const specialistReviewSigns = [
-  "Symptoms are persistent or worsening",
-  "You develop blood in the stool",
-  "There is unexplained weight loss",
-  "Symptoms wake you from sleep",
-  "You develop fever or severe pain",
-  "Symptoms begin later in life or change significantly",
-];
-
 const ibsSymptoms = [
   "Recurrent abdominal pain or cramping",
   "Bloating and abdominal distension",
@@ -184,7 +160,6 @@ const ibsSubtypes = [
     color: "blue"
   },
 ];
-
 
 const triggers = [
   {

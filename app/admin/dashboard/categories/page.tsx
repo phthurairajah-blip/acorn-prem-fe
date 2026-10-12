@@ -197,7 +197,10 @@ const CategoriesPage = () => {
   };
 
   useEffect(() => {
-    loadCategories();
+    const timeoutId = window.setTimeout(() => {
+      void loadCategories();
+    }, 0);
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   return (

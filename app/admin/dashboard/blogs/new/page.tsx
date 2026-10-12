@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Save } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import FeatureImagePicker, {
   type FeatureImageValue,
 } from "@/app/admin/dashboard/blogs/_components/FeatureImagePicker";

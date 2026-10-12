@@ -106,7 +106,10 @@ const BookingPage = () => {
   };
 
   useEffect(() => {
-    loadBookings(0);
+    const timeoutId = window.setTimeout(() => {
+      void loadBookings(0);
+    }, 0);
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   useEffect(() => {

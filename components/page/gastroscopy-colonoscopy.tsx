@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from "framer-motion";
-import { ArrowLeft, Calendar, Clock, Info, HelpCircle } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Image from "next/image";
@@ -46,17 +46,6 @@ const gastroscopyIndications = [
   "Investigation of anaemia or iron deficiency",
   "Surveillance of Barrett's oesophagus",
   "Screening for gastric cancer in high-risk individuals",
-];
-
-const preparationSteps = [
-  {
-    title: "Medication Review",
-    description: "Inform your doctor of all medications. Blood thinners may need to be stopped temporarily.",
-  },
-  {
-    title: "Fasting",
-    description: "No food or drink for at least 6 hours before the procedure.",
-  },
 ];
 
 const whatToExpect = [
@@ -125,7 +114,6 @@ const GastroscopyColonoscopy = () => {
           </div>
         </section>
 
-
         {/* What is Section */}
         <section className="py-16 lg:py-20">
           <div className="container mx-auto px-2 sm:px-4">
@@ -177,7 +165,6 @@ const GastroscopyColonoscopy = () => {
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
                 Who May Need a Gastroscopy?
               </h2>
-
 
               <h3 className="text-xl md:text-2xl font-serif font-semibold text-foreground mb-6">
                 Symptoms that may require gastroscopy

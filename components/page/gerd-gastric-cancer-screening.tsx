@@ -3,9 +3,9 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
-import { RelatedConditions } from "@/components/RelatedConditions";
-import { ArrowLeft, CheckCircle, AlertTriangle, Calendar, Shield, Heart, HelpCircle } from "lucide-react";
+import {  } from "@/components/Footer";
+import {  } from "@/components/RelatedConditions";
+import { ArrowLeft, Calendar, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -67,14 +67,6 @@ const biopsisDiagnose = [
   "Polyps or abnormal tissue changes",
 ];
 
-const followUpReasons = [
-  "Surveillance of Barrett's oesophagus",
-  "Follow-up of stomach ulcers",
-  "Monitoring of gastric polyps",
-  "Evaluation of persistent or worsening symptoms",
-  "Surveillance in selected high-risk individuals",
-];
-
 const faqs = [
   {
     question: "Is gastroscopy safe?",
@@ -115,7 +107,7 @@ const faqs = [
 ];
 
 const colonoscopyImage = "/gerd-gastric-featured.jpg";
-const familyHealthImage = "/endoscope-procedure.jpg";
+
 const drPremConsultationImage = "/dr-prem-consultation.png";
 
 export const GerdGastricScreeningPage = () => {
@@ -214,7 +206,6 @@ export const GerdGastricScreeningPage = () => {
                   </div>
                 </section>
 
-
         {/* Advanced Endoscopic Imaging */}
         <section className="py-14 lg:py-20 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
@@ -278,8 +269,6 @@ export const GerdGastricScreeningPage = () => {
             </motion.div>
           </div>
         </section>
-
-
 
                 <section className="py-14 lg:py-20">
           <div className="container mx-auto px-4 sm:px-6">

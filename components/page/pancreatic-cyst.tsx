@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { RelatedConditions } from "@/components/RelatedConditions";
-import { ArrowLeft, AlertTriangle, CheckCircle, Heart, Calendar, Search, Info, Stethoscope, HelpCircle } from "lucide-react";
+import { ArrowLeft, AlertTriangle, CheckCircle, Calendar, Info, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -34,29 +34,6 @@ const relatedConditions = [
   },
 ];
 
-const cystTypes = [
-  {
-    title: "Intraductal Papillary Mucinous Neoplasm (IPMN)",
-    description: "The most common type, arising from the pancreatic duct. Can be main-duct, branch-duct, or mixed type with varying malignant potential.",
-    risk: "Moderate to High"
-  },
-  {
-    title: "Mucinous Cystic Neoplasm (MCN)",
-    description: "Occurs predominantly in women, typically in the body or tail of the pancreas. Has malignant potential and often requires surgical resection.",
-    risk: "Moderate to High"
-  },
-  {
-    title: "Serous Cystadenoma",
-    description: "Benign tumours with very low malignant potential. Often discovered incidentally and can be monitored safely.",
-    risk: "Very Low"
-  },
-  {
-    title: "Pseudocyst",
-    description: "Non-neoplastic fluid collections that develop after pancreatitis. May resolve spontaneously or require drainage.",
-    risk: "None (Non-neoplastic)"
-  },
-];
-
 const kindsCyst = [
   {
     type: "Serous cyst (SCA)",
@@ -81,95 +58,6 @@ const kindsCyst = [
     type: "Solid pseudopapillary neoplasm (SPN)",
     description:
       "Rare. Usually recommended for removal in otherwise healthy patients.",
-  },
-];
-
-const specialistsConcerns = [
-  {
-    feature: "A solid lump or nodule inside the cyst",
-    concern: "Could be an early sign of cancer developing",
-    recommendation: "See a specialist soon",
-  },
-  {
-    feature: "The main duct (drainage tube) of the pancreas is wider than usual",
-    concern: "Associated with a higher-risk type of cyst",
-    recommendation: "See a specialist soon",
-  },
-  {
-    feature: "The cyst has grown noticeably since the last scan",
-    concern: "May indicate a change in behaviour",
-    recommendation: "Watch more closely",
-  },
-  {
-    feature: "The cyst wall looks thick or irregular",
-    concern: "Can be a worrisome feature",
-    recommendation: "Watch more closely",
-  },
-  {
-    feature: "The cyst is larger than 3 cm",
-    concern: "Requires more careful evaluation",
-    recommendation: "Watch more closely",
-  },
-  {
-    feature: "Small, simple, and stable cyst",
-    concern: "Very low risk — typical finding",
-    recommendation: "Routine check-ups",
-  },
-];
-
-const compareMriEus = [
-  {
-    category: "How it's done",
-    mri: "You lie in a scanner for 30–45 minutes. No needles.",
-    eus: "You are sedated. A flexible scope is passed through your mouth.",
-  },
-  {
-    category: "What it's best for",
-    mri: "Regular follow-up, showing the whole pancreas and ducts, detecting size changes over time.",
-    eus: "Detailed look at a specific cyst, detecting small nodules, sampling cyst fluid.",
-  },
-  {
-    category: "Does it use radiation?",
-    mri: "No",
-    eus: "No",
-  },
-  {
-    category: "Can it sample fluid?",
-    mri: "No",
-    eus: "Yes, if needed",
-  },
-  {
-    category: "When is it used?",
-    mri: "First-line for most follow-up.",
-    eus: "When MRI is unclear or a tissue/fluid sample is needed.",
-  },
-];
-
-const followupGuide = [
-  {
-    scenario: "Small, simple cyst with no concerning features (< 1.5 cm)",
-    interval: "Every 1–2 years",
-    test: "MRI / MRCP",
-  },
-  {
-    scenario: "Cyst 1.5–3 cm, stable, no worrisome features",
-    interval: "Every 6–12 months initially, then annually if stable",
-    test: "MRI / MRCP",
-  },
-  {
-    scenario: "Cyst > 3 cm or with worrisome features",
-    interval: "Every 3–6 months",
-    test: "MRI ± EUS",
-  },
-  {
-    scenario: "After surgery, to check for recurrence",
-    interval: "Varies — discuss with your surgeon",
-    test: "MRI or CT",
-  },
-  {
-    scenario: "Very stable cyst in older patient after many years",
-    interval: "May be extended or stopped",
-    test: "Discuss with specialist",
   },
 ];
 
