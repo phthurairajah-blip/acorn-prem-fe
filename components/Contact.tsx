@@ -201,6 +201,10 @@ export const Contact = () => {
         throw new Error(data?.detail || "Failed to submit booking request.");
       }
 
+      // Track only successfully accepted appointment requests.
+      (window as Window & { dataLayer?: Array<Record<string, string>> }).dataLayer?.push({
+        event: "appointment_form_success",
+      });
       setIsSuccessOpen(true);
       setFormData({
         name: "",
